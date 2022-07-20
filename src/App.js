@@ -1,13 +1,18 @@
+// routes
+import Router from "./routes";
+//theme
+import ThemeProvider from "./theme";
+// hooks
 
-import './App.css';
+// components
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-      </h1>
-    </div>
+    <ThemeProvider>
+      <ScrollToTop />
+      <Router />
+    </ThemeProvider>
   );
 }
 
