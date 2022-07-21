@@ -1,7 +1,13 @@
 // components
 import LandingFirstSection from "../sections/home/LandingFirstSection";
 import Page from "../components/Page";
-import { LandingSecondSection, HeroSection } from "src/sections/home";
+import {
+  LandingSecondSection,
+  HeroSection,
+  Functionalities,
+  BanqueSection,
+  ValeurAndEngagement,
+} from "src/sections/home";
 import ProjetsFiancesSection from "../sections/home/ProjetsFinancesSection";
 // sections
 
@@ -14,6 +20,9 @@ export default function LandingPage() {
       <LandingSecondSection />
       <HeroSection />
       <ProjetsFiancesSection />
+      <Functionalities />
+      <BanqueSection />
+      <ValeurAndEngagement />
     </Page>
   );
 }
