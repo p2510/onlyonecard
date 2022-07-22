@@ -42,7 +42,7 @@ export default function LandingSecondSection() {
           },
           top: {
             xs: -70,
-            md: -40,
+            md: -20,
           },
         }}
       >
