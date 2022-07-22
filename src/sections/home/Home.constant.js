@@ -10,6 +10,11 @@ import solidaire_icon from "../../assets/images/solidaire_icon.png";
 import transparent_icon from "../../assets/images/transparent_icon.png";
 import app_store_icone from "../../assets/images/app_store_icone.png";
 import google_play_icon from "../../assets/images/google_play_icon.png";
+import bilan_mobile from "../../assets/images/bilan_mobile.png";
+import ethique_mobile from "../../assets/images/ethique_mobile.png";
+import carte_mobile from "../../assets/images/carte_mobile.png";
+import biodiversite_mobile from "../../assets/images/biodiversite_mobile.png";
+import economisez_mobile from "../../assets/images/economisez_mobile.png";
 
 export const AVANTAGES = [
   {
@@ -124,5 +129,28 @@ export const ABOUTUSDATA = [
     icon: `${google_play_icon}`,
     paragraphe: `Enfin fière de ma banque (…) L’application est simple d’utilisation et l’accès à des offres responsables me permet de découvrir d’autres services que je ne connaissais pas et faire aussi des dons à des associations. Bravo ! je recommande vivement !`,
     libele: `Majida`,
+  },
+];
+
+export const FONCTIONNALITES = [
+  {
+    id: 1,
+    image: `${ethique_mobile}`,
+  },
+  {
+    id: 2,
+    image: `${carte_mobile}`,
+  },
+  {
+    id: 3,
+    image: `${bilan_mobile}`,
+  },
+  {
+    id: 4,
+    image: `${economisez_mobile}`,
+  },
+  {
+    id: 5,
+    image: `${biodiversite_mobile}`,
   },
 ];

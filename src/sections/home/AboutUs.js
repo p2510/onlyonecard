@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Grid, Typography, Box, Container, Button } from "@mui/material";
+import { Grid, Typography, Box, Container } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import Slider from "react-slick";
 import {
@@ -7,11 +7,10 @@ import {
   varFadeInLeft,
   varFadeInUp,
 } from "../../components/animate";
-import { ABOUTUSDATA } from "./LandingSecondSection.constant";
+import { ABOUTUSDATA } from "./Home.constant";
 import CarouselDots from "../../components/CarouselDots";
 import Communautes from "src/components/Communautes";
-import  TButton  from "./../../components/tailwindComponent/TButton.js";
-
+import TButton from "./../../components/tailwindComponent/TButton.js";
 
 export default function AboutUs({ isActive }) {
   const theme = useTheme();
@@ -107,7 +106,7 @@ export default function AboutUs({ isActive }) {
               mb: { md: 25, xs: 16 },
             }}
           >
-            <TButton name="Je démarre" link='/' />
+            <TButton name="Je démarre" link="/" />
           </Grid>
         </MotionInView>
         <Communautes />
