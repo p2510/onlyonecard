@@ -1,6 +1,6 @@
-import { NavLink as RouterLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { styled } from "@mui/system";
-import {  AppBar, Toolbar, Container, Stack } from "@mui/material";
+import { AppBar, Toolbar, Container, Stack } from "@mui/material";
 import useOffSetTop from "../../hooks/useOffSetTop";
 import { PATH_AUTH } from "../../routes/paths";
 import { MHidden } from "../../components/@material-extend";
@@ -8,8 +8,7 @@ import MenuDesktop from "./MenuDesktop";
 import MenuMobile from "./MenuMobile";
 import menuConfig from "./menuConfig";
 import Logo from "../../components/Logo";
-import  TButton  from "./../../components/tailwindComponent/TButton.js";
-
+import TButton from "./../../components/tailwindComponent/TButton.js";
 
 const APP_BAR_MOBILE = 64;
 const APP_BAR_DESKTOP = 90;
@@ -62,27 +61,20 @@ export default function MainHeader() {
             justifyContent: "space-around",
           }}
         >
-          <RouterLink to="/">
-            <Logo
-              sx={{
-                width: { md: 190, xs: 180 },
-                height: { md: 50, xs: 40 },
-                objectFit: "cover",
-              }}
-            />
-          </RouterLink>
-          {/* <Box sx={{ flexGrow: 1 }} /> */}
+          <Logo
+            sx={{
+              width: { md: 190, xs: 180 },
+              height: { md: 50, xs: 40 },
+              objectFit: "cover",
+            }}
+          />
 
           <MHidden width="mdDown">
             <MenuDesktop isHome={isHome} navConfig={menuConfig} />
           </MHidden>
           <MHidden width="mdDown">
             <Stack direction="row" spacing={2}>
-              <TButton  
-                href={PATH_AUTH.login}
-                name='ouvrir un compte'
-              />
-            
+              <TButton href={PATH_AUTH.login} name="ouvrir un compte" />
             </Stack>
           </MHidden>
 

@@ -1,4 +1,3 @@
-import { LoadingButton } from "@mui/lab";
 import {
   Box,
   Grid,
@@ -10,9 +9,7 @@ import {
 import lampe_icon from "../assets/images/lampe_icon.png";
 import { MotionInView, varFadeInUp } from "./animate";
 import Logo from "./Logo";
-import  TButton  from "./tailwindComponent/TButton.js";
-
-
+import TButton from "./tailwindComponent/TButton.js";
 
 export default function Communautes() {
   return (
@@ -139,7 +136,7 @@ export default function Communautes() {
           />
         </MotionInView>
         <MotionInView variants={varFadeInUp} className="my-2">
-          <TButton name="M'abonner" link='/' /> 
+          <TButton name="M'abonner" link="/" />
         </MotionInView>
       </Stack>
     </Container>

@@ -29,11 +29,16 @@ export default function Router() {
       element: <MainLayout />,
       children: [{ element: <LandingPage />, index: true }],
     },
+    {
+      path: "/compte-ecologique-et-ethique",
+      element: <MainLayout />,
+      children: [{ element: <CompteEcologiqueEthique />, index: true }],
+    },
   ]);
 }
 
 // Main
 const LandingPage = Loadable(lazy(() => import("../pages/LandingPage")));
-// const ServiceRequest = Loadable(lazy(() => import("pages/ServiceRequest")));
-// const NotFound = Loadable(lazy(() => import("pages/Page404")));
-// const Contact = Loadable(lazy(() => import("pages/Contact")));
+const CompteEcologiqueEthique = Loadable(
+  lazy(() => import("../pages/CompteEcologiqueEthique"))
+);

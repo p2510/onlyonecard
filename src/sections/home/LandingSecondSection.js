@@ -1,13 +1,12 @@
-import { Box, Grid, Typography, Container, Button } from "@mui/material";
+import { Box, Grid, Typography, Container } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 import {
   MotionInView,
   varFadeInDown,
   varFadeInUp,
 } from "../../components/animate";
-import { AVANTAGES } from "./LandingSecondSection.constant";
-import  TButton  from "./../../components/tailwindComponent/TButton.js";
-
+import { AVANTAGES } from "./Home.constant";
+import TButton from "./../../components/tailwindComponent/TButton.js";
 
 export default function LandingSecondSection() {
   return (
@@ -108,7 +107,7 @@ export default function LandingSecondSection() {
             mb: { md: 25, xs: 16 },
           }}
         >
-        <TButton name="j'ouvre un compte écologique et éthique" link='/' />
+          <TButton name="j'ouvre un compte écologique et éthique" link="/" />
         </Grid>
       </MotionInView>
     </Container>
