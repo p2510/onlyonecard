@@ -7,6 +7,7 @@ import {
   Functionalities,
   BanqueSection,
   ValeurAndEngagement,
+  AboutUs,
 } from "src/sections/home";
 import ProjetsFiancesSection from "../sections/home/ProjetsFinancesSection";
 // sections
@@ -23,6 +24,7 @@ export default function LandingPage() {
       <Functionalities />
       <BanqueSection />
       <ValeurAndEngagement />
+      <AboutUs />
     </Page>
   );
 }
