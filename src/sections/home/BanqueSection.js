@@ -5,7 +5,7 @@ import {
   varFadeInUp,
 } from "../../components/animate";
 import Lock from "../../assets/images/Lock.png";
-import { BANQUEDATA } from "./LandingSecondSection.constant";
+import { BANQUEDATA } from "./Home.constant";
 
 export default function BanqueSection() {
   return (
