@@ -1,6 +1,6 @@
 import { NavLink as RouterLink, useLocation } from "react-router-dom";
 import { styled } from "@mui/system";
-import { Button, AppBar, Toolbar, Container, Stack } from "@mui/material";
+import {  AppBar, Toolbar, Container, Stack } from "@mui/material";
 import useOffSetTop from "../../hooks/useOffSetTop";
 import { PATH_AUTH } from "../../routes/paths";
 import { MHidden } from "../../components/@material-extend";
@@ -8,6 +8,8 @@ import MenuDesktop from "./MenuDesktop";
 import MenuMobile from "./MenuMobile";
 import menuConfig from "./menuConfig";
 import Logo from "../../components/Logo";
+import  TButton  from "./../../components/tailwindComponent/TButton.js";
+
 
 const APP_BAR_MOBILE = 64;
 const APP_BAR_DESKTOP = 90;
@@ -76,13 +78,11 @@ export default function MainHeader() {
           </MHidden>
           <MHidden width="mdDown">
             <Stack direction="row" spacing={2}>
-              <Button
-                sx={{ height: "40px" }}
-                variant="contained"
+              <TButton  
                 href={PATH_AUTH.login}
-              >
-                Ouvrir un compte
-              </Button>
+                name='ouvrir un compte'
+              />
+            
             </Stack>
           </MHidden>
 

@@ -88,6 +88,7 @@ export default function ProjetsFiancesSection() {
                       height="160"
                       image={biodiversite}
                       alt="green iguana"
+                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
                     />
                   </Card>
                 </MotionInView>
@@ -100,6 +101,7 @@ export default function ProjetsFiancesSection() {
                       height="160"
                       image={ecosysteme}
                       alt="green iguana"
+                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
                     />
                   </Card>
                 </MotionInView>
@@ -112,6 +114,7 @@ export default function ProjetsFiancesSection() {
                       height="160"
                       image={inegalite}
                       alt="green iguana"
+                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
                     />
                   </Card>
                 </MotionInView>
@@ -152,6 +155,7 @@ export default function ProjetsFiancesSection() {
                       height="162"
                       image={ecologique}
                       alt="green iguana"
+                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
                     />
                   </Card>
                 </MotionInView>
@@ -164,6 +168,7 @@ export default function ProjetsFiancesSection() {
                       height="162"
                       image={foret}
                       alt="green iguana"
+                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
                     />
                   </Card>
                 </MotionInView>
@@ -176,6 +181,7 @@ export default function ProjetsFiancesSection() {
                       height="162"
                       image={territoire}
                       alt="green iguana"
+                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
                     />
                   </Card>
                 </MotionInView>
@@ -188,6 +194,7 @@ export default function ProjetsFiancesSection() {
                       height="162"
                       image={association}
                       alt="green iguana"
+                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
                     />
                   </Card>
                 </MotionInView>
@@ -200,6 +207,7 @@ export default function ProjetsFiancesSection() {
                       height="162"
                       image={climatique}
                       alt="green iguana"
+                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
                     />
                   </Card>
                 </MotionInView>
@@ -212,6 +220,7 @@ export default function ProjetsFiancesSection() {
                       height="162"
                       image={energetique}
                       alt="green iguana"
+                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
                     />
                   </Card>
                 </MotionInView>

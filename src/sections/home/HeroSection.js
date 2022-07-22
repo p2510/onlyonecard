@@ -3,6 +3,8 @@ import { Box, Grid, Button, Typography } from "@mui/material";
 import { MHidden } from "../../components/@material-extend";
 import hero1 from "../../assets/images/hero1.png";
 import word from "../../assets/images/word.png";
+import  TButton  from "./../../components/tailwindComponent/TButton.js";
+
 
 import {
   varFadeInUp,
@@ -80,25 +82,9 @@ export default function HeroSection() {
           </MotionInView>
 
           <MotionInView variants={varFadeInUp}>
-            <Button
-              size="medium"
-              variant="contained"
-              sx={{
-                backgroundImage: "linear-gradient(to top, #41d0f5, #19c2a8  )",
-                fontSize: "18px",
-                width: "auto",
-                "&:hover": {
-                  bgcolor: "#41d0f5",
-                },
-                padding: "18px 18px",
-                mt: {
-                  md: 5,
-                  xs: "20px",
-                },
-              }}
-            >
-              Comment ça marche ?
-            </Button>
+          <TButton name=" Comment ça marche ?" link='/' />
+
+             
           </MotionInView>
         </Grid>
       </Grid>
@@ -147,25 +133,7 @@ export default function HeroSection() {
           </MotionInView>
 
           <MotionInView variants={varFadeInUp}>
-            <Button
-              size="medium"
-              variant="contained"
-              sx={{
-                backgroundImage: "linear-gradient(to top, #41d0f5, #19c2a8  )",
-                fontSize: "18px",
-                width: "auto",
-                "&:hover": {
-                  bgcolor: "#41d0f5",
-                },
-                padding: "18px 18px",
-                mt: {
-                  md: 5,
-                  xs: "20px",
-                },
-              }}
-            >
-              Comment ça marche ?
-            </Button>
+          <TButton name="j'explore la place impact" link='/' />
           </MotionInView>
         </Grid>
         <MHidden width="mdDown">

@@ -11,6 +11,8 @@ import {
 } from "../../components/animate";
 import { FONCTIONNALITES } from "./Functionalities.constant";
 import ImageItem from "../../components/ImageItem";
+import  TButton  from "./../../components/tailwindComponent/TButton.js";
+
 
 // ----------------------------------------------------------------------
 
@@ -144,25 +146,9 @@ export default function Functionalities() {
         </MotionInView>
 
         <MotionInView variants={varFadeInUp}>
-          <Button
-            size="medium"
-            variant="contained"
-            sx={{
-              backgroundImage: "linear-gradient(to top, #41d0f5, #19c2a8  )",
-              fontSize: "18px",
-              width: "auto",
-              "&:hover": {
-                bgcolor: "#41d0f5",
-              },
-              padding: "18px 18px",
-              mt: {
-                md: 5,
-                xs: "20px",
-              },
-            }}
-          >
-            Je découvre toutes les fonctionnalités
-          </Button>
+        <TButton name="Je découvre toutes les fonctionnalités" link='/' />
+
+            
         </MotionInView>
       </Grid>
     </Grid>
