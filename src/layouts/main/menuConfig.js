@@ -1,5 +1,6 @@
 // components
 import Iconify from "../../components/Iconify";
+import { PATH_PAGE } from "../../routes/paths";
 
 // ----------------------------------------------------------------------
 
@@ -12,7 +13,7 @@ const menuConfig = [
   {
     title: "Compte écologique et éthique",
     icon: <Iconify icon={"eva:home-fill"} {...ICON_SIZE} />,
-    path: "/",
+    path: PATH_PAGE.CompteEcologiqueEthique,
   },
   {
     title: "Notre mission",

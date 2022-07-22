@@ -1,10 +1,9 @@
 import { styled } from "@mui/system";
-import { Box, Grid, Button, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { MHidden } from "../../components/@material-extend";
 import hero1 from "../../assets/images/hero1.png";
 import word from "../../assets/images/word.png";
-import  TButton  from "./../../components/tailwindComponent/TButton.js";
-
+import TButton from "./../../components/tailwindComponent/TButton.js";
 
 import {
   varFadeInUp,
@@ -68,6 +67,7 @@ export default function HeroSection() {
             <Typography
               sx={{
                 opacity: 0.72,
+                mb: 5,
                 fontSize: "18px",
               }}
             >
@@ -82,9 +82,7 @@ export default function HeroSection() {
           </MotionInView>
 
           <MotionInView variants={varFadeInUp}>
-          <TButton name=" Comment ça marche ?" link='/' />
-
-             
+            <TButton name=" Comment ça marche ?" link="/" />
           </MotionInView>
         </Grid>
       </Grid>
@@ -120,6 +118,7 @@ export default function HeroSection() {
             <Typography
               sx={{
                 opacity: 0.72,
+                mb: 5,
                 fontSize: "18px",
               }}
             >
@@ -133,7 +132,7 @@ export default function HeroSection() {
           </MotionInView>
 
           <MotionInView variants={varFadeInUp}>
-          <TButton name="j'explore la place impact" link='/' />
+            <TButton name="j'explore la place impact" link="/" />
           </MotionInView>
         </Grid>
         <MHidden width="mdDown">

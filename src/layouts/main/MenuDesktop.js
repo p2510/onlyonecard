@@ -277,10 +277,10 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
       component={RouterLink}
       end={path === "/"}
       sx={{
-        ...(isHome && { color: "common.white" }),
+        ...(isHome && { color: "common.black" }),
         ...(isOffset && { color: "text.primary" }),
         "&.active": {
-          color: "primary.main",
+          color: "black",
         },
       }}
     >

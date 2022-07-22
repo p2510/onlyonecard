@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Grid, Button, Typography, Card } from "@mui/material";
+import { Grid, Typography, Card } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 import { useTheme } from "@mui/material/styles";
 import Slider from "react-slick";
@@ -9,10 +9,9 @@ import {
   MotionInView,
   varFadeInLeft,
 } from "../../components/animate";
-import { FONCTIONNALITES } from "./Functionalities.constant";
+import { FONCTIONNALITES } from "./Home.constant";
 import ImageItem from "../../components/ImageItem";
-import  TButton  from "./../../components/tailwindComponent/TButton.js";
-
+import TButton from "./../../components/tailwindComponent/TButton.js";
 
 // ----------------------------------------------------------------------
 
@@ -137,6 +136,7 @@ export default function Functionalities() {
             sx={{
               opacity: 0.72,
               fontSize: "18px",
+              mb: 5,
               mt: 1,
             }}
           >
@@ -146,9 +146,7 @@ export default function Functionalities() {
         </MotionInView>
 
         <MotionInView variants={varFadeInUp}>
-        <TButton name="Je découvre toutes les fonctionnalités" link='/' />
-
-            
+          <TButton name="Je découvre toutes les fonctionnalités" link="/" />
         </MotionInView>
       </Grid>
     </Grid>

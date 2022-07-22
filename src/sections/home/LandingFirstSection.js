@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { styled } from "@mui/system";
-import { Box, Typography, Grid, Button } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import { MHidden } from "src/components/@material-extend";
 import ouverture_compte_img from "../../assets/images/ouverture_compte_img.png";
 import master_card from "../../assets/images/master_card.png";
@@ -12,7 +12,7 @@ import {
 } from "../../components/animate";
 import MotionInView from "../../components/animate/MotionInView";
 
-import  TButton  from "./../../components/tailwindComponent/TButton.js";
+import TButton from "./../../components/tailwindComponent/TButton.js";
 
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: "cover",
@@ -70,17 +70,16 @@ export default function LandingFirstSection() {
                 <Typography
                   variant="h5"
                   sx={{
+                    mb: 5,
                     fontWeight: "fontWeightMedium",
                   }}
                 >
                   Et tous les services de gestion de compte au quotidien.
                 </Typography>
               </Box>
-           
             </motion.div>
             <MotionInView variants={varFadeInUp}>
-            <TButton name="En savoir plus" link='/' />
-            
+              <TButton name="En savoir plus" link="/" />
             </MotionInView>
             <Box
               component="img"
@@ -91,8 +90,8 @@ export default function LandingFirstSection() {
                 height: 70,
                 alignItems: "center",
                 objectFit: "cover",
-                opacity:'0.5',
-                filter: 'grayscale(100%)'
+                opacity: "0.5",
+                filter: "grayscale(100%)",
               }}
             />
           </Box>
