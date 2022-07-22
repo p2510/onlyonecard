@@ -10,6 +10,9 @@ import {
 import lampe_icon from "../assets/images/lampe_icon.png";
 import { MotionInView, varFadeInUp } from "./animate";
 import Logo from "./Logo";
+import  TButton  from "./tailwindComponent/TButton.js";
+
+
 
 export default function Communautes() {
   return (
@@ -135,21 +138,8 @@ export default function Communautes() {
             label="* votre@email.com"
           />
         </MotionInView>
-        <MotionInView variants={varFadeInUp}>
-          <LoadingButton
-            type="submit"
-            size="medium"
-            variant="contained"
-            sx={{
-              backgroundImage: "linear-gradient(to top, #41d0f5, #19c2a8  )",
-              fontSize: "15px",
-              "&:hover": { backgroundPosition: "left" },
-              padding: "10px",
-              mt: "10px",
-            }}
-          >
-            M'abonner
-          </LoadingButton>
+        <MotionInView variants={varFadeInUp} className="my-2">
+          <TButton name="M'abonner" link='/' /> 
         </MotionInView>
       </Stack>
     </Container>
