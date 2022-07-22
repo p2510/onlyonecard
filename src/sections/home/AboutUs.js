@@ -10,6 +10,8 @@ import {
 import { ABOUTUSDATA } from "./LandingSecondSection.constant";
 import CarouselDots from "../../components/CarouselDots";
 import Communautes from "src/components/Communautes";
+import  TButton  from "./../../components/tailwindComponent/TButton.js";
+
 
 export default function AboutUs({ isActive }) {
   const theme = useTheme();
@@ -105,21 +107,7 @@ export default function AboutUs({ isActive }) {
               mb: { md: 25, xs: 16 },
             }}
           >
-            <Button
-              size="medium"
-              variant="contained"
-              sx={{
-                backgroundImage: "linear-gradient(to top, #41d0f5, #19c2a8  )",
-                fontSize: "18px",
-                width: "auto",
-                "&:hover": {
-                  bgcolor: "#41d0f5",
-                },
-                padding: "12px 38px",
-              }}
-            >
-              Je démarre
-            </Button>
+            <TButton name="Je démarre" link='/' />
           </Grid>
         </MotionInView>
         <Communautes />

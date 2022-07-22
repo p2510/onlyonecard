@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, Container, Button } from "@mui/material";
+import { Box, Grid, Typography, Container } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 import {
   MotionInView,
@@ -6,6 +6,7 @@ import {
   varFadeInUp,
 } from "../../components/animate";
 import { AVANTAGES } from "./LandingSecondSection.constant";
+import TButton from "./../../components/tailwindComponent/TButton.js";
 
 export default function LandingSecondSection() {
   return (
@@ -104,25 +105,7 @@ export default function LandingSecondSection() {
             mb: { md: 25, xs: 16 },
           }}
         >
-          <Button
-            size="medium"
-            variant="contained"
-            sx={{
-              backgroundImage: "linear-gradient(to top, #41d0f5, #19c2a8  )",
-              fontSize: "18px",
-              width: "auto",
-              "&:hover": {
-                bgcolor: "#41d0f5",
-              },
-              padding: "18px 18px",
-              mt: {
-                md: 5,
-                xs: "20px",
-              },
-            }}
-          >
-            J'ouvre un compte écologique et éthique
-          </Button>
+          <TButton name="j'ouvre un compte écologique et éthique" link="/" />
         </Grid>
       </MotionInView>
     </Container>

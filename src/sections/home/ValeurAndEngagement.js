@@ -8,6 +8,8 @@ import {
 import unicef_icon from "../../assets/images/unicef_icon.png";
 import { VALEURANDENGAGEMENTDATA } from "./LandingSecondSection.constant";
 import { MHidden } from "src/components/@material-extend";
+import  TButton  from "./../../components/tailwindComponent/TButton.js";
+
 
 export default function ValeurAndEngagement() {
   return (
@@ -131,25 +133,9 @@ export default function ValeurAndEngagement() {
           </MotionInView>
 
           <MotionInView variants={varFadeInUp}>
-            <Button
-              size="medium"
-              variant="contained"
-              sx={{
-                backgroundImage: "linear-gradient(to top, #41d0f5, #19c2a8  )",
-                fontSize: "18px",
-                width: "auto",
-                "&:hover": {
-                  bgcolor: "#41d0f5",
-                },
-                padding: "18px 40px",
-                mt: {
-                  md: 5,
-                  xs: "20px",
-                },
-              }}
-            >
-              La mission d'OnlyOne
-            </Button>
+          <TButton name="La mission d'OnlyOne" link='/' />
+
+   
           </MotionInView>
         </Grid>
         <MHidden width="mdDown">

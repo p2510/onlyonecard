@@ -8,10 +8,11 @@ import MenuDesktop from "./MenuDesktop";
 import MenuMobile from "./MenuMobile";
 import menuConfig from "./menuConfig";
 import Logo from "../../../atoms/Logo";
+import { PATH_AUTH } from "../../routes/paths";
+import TButton from "./../../components/tailwindComponent/TButton.js";
 
 const APP_BAR_MOBILE = 64;
 const APP_BAR_DESKTOP = 90;
-
 const ToolbarStyle = styled(Toolbar)(({ theme }) => ({
   height: APP_BAR_MOBILE,
   transition: theme.transitions.create(["height", "background-color"], {
@@ -22,7 +23,6 @@ const ToolbarStyle = styled(Toolbar)(({ theme }) => ({
     height: APP_BAR_DESKTOP,
   },
 }));
-
 const ToolbarShadowStyle = styled("div")(({ theme }) => ({
   left: 0,
   right: 0,
@@ -67,7 +67,6 @@ export default function MainHeader() {
               objectFit: "cover",
             }}
           />
-
           <MHidden width="mdDown">
             <MenuDesktop isHome={isHome} navConfig={menuConfig} />
           </MHidden>
@@ -85,9 +84,9 @@ export default function MainHeader() {
               >
                 Ouvrir un compte
               </Button>
+              <TButton href={PATH_AUTH.login} name="ouvrir un compte" />
             </Stack>
           </MHidden>
-
           <MHidden width="mdUp">
             <MenuMobile navConfig={menuConfig} />
           </MHidden>
