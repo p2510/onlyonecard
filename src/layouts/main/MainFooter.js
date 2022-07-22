@@ -25,6 +25,8 @@ import {
   varFadeInUp,
 } from "../../components/animate/variants/fade/";
 import { LoadingButton } from "@mui/lab";
+import  TButton  from "./../../components/tailwindComponent/TButton.js";
+
 
 export default function MainFooter() {
   const currentDate = new Date();
@@ -168,23 +170,9 @@ export default function MainFooter() {
                 label="* votre@email.com"
               />
             </MotionInView>
-            <MotionInView variants={varFadeInUp}>
-              <LoadingButton
-                type="submit"
-                size="medium"
-                variant="contained"
-                sx={{
-                  backgroundImage:
-                    "linear-gradient(to top, #41d0f5, #19c2a8  )",
-                  fontSize: "15px",
-                  width: "8rem",
-                  "&:hover": { backgroundPosition: "left" },
-                  padding: "10px",
-                  mt: "10px",
-                }}
-              >
-                M'abonner
-              </LoadingButton>
+            <MotionInView variants={varFadeInUp} className='my-2'>
+             <TButton name="M'abonner" link='/' /> 
+
             </MotionInView>
           </Stack>
         </Grid>

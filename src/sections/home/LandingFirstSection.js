@@ -12,6 +12,8 @@ import {
 } from "../../components/animate";
 import MotionInView from "../../components/animate/MotionInView";
 
+import  TButton  from "./../../components/tailwindComponent/TButton.js";
+
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: "cover",
   backgroundPosition: "center",
@@ -74,23 +76,11 @@ export default function LandingFirstSection() {
                   Et tous les services de gestion de compte au quotidien.
                 </Typography>
               </Box>
+           
             </motion.div>
             <MotionInView variants={varFadeInUp}>
-              <Button
-                size="medium"
-                variant="contained"
-                sx={{
-                  backgroundImage:
-                    "linear-gradient(to top, #41d0f5, #19c2a8  )",
-                  fontSize: "20px",
-                  width: "14rem",
-                  "&:hover": { backgroundPosition: "left" },
-                  padding: "10px",
-                  mt: "30px",
-                }}
-              >
-                En savoir Plus
-              </Button>
+            <TButton name="En savoir plus" link='/' />
+            
             </MotionInView>
             <Box
               component="img"
@@ -101,6 +91,8 @@ export default function LandingFirstSection() {
                 height: 70,
                 alignItems: "center",
                 objectFit: "cover",
+                opacity:'0.5',
+                filter: 'grayscale(100%)'
               }}
             />
           </Box>
