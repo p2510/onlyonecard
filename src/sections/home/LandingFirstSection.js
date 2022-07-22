@@ -11,7 +11,13 @@ import {
   varFadeInUp,
 } from "../../components/animate";
 import MotionInView from "../../components/animate/MotionInView";
+<<<<<<< HEAD
 import TButton from "./../../components/tailwindComponent/TButton.js";
+=======
+
+import TButton from "./../../components/tailwindComponent/TButton.js";
+
+>>>>>>> implementation des sections ouverture de compte et des differents services
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: "cover",
   backgroundPosition: "center",
@@ -66,6 +72,7 @@ export default function LandingFirstSection() {
                 <Typography
                   variant="h5"
                   sx={{
+                    mb: 5,
                     fontWeight: "fontWeightMedium",
                   }}
                 >

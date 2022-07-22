@@ -23,7 +23,6 @@ import {
   varFadeInLeft,
   varFadeInUp,
 } from "../../components/animate/variants/fade/";
-import TButton from "./../../components/tailwindComponent/TButton.js";
 
 export default function MainFooter() {
   const currentDate = new Date();
@@ -180,9 +179,6 @@ export default function MainFooter() {
                 </Link>
               </Button>
             ))}
-            <MotionInView variants={varFadeInUp} className="my-2">
-              <TButton name="M'abonner" link="/" />
-            </MotionInView>
           </Stack>
         </Grid>
       </Grid>

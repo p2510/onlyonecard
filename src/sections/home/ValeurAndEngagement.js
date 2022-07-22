@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, Container, Button } from "@mui/material";
+import { Box, Grid, Typography, Container } from "@mui/material";
 import {
   MotionInView,
   varFadeInDown,
@@ -6,10 +6,9 @@ import {
   varFadeInUp,
 } from "../../components/animate";
 import unicef_icon from "../../assets/images/unicef_icon.png";
-import { VALEURANDENGAGEMENTDATA } from "./LandingSecondSection.constant";
+import { VALEURANDENGAGEMENTDATA } from "./Home.constant";
 import { MHidden } from "src/components/@material-extend";
-import  TButton  from "./../../components/tailwindComponent/TButton.js";
-
+import TButton from "./../../components/tailwindComponent/TButton.js";
 
 export default function ValeurAndEngagement() {
   return (
@@ -119,6 +118,7 @@ export default function ValeurAndEngagement() {
             <Typography
               sx={{
                 fontSize: "18px",
+                mb: 5,
               }}
             >
               <br />
@@ -133,9 +133,7 @@ export default function ValeurAndEngagement() {
           </MotionInView>
 
           <MotionInView variants={varFadeInUp}>
-          <TButton name="La mission d'OnlyOne" link='/' />
-
-   
+            <TButton name="La mission d'OnlyOne" link="/" />
           </MotionInView>
         </Grid>
         <MHidden width="mdDown">

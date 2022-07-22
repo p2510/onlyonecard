@@ -8,8 +8,6 @@ import MenuDesktop from "./MenuDesktop";
 import MenuMobile from "./MenuMobile";
 import menuConfig from "./menuConfig";
 import Logo from "../../../atoms/Logo";
-import { PATH_AUTH } from "../../routes/paths";
-import TButton from "./../../components/tailwindComponent/TButton.js";
 
 const APP_BAR_MOBILE = 64;
 const APP_BAR_DESKTOP = 90;
@@ -40,7 +38,6 @@ export default function MainHeader() {
   const isOffset = useOffSetTop(100);
   const { pathname } = useLocation();
   const isHome = pathname === "/";
-
   return (
     <AppBar sx={{ boxShadow: 0, bgcolor: "transparent" }}>
       <ToolbarStyle
@@ -84,7 +81,6 @@ export default function MainHeader() {
               >
                 Ouvrir un compte
               </Button>
-              <TButton href={PATH_AUTH.login} name="ouvrir un compte" />
             </Stack>
           </MHidden>
           <MHidden width="mdUp">

@@ -4,6 +4,10 @@ import { MHidden } from "../../components/@material-extend";
 import hero1 from "../../assets/images/hero1.png";
 import word from "../../assets/images/word.png";
 import TButton from "./../../components/tailwindComponent/TButton.js";
+<<<<<<< HEAD
+=======
+
+>>>>>>> implementation des sections ouverture de compte et des differents services
 import {
   varFadeInUp,
   MotionInView,
@@ -59,6 +63,7 @@ export default function HeroSection() {
             <Typography
               sx={{
                 opacity: 0.72,
+                mb: 5,
                 fontSize: "18px",
               }}
             >
@@ -108,6 +113,7 @@ export default function HeroSection() {
             <Typography
               sx={{
                 opacity: 0.72,
+                mb: 5,
                 fontSize: "18px",
               }}
             >
