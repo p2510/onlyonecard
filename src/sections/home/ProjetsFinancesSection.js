@@ -44,7 +44,8 @@ export default function ProjetsFiancesSection() {
           mb: 3,
         }}
       >
-        Les projets financés par la communauté OnlyOne.
+        Les projets financés par la communauté OnlyOne
+        <span style={{ color: "#00db89" }}>.</span>
       </Typography>
       <Grid
         container
@@ -88,7 +89,7 @@ export default function ProjetsFiancesSection() {
                       height="160"
                       image={biodiversite}
                       alt="green iguana"
-                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
+                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
                     />
                   </Card>
                 </MotionInView>
@@ -101,7 +102,7 @@ export default function ProjetsFiancesSection() {
                       height="160"
                       image={ecosysteme}
                       alt="green iguana"
-                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
+                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
                     />
                   </Card>
                 </MotionInView>
@@ -114,7 +115,7 @@ export default function ProjetsFiancesSection() {
                       height="160"
                       image={inegalite}
                       alt="green iguana"
-                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
+                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
                     />
                   </Card>
                 </MotionInView>
@@ -155,7 +156,7 @@ export default function ProjetsFiancesSection() {
                       height="162"
                       image={ecologique}
                       alt="green iguana"
-                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
+                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
                     />
                   </Card>
                 </MotionInView>
@@ -168,7 +169,7 @@ export default function ProjetsFiancesSection() {
                       height="162"
                       image={foret}
                       alt="green iguana"
-                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
+                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
                     />
                   </Card>
                 </MotionInView>
@@ -181,7 +182,7 @@ export default function ProjetsFiancesSection() {
                       height="162"
                       image={territoire}
                       alt="green iguana"
-                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
+                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
                     />
                   </Card>
                 </MotionInView>
@@ -194,7 +195,7 @@ export default function ProjetsFiancesSection() {
                       height="162"
                       image={association}
                       alt="green iguana"
-                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
+                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
                     />
                   </Card>
                 </MotionInView>
@@ -207,7 +208,7 @@ export default function ProjetsFiancesSection() {
                       height="162"
                       image={climatique}
                       alt="green iguana"
-                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
+                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
                     />
                   </Card>
                 </MotionInView>
@@ -220,7 +221,7 @@ export default function ProjetsFiancesSection() {
                       height="162"
                       image={energetique}
                       alt="green iguana"
-                      className='opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 '
+                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
                     />
                   </Card>
                 </MotionInView>

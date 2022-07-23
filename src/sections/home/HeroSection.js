@@ -59,7 +59,8 @@ export default function HeroSection() {
                 lineHeight: "1em",
               }}
             >
-              Chaque euro peut devenir une bonne action !
+              Chaque euro peut devenir une bonne action{" "}
+              <span style={{ color: "#00db89" }}>!</span>
             </Typography>
           </MotionInView>
 
@@ -110,7 +111,8 @@ export default function HeroSection() {
                 lineHeight: "1em",
               }}
             >
-              Épargnez votre argent, épargnez la planète !
+              Épargnez votre argent, épargnez la planète{" "}
+              <span style={{ color: "#00db89" }}>!</span>
             </Typography>
           </MotionInView>
 
