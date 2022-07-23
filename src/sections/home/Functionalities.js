@@ -67,7 +67,8 @@ export default function Functionalities() {
               lineHeight: "1em",
             }}
           >
-            Un compte innovant, simple et responsable.
+            Un compte innovant, simple et responsable
+            <span style={{ color: "#00db89" }}>.</span>
           </Typography>
         </MotionInView>
 
