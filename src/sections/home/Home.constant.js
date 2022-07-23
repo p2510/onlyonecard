@@ -90,7 +90,7 @@ export const VALEURANDENGAGEMENTDATA = [
 export const ABOUTUSDATA = [
   {
     id: 1,
-    icon: `${transparent_icon}`,
+    icon: `${google_play_icon}`,
     paragraphe: `Banque en ligne éco-responsable avec peu de frais !`,
     libele: `Rose`,
   },

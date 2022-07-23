@@ -11,13 +11,7 @@ import {
   varFadeInUp,
 } from "../../components/animate";
 import MotionInView from "../../components/animate/MotionInView";
-<<<<<<< HEAD
-import TButton from "./../../components/tailwindComponent/TButton.js";
-=======
 
-import TButton from "./../../components/tailwindComponent/TButton.js";
-
->>>>>>> implementation des sections ouverture de compte et des differents services
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: "cover",
   backgroundPosition: "center",
@@ -80,9 +74,6 @@ export default function LandingFirstSection() {
                 </Typography>
               </Box>
             </motion.div>
-            <MotionInView variants={varFadeInUp}>
-              <TButton name="En savoir plus" link="/" />
-            </MotionInView>
             <Box
               component="img"
               alt="Eco-compte Onlyone"

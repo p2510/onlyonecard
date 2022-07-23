@@ -40,7 +40,8 @@ export default function ProjetsFiancesSection() {
           mb: 3,
         }}
       >
-        Les projets financés par la communauté OnlyOne.
+        Les projets financés par la communauté OnlyOne
+        <span style={{ color: "#00db89" }}>.</span>
       </Typography>
       <Grid
         container

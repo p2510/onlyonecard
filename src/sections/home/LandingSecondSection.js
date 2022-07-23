@@ -5,11 +5,7 @@ import {
   varFadeInDown,
   varFadeInUp,
 } from "../../components/animate";
-<<<<<<< HEAD
-import { AVANTAGES } from "./LandingSecondSection.constant";
-=======
 import { AVANTAGES } from "./Home.constant";
->>>>>>> implementation des sections ouverture de compte et des differents services
 import TButton from "./../../components/tailwindComponent/TButton.js";
 
 export default function LandingSecondSection() {

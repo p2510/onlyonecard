@@ -4,10 +4,6 @@ import { MHidden } from "../../components/@material-extend";
 import hero1 from "../../assets/images/hero1.png";
 import word from "../../assets/images/word.png";
 import TButton from "./../../components/tailwindComponent/TButton.js";
-<<<<<<< HEAD
-=======
-
->>>>>>> implementation des sections ouverture de compte et des differents services
 import {
   varFadeInUp,
   MotionInView,
@@ -56,7 +52,8 @@ export default function HeroSection() {
                 lineHeight: "1em",
               }}
             >
-              Chaque euro peut devenir une bonne action !
+              Chaque euro peut devenir une bonne action{" "}
+              <span style={{ color: "#00db89" }}>!</span>
             </Typography>
           </MotionInView>
           <MotionInView variants={varFadeInLeft}>
@@ -105,7 +102,8 @@ export default function HeroSection() {
                 lineHeight: "1em",
               }}
             >
-              Épargnez votre argent, épargnez la planète !
+              Épargnez votre argent, épargnez la planète{" "}
+              <span style={{ color: "#00db89" }}>!</span>
             </Typography>
           </MotionInView>
 
