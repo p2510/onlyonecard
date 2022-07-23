@@ -30,11 +30,8 @@ export default function DifferentsService() {
       >
         <Typography
           sx={{
-            display: "flex",
-            justifyContent: "center",
             fontSize: "2.4rem",
             fontWeight: "bold",
-            alignItems: "center",
             textAlign: "center",
             mb: 8,
             mt: {
@@ -43,7 +40,8 @@ export default function DifferentsService() {
             },
           }}
         >
-          Tous les services que l’on peut attendre d’un compte et bien au-delà.
+          <span>Tous les services que l’on peut attendre d’un</span> {""}
+          <span style={{ color: "#00db89" }}>compte et bien au-delà.</span>
         </Typography>
       </Grid>
       <Box sx={{ flexGrow: 1 }}>
