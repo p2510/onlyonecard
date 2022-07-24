@@ -23,7 +23,7 @@ const menuConfig = [
   {
     title: "Un geste, un impact",
     icon: <Iconify icon={"eva:home-fill"} {...ICON_SIZE} />,
-    path: "/",
+    path: PATH_PAGE.UnGesteUnImpact,
   },
   {
     title: "La chronique finance et impact",
