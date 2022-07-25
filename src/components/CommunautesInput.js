@@ -1,8 +1,21 @@
-import { Grid, Typography, Container, Stack, TextField } from "@mui/material";
+import PropTypes from "prop-types";
+import { Grid, Container, Stack, TextField, Box } from "@mui/material";
 import { MotionInView, varFadeInUp } from "./animate";
 import TButton from "./tailwindComponent/TButton.js";
 
-export default function CommunautesInput() {
+CommunautesInput.propTypes = {
+  title: PropTypes.any,
+  sx: PropTypes.any,
+  inputStyle: PropTypes.any,
+  buttonStyle: PropTypes.any,
+};
+
+export default function CommunautesInput({
+  title,
+  sx,
+  inputStyle,
+  buttonStyle,
+}) {
   return (
     <Container
       spacing={10}
@@ -10,6 +23,7 @@ export default function CommunautesInput() {
         dispaly: "flex",
         justifyContent: "center",
         alignItems: "center",
+        ...sx,
       }}
     >
       <Grid
@@ -21,16 +35,17 @@ export default function CommunautesInput() {
           justifyContent: "center",
         }}
       >
-        <Typography
+        <Box
           sx={{
             fontSize: "2.4rem",
             fontWeight: "bold",
             mb: 6,
             mt: 1,
+            ...sx,
           }}
         >
-          Rejoins la communauté
-        </Typography>
+          {title}
+        </Box>
       </Grid>
       <Stack
         sx={{
@@ -39,6 +54,7 @@ export default function CommunautesInput() {
             md: "15rem",
             xs: 0,
           },
+          ...inputStyle,
         }}
       >
         <MotionInView variants={varFadeInUp}>
@@ -55,9 +71,11 @@ export default function CommunautesInput() {
             label="* votre@email.com"
           />
         </MotionInView>
-        <MotionInView variants={varFadeInUp} className="my-2">
-          <TButton name="M'abonner" link="/" />
-        </MotionInView>
+        <Box sx={{ ...buttonStyle }}>
+          <MotionInView variants={varFadeInUp} className="my-2">
+            <TButton name="M'abonner" link="/" />
+          </MotionInView>
+        </Box>
       </Stack>
     </Container>
   );
