@@ -84,7 +84,7 @@ export default function Communautes() {
           Conciliez votre argent et vos valeurs.
         </Typography>
       </Grid>
-      <CommunautesInput />
+      <CommunautesInput title="Rejoins la communauté" />
     </Container>
   );
 }
