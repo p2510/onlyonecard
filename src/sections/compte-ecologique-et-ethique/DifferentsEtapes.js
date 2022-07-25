@@ -131,7 +131,7 @@ export default function DifferentsEtapes() {
           <TButton name="J'ouvre un compte" link="/" />
         </Grid>
       </MotionInView>
-      <CommunautesInput />
+      <CommunautesInput title="Rejoins la communauté" />
       <Grid
         item
         sx={{

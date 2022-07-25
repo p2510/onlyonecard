@@ -161,7 +161,6 @@ export default function DepenseEtProjet() {
         container
         spacing={1}
         sx={{
-          mb: 20,
           width: "80vw",
           mx: "auto",
         }}
