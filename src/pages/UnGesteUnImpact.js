@@ -6,7 +6,7 @@ import Page from "../components/Page";
 
 export default function UnGesteUnImpact() {
   return (
-    <Page title="Le 1er compte à impact positif | ONLYONE">
+    <Page title="Un geste un impact | ONLYONE">
       <DepenseEtProjet />
       <ConseilsEpargne />
     </Page>
