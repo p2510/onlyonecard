@@ -12,8 +12,8 @@ import ProjetsFiancesSection from "../sections/home/ProjetsFinancesSection";
 
 export default function LandingPage() {
   return (
-    <Page title="Le 1er compte à impact positif | ONLYONE">
-      <LandingFirstSection  />
+    <Page title="Page d'accueil | ONLYONE">
+      <LandingFirstSection />
       <LandingSecondSection />
       <HeroSection />
       <ProjetsFiancesSection />

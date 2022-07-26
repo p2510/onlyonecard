@@ -39,6 +39,11 @@ export default function Router() {
       element: <MainLayout />,
       children: [{ element: <UnGesteUnImpact />, index: true }],
     },
+    {
+      path: "/notre-mission",
+      element: <MainLayout />,
+      children: [{ element: <NotreMission />, index: true }],
+    },
   ]);
 }
 const LandingPage = Loadable(lazy(() => import("../pages/LandingPage")));
@@ -48,3 +53,4 @@ const CompteEcologiqueEthique = Loadable(
 const UnGesteUnImpact = Loadable(
   lazy(() => import("../pages/UnGesteUnImpact"))
 );
+const NotreMission = Loadable(lazy(() => import("../pages/NotreMission")));

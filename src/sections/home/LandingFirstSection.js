@@ -8,9 +8,7 @@ import {
   TextAnimate,
   varFadeInRight,
   varWrapEnter,
-  varFadeInUp,
 } from "../../components/animate";
-import MotionInView from "../../components/animate/MotionInView";
 
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: "cover",
