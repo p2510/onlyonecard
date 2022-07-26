@@ -10,7 +10,7 @@ import Page from "../components/Page";
 
 export default function CompteEcologiqueEthique() {
   return (
-    <Page title="Le 1er compte à impact positif | ONLYONE">
+    <Page title="Compte écologique et éthique | ONLYONE">
       <OuvrirUnCompte />
       <DifferentsService />
       <CartePaiementEtPrix />
