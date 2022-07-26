@@ -18,7 +18,7 @@ const menuConfig = [
   {
     title: "Notre mission",
     icon: <Iconify icon={"eva:home-fill"} {...ICON_SIZE} />,
-    path: "/",
+    path: PATH_PAGE.NotreMission,
   },
   {
     title: "Un geste, un impact",
