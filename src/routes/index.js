@@ -44,6 +44,11 @@ export default function Router() {
       element: <MainLayout />,
       children: [{ element: <NotreMission />, index: true }],
     },
+    {
+      path: "/blog",
+      element: <MainLayout />,
+      children: [{ element: <ChroniqueFinanceEtImpact />, index: true }],
+    },
   ]);
 }
 const LandingPage = Loadable(lazy(() => import("../pages/LandingPage")));
@@ -54,3 +59,6 @@ const UnGesteUnImpact = Loadable(
   lazy(() => import("../pages/UnGesteUnImpact"))
 );
 const NotreMission = Loadable(lazy(() => import("../pages/NotreMission")));
+const ChroniqueFinanceEtImpact = Loadable(
+  lazy(() => import("../pages/ChroniqueFinanceEtImpact"))
+);
