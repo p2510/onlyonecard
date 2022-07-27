@@ -28,7 +28,7 @@ const menuConfig = [
   {
     title: "La chronique finance et impact",
     icon: <Iconify icon={"eva:home-fill"} {...ICON_SIZE} />,
-    path: "/",
+    path: PATH_PAGE.ChroniqueFinanceEtImpact,
   },
 ];
 

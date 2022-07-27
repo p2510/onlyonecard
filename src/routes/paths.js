@@ -13,4 +13,5 @@ export const PATH_PAGE = {
   CompteEcologiqueEthique: "/compte-ecologique-et-ethique",
   UnGesteUnImpact: "/un-geste-un-impact",
   NotreMission: "/notre-mission",
+  ChroniqueFinanceEtImpact: "/blog",
 };
