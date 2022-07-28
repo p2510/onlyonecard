@@ -45,7 +45,7 @@ export default function BanqueSection() {
             },
           }}
         >
-          Votre argent est en{" "}
+          <span>Votre argent est en </span>
           <span style={{ color: "#00db89" }}> sécurité</span> !
         </Typography>
       </Grid>

@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import { styled } from "@mui/system";
 import { AppBar, Toolbar, Container, Stack } from "@mui/material";
 import useOffSetTop from "../../hooks/useOffSetTop";
-import { PATH_AUTH } from "../../routes/paths";
+import { PATH_PAGE } from "../../routes/paths";
 import { MHidden } from "../../components/@material-extend";
 import MenuDesktop from "./MenuDesktop";
 import MenuMobile from "./MenuMobile";
@@ -74,7 +74,10 @@ export default function MainHeader() {
           </MHidden>
           <MHidden width="mdDown">
             <Stack direction="row" spacing={2}>
-              <TButton href={PATH_AUTH.login} name="ouvrir un compte" />
+              <TButton
+                link={PATH_PAGE.OuvertureDeCompte}
+                name="ouvrir un compte"
+              />
             </Stack>
           </MHidden>
 
