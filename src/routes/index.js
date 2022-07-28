@@ -49,6 +49,11 @@ export default function Router() {
       element: <MainLayout />,
       children: [{ element: <ChroniqueFinanceEtImpact />, index: true }],
     },
+    {
+      path: "/ouvrir-un-compte-onlyone",
+      element: <MainLayout />,
+      children: [{ element: <OuvertureDeCompte />, index: true }],
+    },
   ]);
 }
 const LandingPage = Loadable(lazy(() => import("../pages/LandingPage")));
@@ -61,4 +66,7 @@ const UnGesteUnImpact = Loadable(
 const NotreMission = Loadable(lazy(() => import("../pages/NotreMission")));
 const ChroniqueFinanceEtImpact = Loadable(
   lazy(() => import("../pages/ChroniqueFinanceEtImpact"))
+);
+const OuvertureDeCompte = Loadable(
+  lazy(() => import("../pages/OuvertureDeCompte"))
 );
