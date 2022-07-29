@@ -9,6 +9,8 @@ import {
   MotionInView,
   varFadeInLeft,
 } from "../../components/animate";
+import { PATH_PAGE } from "src/routes/paths";
+
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
   paddingBottom: theme.spacing(10),
@@ -74,7 +76,10 @@ export default function HeroSection() {
             </Typography>
           </MotionInView>
           <MotionInView variants={varFadeInUp}>
-            <TButton name=" Comment ça marche ?" link="/" />
+            <TButton
+              name=" Comment ça marche ?"
+              link={PATH_PAGE.UnGesteUnImpact}
+            />
           </MotionInView>
         </Grid>
       </Grid>
