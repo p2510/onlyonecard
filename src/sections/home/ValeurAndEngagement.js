@@ -9,6 +9,7 @@ import unicef_icon from "../../assets/images/unicef_icon.png";
 import { VALEURANDENGAGEMENTDATA } from "./Home.constant";
 import { MHidden } from "src/components/@material-extend";
 import TButton from "./../../components/tailwindComponent/TButton.js";
+import { PATH_PAGE } from "src/routes/paths";
 
 export default function ValeurAndEngagement() {
   return (
@@ -133,7 +134,10 @@ export default function ValeurAndEngagement() {
           </MotionInView>
 
           <MotionInView variants={varFadeInUp}>
-            <TButton name="La mission d'OnlyOne" link="/" />
+            <TButton
+              name="La mission d'OnlyOne"
+              link={PATH_PAGE.NotreMission}
+            />
           </MotionInView>
         </Grid>
         <MHidden width="mdDown">

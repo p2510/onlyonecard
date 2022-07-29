@@ -11,6 +11,7 @@ import { ABOUTUSDATA } from "./Home.constant";
 import CarouselDots from "../../components/CarouselDots";
 import Communautes from "src/components/Communautes";
 import TButton from "./../../components/tailwindComponent/TButton.js";
+import Dialogue from "src/components/Dialogue";
 
 export default function AboutUs({ isActive }) {
   const theme = useTheme();
@@ -18,6 +19,18 @@ export default function AboutUs({ isActive }) {
   const [currentIndex, setCurrentIndex] = useState(
     theme.direction === "rtl" ? ABOUTUSDATA.length - 1 : 0
   );
+
+  const [open, setOpen] = useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const modalClose = () => {
+    setOpen(false);
+  };
+
+  const modalClickOpen = () => {
+    setOpen(true);
+  };
 
   const settings = {
     speed: 800,
@@ -100,17 +113,21 @@ export default function AboutUs({ isActive }) {
         </Typography>
         <MotionInView variants={varFadeInUp}>
           <Grid
+            open={isOpen}
+            onClose={() => setIsOpen(false)}
+            onClick={modalClickOpen}
             sx={{
               display: "flex",
               justifyContent: "center",
               mb: { md: 25, xs: 16 },
             }}
           >
-            <TButton name="Je démarre" link="/" />
+            <TButton name="Je démarre" />
           </Grid>
         </MotionInView>
         <Communautes />
       </Grid>
+      <Dialogue open={open} modalClose={modalClose} />
     </Container>
   );
 }

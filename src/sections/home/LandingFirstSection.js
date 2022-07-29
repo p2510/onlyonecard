@@ -13,6 +13,7 @@ import {
 import MotionInView from "../../components/animate/MotionInView";
 
 import TButton from "./../../components/tailwindComponent/TButton.js";
+import { PATH_PAGE } from "src/routes/paths";
 
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: "cover",
@@ -79,7 +80,7 @@ export default function LandingFirstSection() {
               </Box>
             </motion.div>
             <MotionInView variants={varFadeInUp}>
-              <TButton name="En savoir plus" link="/" />
+              <TButton name="En savoir plus" link={PATH_PAGE.UnGesteUnImpact} />
             </MotionInView>
             <Box
               component="img"
