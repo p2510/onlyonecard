@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Box, Grid, Typography, Container } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 import {
@@ -7,8 +8,21 @@ import {
 } from "../../components/animate";
 import { AVANTAGES } from "./Home.constant";
 import TButton from "./../../components/tailwindComponent/TButton.js";
+import Dialogue from "src/components/Dialogue";
 
 export default function LandingSecondSection() {
+  const [open, setOpen] = useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const modalClose = () => {
+    setOpen(false);
+  };
+
+  const modalClickOpen = () => {
+    setOpen(true);
+  };
+
   return (
     <Container spacing={10}>
       <Typography
@@ -101,15 +115,19 @@ export default function LandingSecondSection() {
       </Grid>
       <MotionInView variants={varFadeInUp}>
         <Grid
+          open={isOpen}
+          onClose={() => setIsOpen(false)}
+          onClick={modalClickOpen}
           sx={{
             display: "flex",
             justifyContent: "center",
             mb: { md: 25, xs: 16 },
           }}
         >
-          <TButton name="j'ouvre un compte écologique et éthique" link="/" />
+          <TButton name="j'ouvre un compte écologique et éthique" />
         </Grid>
       </MotionInView>
+      <Dialogue open={open} modalClose={modalClose} />
     </Container>
   );
 }
