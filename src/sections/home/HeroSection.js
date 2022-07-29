@@ -10,6 +10,7 @@ import {
   MotionInView,
   varFadeInLeft,
 } from "../../components/animate";
+import { PATH_PAGE } from "src/routes/paths";
 
 // ----------------------------------------------------------------------
 
@@ -83,7 +84,10 @@ export default function HeroSection() {
           </MotionInView>
 
           <MotionInView variants={varFadeInUp}>
-            <TButton name=" Comment ça marche ?" link="/" />
+            <TButton
+              name=" Comment ça marche ?"
+              link={PATH_PAGE.UnGesteUnImpact}
+            />
           </MotionInView>
         </Grid>
       </Grid>

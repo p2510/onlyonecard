@@ -12,6 +12,7 @@ import {
 import { FONCTIONNALITES } from "./Home.constant";
 import ImageItem from "../../components/ImageItem";
 import TButton from "./../../components/tailwindComponent/TButton.js";
+import { PATH_PAGE } from "src/routes/paths";
 
 // ----------------------------------------------------------------------
 
@@ -147,7 +148,10 @@ export default function Functionalities() {
         </MotionInView>
 
         <MotionInView variants={varFadeInUp}>
-          <TButton name="Je découvre toutes les fonctionnalités" link="/" />
+          <TButton
+            name="Je découvre toutes les fonctionnalités"
+            link={PATH_PAGE.CompteEcologiqueEthique}
+          />
         </MotionInView>
       </Grid>
     </Grid>
