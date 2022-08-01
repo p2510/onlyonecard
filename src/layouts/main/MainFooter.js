@@ -169,7 +169,7 @@ export default function MainFooter() {
               />
             </MotionInView>
             <MotionInView variants={varFadeInUp} className="my-2">
-              <TButton name="M'abonner" link="/" />
+              <TButton name="M'abonner" />
             </MotionInView>
           </Stack>
         </Grid>
