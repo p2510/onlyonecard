@@ -129,7 +129,10 @@ export default function HeroSection() {
             </Typography>
           </MotionInView>
           <MotionInView variants={varFadeInUp}>
-            <TButton name="j'explore la place impact" link="/" />
+            <TButton
+              name="j'explore la place impact"
+              link={PATH_PAGE.PlaceImpact}
+            />
           </MotionInView>
         </Grid>
         <MHidden width="mdDown">

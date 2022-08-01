@@ -54,6 +54,11 @@ export default function Router() {
       element: <MainLayout />,
       children: [{ element: <OuvertureDeCompte />, index: true }],
     },
+    {
+      path: "/place-impact",
+      element: <MainLayout />,
+      children: [{ element: <PlaceImpact />, index: true }],
+    },
   ]);
 }
 const LandingPage = Loadable(lazy(() => import("../pages/LandingPage")));
@@ -70,3 +75,4 @@ const ChroniqueFinanceEtImpact = Loadable(
 const OuvertureDeCompte = Loadable(
   lazy(() => import("../pages/OuvertureDeCompte"))
 );
+const PlaceImpact = Loadable(lazy(() => import("../pages/PlaceImpact")));
