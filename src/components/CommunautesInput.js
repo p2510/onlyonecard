@@ -73,7 +73,7 @@ export default function CommunautesInput({
         </MotionInView>
         <Box sx={{ ...buttonStyle }}>
           <MotionInView variants={varFadeInUp} className="my-2">
-            <TButton name="M'abonner" link="/" />
+            <TButton name="M'abonner" />
           </MotionInView>
         </Box>
       </Stack>
