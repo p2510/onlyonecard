@@ -14,8 +14,6 @@ import ImageItem from "../../components/ImageItem";
 import TButton from "./../../components/tailwindComponent/TButton.js";
 import { PATH_PAGE } from "src/routes/paths";
 
-// ----------------------------------------------------------------------
-
 export default function Functionalities() {
   const theme = useTheme();
   const carouselRef = useRef(null);
@@ -35,7 +33,6 @@ export default function Functionalities() {
   };
 
   return (
-    //     <RootStyle>
     <Grid
       container
       spacing={3}
@@ -155,6 +152,5 @@ export default function Functionalities() {
         </MotionInView>
       </Grid>
     </Grid>
-    //     </RootStyle>
   );
 }

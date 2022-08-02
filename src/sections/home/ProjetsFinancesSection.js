@@ -17,8 +17,6 @@ import {
   varFadeInLeft,
 } from "../../components/animate";
 
-// ----------------------------------------------------------------------
-
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
   marginBottom: "3.5rem",

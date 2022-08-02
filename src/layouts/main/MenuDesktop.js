@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { m } from "framer-motion";
 import { useState, useEffect } from "react";
 import { NavLink as RouterLink, useLocation } from "react-router-dom";
-// @mui
 import { styled } from "@mui/material/styles";
 import {
   Box,
@@ -15,10 +14,7 @@ import {
   ListSubheader,
   CardActionArea,
 } from "@mui/material";
-// components
 import Iconify from "../../components/Iconify";
-
-// ----------------------------------------------------------------------
 
 const LinkStyle = styled(Link)(({ theme }) => ({
   ...theme.typography.subtitle2,
@@ -43,8 +39,6 @@ const ListItemStyle = styled(ListItem)(({ theme }) => ({
     color: theme.palette.text.primary,
   },
 }));
-
-// ----------------------------------------------------------------------
 
 MenuDesktop.propTypes = {
   isHome: PropTypes.bool,
@@ -88,8 +82,6 @@ export default function MenuDesktop({ isOffset, isHome, navConfig }) {
   );
 }
 
-// ----------------------------------------------------------------------
-
 IconBullet.propTypes = {
   type: PropTypes.oneOf(["item", "subheader"]),
 };
@@ -116,8 +108,6 @@ function IconBullet({ type = "item" }) {
     </Box>
   );
 }
-
-// ----------------------------------------------------------------------
 
 MenuDesktopItem.propTypes = {
   isHome: PropTypes.bool,

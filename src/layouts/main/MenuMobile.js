@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { NavLink as RouterLink, useLocation } from "react-router-dom";
-// @mui
 import { alpha, styled } from "@mui/material/styles";
 import {
   Box,
@@ -13,16 +12,12 @@ import {
   ListItemIcon,
   ListItemButton,
 } from "@mui/material";
-// config
 import { NAVBAR } from "../../config";
-// components
 import Logo from "../../components/Logo";
 import Iconify from "../../components/Iconify";
 import Scrollbar from "../../components/Scrollbar";
 import { NavSectionVertical } from "../../components/nav-section";
 import IconButtonAnimate from "src/components/animate/IconButtonAnimate";
-
-// ----------------------------------------------------------------------
 
 const ListItemStyle = styled(ListItemButton)(({ theme }) => ({
   ...theme.typography.body2,
@@ -30,8 +25,6 @@ const ListItemStyle = styled(ListItemButton)(({ theme }) => ({
   textTransform: "capitalize",
   color: theme.palette.text.secondary,
 }));
-
-// ----------------------------------------------------------------------
 
 MenuMobile.propTypes = {
   isOffset: PropTypes.bool,
@@ -102,8 +95,6 @@ export default function MenuMobile({ isOffset, isHome, navConfig }) {
     </>
   );
 }
-
-// ----------------------------------------------------------------------
 
 MenuMobileItem.propTypes = {
   isOpen: PropTypes.bool,

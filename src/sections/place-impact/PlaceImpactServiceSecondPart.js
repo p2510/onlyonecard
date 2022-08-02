@@ -13,8 +13,6 @@ import {
   DATA,
 } from "./PlaceImpact.constant";
 
-// ----------------------------------------------------------------------
-
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
   paddingBottom: theme.spacing(10),
@@ -22,8 +20,6 @@ const RootStyle = styled("div")(({ theme }) => ({
     textAlign: "left",
   },
 }));
-
-// ----------------------------------------------------------------------
 
 export default function PlaceImpactServiceSecondPart() {
   return (
