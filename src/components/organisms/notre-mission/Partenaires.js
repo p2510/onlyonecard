@@ -106,7 +106,6 @@ export default function Partenaires() {
           </Typography>
         </Box>
       </MHidden>
-
       <Container
         direction={{ xs: "column", sm: "row" }}
         sx={{

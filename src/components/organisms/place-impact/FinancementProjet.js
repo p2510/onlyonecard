@@ -217,7 +217,6 @@ export default function FinancementProjet() {
         </Accordion>
         <Divider />
       </Container>
-
       <Box
         sx={{
           display: "flex",

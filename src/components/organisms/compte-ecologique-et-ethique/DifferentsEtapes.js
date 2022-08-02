@@ -230,7 +230,6 @@ export default function DifferentsEtapes() {
             <span style={{ color: "#FAAA42" }}>.</span>
           </Typography>
         </Grid>
-
         <Grid
           Container
           direction={{ xs: "column", sm: "row" }}

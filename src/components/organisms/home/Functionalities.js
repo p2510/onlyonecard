@@ -1,13 +1,10 @@
 import { useState, useRef } from "react";
 import { Grid, Typography, Card, Button, Box } from "@mui/material";
-// import CheckIcon from "@mui/icons-material/Check";
 import { useTheme } from "@mui/material/styles";
 import Slider from "react-slick";
-
 import { varFadeInUp, MotionInView, varFadeInLeft } from "../../atoms/animate";
 import { FONCTIONNALITES } from "./Home.constant";
 import ImageItem from "../../atoms/ImageItem";
-// import TButton from "../../atoms/tailwindComponent/TButton.js";
 import { PATH_PAGE } from "../../../configues//routes/paths";
 import { MHidden } from "src/components/atoms/@material-extend";
 

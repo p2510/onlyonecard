@@ -29,24 +29,8 @@ export default function Communautes() {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
-            mb: 5,
-            mt: {
-              md: 1,
-            },
           }}
         >
-          <Typography
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              fontSize: "2.5rem",
-              fontWeight: "bold",
-              alignItems: "center",
-              mr: "1rem",
-            }}
-          >
-            Un Compte
-          </Typography>
           <Typography
             sx={{
               display: "flex",
@@ -54,11 +38,37 @@ export default function Communautes() {
               fontSize: "2.4rem",
               fontWeight: "bold",
               alignItems: "center",
-              color: "#00bd85",
+              mb: 5,
+              mt: {
+                md: 1,
+              },
             }}
           >
-            <Typewriter words={["simple", "sécurisé", "responsable"]} loop />
-            <Cursor />
+            <Typography
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                fontSize: "2.5rem",
+                fontWeight: "bold",
+                alignItems: "center",
+                mr: "1rem",
+              }}
+            >
+              Un Compte
+            </Typography>
+            <Typography
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                fontSize: "2.4rem",
+                fontWeight: "bold",
+                alignItems: "center",
+                color: "#00bd85",
+              }}
+            >
+              <Typewriter words={["simple", "sécurisé", "responsable"]} loop />
+              <Cursor />
+            </Typography>
           </Typography>
         </Box>
         <Box
@@ -73,7 +83,6 @@ export default function Communautes() {
         />
         <Logo />
       </Grid>
-
       <Grid
         Container
         direction={{ xs: "column", sm: "row" }}

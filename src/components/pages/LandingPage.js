@@ -8,8 +8,6 @@ import {
 } from "../organisms/home";
 import ProjetsFiancesSection from "../organisms/home/ProjetsFinancesSection";
 
-// ----------------------------------------------------------------------
-
 export default function LandingPage() {
   return (
     <Page title="Page d'accueil | ONLYONE">

@@ -4,8 +4,6 @@ import { MHidden } from "../../atoms/@material-extend";
 import carte_paiement from "../../../assets/images/carte_paiement.png";
 import frais_bancaire from "../../../assets/images/frais_bancaire.png";
 import Lock from "../../../assets/images/Lock.png";
-import TButton from "../../atoms/tailwindComponent/TButton.js";
-
 import {
   varFadeInUp,
   MotionInView,
@@ -14,7 +12,6 @@ import {
 } from "../../atoms/animate";
 import { BANQUEDATA } from "../home/Home.constant";
 import Banques from "../../molecules/Banques";
-import { PATH_PAGE } from "src/configues/routes/paths";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -63,7 +60,6 @@ export default function CartePaiementEtPrix() {
             </MotionInView>
           </Grid>
         </MHidden>
-        8
         <Grid item xs={12} md={6} lg={5} mt="2rem">
           <MotionInView variants={varFadeInLeft}>
             <Typography
@@ -79,7 +75,6 @@ export default function CartePaiementEtPrix() {
               Recevez la 1ère carte de paiement éco-responsable !
             </Typography>
           </MotionInView>
-
           <MotionInView variants={varFadeInLeft}>
             <Typography
               sx={{
@@ -136,7 +131,6 @@ export default function CartePaiementEtPrix() {
               Le prix de la transparence
             </Typography>
           </MotionInView>
-
           <MotionInView variants={varFadeInLeft}>
             <Typography
               sx={{
@@ -161,14 +155,6 @@ export default function CartePaiementEtPrix() {
               Et oui, tout ça !
             </Typography>
           </MotionInView>
-          <Box sx={{ ml: { md: 10 } }}>
-            <MotionInView variants={varFadeInUp}>
-              <TButton
-                name="je trouve l'abonnement qui me convient"
-                link={PATH_PAGE.TarifsEtAbonnements}
-              />
-            </MotionInView>
-          </Box>
         </Grid>
         <MHidden width="mdDown">
           <Grid

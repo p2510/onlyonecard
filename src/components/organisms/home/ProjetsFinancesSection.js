@@ -5,7 +5,6 @@ import CardMedia from "@mui/material/CardMedia";
 import projet_image_1 from "../../../assets/images/projet_image_1.svg";
 import projet_image_2 from "../../../assets/images/projet_image_2.svg";
 import "react-lazy-load-image-component/src/effects/blur.css";
-
 import { varFadeInUp, MotionInView, varFadeInLeft } from "../../atoms/animate";
 import { MHidden } from "src/components/atoms/@material-extend";
 import { ECOCOMPTEDATA, EPARGNEDATA } from "./Home.constant";
@@ -18,8 +17,6 @@ const RootStyle = styled("div")(({ theme }) => ({
     textAlign: "left",
   },
 }));
-
-// ----------------------------------------------------------------------
 
 export default function ProjetsFiancesSection() {
   return (

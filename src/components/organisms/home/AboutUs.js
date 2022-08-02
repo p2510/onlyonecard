@@ -31,7 +31,6 @@ export default function AboutUs({ isActive }) {
   const modalClose = () => {
     setOpen(false);
   };
-
   const settings = {
     speed: 800,
     dots: true,

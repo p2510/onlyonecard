@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import { Box, Grid, Typography, Container } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
-import {
-  MotionInView,
-  varFadeInDown,
-  varFadeInUp,
-} from "../../components/animate";
+import { MotionInView, varFadeInDown, varFadeInUp } from "../../atoms/animate";
 import { AVANTAGES } from "./Home.constant";
-import TButton from "./../../components/tailwindComponent/TButton.js";
-import Dialogue from "src/components/Dialogue";
+import TButton from "../../atoms/tailwindComponent/TButton.js";
+import Dialogue from "../../molecules/Dialogue";
 
 export default function LandingSecondSection() {
   const [open, setOpen] = useState(false);
