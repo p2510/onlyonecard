@@ -12,8 +12,6 @@ import {
 } from "../../components/animate";
 import { PATH_PAGE } from "src/routes/paths";
 
-// ----------------------------------------------------------------------
-
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
   paddingBottom: theme.spacing(10),
@@ -21,8 +19,6 @@ const RootStyle = styled("div")(({ theme }) => ({
     textAlign: "left",
   },
 }));
-
-// ----------------------------------------------------------------------
 
 export default function HeroSection() {
   return (

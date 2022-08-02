@@ -26,8 +26,6 @@ const RootStyle = styled(motion.div)(({ theme }) => ({
   },
 }));
 
-// ----------------------------------------------------------------------
-
 export default function LandingFirstSection() {
   return (
     <RootStyle initial="initial" animate="animate" variants={varWrapEnter}>

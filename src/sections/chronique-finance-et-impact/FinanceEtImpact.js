@@ -20,8 +20,6 @@ import {
   BUTTONLABELLEDATA,
 } from "./ChroniqueFinanceEtImpact.constant";
 
-// ----------------------------------------------------------------------
-
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
   paddingBottom: theme.spacing(10),

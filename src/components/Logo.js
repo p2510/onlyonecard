@@ -1,10 +1,7 @@
 import PropTypes from "prop-types";
 import { Link as RouterLink } from "react-router-dom";
 import onlyone_logo from "../assets/images/onlyone_logo.png";
-// @mui
 import { Box } from "@mui/material";
-
-// ----------------------------------------------------------------------
 
 Logo.propTypes = {
   disabledLink: PropTypes.bool,

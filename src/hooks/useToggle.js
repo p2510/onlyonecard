@@ -1,6 +1,4 @@
-import { useState } from 'react';
-
-// ----------------------------------------------------------------------
+import { useState } from "react";
 
 export default function useToggle(defaultChecked) {
   const [toggle, setToggle] = useState(defaultChecked || false);
