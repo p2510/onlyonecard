@@ -1,9 +1,7 @@
-import { useState } from 'react';
-
-// ----------------------------------------------------------------------
+import { useState } from "react";
 
 export default function useTabs(defaultValues) {
-  const [currentTab, setCurrentTab] = useState(defaultValues || '');
+  const [currentTab, setCurrentTab] = useState(defaultValues || "");
 
   return {
     currentTab,

@@ -1,8 +1,5 @@
-// @mui
 import { styled } from "@mui/material/styles";
 import { Box } from "@mui/material";
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Box, {
   shouldForwardProp: (prop) => prop !== "rounded",
@@ -45,8 +42,6 @@ const DotStyle = styled("span")(({ theme }) => ({
     duration: theme.transitions.duration.short,
   }),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function CarouselDots(props) {
   const color = props?.color;

@@ -13,8 +13,6 @@ import {
 } from "../../components/animate";
 import CommunautesInput from "src/components/CommunautesInput";
 
-// ----------------------------------------------------------------------
-
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
   paddingBottom: theme.spacing(10),
@@ -36,8 +34,6 @@ const titre = (
     <span>grâce à un compte écologique et une épargne positive.</span>
   </Typography>
 );
-
-// ----------------------------------------------------------------------
 
 export default function ConseilsEpargne() {
   return (
