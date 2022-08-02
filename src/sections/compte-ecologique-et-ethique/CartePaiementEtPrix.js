@@ -15,8 +15,6 @@ import {
 import { BANQUEDATA } from "../home/Home.constant";
 import Banques from "src/components/Banques";
 
-// ----------------------------------------------------------------------
-
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
   paddingBottom: theme.spacing(10),
@@ -24,8 +22,6 @@ const RootStyle = styled("div")(({ theme }) => ({
     textAlign: "left",
   },
 }));
-
-// ----------------------------------------------------------------------
 
 export default function CartePaiementEtPrix() {
   return (

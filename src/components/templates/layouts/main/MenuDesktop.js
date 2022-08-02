@@ -244,7 +244,6 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
       </>
     );
   }
-
   if (title === "Documentation") {
     return (
       <LinkStyle

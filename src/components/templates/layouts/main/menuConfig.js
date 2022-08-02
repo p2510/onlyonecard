@@ -1,5 +1,10 @@
+<<<<<<< HEAD:src/components/templates/layouts/main/menuConfig.js
 import Iconify from "../../../atoms/Iconify";
 import { PATH_PAGE } from "../../../../configues/routes/paths";
+=======
+import Iconify from "../../components/Iconify";
+import { PATH_PAGE } from "../../routes/paths";
+>>>>>>> review de tout les compossants:src/layouts/main/menuConfig.js
 
 const ICON_SIZE = {
   width: 20,

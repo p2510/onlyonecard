@@ -1,6 +1,10 @@
 import { alpha, styled } from "@mui/material/styles";
 import { Button, Popover } from "@mui/material";
+<<<<<<< HEAD:src/components/templates/nav-section/horizontal/style.js
 import { NAVBAR } from "../../../../config";
+=======
+import { NAVBAR } from "../../../config";
+>>>>>>> review de tout les compossants:src/components/nav-section/horizontal/style.js
 
 export const ListItemStyle = styled(Button, {
   shouldForwardProp: (prop) =>

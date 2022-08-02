@@ -12,8 +12,6 @@ import CommunautesInput from "src/components/CommunautesInput";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-// ----------------------------------------------------------------------
-
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
   marginBottom: "3.5rem",
@@ -52,8 +50,6 @@ const titre = (
     de la biodiversité et de la société
   </Typography>
 );
-
-// ----------------------------------------------------------------------
 
 export default function FinancementProjet() {
   const [expanded, setExpanded] = useState(true);

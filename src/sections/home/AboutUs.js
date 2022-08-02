@@ -50,8 +50,6 @@ export default function AboutUs({ isActive }) {
     }),
   };
 
-  // const { paragraphe, libele, icon } = item;
-
   return (
     <Container
       spacing={10}
