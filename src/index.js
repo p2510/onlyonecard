@@ -1,9 +1,3 @@
-// i18n
-import "./locales/i18n";
-
-// highlight
-
-// scroll bar
 import "simplebar/src/simplebar.css";
 
 // lightbox

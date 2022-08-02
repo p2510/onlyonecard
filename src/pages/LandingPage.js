@@ -1,4 +1,3 @@
-// components
 import LandingFirstSection from "../sections/home/LandingFirstSection";
 import Page from "../components/Page";
 import {
@@ -10,7 +9,6 @@ import {
   AboutUs,
 } from "src/sections/home";
 import ProjetsFiancesSection from "../sections/home/ProjetsFinancesSection";
-// sections
 
 // ----------------------------------------------------------------------
 

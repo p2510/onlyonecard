@@ -1,13 +1,9 @@
-import PropTypes from 'prop-types';
-import { NavLink as RouterLink } from 'react-router-dom';
-// @mui
-import { Box, Link, ListItemText } from '@mui/material';
-//
-import Iconify from '../../Iconify';
-import { ListItemStyle, ListItemTextStyle, ListItemIconStyle } from './style';
-import { isExternalLink } from '..';
-
-// ----------------------------------------------------------------------
+import PropTypes from "prop-types";
+import { NavLink as RouterLink } from "react-router-dom";
+import { Box, Link, ListItemText } from "@mui/material";
+import Iconify from "../../Iconify";
+import { ListItemStyle, ListItemTextStyle, ListItemIconStyle } from "./style";
+import { isExternalLink } from "..";
 
 NavItemRoot.propTypes = {
   active: PropTypes.bool,
@@ -23,13 +19,23 @@ NavItemRoot.propTypes = {
   }),
 };
 
-export function NavItemRoot({ item, isCollapse, open = false, active, onOpen }) {
+export function NavItemRoot({
+  item,
+  isCollapse,
+  open = false,
+  active,
+  onOpen,
+}) {
   const { title, path, icon, info, children } = item;
 
   const renderContent = (
     <>
       {icon && <ListItemIconStyle>{icon}</ListItemIconStyle>}
-      <ListItemTextStyle disableTypography primary={title} isCollapse={isCollapse} />
+      <ListItemTextStyle
+        disableTypography
+        primary={title}
+        isCollapse={isCollapse}
+      />
       {!isCollapse && (
         <>
           {info && info}
@@ -57,8 +63,6 @@ export function NavItemRoot({ item, isCollapse, open = false, active, onOpen }) 
     </ListItemStyle>
   );
 }
-
-// ----------------------------------------------------------------------
 
 NavItemSub.propTypes = {
   active: PropTypes.bool,
@@ -93,7 +97,13 @@ export function NavItemSub({ item, open = false, active = false, onOpen }) {
   }
 
   return isExternalLink(path) ? (
-    <ListItemStyle component={Link} href={path} target="_blank" rel="noopener" subItem>
+    <ListItemStyle
+      component={Link}
+      href={path}
+      target="_blank"
+      rel="noopener"
+      subItem
+    >
       {renderContent}
     </ListItemStyle>
   ) : (
@@ -102,8 +112,6 @@ export function NavItemSub({ item, open = false, active = false, onOpen }) {
     </ListItemStyle>
   );
 }
-
-// ----------------------------------------------------------------------
 
 DotIcon.propTypes = {
   active: PropTypes.bool,
@@ -117,23 +125,21 @@ export function DotIcon({ active }) {
         sx={{
           width: 4,
           height: 4,
-          borderRadius: '50%',
-          bgcolor: 'text.disabled',
+          borderRadius: "50%",
+          bgcolor: "text.disabled",
           transition: (theme) =>
-            theme.transitions.create('transform', {
+            theme.transitions.create("transform", {
               duration: theme.transitions.duration.shorter,
             }),
           ...(active && {
-            transform: 'scale(2)',
-            bgcolor: 'primary.main',
+            transform: "scale(2)",
+            bgcolor: "primary.main",
           }),
         }}
       />
     </ListItemIconStyle>
   );
 }
-
-// ----------------------------------------------------------------------
 
 ArrowIcon.propTypes = {
   open: PropTypes.bool,
@@ -142,7 +148,7 @@ ArrowIcon.propTypes = {
 export function ArrowIcon({ open }) {
   return (
     <Iconify
-      icon={open ? 'eva:arrow-ios-downward-fill' : 'eva:arrow-ios-forward-fill'}
+      icon={open ? "eva:arrow-ios-downward-fill" : "eva:arrow-ios-forward-fill"}
       sx={{ width: 16, height: 16, ml: 1 }}
     />
   );

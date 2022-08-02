@@ -1,8 +1,5 @@
-// components
 import Iconify from "../../components/Iconify";
 import { PATH_PAGE } from "../../routes/paths";
-
-// ----------------------------------------------------------------------
 
 const ICON_SIZE = {
   width: 20,

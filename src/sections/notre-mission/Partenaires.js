@@ -11,8 +11,6 @@ import { MHidden } from "src/components/@material-extend";
 import developpement_durable from "../../assets/images/developpement_durable.png";
 import CommunautesInput from "src/components/CommunautesInput";
 
-// ----------------------------------------------------------------------
-
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
   paddingBottom: theme.spacing(10),
@@ -37,8 +35,6 @@ const titre = (
     transparent et sécurisé.
   </Typography>
 );
-
-// ----------------------------------------------------------------------
 
 export default function Partenaires() {
   return (

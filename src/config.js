@@ -1,9 +1,3 @@
-// API
-// ---------------------------------------------------------------------
-
-// LAYOUT
-// ----------------------------------------------------------------------
-
 export const HEADER = {
   MOBILE_HEIGHT: 64,
   MAIN_DESKTOP_HEIGHT: 88,
@@ -25,10 +19,6 @@ export const ICON = {
   NAVBAR_ITEM: 22,
   NAVBAR_ITEM_HORIZONTAL: 20,
 };
-
-// SETTINGS
-// Please remove `localStorage` when you set settings.
-// ----------------------------------------------------------------------
 
 export const defaultSettings = {
   themeMode: "light",

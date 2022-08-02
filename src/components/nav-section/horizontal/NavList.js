@@ -1,12 +1,9 @@
-import PropTypes from 'prop-types';
-import { useState, useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
-//
-import { NavItemRoot, NavItemSub } from './NavItem';
-import { PaperStyle } from './style';
-import { getActive } from '..';
-
-// ----------------------------------------------------------------------
+import PropTypes from "prop-types";
+import { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
+import { NavItemRoot, NavItemSub } from "./NavItem";
+import { PaperStyle } from "./style";
+import { getActive } from "..";
 
 NavListRoot.propTypes = {
   list: PropTypes.shape({
@@ -56,8 +53,8 @@ export function NavListRoot({ list }) {
         <PaperStyle
           open={open}
           anchorEl={menuRef.current}
-          anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
-          transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+          anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+          transformOrigin={{ vertical: "top", horizontal: "left" }}
           PaperProps={{
             onMouseEnter: handleOpen,
             onMouseLeave: handleClose,
@@ -73,8 +70,6 @@ export function NavListRoot({ list }) {
 
   return <NavItemRoot item={list} active={active} />;
 }
-
-// ----------------------------------------------------------------------
 
 NavListSub.propTypes = {
   list: PropTypes.shape({
@@ -117,8 +112,8 @@ function NavListSub({ list }) {
         <PaperStyle
           open={open}
           anchorEl={menuRef.current}
-          anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-          transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+          anchorOrigin={{ vertical: "top", horizontal: "right" }}
+          transformOrigin={{ vertical: "top", horizontal: "left" }}
           PaperProps={{
             onMouseEnter: handleOpen,
             onMouseLeave: handleClose,

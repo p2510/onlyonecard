@@ -1,9 +1,11 @@
-import PropTypes from 'prop-types';
-import { Link as RouterLink } from 'react-router-dom';
-// @mui
-import { Box, Link, Typography, Breadcrumbs as MUIBreadcrumbs } from '@mui/material';
-
-// ----------------------------------------------------------------------
+import PropTypes from "prop-types";
+import { Link as RouterLink } from "react-router-dom";
+import {
+  Box,
+  Link,
+  Typography,
+  Breadcrumbs as MUIBreadcrumbs,
+} from "@mui/material";
 
 Breadcrumbs.propTypes = {
   activeLast: PropTypes.bool,
@@ -13,7 +15,9 @@ Breadcrumbs.propTypes = {
 export default function Breadcrumbs({ links, activeLast = false, ...other }) {
   const currentLink = links[links.length - 1].name;
 
-  const listDefault = links.map((link) => <LinkItem key={link.name} link={link} />);
+  const listDefault = links.map((link) => (
+    <LinkItem key={link.name} link={link} />
+  ));
 
   const listActiveLast = links.map((link) => (
     <div key={link.name}>
@@ -24,10 +28,10 @@ export default function Breadcrumbs({ links, activeLast = false, ...other }) {
           variant="body2"
           sx={{
             maxWidth: 260,
-            overflow: 'hidden',
-            whiteSpace: 'nowrap',
-            color: 'text.disabled',
-            textOverflow: 'ellipsis',
+            overflow: "hidden",
+            whiteSpace: "nowrap",
+            color: "text.disabled",
+            textOverflow: "ellipsis",
           }}
         >
           {currentLink}
@@ -38,7 +42,17 @@ export default function Breadcrumbs({ links, activeLast = false, ...other }) {
 
   return (
     <MUIBreadcrumbs
-      separator={<Box component="span" sx={{ width: 4, height: 4, borderRadius: '50%', bgcolor: 'text.disabled' }} />}
+      separator={
+        <Box
+          component="span"
+          sx={{
+            width: 4,
+            height: 4,
+            borderRadius: "50%",
+            bgcolor: "text.disabled",
+          }}
+        />
+      }
       {...other}
     >
       {activeLast ? listDefault : listActiveLast}
@@ -63,16 +77,18 @@ function LinkItem({ link }) {
       key={name}
       variant="body2"
       component={RouterLink}
-      to={href || '#'}
+      to={href || "#"}
       sx={{
         lineHeight: 2,
-        display: 'flex',
-        alignItems: 'center',
-        color: 'text.primary',
-        '& > div': { display: 'inherit' },
+        display: "flex",
+        alignItems: "center",
+        color: "text.primary",
+        "& > div": { display: "inherit" },
       }}
     >
-      {icon && <Box sx={{ mr: 1, '& svg': { width: 20, height: 20 } }}>{icon}</Box>}
+      {icon && (
+        <Box sx={{ mr: 1, "& svg": { width: 20, height: 20 } }}>{icon}</Box>
+      )}
       {name}
     </Link>
   );

@@ -1,10 +1,7 @@
 import PropTypes from "prop-types";
 import { m } from "framer-motion";
 import { forwardRef } from "react";
-// @mui
 import { Box, IconButton } from "@mui/material";
-
-// ----------------------------------------------------------------------
 
 const IconButtonAnimate = forwardRef(
   ({ children, size = "medium", ...other }, ref) => (
@@ -32,8 +29,6 @@ IconButtonAnimate.propTypes = {
 };
 
 export default IconButtonAnimate;
-
-// ----------------------------------------------------------------------
 
 const varSmall = {
   hover: { scale: 1.1 },

@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
-// material
 import { Typography } from "@mui/material";
-//
 import { varFadeInUp } from "./variants";
 
 TextAnimate.propTypes = {
