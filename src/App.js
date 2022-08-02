@@ -1,6 +1,6 @@
-import Router from "./routes";
-import ThemeProvider from "./theme";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./components/atoms/ScrollToTop";
+import Router from "./configues/routes";
+import ThemeProvider from "./configues/theme";
 
 function App() {
   return (
