@@ -14,6 +14,7 @@ import {
 } from "../../atoms/animate";
 import { BANQUEDATA } from "../home/Home.constant";
 import Banques from "../../molecules/Banques";
+import { PATH_PAGE } from "src/configues/routes/paths";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -161,7 +162,10 @@ export default function CartePaiementEtPrix() {
           </MotionInView>
           <Box sx={{ ml: { md: 10 } }}>
             <MotionInView variants={varFadeInUp}>
-              <TButton name="je trouve l'abonnement qui me convient" link="/" />
+              <TButton
+                name="je trouve l'abonnement qui me convient"
+                link={PATH_PAGE.TarifsEtAbonnements}
+              />
             </MotionInView>
           </Box>
         </Grid>
