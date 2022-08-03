@@ -59,6 +59,11 @@ export default function Router() {
       element: <MainLayout />,
       children: [{ element: <PlaceImpact />, index: true }],
     },
+    {
+      path: "/nos-tarifs-et-abonnements",
+      element: <MainLayout />,
+      children: [{ element: <TarifsEtAbonnements />, index: true }],
+    },
   ]);
 }
 
@@ -83,4 +88,7 @@ const OuvertureDeCompte = Loadable(
 );
 const PlaceImpact = Loadable(
   lazy(() => import("../../components/pages/PlaceImpact"))
+);
+const TarifsEtAbonnements = Loadable(
+  lazy(() => import("../../components/pages/TarifsEtAbonnements"))
 );

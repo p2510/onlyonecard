@@ -92,17 +92,20 @@ export const DIFFERENTSETAPESDATA = [
     icon: `${etape_1}`,
     title: `Comment ça marche`,
     paragraphe: `Dès la souscription, je connais les projets financés grâce à mon compte éthique et écologique et je commence déjà à créer de l’impact positif.`,
+    link: `un-geste-un-impact`,
   },
   {
     id: 2,
     icon: `${etape_2}`,
     title: `Je découvre l'éco-coach`,
     paragraphe: `J’agrège mes comptes bancaires et je réalise un bilan carbone complet. Je commence à recevoir des notifications personnalisées si je le souhaite.`,
+    link: `nos-tarifs-et-abonnements`,
   },
   {
     id: 3,
     icon: `${etape_3}`,
     title: `Je découvre la Place Impact`,
     paragraphe: `Je découvre des produits d’épargne durables et je profite d’offres spécifiques sur la Place Impact de l’application.`,
+    link: `place-impact`,
   },
 ];

@@ -16,4 +16,5 @@ export const PATH_PAGE = {
   ChroniqueFinanceEtImpact: "/blog",
   OuvertureDeCompte: "/ouvrir-un-compte-onlyone",
   PlaceImpact: "/place-impact",
+  TarifsEtAbonnements: "/nos-tarifs-et-abonnements",
 };
