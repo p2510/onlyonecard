@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import etoile from "../../../assets/images/etoile.svg";
 
 export const COUTDATA = [
   {
     id: 1,
     title: "marque andre",
+=======
+export const COUTDATA = [
+  {
+    id: 1,
+>>>>>>> première partie des fonctionnalites principales
     libelle: "Coût mensuel",
     valeurParAn: "3€",
     valeurParMois: "6€",
@@ -15,6 +21,7 @@ export const COUTDATA = [
     valeurParMois: "58€",
   },
 ];
+<<<<<<< HEAD
 
 export const TABLEAUDERESUMEDATA = [
   {
@@ -193,3 +200,5 @@ export const TABLEAUDERESUMEDATA = [
     icon: `${etoile}`,
   },
 ];
+=======
+>>>>>>> première partie des fonctionnalites principales
