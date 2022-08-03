@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Box, Grid, Typography, Container } from "@mui/material";
 import { MHidden } from "../../atoms/@material-extend";
 import CommunautesInput from "../../molecules/CommunautesInput";
@@ -7,8 +8,18 @@ import {
   DIFFERENTSETAPESDATA,
   PARTENAIRELOGODATA,
 } from "./CompteEcologiqueEtEthique.constant";
+import Dialogue from "src/components/molecules/Dialogue";
 
 export default function DifferentsEtapes() {
+  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const modalClose = () => {
+    setOpen(false);
+  };
+  const modalClickOpen = () => {
+    setOpen(true);
+  };
+
   return (
     <Container
       spacing={2}
@@ -99,7 +110,7 @@ export default function DifferentsEtapes() {
                     width: 380,
                   }}
                 >
-                  <TButton name={item.title} />
+                  <TButton name={item.title} link={item.link} />
                 </Grid>
               </MHidden>
             </MotionInView>
@@ -122,13 +133,16 @@ export default function DifferentsEtapes() {
       </Typography>
       <MotionInView variants={varFadeInUp}>
         <Grid
+          open={isOpen}
+          onClose={() => setIsOpen(false)}
+          onClick={modalClickOpen}
           sx={{
             display: "flex",
             justifyContent: "center",
             mb: { md: 13, xs: 16 },
           }}
         >
-          <TButton name="J'ouvre un compte" link="/" />
+          <TButton name="J'ouvre un compte" />
         </Grid>
       </MotionInView>
       <CommunautesInput title="Rejoins la communauté" />
@@ -194,6 +208,7 @@ export default function DifferentsEtapes() {
           </Grid>
         ))}
       </Grid>
+      <Dialogue open={open} modalClose={modalClose} />
     </Container>
   );
 }
