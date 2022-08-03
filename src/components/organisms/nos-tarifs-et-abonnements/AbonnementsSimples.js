@@ -3,7 +3,11 @@ import abonnement_simple_img from "../../../assets/images/abonnement_simple_img.
 import { styled } from "@mui/system";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { MHidden } from "src/components/atoms/@material-extend";
-import { MotionInView, varFadeInLeft } from "src/components/atoms/animate";
+import {
+  MotionInView,
+  varFadeInLeft,
+  varFadeInUp,
+} from "src/components/atoms/animate";
 
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
@@ -11,7 +15,7 @@ import { useTheme } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import TButton from "src/components/atoms/tailwindComponent/TButton";
+import TButton from "../../../components/atoms/tailwindComponent/TButton";
 import Dialogue from "src/components/molecules/Dialogue";
 
 const RootStyle = styled("div")(({ theme }) => ({
@@ -227,7 +231,15 @@ export default function AbonnementsSimples() {
                     Compte <br /> Jeune
                   </span>
                   <br />
-                  <span style={{ fontSize: "40px", fontWeight: "bold" }}>
+                  <span
+                    style={{
+                      fontSize: {
+                        md: "70px",
+                        sx: "38px",
+                      },
+                      fontWeight: "bold",
+                    }}
+                  >
                     3€
                   </span>
                   TTC/ mois
@@ -237,14 +249,25 @@ export default function AbonnementsSimples() {
                     fontSize: "20px",
                     fontWeight: "bold",
                     mt: 4,
-                    mr: "23rem",
+                    mr: {
+                      md: "23rem",
+                      xs: 0,
+                    },
                   }}
                 >
                   <span style={{ fontSize: "20px", fontWeight: 5 }}>
                     Compte <br /> Impact
                   </span>
                   <br />
-                  <span style={{ fontSize: "40px", fontWeight: "bold" }}>
+                  <span
+                    style={{
+                      fontSize: {
+                        md: "40px",
+                        sx: "38px",
+                      },
+                      fontWeight: "bold",
+                    }}
+                  >
                     6€
                   </span>
                   TTC/ mois
@@ -270,7 +293,15 @@ export default function AbonnementsSimples() {
                     Compte <br /> Jeune
                   </span>
                   <br />
-                  <span style={{ fontSize: "40px", fontWeight: "bold" }}>
+                  <span
+                    style={{
+                      fontSize: {
+                        md: "40px",
+                        sx: "38px",
+                      },
+                      fontWeight: "bold",
+                    }}
+                  >
                     29€
                   </span>
                   TTC/ an
@@ -280,14 +311,25 @@ export default function AbonnementsSimples() {
                     fontSize: "20px",
                     fontWeight: "bold",
                     mt: 4,
-                    mr: "23rem",
+                    mr: {
+                      md: "23rem",
+                      xs: 0,
+                    },
                   }}
                 >
                   <span style={{ fontSize: "20px", fontWeight: 5 }}>
                     Compte <br /> Impact
                   </span>
                   <br />
-                  <span style={{ fontSize: "40px", fontWeight: "bold" }}>
+                  <span
+                    style={{
+                      fontSize: {
+                        md: "40px",
+                        sx: "37px",
+                      },
+                      fontWeight: "bold",
+                    }}
+                  >
                     58€
                   </span>
                   TTC/ an
@@ -296,19 +338,20 @@ export default function AbonnementsSimples() {
             </TabPanel>
           </SwipeableViews>
         </Box>
-        <Box
-          open={isOpen}
-          onClose={() => setIsOpen(false)}
-          onClick={modalClickOpen}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            mt: 8,
-            padding: -15,
-          }}
-        >
-          <TButton name="Ouvrir un éco-compte" />
-        </Box>
+        <MotionInView variants={varFadeInUp}>
+          <Grid
+            open={isOpen}
+            onClose={() => setIsOpen(false)}
+            onClick={modalClickOpen}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              mt: 8,
+            }}
+          >
+            <TButton name="Ouvrir un éco-compte" />
+          </Grid>
+        </MotionInView>
       </Container>
       <Dialogue open={open} modalClose={modalClose} />
     </RootStyle>
