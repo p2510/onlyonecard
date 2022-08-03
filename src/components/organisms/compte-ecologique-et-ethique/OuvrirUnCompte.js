@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { styled } from "@mui/system";
 import { Box, Grid, Typography, Card } from "@mui/material";
 import { MHidden } from "../../atoms/@material-extend";
@@ -5,6 +6,7 @@ import eco_coach from "../../../assets/images/eco_coach.png";
 import TButton from "../../atoms/tailwindComponent/TButton.js";
 
 import { varFadeInUp, MotionInView, varFadeInLeft } from "../../atoms/animate";
+import Dialogue from "src/components/molecules/Dialogue";
 
 // ----------------------------------------------------------------------
 
@@ -19,6 +21,15 @@ const RootStyle = styled("div")(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function OuvrirUnCompte() {
+  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const modalClose = () => {
+    setOpen(false);
+  };
+  const modalClickOpen = () => {
+    setOpen(true);
+  };
+
   return (
     <RootStyle>
       <Grid
@@ -68,11 +79,16 @@ export default function OuvrirUnCompte() {
               C’est simple et c’est bien.
             </Typography>
           </MotionInView>
-          <Box sx={{ ml: { md: 20 } }}>
-            <MotionInView variants={varFadeInUp}>
-              <TButton name="C'est parti !" link="/" />
-            </MotionInView>
-          </Box>
+          <MotionInView variants={varFadeInUp}>
+            <Grid
+              open={isOpen}
+              onClose={() => setIsOpen(false)}
+              onClick={modalClickOpen}
+              sx={{ ml: { md: 20 } }}
+            >
+              <TButton name="C'est parti !" />
+            </Grid>
+          </MotionInView>
         </Grid>
         <MHidden width="mdDown">
           <Grid item xs={12} md={6} lg={4.5}>
@@ -98,6 +114,7 @@ export default function OuvrirUnCompte() {
           </Grid>
         </MHidden>
       </Grid>
+      <Dialogue open={open} modalClose={modalClose} />
     </RootStyle>
   );
 }

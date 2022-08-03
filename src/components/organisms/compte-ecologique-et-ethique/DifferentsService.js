@@ -1,9 +1,20 @@
+import React, { useState } from "react";
 import { Box, Grid, Typography, Container } from "@mui/material";
 import { MotionInView, varFadeInDown, varFadeInUp } from "../../atoms/animate";
 import { VALEURANDENGAGEMENTDATA } from "./CompteEcologiqueEtEthique.constant";
 import TButton from "../../atoms/tailwindComponent/TButton.js";
+import Dialogue from "src/components/molecules/Dialogue";
 
 export default function DifferentsService() {
+  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const modalClose = () => {
+    setOpen(false);
+  };
+  const modalClickOpen = () => {
+    setOpen(true);
+  };
+
   return (
     <Container
       spacing={10}
@@ -90,12 +101,18 @@ export default function DifferentsService() {
             </Grid>
           ))}
         </Grid>
-        <Box sx={{ ml: { md: 48 }, mt: 13 }}>
-          <MotionInView variants={varFadeInUp}>
-            <TButton name="Cette fois, je démarre vraiment !" link="/" />
-          </MotionInView>
-        </Box>
+        <MotionInView variants={varFadeInUp}>
+          <Grid
+            open={isOpen}
+            onClose={() => setIsOpen(false)}
+            onClick={modalClickOpen}
+            sx={{ ml: { md: 48 }, mt: 13 }}
+          >
+            <TButton name="Cette fois, je démarre vraiment !" />
+          </Grid>
+        </MotionInView>
       </Box>
+      <Dialogue open={open} modalClose={modalClose} />
     </Container>
   );
 }
