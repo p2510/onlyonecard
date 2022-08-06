@@ -19,7 +19,7 @@ export default function FonctionnalitesPrincipales() {
               container
               spacing={{
                 md: 16,
-                xs: 1,
+                xs: 2,
               }}
             >
               <Grid item xs={6}>
@@ -101,7 +101,7 @@ export default function FonctionnalitesPrincipales() {
                       fontWeight: "bold",
                       ml: {
                         md: 5,
-                        xs: -11,
+                        xs: -13,
                       },
                     }}
                   >
