@@ -17,4 +17,5 @@ export const PATH_PAGE = {
   OuvertureDeCompte: "/ouvrir-un-compte-onlyone",
   PlaceImpact: "/place-impact",
   TarifsEtAbonnements: "/nos-tarifs-et-abonnements",
+  ActionEtEmpreinteCarbone: "/votre-eco-coach-personnel",
 };

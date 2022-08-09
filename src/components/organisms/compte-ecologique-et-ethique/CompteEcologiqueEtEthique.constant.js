@@ -99,7 +99,7 @@ export const DIFFERENTSETAPESDATA = [
     icon: `${etape_2}`,
     title: `Je découvre l'éco-coach`,
     paragraphe: `J’agrège mes comptes bancaires et je réalise un bilan carbone complet. Je commence à recevoir des notifications personnalisées si je le souhaite.`,
-    link: `nos-tarifs-et-abonnements`,
+    link: `votre-eco-coach-personnel`,
   },
   {
     id: 3,
