@@ -1,4 +1,5 @@
 import { Box, Grid, Typography, Container } from "@mui/material";
+import { Cursor, Typewriter } from "react-simple-typewriter";
 import lampe_icon from "../../assets/images/lampe_icon.png";
 import Logo from "../atoms/Logo";
 import CommunautesInput from "./CommunautesInput";
@@ -22,21 +23,44 @@ export default function Communautes() {
           justifyContent: "center",
         }}
       >
-        <Typography
+        <Box
           sx={{
             display: "flex",
-            justifyContent: "center",
-            fontSize: "2.4rem",
-            fontWeight: "bold",
+            flexDirection: "row",
             alignItems: "center",
+            justifyContent: "center",
             mb: 5,
             mt: {
               md: 1,
             },
           }}
         >
-          Un Compte simple, sécurisé et responsable
-        </Typography>
+          <Typography
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              fontSize: "2.5rem",
+              fontWeight: "bold",
+              alignItems: "center",
+              mr: "1rem",
+            }}
+          >
+            Un Compte
+          </Typography>
+          <Typography
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              fontSize: "2.4rem",
+              fontWeight: "bold",
+              alignItems: "center",
+              color: "#00bd85",
+            }}
+          >
+            <Typewriter words={["simple", "sécurisé", "responsable"]} loop />
+            <Cursor />
+          </Typography>
+        </Box>
         <Box
           component="img"
           src={lampe_icon}
