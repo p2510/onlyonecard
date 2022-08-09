@@ -64,6 +64,11 @@ export default function Router() {
       element: <MainLayout />,
       children: [{ element: <TarifsEtAbonnements />, index: true }],
     },
+    {
+      path: "/votre-eco-coach-personnel",
+      element: <MainLayout />,
+      children: [{ element: <ActionEtEmpreinteCarbone />, index: true }],
+    },
   ]);
 }
 
@@ -91,4 +96,7 @@ const PlaceImpact = Loadable(
 );
 const TarifsEtAbonnements = Loadable(
   lazy(() => import("../../components/pages/TarifsEtAbonnements"))
+);
+const ActionEtEmpreinteCarbone = Loadable(
+  lazy(() => import("../../components/pages/EcoCoachPersonnel"))
 );
