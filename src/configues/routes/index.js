@@ -69,6 +69,11 @@ export default function Router() {
       element: <MainLayout />,
       children: [{ element: <ActionEtEmpreinteCarbone />, index: true }],
     },
+    {
+      path: "/partenariat-onu-unitlife",
+      element: <MainLayout />,
+      children: [{ element: <PartenariatOnuUnitlife />, index: true }],
+    },
   ]);
 }
 
@@ -99,4 +104,7 @@ const TarifsEtAbonnements = Loadable(
 );
 const ActionEtEmpreinteCarbone = Loadable(
   lazy(() => import("../../components/pages/EcoCoachPersonnel"))
+);
+const PartenariatOnuUnitlife = Loadable(
+  lazy(() => import("../../components/pages/PartenariatOnuUnitlife"))
 );

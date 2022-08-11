@@ -5,6 +5,7 @@ import chaque_depense from "../../../assets/images/chaque_depense.png";
 import projet_solidaire from "../../../assets/images/projet_solidaire.png";
 import TButton from "../../atoms/tailwindComponent/TButton.js";
 import { varFadeInUp, MotionInView, varFadeInLeft } from "../../atoms/animate";
+import { PATH_PAGE } from "src/configues/routes/paths";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -142,7 +143,7 @@ export default function DepenseEtProjet() {
             <MotionInView variants={varFadeInUp}>
               <TButton
                 name="Je découvre le compte et sa carte de paiement OnlyOne"
-                link="/"
+                link={PATH_PAGE.CompteEcologiqueEthique}
               />
             </MotionInView>
           </Box>
@@ -198,7 +199,7 @@ export default function DepenseEtProjet() {
             <MotionInView variants={varFadeInUp}>
               <TButton
                 name="Je comprends l'importance de ce projet solidaire"
-                link="/"
+                link={PATH_PAGE.PartenariatOnuUnitlife}
               />
             </MotionInView>
           </Box>

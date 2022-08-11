@@ -37,7 +37,7 @@ export default function Banques({ data, sx }) {
                 alt={item.title}
                 sx={{
                   width: "110px",
-                  height: "110px",
+                  height: "140px",
                 }}
               />
             </MotionInView>
@@ -50,6 +50,7 @@ export default function Banques({ data, sx }) {
                   textAlign: "center",
                   fontSize: "18px",
                   fontWeight: "bold",
+                  color: "#10403B",
                   mb: 2,
                 }}
               >
@@ -57,7 +58,9 @@ export default function Banques({ data, sx }) {
               </Typography>
             </MotionInView>
             <MotionInView variants={varFadeInUp}>
-              <Typography sx={{ fontSize: "18px", textAlign: "center" }}>
+              <Typography
+                sx={{ fontSize: "18px", textAlign: "center", color: "#10403B" }}
+              >
                 {item.paragraphe}
               </Typography>
             </MotionInView>
@@ -77,6 +80,7 @@ export default function Banques({ data, sx }) {
           sx={{
             fontSize: "18px",
             fontWeight: "bold",
+            color: "#10403B",
             mb: 2,
             mt: 1,
           }}
@@ -87,6 +91,7 @@ export default function Banques({ data, sx }) {
           sx={{
             fontSize: "18px",
             textAlign: "center",
+            color: "#10403B",
           }}
         >
           Vos données telles que vos informations personnelles, vos identifiants
@@ -98,6 +103,7 @@ export default function Banques({ data, sx }) {
           sx={{
             fontSize: "18px",
             fontWeight: "bold",
+            color: "#10403B",
             mb: 2,
             mt: 2,
           }}
@@ -108,6 +114,7 @@ export default function Banques({ data, sx }) {
           sx={{
             fontSize: "18px",
             textAlign: "center",
+            color: "#10403B",
           }}
         >
           Bloquez/débloquez votre carte et modifiez vos codes directement depuis

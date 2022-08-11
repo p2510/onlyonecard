@@ -1,14 +1,13 @@
-import { Box, Grid, Typography, Container } from "@mui/material";
+import { Box, Grid, Typography, Container, Button } from "@mui/material";
 import {
   MotionInView,
   varFadeInDown,
   varFadeInLeft,
   varFadeInUp,
 } from "../../atoms/animate";
-import unicef_icon from "../../../assets/images/unicef_icon.png";
+import unicef_icon from "../../../assets/images/unicef_icon.svg";
 import { VALEURANDENGAGEMENTDATA } from "./Home.constant";
 import { MHidden } from "../../atoms/@material-extend";
-import TButton from "../../atoms/tailwindComponent/TButton.js";
 import { PATH_PAGE } from "../../../configues/routes/paths";
 
 export default function ValeurAndEngagement() {
@@ -32,18 +31,18 @@ export default function ValeurAndEngagement() {
       >
         <Typography
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            fontSize: "2.7rem",
+            fontSize: "38px",
             fontWeight: "bold",
             alignItems: "center",
             mb: 6,
             mt: {
-              md: 19,
+              md: "121px",
             },
           }}
         >
-          Des valeurs et des engagements.
+          Des <span style={{ color: "#C4E3D5" }}>valeurs</span> et des{" "}
+          <spanstyle style={{ color: "#C4E3D5" }}>engagements</spanstyle>
+          <spn style={{ color: "#FAAA42" }}>.</spn>
         </Typography>
       </Grid>
 
@@ -59,9 +58,8 @@ export default function ValeurAndEngagement() {
             md: 4,
             xs: 8,
           },
-          top: {
-            xs: -70,
-            md: -40,
+          mt: {
+            md: "90px",
           },
         }}
       >
@@ -83,8 +81,8 @@ export default function ValeurAndEngagement() {
                 src={item.icon}
                 alt={item.title}
                 sx={{
-                  width: "140px",
-                  height: "110px",
+                  width: "57px",
+                  height: "52px",
                 }}
               />
             </MotionInView>
@@ -97,6 +95,7 @@ export default function ValeurAndEngagement() {
                   textAlign: "center",
                   fontSize: "24px",
                   fontWeight: "bold",
+                  mt: "30px",
                 }}
               >
                 {item.title}
@@ -119,25 +118,46 @@ export default function ValeurAndEngagement() {
             <Typography
               sx={{
                 fontSize: "18px",
-                mb: 5,
+                lineHeight: "27px",
+                mb: "62px",
               }}
             >
               <br />
               Nous nous mobilisons sur 8 des 17 objectifs de Développement
-              Durable pour un monde meilleur.
+              <br /> Durable pour un monde meilleur.
               <br /> <br />
               En effet, nous pensons que la finance responsable est l’avenir.
               <br /> <br />
               C’est pourquoi nous agissons avec notre compte courant écologique,
+              <br />
               afin de faire fructifier toutes vos bonnes actions.
             </Typography>
           </MotionInView>
 
           <MotionInView variants={varFadeInUp}>
-            <TButton
-              name="La mission d'OnlyOne"
-              link={PATH_PAGE.NotreMission}
-            />
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                mb: 12,
+                ml: -10,
+              }}
+            >
+              <Button
+                sx={{
+                  borderRadius: 50,
+                  bgcolor: "#2A7267",
+                  "&:hover": { bgcolor: "#10403B" },
+                  boxShadow: "none",
+                  fontSize: "18px",
+                  padding: "7px 38px 10px 38px",
+                }}
+                variant="contained"
+                href={PATH_PAGE.UnGesteUnImpact}
+              >
+                La mission d'OnlyOne
+              </Button>
+            </Box>
           </MotionInView>
         </Grid>
         <MHidden width="mdDown">
@@ -149,8 +169,8 @@ export default function ValeurAndEngagement() {
                 src={unicef_icon}
                 sx={{
                   borderRadius: 2,
-                  width: "26vw",
-                  height: "20vw",
+                  width: "300px",
+                  height: "249px",
                 }}
               />
             </MotionInView>
