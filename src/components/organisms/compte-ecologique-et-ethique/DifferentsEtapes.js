@@ -4,6 +4,8 @@ import { MHidden } from "../../atoms/@material-extend";
 import CommunautesInput from "../../molecules/CommunautesInput";
 import TButton from "../../atoms/tailwindComponent/TButton";
 import { MotionInView, varFadeInUp } from "../../atoms/animate";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 import {
   DIFFERENTSETAPESDATA,
   PARTENAIRELOGODATA,
@@ -27,7 +29,7 @@ export default function DifferentsEtapes() {
         dispaly: "flex",
         justifyContent: "center",
         alignItems: "center",
-        mt: -11,
+        mt: -3,
       }}
     >
       <Grid
@@ -163,8 +165,9 @@ export default function DifferentsEtapes() {
             fontWeight: "bold",
             alignItems: "center",
             mt: {
-              md: 19,
+              md: 7,
             },
+            mb: 3,
           }}
         >
           <span>Nos partenaires</span>
@@ -178,35 +181,44 @@ export default function DifferentsEtapes() {
         sx={{
           display: "flex",
           width: "100%",
+          ml: -10,
           mb: {
-            md: 7,
+            md: 6.5,
             xs: 8,
           },
         }}
       >
-        {PARTENAIRELOGODATA.map((item) => (
-          <Grid
-            item
-            key={item.id}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "space-around",
-            }}
-          >
-            <MotionInView variants={varFadeInUp}>
-              <Box
-                component="img"
-                src={item.icon}
-                sx={{
-                  width: "260px",
-                  height: "200px",
-                }}
-              />
-            </MotionInView>
-          </Grid>
-        ))}
+        <Carousel
+          width="112%"
+          autoPlay
+          infiniteLoop
+          showIndicators={false}
+          showStatus={false}
+        >
+          {PARTENAIRELOGODATA.map((item) => (
+            <Grid
+              item
+              key={item.id}
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-around",
+              }}
+            >
+              {item.marc?.map((item) => (
+                <Box
+                  component="img"
+                  src={item.icon}
+                  sx={{
+                    width: "165px",
+                    height: "125px",
+                  }}
+                />
+              ))}
+            </Grid>
+          ))}
+        </Carousel>
       </Grid>
       <Dialogue open={open} modalClose={modalClose} />
     </Container>

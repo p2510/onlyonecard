@@ -1,14 +1,14 @@
-import twitterFill from "@iconify/icons-eva/twitter-fill";
-import facebookFill from "@iconify/icons-eva/facebook-fill";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import linkedinFill from "@iconify/icons-eva/linkedin-fill";
+import facebook_icon from "../../../../assets/images/facebook_icon.svg";
+import linkedin_icon from "../../../../assets/images/linkedin_icon.svg";
+import insta_icon from "../../../../assets/images/insta_icon.svg";
+import twitter_icon from "../../../../assets/images/twitter_icon.svg";
 import { styled } from "@mui/system";
 
 export const SOCIALS = [
-  { name: "FaceBook", icon: facebookFill },
-  { name: "Twitter", icon: twitterFill },
-  { name: "Linkedin", icon: linkedinFill },
-  { name: "Instagram", icon: InstagramIcon },
+  { name: "FaceBook", icon: facebook_icon },
+  { name: "Linkedin", icon: linkedin_icon },
+  { name: "Twitter", icon: twitter_icon },
+  { name: "Instagram", icon: insta_icon },
 ];
 
 export const LINKS = [
@@ -51,5 +51,5 @@ export const CONDITIONLINKS = [
 
 export const RootStyle = styled("div")(({ theme }) => ({
   position: "relative",
-  backgroundColor: "#333333",
+  backgroundColor: "#75AB95",
 }));

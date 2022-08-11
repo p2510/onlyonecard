@@ -1,20 +1,24 @@
 import compte_courant from "../../../assets/images/compte_courant.png";
 import paiement_carte from "../../../assets/images/paiement_carte.png";
 import epargne_position from "../../../assets/images/epargne_position.png";
-import sgbci from "../../../assets/images/sgbci.png";
-import banque_france from "../../../assets/images/banque_france.png";
-import master_card from "../../../assets/images/master_card.png";
-import ethique_icon from "../../../assets/images/ethique_icon.png";
-import responsable_icon from "../../../assets/images/responsable_icon.png";
-import solidaire_icon from "../../../assets/images/solidaire_icon.png";
-import transparent_icon from "../../../assets/images/transparent_icon.png";
+import societe_generale from "../../../assets/images/societe_generale.svg";
+import banque_france from "../../../assets/images/banque_france.svg";
+import master_card from "../../../assets/images/master_card.svg";
+import ethique_icon from "../../../assets/images/ethique_icon.svg";
+import responsable_icon from "../../../assets/images/responsable_icon.svg";
+import solidaire_icon from "../../../assets/images/solidaire_icon.svg";
+import transparent_icon from "../../../assets/images/transparent_icon.svg";
 import app_store_icone from "../../../assets/images/app_store_icone.png";
 import google_play_icon from "../../../assets/images/google_play_icon.png";
 import bilan_mobile from "../../../assets/images/bilan_mobile.png";
-import ethique_mobile from "../../../assets/images/ethique_mobile.png";
+import ethique_mobile from "../../../assets/images/ethique_mobile.svg";
 import carte_mobile from "../../../assets/images/carte_mobile.png";
 import biodiversite_mobile from "../../../assets/images/biodiversite_mobile.png";
 import economisez_mobile from "../../../assets/images/economisez_mobile.png";
+
+import paiement_utile from "../../../assets/images/paiement_utile.svg";
+import courant_ecologique from "../../../assets/images/courant_ecologique.svg";
+import epargne_positive from "../../../assets/images/epargne_positive.svg";
 
 export const AVANTAGES = [
   {
@@ -52,7 +56,7 @@ export const BANQUEDATA = [
   },
   {
     id: 2,
-    icon: `${sgbci}`,
+    icon: `${societe_generale}`,
     title: `Fonds cantonnés en sécurité`,
     paragraphe: `Vos fonds sont garantis et sécurisés par la Société Générale et seul vous avez accès à votre argent.`,
   },
@@ -152,5 +156,30 @@ export const FONCTIONNALITES = [
   {
     id: 5,
     image: `${biodiversite_mobile}`,
+  },
+];
+
+export const ACTIONSDATA = [
+  {
+    id: 1,
+    icon: `${courant_ecologique}`,
+    title: `Un compte courant écologique`,
+    paragraphe: `Bénéficiez d’un compte en ligne avec IBAN Français sécurisé`,
+    paragraphe2: `Suivez l’impact CO2 de vos dépenses`,
+  },
+  {
+    id: 2,
+    icon: `${paiement_utile}`,
+    title: `Une carte de paiement utile`,
+    buttonTitle: `Ouvrir un compte écologique`,
+    paragraphe: `Payez sans frais dans toute l’Europe et à l’international`,
+    paragraphe2: ` À chaque paiement nous finançons des projets à impact positif`,
+  },
+  {
+    id: 3,
+    icon: `${epargne_positive}`,
+    title: `De l’épargne positive`,
+    paragraphe: `Découvrez des produits financiers qui vous correspondent`,
+    paragraphe2: `Diversifier votre épargne au profit de la transition écologique et solidaire`,
   },
 ];

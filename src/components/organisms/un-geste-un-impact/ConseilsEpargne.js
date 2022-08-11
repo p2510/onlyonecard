@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { styled } from "@mui/system";
 import { Box, Grid, Typography, Card } from "@mui/material";
 import { MHidden } from "../../atoms/@material-extend";
@@ -8,6 +9,8 @@ import TButton from "../../atoms/tailwindComponent/TButton.js";
 import { ECOLOGIQUEDATA } from "./UnGesteUnImpact.constant";
 import { varFadeInUp, MotionInView, varFadeInLeft } from "../../atoms/animate";
 import CommunautesInput from "../../molecules/CommunautesInput";
+import { PATH_PAGE } from "src/configues/routes/paths";
+import Dialogue from "src/components/molecules/Dialogue";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -32,6 +35,18 @@ const titre = (
 );
 
 export default function ConseilsEpargne() {
+  const [open, setOpen] = useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const modalClose = () => {
+    setOpen(false);
+  };
+
+  const modalClickOpen = () => {
+    setOpen(true);
+  };
+
   return (
     <RootStyle>
       <Grid
@@ -121,7 +136,10 @@ export default function ConseilsEpargne() {
             }}
           >
             <MotionInView variants={varFadeInUp}>
-              <TButton name="Je fais connaissance avec l'éco-coach" link="/" />
+              <TButton
+                name="Je fais connaissance avec l'éco-coach"
+                link={PATH_PAGE.ActionEtEmpreinteCarbone}
+              />
             </MotionInView>
           </Box>
         </Grid>
@@ -172,7 +190,10 @@ export default function ConseilsEpargne() {
           </MotionInView>
           <Box sx={{ ml: { md: 14.5 } }}>
             <MotionInView variants={varFadeInUp}>
-              <TButton name="J'explore la Place Impact" link="/" />
+              <TButton
+                name="J'explore la Place Impact"
+                link={PATH_PAGE.PlaceImpact}
+              />
             </MotionInView>
           </Box>
         </Grid>
@@ -308,6 +329,9 @@ export default function ConseilsEpargne() {
             </Typography>
           </MotionInView>
           <Box
+            open={isOpen}
+            onClose={() => setIsOpen(false)}
+            onClick={modalClickOpen}
             sx={{
               margin: "0.3rem",
               textAlign: "center",
@@ -315,7 +339,7 @@ export default function ConseilsEpargne() {
             }}
           >
             <MotionInView variants={varFadeInUp}>
-              <TButton name="J'ouvre mon éco-compte" link="/" />
+              <TButton name="J'ouvre mon éco-compte" />
             </MotionInView>
           </Box>
         </Grid>
@@ -326,6 +350,7 @@ export default function ConseilsEpargne() {
           buttonStyle={{ mr: "28.5rem" }}
         />
       </Grid>
+      <Dialogue open={open} modalClose={modalClose} />
     </RootStyle>
   );
 }

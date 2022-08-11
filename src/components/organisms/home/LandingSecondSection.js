@@ -31,7 +31,7 @@ export default function LandingSecondSection() {
           width: "100%",
           mb: 10,
           mt: {
-            md: "8rem",
+            md: "89rem",
             xs: 0,
           },
         }}
