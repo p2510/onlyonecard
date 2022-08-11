@@ -1,71 +1,70 @@
 import { Box, Grid, Typography, Container } from "@mui/material";
-import Lock from "../../../assets/images/Lock.png";
+import Icon_cadenas from "../../../assets/images/Icon_cadenas.svg";
 import { BANQUEDATA } from "./Home.constant";
 import Banques from "../../molecules/Banques";
 
 export default function BanqueSection() {
   return (
-    <Container
-      spacing={10}
-      sx={{
-        dispaly: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Grid
-        item
+    <Box sx={{ bgcolor: "#f1ebdf", height: "980px" }}>
+      <Container
+        spacing={10}
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          dispaly: "flex",
           justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        <Box
-          component="img"
-          src={Lock}
-          alt="Lock"
-          sx={{
-            mb: 0.5,
-            width: "120px",
-            height: "120px",
-          }}
-        />
-        <Typography
+        <Grid
+          item
           sx={{
             display: "flex",
-            justifyContent: "center",
-            fontSize: "2.2rem",
-            fontWeight: "bold",
+            flexDirection: "column",
             alignItems: "center",
-            mb: 3,
-            mt: {
-              md: 1,
-            },
+            justifyContent: "center",
           }}
         >
-          <span>Votre argent est en </span>
-          <span style={{ color: "#00db89" }}> sécurité</span> !
-        </Typography>
-      </Grid>
-      <Banques
-        data={BANQUEDATA}
-        sx={{
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          width: "100%",
-          mb: {
-            md: 4,
-            xs: 8,
-          },
-          top: {
-            xs: -70,
-            md: -40,
-          },
-        }}
-      />
-    </Container>
+          <Box
+            component="img"
+            src={Icon_cadenas}
+            alt="Lock"
+            sx={{
+              width: "120px",
+              height: "120px",
+              mt: "80px",
+            }}
+          />
+          <Typography
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              fontSize: "38px",
+              fontWeight: "bold",
+              alignItems: "center",
+              mb: 3,
+            }}
+          >
+            <span>Votre argent est en </span>
+            <span style={{ color: "#00db89", marginLeft: "0.5rem" }}>
+              sécurité
+            </span>
+            <span style={{ color: "#FAAA42", marginLeft: "0.5rem" }}>.</span>
+          </Typography>
+        </Grid>
+        <Banques
+          data={BANQUEDATA}
+          sx={{
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            width: "100%",
+            mb: {
+              md: 4,
+              xs: 8,
+            },
+            mt: "132px",
+          }}
+        />
+      </Container>
+    </Box>
   );
 }

@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { styled } from "@mui/system";
-import { AppBar, Toolbar, Container, Stack } from "@mui/material";
+import { AppBar, Toolbar, Container, Stack, Button } from "@mui/material";
 import useOffSetTop from "../../../../configues/hooks/useOffSetTop";
 import { PATH_PAGE } from "../../../../configues//routes/paths";
 import { MHidden } from "../../../atoms/@material-extend";
@@ -8,7 +8,6 @@ import MenuDesktop from "./MenuDesktop";
 import MenuMobile from "./MenuMobile";
 import menuConfig from "./menuConfig";
 import Logo from "../../../atoms/Logo";
-import TButton from "../../../atoms/tailwindComponent/TButton.js";
 
 const APP_BAR_MOBILE = 64;
 const APP_BAR_DESKTOP = 90;
@@ -63,8 +62,9 @@ export default function MainHeader() {
         >
           <Logo
             sx={{
-              width: { md: 190, xs: 180 },
-              height: { md: 50, xs: 40 },
+              mt: "1rem",
+              width: { md: 87, xs: 45 },
+              height: { md: 90, xs: 47 },
               objectFit: "cover",
             }}
           />
@@ -74,10 +74,18 @@ export default function MainHeader() {
           </MHidden>
           <MHidden width="mdDown">
             <Stack direction="row" spacing={2}>
-              <TButton
-                link={PATH_PAGE.OuvertureDeCompte}
-                name="ouvrir un compte"
-              />
+              <Button
+                sx={{
+                  borderRadius: 50,
+                  bgcolor: "#FAAA42",
+                  "&:hover": { bgcolor: "#f7b96c" },
+                  boxShadow: "none",
+                }}
+                variant="contained"
+                href={PATH_PAGE.OuvertureDeCompte}
+              >
+                Ouvrir un compte
+              </Button>
             </Stack>
           </MHidden>
 

@@ -1,13 +1,41 @@
 import { useState, useRef } from "react";
-import { Grid, Typography, Box, Container } from "@mui/material";
+import { Grid, Typography, Box, Button, TextField } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import Slider from "react-slick";
 import { MotionInView, varFadeInLeft, varFadeInUp } from "../../atoms/animate";
 import { ABOUTUSDATA } from "./Home.constant";
+import { styled } from "@mui/system";
 import CarouselDots from "../../atoms/CarouselDots";
-import Communautes from "../../molecules/Communautes";
-import TButton from "../../atoms/tailwindComponent/TButton.js";
-import Dialogue from "../../molecules/Dialogue";
+import nouveau_monde from "../../../assets/images/nouveau_monde.svg";
+import { Cursor, Typewriter } from "react-simple-typewriter";
+
+const RootStyle = styled("div")(({ theme }) => ({
+  textAlign: "center",
+  [theme.breakpoints.up("md")]: {
+    textAlign: "left",
+  },
+  marginTop: -100,
+}));
+
+const CustomTextField = styled(TextField)({
+  width: "656px",
+  background: "#fff",
+  marginTop: "44px",
+  marginBottom: "51px",
+  border: "0px",
+  borderRadius: "50px",
+  outline: "none",
+  noBorder: {
+    border: "none",
+  },
+  "& .css-1k2zuns-MuiInputBase-root-MuiOutlinedInput-root": {
+    borderRadius: "50px",
+  },
+  "& .MuiInputBase-input": {
+    color: "#333",
+    fontWeight: "900",
+  },
+});
 
 export default function AboutUs({ isActive }) {
   const theme = useTheme();
@@ -15,18 +43,6 @@ export default function AboutUs({ isActive }) {
   const [currentIndex, setCurrentIndex] = useState(
     theme.direction === "rtl" ? ABOUTUSDATA.length - 1 : 0
   );
-
-  const [open, setOpen] = useState(false);
-
-  const [isOpen, setIsOpen] = useState(false);
-
-  const modalClose = () => {
-    setOpen(false);
-  };
-
-  const modalClickOpen = () => {
-    setOpen(true);
-  };
 
   const settings = {
     speed: 800,
@@ -39,89 +55,235 @@ export default function AboutUs({ isActive }) {
     beforeChange: (current, next) => setCurrentIndex(next),
     ...CarouselDots({
       zIndex: 4,
-      top: { md: 150, xs: 300 },
-      left: { md: 500, xs: 95 },
+      top: { md: 220, xs: 300 },
+      left: { md: 360, xs: 95 },
       position: "absolute",
       color: "black",
     }),
   };
 
   return (
-    <Container
-      spacing={10}
-      sx={{
-        dispaly: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Grid item xs={12} md={6} lg={7.7}>
-        <MotionInView variants={varFadeInLeft}>
-          <Typography
-            sx={{
-              fontSize: "2.7rem",
-              fontWeight: "bold",
-              mb: 3,
-            }}
-          >
-            Ils parlent de nous.
-          </Typography>
-          <Slider ref={carouselRef} {...settings}>
-            {ABOUTUSDATA.map((app, index) => (
-              <Grid key={app.id} item={app} isActive={index === currentIndex}>
-                <Typography
-                  sx={{
-                    fontSize: "18px",
-                    fontStyle: "italic",
-                    ml: 4,
-                  }}
-                >
-                  {app.paragraphe}
-                </Typography>
-                <Grid display="flex" flexDirection={{ md: "row", xs: "row" }}>
-                  <Box
-                    component="img"
-                    src={app.icon}
-                    sx={{ width: "65px", height: "65px", mt: 2 }}
-                  />
-                  <Typography sx={{ mt: 4, mb: 13, ml: 2, fontWeight: "bold" }}>
-                    {app.libele}
-                  </Typography>
-                </Grid>
-              </Grid>
-            ))}
-          </Slider>
-        </MotionInView>
+    <RootStyle>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          bgcolor: "#2A7267",
+          height: "611px",
+        }}
+      >
         <Typography
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            fontSize: "18px",
+            textAlign: "center",
+            fontSize: "2.7rem",
             fontWeight: "bold",
-            alignItems: "center",
-            mb: 8,
+            mt: "-59px",
+            mb: "63px",
+            color: "#fff",
           }}
         >
-          Rejoignez le mouvement des citoyens au service de la biodiversité, du
-          climat et de la société.
+          Ils parlent de nous.
         </Typography>
-        <MotionInView variants={varFadeInUp}>
-          <Grid
-            open={isOpen}
-            onClose={() => setIsOpen(false)}
-            onClick={modalClickOpen}
+        <Box sx={{ bgcolor: "#fff", width: "853px", height: "296px" }}>
+          <MotionInView variants={varFadeInLeft}>
+            <Slider ref={carouselRef} {...settings}>
+              {ABOUTUSDATA.map((app, index) => (
+                <Grid key={app.id} item={app} isActive={index === currentIndex}>
+                  <Typography
+                    sx={{
+                      textAlign: "justify",
+                      fontSize: "20px",
+                      fontStyle: "italic",
+                      padding: "40px 70px 0px 70px",
+                      color: "#10403B",
+                    }}
+                  >
+                    {app.paragraphe}
+                  </Typography>
+                  <Grid display="flex" flexDirection={{ md: "row", xs: "row" }}>
+                    <Box
+                      component="img"
+                      src={app.icon}
+                      sx={{
+                        width: "65px",
+                        height: "65px",
+                        mt: 2,
+                        padding: "0px 0px 0px 10px",
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        mt: 4,
+                        ml: 2,
+                        fontWeight: 700,
+                        fontSize: "24px",
+                        color: "#10403B",
+                      }}
+                    >
+                      {app.libele}
+                    </Typography>
+                  </Grid>
+                </Grid>
+              ))}
+            </Slider>
+          </MotionInView>
+        </Box>
+      </Box>
+      <Grid
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+
+          mb: 0,
+        }}
+      >
+        <Box
+          component="img"
+          src={nouveau_monde}
+          sx={{
+            width: "428px",
+            height: "992px",
+            marginLeft: "0px",
+          }}
+        />
+        <Box
+          sx={{
+            width: "100%",
+            height: "992px",
+          }}
+        >
+          <Box
             sx={{
               display: "flex",
               justifyContent: "center",
-              mb: { md: 25, xs: 16 },
+              flexDirection: "column",
+              alignItems: "center",
+              width: "100%",
+              height: "610px",
             }}
           >
-            <TButton name="Je démarre" />
-          </Grid>
-        </MotionInView>
-        <Communautes />
+            <Typography
+              sx={{
+                fontSize: "32px",
+                fontWeight: 700,
+                lineHeight: "48px",
+                color: "#10403B",
+                mt: "-20px",
+                mb: "20px",
+                textAlign: "center",
+              }}
+            >
+              Rejoignez le mouvement d’un nouveau monde <br /> bancaire,
+              écologique, transparent et sécurisé.
+            </Typography>
+            <Button
+              sx={{
+                borderRadius: 50,
+                bgcolor: "#FAAA42 !important",
+                "&:hover": { bgcolor: "#f7b96c !important" },
+                boxShadow: "none",
+                fontSize: "16px",
+                margin: "29px 0px 61px 0px",
+                padding: "6px 38px 6px 38px",
+              }}
+              variant="contained"
+            >
+              Je démarre
+            </Button>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center",
+                mb: 7,
+              }}
+            >
+              <Typography
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  fontSize: "38px",
+                  fontWeight: "bold",
+                  alignItems: "center",
+                  color: "#10403B",
+                  mr: "1rem",
+                }}
+              >
+                Un Compte
+              </Typography>
+              <Typography
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  fontSize: "38px",
+                  fontWeight: "bold",
+                  alignItems: "center",
+                  color: "#00bd85",
+                }}
+              >
+                <Typewriter
+                  words={["simple", "sécurisé", "responsable"]}
+                  loop
+                />
+                <Cursor />
+              </Typography>
+            </Box>
+            <Typography
+              sx={{
+                fontSize: "24px",
+                fontWeight: 700,
+                lineHeight: "36px",
+                color: "#10403B",
+                textAlign: "center",
+              }}
+            >
+              Conciliez votre argent et vos valeurs.
+            </Typography>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "100%",
+              height: "382px",
+              background: "#C4E3D5",
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: "24px",
+                color: "#10403B",
+                fontWeight: 700,
+                textAlign: "24px",
+              }}
+            >
+              Rejoins la communauté
+            </Typography>
+            <MotionInView variants={varFadeInUp}>
+              <CustomTextField type="email" placeholder="* votre@email.com" />
+            </MotionInView>
+            <Button
+              sx={{
+                variant: "contained",
+                borderRadius: 50,
+                background: "#10403B !important",
+                "&:hover": { background: "#2A7267 !important" },
+                boxShadow: "none",
+                color: "#fff",
+                fontSize: "16px",
+                padding: "7px 38px 10px 38px",
+              }}
+            >
+              M'abonner
+            </Button>
+          </Box>
+        </Box>
       </Grid>
-      <Dialogue open={open} modalClose={modalClose} />
-    </Container>
+    </RootStyle>
   );
 }

@@ -1,13 +1,13 @@
 import { useState, useRef } from "react";
-import { Grid, Typography, Card } from "@mui/material";
-import CheckIcon from "@mui/icons-material/Check";
+import { Grid, Typography, Card, Button, Box } from "@mui/material";
+// import CheckIcon from "@mui/icons-material/Check";
 import { useTheme } from "@mui/material/styles";
 import Slider from "react-slick";
 
 import { varFadeInUp, MotionInView, varFadeInLeft } from "../../atoms/animate";
 import { FONCTIONNALITES } from "./Home.constant";
 import ImageItem from "../../atoms/ImageItem";
-import TButton from "../../atoms/tailwindComponent/TButton.js";
+// import TButton from "../../atoms/tailwindComponent/TButton.js";
 import { PATH_PAGE } from "../../../configues//routes/paths";
 
 export default function Functionalities() {
@@ -32,11 +32,17 @@ export default function Functionalities() {
     <Grid
       container
       spacing={3}
-      sx={{ mb: 17, marginTop: { md: "10rem" }, width: "80vw", mx: "auto" }}
+      sx={{ marginTop: { md: "10rem" }, width: "80vw", mx: "auto" }}
     >
-      <Grid item xs={12} md={5} lg={6.5}>
+      <Grid item xs={12} md={5} lg={5.5}>
         <MotionInView variants={varFadeInUp}>
-          <Card sx={{ width: { md: 410, xs: 260 } }}>
+          <Card
+            sx={{
+              width: { md: "358px", xs: 260 },
+              height: "478px",
+              borderRadius: "0px",
+            }}
+          >
             <Slider ref={carouselRef} {...settings}>
               {FONCTIONNALITES.map((app, index) => (
                 <ImageItem
@@ -50,19 +56,18 @@ export default function Functionalities() {
         </MotionInView>
       </Grid>
 
-      <Grid item xs={12} md={7} lg={5}>
+      <Grid item xs={12} md={7} lg={6.5} mt="-2.3rem">
         <MotionInView variants={varFadeInLeft}>
           <Typography
-            variant="h3"
             sx={{
-              my: 2,
-              color: "common.gray",
-              fontWeight: "fontWeightMedium",
-              lineHeight: "1em",
+              color: "#10403B",
+              fontSize: "38px",
+              fontStyle: "normal",
+              fontWeight: 800,
+              lineHeight: "57px",
             }}
           >
-            Un compte innovant, simple et responsable
-            <span style={{ color: "#00db89" }}>.</span>
+            Un compte innovant, simple et responsable.
           </Typography>
         </MotionInView>
 
@@ -71,80 +76,49 @@ export default function Functionalities() {
             sx={{
               opacity: 0.72,
               fontSize: "18px",
+              color: "#10403B",
               mt: 3,
             }}
           >
-            <CheckIcon />
-            Paiements internationaux sans frais et sans limite
-          </Typography>
-          <Typography
-            sx={{
-              opacity: 0.72,
-              fontSize: "18px",
-              mt: 1,
-            }}
-          >
-            <CheckIcon />
-            Eco-coach pour mesurer, comprendre et réduire l’empreinte carbone
-          </Typography>
-          <Typography
-            sx={{
-              opacity: 0.72,
-              fontSize: "18px",
-              mt: 1,
-            }}
-          >
-            <CheckIcon />
-            Agrégation des différents comptes bancaires de l’utilisateur
-          </Typography>
-          <Typography
-            sx={{
-              opacity: 0.72,
-              fontSize: "18px",
-              mt: 1,
-            }}
-          >
-            <CheckIcon />
-            Notifications d’opérations en temps réel
-          </Typography>
-          <Typography
-            sx={{
-              opacity: 0.72,
-              fontSize: "18px",
-              mt: 1,
-            }}
-          >
-            <CheckIcon />
-            Coffres d’épargne
-          </Typography>
-          <Typography
-            sx={{
-              opacity: 0.72,
-              fontSize: "18px",
-              mt: 1,
-            }}
-          >
-            <CheckIcon />
-            Avantages exclusifs chez nos partenaires éco-responsables
-          </Typography>
-          <Typography
-            sx={{
-              opacity: 0.72,
-              fontSize: "18px",
-              mb: 5,
-              mt: 1,
-            }}
-          >
-            <CheckIcon />
-            Support client humain disponible par mail et téléphone
+            Paiements internationaux sans frais et sans limite <br />
+            <br />
+            <span style={{ color: "#FAAA42" }}>✓</span> Eco-coach pour mesurer,
+            comprendre et réduire l’empreinte carbone <br />
+            <br />
+            <span style={{ color: "#FAAA42" }}>✓</span> Agrégation des
+            différents comptes bancaires de l’utilisateur <br />
+            <br />
+            <span style={{ color: "#FAAA42" }}>✓</span> Notifications
+            d’opérations en temps réel
+            <br />
+            <br /> <span style={{ color: "#FAAA42" }}>✓</span> Coffres d’épargne{" "}
+            <br />
+            <br /> <span style={{ color: "#FAAA42" }}>✓</span> Avantages
+            exclusifs chez nos partenaires éco-responsables
+            <br /> <br /> <span style={{ color: "#FAAA42" }}>✓</span> Support
+            client humain disponible par mail et téléphone
           </Typography>
         </MotionInView>
 
         <MotionInView variants={varFadeInUp}>
-          <TButton
-            name="Je découvre toutes les fonctionnalités"
-            link={PATH_PAGE.CompteEcologiqueEthique}
-          />
+          <Box
+            sx={{ display: "flex", justifyContent: "center", mt: 7, mb: 12 }}
+          >
+            <Button
+              sx={{
+                borderRadius: 50,
+                bgcolor: "#FAAA42",
+                "&:hover": { bgcolor: "#f7b96c" },
+                boxShadow: "none",
+                fontSize: "16px",
+                padding: "7px 38px 10px 38px",
+              }}
+              variant="contained"
+              href={PATH_PAGE.UnGesteUnImpact}
+            >
+              Je découvre toutes les fonctionnalités
+            </Button>
+          </Box>
         </MotionInView>
       </Grid>
     </Grid>

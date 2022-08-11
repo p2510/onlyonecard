@@ -14,7 +14,10 @@ import tekhne_logo from "../../../assets/images/tekhne_logo.png";
 import impact_france_logo from "../../../assets/images/impact_france_logo.png";
 import tech_for_good_logo from "../../../assets/images/tech_for_good_logo.png";
 import republique_france_logo from "../../../assets/images/republique_france_logo.png";
-import finance_france_logo from "../../../assets/images/finance_france_logo.png";
+import finance_tomorrow from "../../../assets/images/finance_tomorrow.png";
+import abc from "../../../assets/images/abc.png";
+import finance_innovation from "../../../assets/images/finance_innovation.png";
+import unitlife_2 from "../../../assets/images/unitlife_2.png";
 
 export const VALEURANDENGAGEMENTDATA = [
   {
@@ -62,27 +65,73 @@ export const VALEURANDENGAGEMENTDATA = [
 export const PARTENAIRELOGODATA = [
   {
     id: 1,
-    icon: `${swave_logo}`,
+    marc: [
+      {
+        id: 1,
+        icon: `${swave_logo}`,
+        lien: ``,
+      },
+      {
+        id: 2,
+        icon: `${tekhne_logo}`,
+        lien: ``,
+      },
+      {
+        id: 3,
+        icon: `${impact_france_logo}`,
+        lien: ``,
+      },
+      {
+        id: 4,
+        icon: `${tech_for_good_logo}`,
+        lien: ``,
+      },
+      {
+        id: 5,
+        icon: `${republique_france_logo}`,
+        lien: ``,
+      },
+      {
+        id: 6,
+        icon: `${finance_tomorrow}`,
+        lien: ``,
+      },
+    ],
   },
   {
     id: 2,
-    icon: `${tekhne_logo}`,
-  },
-  {
-    id: 3,
-    icon: `${impact_france_logo}`,
-  },
-  {
-    id: 4,
-    icon: `${tech_for_good_logo}`,
-  },
-  {
-    id: 5,
-    icon: `${republique_france_logo}`,
-  },
-  {
-    id: 6,
-    icon: `${finance_france_logo}`,
+    marc: [
+      {
+        id: 1,
+        icon: `${finance_innovation}`,
+        lien: ``,
+      },
+      {
+        id: 2,
+        icon: `${unitlife_2}`,
+        lien: ``,
+      },
+      {
+        id: 3,
+        icon: `${abc}`,
+        lien: ``,
+      },
+      {
+        id: 4,
+        icon: `${swave_logo}`,
+        lien: ``,
+      },
+      {
+        id: 5,
+        icon: `${tekhne_logo}`,
+        lien: ``,
+      },
+      {
+        id: 6,
+        icon: `${impact_france_logo}`,
+        lien: ``,
+      },
+    ],
   },
 ];
 

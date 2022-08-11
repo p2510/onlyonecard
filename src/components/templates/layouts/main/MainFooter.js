@@ -1,10 +1,8 @@
-import { Icon } from "@iconify/react";
 import { Link as RouterLink } from "react-router-dom";
 import {
   Grid,
   Link,
   Typography,
-  IconButton,
   Button,
   Stack,
   Box,
@@ -12,7 +10,6 @@ import {
   TextField,
 } from "@mui/material";
 import Logo from "../../../atoms/Logo";
-import Iconify from "../../../atoms/Iconify";
 import {
   LINKS,
   CONDITIONLINKS,
@@ -20,11 +17,12 @@ import {
   SOCIALS,
 } from "./MainFooter.constants";
 import MotionInView from "../../../atoms/animate/MotionInView";
+import google_play_logo from "../../../../assets/images/google_play_logo.svg";
+import app_store_icon from "../../../../assets/images/app_store_icon.svg";
 import {
   varFadeInLeft,
   varFadeInUp,
 } from "../../../atoms/animate/variants/fade";
-import TButton from "../../../atoms/tailwindComponent/TButton.js";
 
 export default function MainFooter() {
   const currentDate = new Date();
@@ -33,84 +31,74 @@ export default function MainFooter() {
     <RootStyle>
       <Grid
         container
-        justifyContent={{ xs: "center", md: "space-between" }}
+        justifyContent={{ xs: "center", md: "space-around" }}
         sx={{
           textAlign: { xs: "center", md: "left" },
           color: "common.white",
-          width: "94vw",
+          width: "93vw",
           mx: "auto",
-          mb: "-5rem",
+          mb: "-7rem",
           mt: "3rem",
           pb: 20,
         }}
       >
-        <Grid item xs={12} md={2.5}>
+        <Grid
+          item
+          xs={12}
+          md={2.5}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+            mt: "-5.5rem",
+          }}
+        >
           <Logo
             sx={{
-              width: { md: 190, xs: 140 },
-              height: { md: 50, xs: 40 },
+              width: { md: 142, xs: 140 },
+              height: { md: 150, xs: 40 },
+              mb: 4,
+              mt: 4,
               objectFit: "cover",
             }}
           />
-          <MotionInView variants={varFadeInLeft}>
-            <Button
-              size="large"
-              variant="contained"
-              sx={{
-                mt: "40px",
-                mb: "15px",
-                bgcolor: "black",
-                border: "solid",
-                "&:hover": {
-                  bgcolor: "#191717",
-                },
-              }}
-              startIcon={<Iconify icon="bi:apple" width={22} height={35} />}
-            >
-              <Stack direction={{ xs: "column", md: "column" }}>
-                <Typography fontSize="12px">Télécharger avec</Typography>
-                <Typography sx={{ fontSize: "15px", fontWeight: "bold" }}>
-                  l'App Store
-                </Typography>
-              </Stack>
-            </Button>
-          </MotionInView>
-          <MotionInView variants={varFadeInLeft}>
-            <Button
-              size="large"
-              variant="contained"
-              sx={{
-                mb: "60px",
-                bgcolor: "black",
-                border: "solid",
-                "&:hover": {
-                  bgcolor: "#191717",
-                },
-              }}
-              startIcon={
-                <Iconify
-                  icon="teenyicons:google-play-store-solid"
-                  width={30}
-                  height={35}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-around",
+              alignItems: "center",
+            }}
+          >
+            <MotionInView variants={varFadeInLeft}>
+              <Button>
+                <Box
+                  component="img"
+                  src={app_store_icon}
+                  alt=""
+                  sx={{
+                    height: "70px",
+                    width: "130px",
+                  }}
                 />
-              }
-            >
-              <Stack direction={{ xs: "column", md: "column" }}>
-                <Typography fontSize="12px">Disponibe sur</Typography>
-                <Typography sx={{ fontSize: "15px", fontWeight: "bold" }}>
-                  Google Play
-                </Typography>
-              </Stack>
-            </Button>
-          </MotionInView>
-          <Typography fontSize="1.1rem" sx={{ pr: { md: 5 } }}>
-            Contactez nous
-          </Typography>
-          <Typography fontSize="1.1rem" sx={{ pr: { md: 5 } }}>
-            Prenons RDV
-          </Typography>
+              </Button>
+            </MotionInView>
+            <MotionInView variants={varFadeInLeft}>
+              <Button>
+                <Box
+                  component="img"
+                  src={google_play_logo}
+                  alt=""
+                  sx={{
+                    height: "70px",
+                    width: "130px",
+                  }}
+                />
+              </Button>
+            </MotionInView>
+          </Box>
         </Grid>
-        <Grid item xs={8} md={7}>
+        <Grid item xs={8} md={5.5}>
           <Stack
             direction={{ xs: "column", md: "row" }}
             justifyContent="space-around"
@@ -119,7 +107,13 @@ export default function MainFooter() {
               const { headline, children } = list;
               return (
                 <Stack key={headline} spacing={3}>
-                  <Typography component="p" fontSize="1.1rem" mb="1.5rem">
+                  <Typography
+                    fontSize="16px"
+                    fontWeight="700"
+                    lineHeight="24px"
+                    color="#10403B"
+                    mb="1.5rem"
+                  >
                     {headline}
                   </Typography>
                   {children.map((link) => (
@@ -127,9 +121,9 @@ export default function MainFooter() {
                       to={link.href}
                       key={link.name}
                       color="inherit"
-                      fontSize="1rem"
+                      fontSize="16px"
                       component={RouterLink}
-                      sx={{ display: "block" }}
+                      sx={{ display: "block", lineHeight: "14px" }}
                     >
                       {link.name}
                     </Link>
@@ -139,26 +133,17 @@ export default function MainFooter() {
             })}
           </Stack>
         </Grid>
-        <Grid item xs={12} md={2.5}>
-          <Typography fontSize="1.1rem" sx={{ pr: { md: 5 } }}>
+        <Grid item xs={12} md={3} mt="1rem">
+          <Typography
+            fontSize="18px"
+            fontWeight="700"
+            lineHeight="27px"
+            textAlign="end"
+            mb="3rem"
+          >
             Rester informé et recevoir les chroniques de la finance et de
             l’impact
           </Typography>
-          <Stack
-            spacing={1.5}
-            direction="row"
-            justifyContent={{ xs: "center", md: "flex-start" }}
-            sx={{ mt: 6, mb: { xs: 5, md: 6 } }}
-          >
-            {SOCIALS.map((social) => (
-              <IconButton
-                key={social.name}
-                sx={{ p: 1, color: "common.white", bgcolor: "#333333" }}
-              >
-                <Icon icon={social.icon} width={25} height={25} />
-              </IconButton>
-            ))}
-          </Stack>
           <Stack>
             <MotionInView variants={varFadeInUp}>
               <TextField
@@ -168,9 +153,26 @@ export default function MainFooter() {
                 label="* votre@email.com"
               />
             </MotionInView>
-            <MotionInView variants={varFadeInUp} className="my-2">
-              <TButton name="M'abonner" />
-            </MotionInView>
+          </Stack>
+          <Stack
+            sx={{
+              mt: 6,
+              mb: { xs: 5, md: 6 },
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: { xs: "center", md: "center" },
+            }}
+          >
+            {SOCIALS.map((social) => (
+              <Button variant="outline">
+                <Box
+                  key={social.name}
+                  component="img"
+                  src={social.icon}
+                  sx={{ height: "30px" }}
+                />
+              </Button>
+            ))}
           </Stack>
         </Grid>
       </Grid>
@@ -200,7 +202,7 @@ export default function MainFooter() {
                       key={link.name}
                       color="inherit"
                       component={RouterLink}
-                      sx={{ display: "block" }}
+                      sx={{ display: "block", mr: "1.5rem" }}
                     >
                       {link.name}
                     </Link>
@@ -228,7 +230,7 @@ export default function MainFooter() {
         <Typography
           component="p"
           sx={{
-            fontSize: { md: 14, xs: 10 },
+            fontSize: { md: 11, xs: 10 },
             textAlign: "center",
             width: "93vw",
             mx: "auto",
