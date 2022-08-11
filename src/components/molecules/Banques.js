@@ -38,7 +38,6 @@ export default function Banques({ data, sx }) {
                 sx={{
                   width: "110px",
                   height: "140px",
-                  height: "110px",
                 }}
               />
             </MotionInView>

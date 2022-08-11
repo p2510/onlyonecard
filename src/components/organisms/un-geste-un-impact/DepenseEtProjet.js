@@ -205,7 +205,6 @@ export default function DepenseEtProjet() {
           <Box
             sx={{
               textAlign: "center",
-              // lineHeight: 1.9,
             }}
           >
             <MotionInView variants={varFadeInUp}>
