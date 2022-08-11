@@ -1,6 +1,6 @@
 import projet_labellise from "../../../assets/images/projet_labellise.png";
 import republique_france_logo from "../../../assets/images/republique_france_logo.png";
-import banque_france from "../../../assets/images/banque_france.png";
+import banque_france from "../../../assets/images/banque_france.svg";
 import union_logo from "../../../assets/images/union_logo.png";
 
 export const ECOLOGIQUEDATA = [

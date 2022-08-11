@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Link as RouterLink } from "react-router-dom";
-import onlyone_logo from "../../assets/images/onlyone_logo.png";
+import onlyone_logo from "../../assets/images/onlyone_logo.svg";
 import { Box } from "@mui/material";
 
 Logo.propTypes = {
@@ -15,8 +15,8 @@ export default function Logo({ disabledLink = false, sx }) {
       src={onlyone_logo}
       alt="logo"
       sx={{
-        width: { md: 190, xs: 140 },
-        height: { md: 50, xs: 40 },
+        width: { md: 100, xs: 45 },
+        height: { md: 20, xs: 47 },
         objectFit: "cover",
         ...sx,
       }}

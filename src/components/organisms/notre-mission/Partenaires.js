@@ -1,5 +1,5 @@
 import { styled } from "@mui/system";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Link, Typography } from "@mui/material";
 import {
   MotionInView,
   varFadeInDown,
@@ -316,14 +316,16 @@ export default function Partenaires() {
                     }}
                   >
                     <MotionInView variants={varFadeInUp}>
-                      <Box
-                        component="img"
-                        src={item.icon}
-                        sx={{
-                          width: "90px",
-                          height: "100px",
-                        }}
-                      />
+                      <Link>
+                        <Box
+                          component="img"
+                          src={item.icon}
+                          sx={{
+                            width: "90px",
+                            height: "100px",
+                          }}
+                        />
+                      </Link>
                     </MotionInView>
                   </Grid>
                 ))}
