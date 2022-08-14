@@ -2,34 +2,12 @@ import { styled } from "@mui/system";
 import { Box, Grid, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
-import { makeStyles } from "@mui/styles";
 import biodiversite_image from "../../../assets/images/biodiversite_image.svg";
 import projet_image_1 from "../../../assets/images/projet_image_1.svg";
 import projet_image_2 from "../../../assets/images/projet_image_2.svg";
-import ecologique from "../../../assets/images/ecologique.png";
-import foret from "../../../assets/images/foret.png";
-import territoire from "../../../assets/images/territoire.png";
-import association from "../../../assets/images/association.png";
-import climatique from "../../../assets/images/climatique.png";
-import energetique from "../../../assets/images/energetique.png";
+
 import { varFadeInUp, MotionInView, varFadeInLeft } from "../../atoms/animate";
 import { MHidden } from "src/components/atoms/@material-extend";
-
-const useStyles = makeStyles(() => ({
-  boxStyle: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    width: { md: "270px", xs: "380px" },
-    zIndex: 6,
-    bgcolor: "#10403B",
-    opacity: 0.75,
-    height: "132px ",
-    position: "absolute",
-    mt: { md: "-165px", xs: "100px" },
-    left: { md: "227px", xs: "0px" },
-  },
-}));
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",

@@ -1,6 +1,6 @@
-import etape_1 from "../../../assets/images/etape_1.png";
-import etape_2 from "../../../assets/images/etape_2.png";
-import etape_3 from "../../../assets/images/etape_3.png";
+import etape_1 from "../../../assets/images/etape_1.svg";
+import etape_2 from "../../../assets/images/etape_2.svg";
+import etape_3 from "../../../assets/images/etape_3.svg";
 
 export const OUVERTURECOMPTEDATA = [
   {

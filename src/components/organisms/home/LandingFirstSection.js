@@ -1,7 +1,7 @@
 import React from "react";
 import presentation from "../../../assets/images/presentation.svg";
 import euro_image from "../../../assets/images/euro_image.svg";
-// import planete_image from "../../../assets/images/planete_image.svg";
+import planete_image from "../../../assets/images/planete_image.svg";
 import { styled } from "@mui/system";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { MHidden } from "src/components/atoms/@material-extend";
@@ -60,7 +60,7 @@ export default function LandingFirstSection() {
         >
           <Typography
             sx={{
-              font: "Poppins",
+              fontFamily: "Poppins",
               width: "480px",
               height: "133px",
               top: "347px",
@@ -82,7 +82,7 @@ export default function LandingFirstSection() {
           <Typography
             sx={{
               color: "#fff",
-              font: "Lora",
+              fontFamily: "Lora",
               margin: "17px 49px 0px 34px",
               fontSize: "18px",
             }}
@@ -129,7 +129,7 @@ export default function LandingFirstSection() {
             display: "flex",
             justifyContent: "center",
             color: "#fff",
-            font: "Poppins",
+            fontFamily: "Poppins",
             fontSize: "32px",
             fontWeight: 700,
             zIndex: 6,
@@ -197,7 +197,7 @@ export default function LandingFirstSection() {
                     fontSize: "18px",
                     textAlign: "inherit",
                     color: "#10403B",
-                    font: "Lora",
+                    fontFamily: "Lora",
                     margin: "0px 2px",
                   }}
                 >
@@ -245,7 +245,7 @@ export default function LandingFirstSection() {
         >
           <Typography
             sx={{
-              font: "Poppins",
+              fontFamily: "Poppins",
               ml: "5000px",
               height: "133px",
               top: "347px",
@@ -263,7 +263,7 @@ export default function LandingFirstSection() {
           <Typography
             sx={{
               color: "#fff",
-              font: "Lora",
+              fontFamily: "Lora",
               margin: "0px 49px 69px 68px",
               fontSize: "18px",
             }}
@@ -294,17 +294,24 @@ export default function LandingFirstSection() {
           </Button>
         </Box>
       </Grid>
-      <Grid sx={{ mt: 10 }}>
+      <Grid
+        sx={{
+          mt: 10,
+          display: "flex",
+          justifyContent: "space-between",
+          flexDirection: "row",
+        }}
+      >
         <Box
           sx={{
-            width: "100%",
+            width: "80%",
             height: "584px",
           }}
         >
           <Container>
             <Typography
               sx={{
-                font: "Poppins",
+                fontFamily: "Poppins",
                 ml: "5000px",
                 height: "133px",
                 top: "347px",
@@ -321,7 +328,7 @@ export default function LandingFirstSection() {
             <Typography
               sx={{
                 color: "10403B",
-                font: "Lora",
+                fontFamily: "Lora",
                 margin: "0px 49px 69px 68px",
                 fontSize: "18px",
               }}
@@ -348,6 +355,12 @@ export default function LandingFirstSection() {
             </Button>
           </Container>
         </Box>
+        <Box
+          component="img"
+          src={planete_image}
+          alt="Epargnez votre argent, épargnez la planète"
+          sx={{ width: "467px", height: "459px" }}
+        />
       </Grid>
     </RootStyle>
   );

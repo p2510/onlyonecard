@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import { Grid, Container, Stack, TextField, Box } from "@mui/material";
+import { Container, TextField, Box, Typography, Button } from "@mui/material";
 import { MotionInView, varFadeInUp } from "../atoms/animate";
-import TButton from "../atoms/tailwindComponent/TButton";
+import { styled } from "@mui/styles";
 
 CommunautesInput.propTypes = {
   title: PropTypes.any,
@@ -9,6 +9,18 @@ CommunautesInput.propTypes = {
   inputStyle: PropTypes.any,
   buttonStyle: PropTypes.any,
 };
+
+const CustomTextField = styled(TextField)({
+  width: "656px",
+  background: "#fff",
+  marginTop: "44px",
+  marginBottom: "51px",
+  borderRadius: "16px",
+  outline: "none",
+  "& .MuiInputBase-input": {
+    color: "#10403B",
+  },
+});
 
 export default function CommunautesInput({
   title,
@@ -26,57 +38,44 @@ export default function CommunautesInput({
         ...sx,
       }}
     >
-      <Grid
-        item
+      <Box
         sx={{
           display: "flex",
+          justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
+          width: "100%",
+          height: "382px",
         }}
       >
-        <Box
+        <Typography
           sx={{
-            fontSize: "2.4rem",
-            fontWeight: "bold",
-            mb: 6,
-            mt: 1,
-            ...sx,
+            fontSize: "32px",
+            color: "#10403B",
+            fontWeight: 700,
+            textAlign: "34px",
           }}
         >
-          {title}
-        </Box>
-      </Grid>
-      <Stack
-        sx={{
-          mb: 8,
-          ml: {
-            md: "15rem",
-            xs: 0,
-          },
-          ...inputStyle,
-        }}
-      >
+          Rejoins la communauté
+        </Typography>
         <MotionInView variants={varFadeInUp}>
-          <TextField
-            type="email"
-            sx={{
-              bgcolor: "#fff",
-              borderRadius: "7.5px",
-              width: {
-                md: "39rem",
-                xs: "100%",
-              },
-            }}
-            label="* votre@email.com"
-          />
+          <CustomTextField type="email" placeholder="* votre@email.com" />
         </MotionInView>
-        <Box sx={{ ...buttonStyle }}>
-          <MotionInView variants={varFadeInUp} className="my-2">
-            <TButton name="M'abonner" />
-          </MotionInView>
-        </Box>
-      </Stack>
+        <Button
+          sx={{
+            variant: "contained",
+            borderRadius: 50,
+            background: "#10403B !important",
+            "&:hover": { background: "#2A7267 !important" },
+            boxShadow: "none",
+            color: "#fff",
+            fontSize: "16px",
+            padding: "7px 38px 10px 38px",
+          }}
+        >
+          M'abonner
+        </Button>
+      </Box>
     </Container>
   );
 }
