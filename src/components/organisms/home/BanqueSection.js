@@ -61,7 +61,7 @@ export default function BanqueSection() {
               md: 4,
               xs: 8,
             },
-            mt: "132px",
+            mt: "50px",
           }}
         />
       </Container>
