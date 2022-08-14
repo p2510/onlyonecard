@@ -8,7 +8,7 @@ import ethique_icon from "../../../assets/images/ethique_icon.svg";
 import solidaire_icon from "../../../assets/images/solidaire_icon.svg";
 import temps_icon from "../../../assets/images/temps_icon.png";
 import responsable_icon from "../../../assets/images/responsable_icon.svg";
-import outil from "../../../assets/images/outil.png";
+import outil from "../../../assets/images/outil.svg";
 import accompagner_icon from "../../../assets/images/accompagner_icon.png";
 import luko from "../../../assets/images/luko.png";
 import plum_energie from "../../../assets/images/plum_energie.png";
