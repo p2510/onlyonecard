@@ -74,7 +74,6 @@ export default function CommunautesInput({
             boxShadow: "none",
             color: "#fff",
             fontSize: "16px",
-            padding: "7px 38px 7px 38px",
           }}
         >
           M'abonner

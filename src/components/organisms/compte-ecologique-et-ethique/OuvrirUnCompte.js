@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { styled } from "@mui/system";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import onlyone_carte from "../../../assets/images/onlyone_carte.png";
@@ -13,7 +13,6 @@ import {
   varFadeInUp,
 } from "src/components/atoms/animate";
 import { VALEURANDENGAGEMENTDATA } from "./CompteEcologiqueEtEthique.constant";
-import Dialogue from "src/components/molecules/Dialogue";
 import { MHidden } from "src/components/atoms/@material-extend";
 
 const RootStyle = styled("div")(({ theme }) => ({
@@ -30,10 +29,6 @@ OuvrirUnCompte.propTypes = {
 };
 
 export default function OuvrirUnCompte() {
-  const [open, setOpen] = useState(false);
-  const modalClose = () => {
-    setOpen(false);
-  };
   return (
     <RootStyle>
       <Grid
@@ -147,7 +142,6 @@ export default function OuvrirUnCompte() {
             padding: "8px 38px 8px 38px",
             marginTop: "-16rem",
           }}
-          onClick={() => setOpen(true)}
         >
           C'est parti !
         </Button>
@@ -197,7 +191,6 @@ export default function OuvrirUnCompte() {
               bgcolor: "#C4E3D5",
               height: "644px",
               width: { md: "1196px", xs: "100%" },
-
               opacity: "70%",
             }}
           >
@@ -261,7 +254,6 @@ export default function OuvrirUnCompte() {
                   padding: "8px 48px 8px 40px",
                   mt: 6,
                 }}
-                onClick={() => setOpen(true)}
               >
                 Cette fois, je démarre vraiment !
               </Button>
@@ -286,7 +278,6 @@ export default function OuvrirUnCompte() {
           />
         </MHidden>
       </Grid>
-      <Dialogue open={open} modalClose={modalClose} />
     </RootStyle>
   );
 }
