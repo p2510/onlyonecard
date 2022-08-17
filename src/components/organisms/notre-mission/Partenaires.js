@@ -132,9 +132,7 @@ export default function Partenaires() {
               marginRight: "2rem",
             }}
           >
-            <MotionInView variants={varFadeInUp}>
-              <Box component="img" src={item.icon} alt={item.title} />
-            </MotionInView>
+            <MotionInView variants={varFadeInUp}></MotionInView>
 
             <MotionInView variants={varFadeInDown}>
               <Typography
