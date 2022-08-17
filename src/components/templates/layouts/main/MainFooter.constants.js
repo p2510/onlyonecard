@@ -5,14 +5,15 @@ import twitter_icon from "../../../../assets/images/twitter_icon.svg";
 import { styled } from "@mui/system";
 
 export const SOCIALS = [
-  { name: "FaceBook", icon: facebook_icon },
-  { name: "Linkedin", icon: linkedin_icon },
-  { name: "Twitter", icon: twitter_icon },
-  { name: "Instagram", icon: insta_icon },
+  { id: 1, name: "FaceBook", icon: facebook_icon },
+  { id: 2, name: "Linkedin", icon: linkedin_icon },
+  { id: 3, name: "Twitter", icon: twitter_icon },
+  { id: 4, name: "Instagram", icon: insta_icon },
 ];
 
 export const LINKS = [
   {
+    id: 1,
     headline: "Application OnlyOne",
     children: [
       { name: "Comment créer de l'impact", href: "#" },
@@ -24,6 +25,7 @@ export const LINKS = [
     ],
   },
   {
+    id: 2,
     headline: "La marque OnlyOne",
     children: [
       { name: "La chronique finance et impact", href: "#" },
@@ -36,16 +38,19 @@ export const LINKS = [
 
 export const CONDITIONLINKS = [
   {
+    id: 1,
     headline: "Mentions",
-    children: [{ name: "Mentions légales", href: "#" }],
+    children: [{ id: 1, name: "Mentions légales", href: "#" }],
   },
   {
+    id: 2,
     headline: "confidentialités",
-    children: [{ name: "Charte de confidentialités", href: "#" }],
+    children: [{ id: 2, name: "Charte de confidentialités", href: "#" }],
   },
   {
+    id: 3,
     headline: "Conditions",
-    children: [{ name: "Conditions générales", href: "#" }],
+    children: [{ id: 3, name: "Conditions générales", href: "#" }],
   },
 ];
 
