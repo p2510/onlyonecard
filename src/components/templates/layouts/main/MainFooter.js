@@ -104,9 +104,9 @@ export default function MainFooter() {
             justifyContent="space-around"
           >
             {LINKS.map((list) => {
-              const { headline, children } = list;
+              const { headline, children, id } = list;
               return (
-                <Stack key={headline} spacing={3}>
+                <Stack key={id} spacing={3}>
                   <Typography
                     fontSize="16px"
                     fontWeight="700"
@@ -156,7 +156,7 @@ export default function MainFooter() {
           </Stack>
           <Stack
             sx={{
-              mt: 6,
+              mt: 5,
               mb: { xs: 5, md: 6 },
               display: "flex",
               flexDirection: "row",
@@ -166,7 +166,7 @@ export default function MainFooter() {
             {SOCIALS.map((social) => (
               <Button variant="outline">
                 <Box
-                  key={social.name}
+                  key={social.id}
                   component="img"
                   src={social.icon}
                   sx={{ height: "30px" }}
@@ -192,9 +192,9 @@ export default function MainFooter() {
           justifyContent="space-around"
         >
           {CONDITIONLINKS.map((list) => {
-            const { headline, children } = list;
+            const { id, children } = list;
             return (
-              <Stack key={headline}>
+              <Stack key={id}>
                 <Typography sx={{ fontSize: { md: 14, xs: "12.7px" } }}>
                   {children.map((link) => (
                     <Link
