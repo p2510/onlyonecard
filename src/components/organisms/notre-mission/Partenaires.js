@@ -1,80 +1,112 @@
 import { styled } from "@mui/system";
-import { Box, Container, Grid, Link, Typography } from "@mui/material";
-import {
-  MotionInView,
-  varFadeInDown,
-  varFadeInLeft,
-  varFadeInUp,
-} from "../../atoms/animate";
-import { ODDDATA, PARTENAIREDATA, VALEURSDATA } from "./NotreMission.constant";
+import { Box, Container, Grid, Typography } from "@mui/material";
+import { MotionInView, varFadeInDown, varFadeInUp } from "../../atoms/animate";
+import { PARTENAIREDATA } from "./NotreMission.constant";
 import { MHidden } from "../../atoms/@material-extend";
-import developpement_durable from "../../../assets/images/developpement_durable.png";
-import CommunautesInput from "../../molecules/CommunautesInput";
+import arriere_plan_notre_mission from "../../../assets/images/arriere_plan_notre_mission.svg";
+import bras_image from "../../../assets/images/bras_image.svg";
+import cercle from "../../../assets/images/cercle.svg";
+import plage_image from "../../../assets/images/plage_image.svg";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
-  paddingBottom: theme.spacing(10),
+  paddingBottom: theme.spacing(0),
   [theme.breakpoints.up("md")]: {
     textAlign: "left",
   },
 }));
 
-const titre = (
-  <Typography
-    sx={{
-      fontSize: "37px",
-      fontWeight: 600,
-      textAlign: "start",
-      margin: "0px",
-      mb: 6,
-      mt: 10,
-      ml: -18,
-    }}
-  >
-    Rejoignez le mouvement d’un nouveau monde bancaire, <br /> écologique,
-    transparent et sécurisé.
-  </Typography>
-);
-
 export default function Partenaires() {
   return (
     <RootStyle>
-      <Grid
-        item
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Typography
+      <MHidden width="mdDown">
+        <Grid container>
+          <Box
+            component="img"
+            src={cercle}
+            alt="Eco-compte Onlyone"
+            sx={{
+              mt: "240px",
+              ml: "428px",
+            }}
+          />
+          <Box
+            component="img"
+            src={arriere_plan_notre_mission}
+            alt="Eco-compte Onlyone"
+            sx={{
+              width: "100%",
+              position: "absolute",
+              height: "686.49px",
+              right: "2px",
+              top: "337.51px",
+            }}
+          />
+          <Box
+            component="img"
+            src={bras_image}
+            alt="Eco-compte Onlyone"
+            sx={{
+              position: "absolute",
+              width: "583px",
+              height: "568px",
+              left: "836px",
+              top: "453px",
+            }}
+          />
+        </Grid>
+        <Box
           sx={{
-            fontSize: "48px",
-            fontWeight: 600,
-            lineHeight: 1.2,
-            textAlign: "center",
-            mt: {
-              md: 24,
-              xs: 15,
-            },
+            width: "80%",
+            height: "584px",
+            mt: 25,
+            ml: "2rem",
           }}
         >
-          Notre mission est de concilier votre argent et vos <br /> valeurs
-        </Typography>
-        <Typography
-          sx={{
-            fontWeight: 400,
-            textAlign: "center",
-            fontSize: "24px",
-            mt: 5,
-            mb: 3,
-          }}
-        >
-          Nous aidons à transformer vos bonnes intentions en actions, tout
-          simplement.
-        </Typography>
-      </Grid>
+          <Typography
+            sx={{
+              font: "Poppins",
+              ml: "5000px",
+              height: "133px",
+              top: "347px",
+              fontSize: { md: "42px", xs: "22px" },
+              color: "#fff",
+              fontWeight: 900,
+              lineHeight: "63px",
+              fontStyle: "normal",
+              opacity: 0.98,
+              margin: "39px 73px 60px 68px",
+            }}
+          >
+            Notre mission est de concilier
+            <br />
+            <span
+              style={{ fontWeight: "bold", color: "#C4E3D5", marginLeft: 0.5 }}
+            >
+              votre argent
+            </span>
+            <span> et </span>
+            <span style={{ fontWeight: "bold", color: "#C4E3D5" }}>
+              vos valeurs
+            </span>
+            <span style={{ fontWeight: "bold", color: "#FAAA42" }}>.</span>
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: "32px",
+              color: "#fff",
+              margin: "0px 49px 79px 68px",
+              lineHeight: "48px",
+              fontWeight: 700,
+              opacity: 0.98,
+            }}
+          >
+            Nous aidons à transformer vos bonnes <br /> intentions en actions,
+            tout simplement.
+          </Typography>
+        </Box>
+      </MHidden>
+
       <Container
         direction={{ xs: "column", sm: "row" }}
         sx={{
@@ -83,10 +115,10 @@ export default function Partenaires() {
           alignItems: "center",
           width: "100%",
           mb: {
-            md: 4,
+            md: 18,
             xs: 8,
           },
-          mt: 7,
+          mt: -10,
         }}
       >
         {PARTENAIREDATA.map((item) => (
@@ -107,8 +139,8 @@ export default function Partenaires() {
                 src={item.icon}
                 alt={item.title}
                 sx={{
-                  width: "450px",
-                  height: "240px",
+                  width: "220px",
+                  height: "170px",
                 }}
               />
             </MotionInView>
@@ -119,271 +151,103 @@ export default function Partenaires() {
                   display: "flex",
                   alignItems: "center",
                   textAlign: "center",
-                  fontWeight: 600,
-                  fontSize: "28px",
-                  lineHeight: 0.9,
-                  mb: 2,
+                  fontWeight: 700,
+                  fontSize: "32px",
+                  lineHeight: "48px",
+                  mt: 8,
+                  mb: 6,
                 }}
               >
                 {item.title}
               </Typography>
             </MotionInView>
             <MotionInView variants={varFadeInUp}>
-              <Typography
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: 1.4,
-                  fontWeight: 400,
-                  textAlign: "center",
-                }}
-              >
-                {item.paragraphe}
-              </Typography>
-            </MotionInView>
-          </Grid>
-        ))}
-      </Container>
-
-      <Container
-        sx={{
-          dispaly: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          mt: "5rem",
-        }}
-      >
-        <Grid item xs={12} md={6} lg={7.7}>
-          <MotionInView variants={varFadeInLeft}>
-            <Typography
-              sx={{
-                fontSize: "40px",
-                fontWeight: 800,
-                lineHeight: 1,
-                mt: {
-                  md: 24,
-                  xs: 15,
-                },
-              }}
-            >
-              Mission
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "18px",
-                fontWeight: 400,
-                letterSpacing: "0px",
-                mb: 5,
-              }}
-            >
-              <br />
-              Le compte OnlyOne souhaite faire de la banque, le catalyseur du
-              changement. La banque doit être au cœur de l’économie réelle et
-              servir de guide pour construire le monde de demain, plus durable,
-              plus responsable et plus inclusif.
-              <br /> <br />
-              Bienvenue dans le mouvement d’un nouveau monde bancaire, au
-              service du climat, de la biodiversité et de la société.
-            </Typography>
-          </MotionInView>
-          <MotionInView variants={varFadeInLeft}>
-            <Typography
-              sx={{
-                fontSize: "35px",
-                fontWeight: 600,
-                lineHeight: 1.4,
-                mt: {
-                  md: 16,
-                  xs: 15,
-                },
-              }}
-            >
-              Nos valeurs & engagements
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "18px",
-                fontWeight: 400,
-                mt: -2,
-              }}
-            >
-              <br />4 valeurs profondément ancrées dans notre ADN, nous animent
-              au quotidien.
-            </Typography>
-          </MotionInView>
-        </Grid>
-        {VALEURSDATA.map((item) => (
-          <Grid
-            container
-            key={item.id}
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "start",
-              justifyContent: "space-around",
-            }}
-          >
-            <Grid item sx={{ ml: -82, marginBlock: -12, mt: 10 }}>
-              <Box
-                component="img"
-                src={item.icon}
-                alt={item.title}
-                sx={{
-                  width: "130px",
-                  height: "120px",
-                }}
-              />
-            </Grid>
-            <Grid item sx={{ ml: 42 }}>
-              <MotionInView variants={varFadeInDown}>
-                <Typography
+              <Grid>
+                <Box
                   sx={{
-                    fontWeight: 600,
-                    fontSize: "28px",
-                    lineHeight: 0.9,
-                    mb: 2,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "280px",
+                    height: "211px",
+                    background: "#E4D6C0",
                   }}
                 >
-                  {item.title}
-                </Typography>
-              </MotionInView>
-
-              <MotionInView variants={varFadeInUp}>
-                <Typography
-                  sx={{
-                    fontSize: "18px",
-                    lineHeight: 1.4,
-                    fontWeight: 400,
-                    textAlign: "start",
-                    mb: "20px",
-                  }}
-                >
-                  {item.paragraphe}
-                </Typography>
-              </MotionInView>
-            </Grid>
-          </Grid>
-        ))}
-      </Container>
-      <Grid
-        container
-        spacing={1}
-        sx={{
-          mb: 18,
-          mt: {
-            md: "7rem",
-            xs: 0,
-          },
-          width: "80vw",
-          mx: "auto",
-        }}
-      >
-        <MHidden width="mdDown">
-          <Grid item xs={12} md={6} lg={5.8}>
-            <MotionInView variants={varFadeInUp}>
-              <Box
-                component="img"
-                alt="Image d'une pièce d'hero "
-                src={developpement_durable}
-                sx={{
-                  borderRadius: 2,
-                  width: "78%",
-                  height: "18vw",
-                  ml: 7,
-                  mt: 15,
-                }}
-              />
-              <Grid
-                container
-                direction={{ xs: "column", sm: "row" }}
-                sx={{
-                  display: "flex",
-                  width: "55vw",
-                  mb: {
-                    md: 7,
-                    xs: 8,
-                  },
-                }}
-              >
-                {ODDDATA.map((item) => (
-                  <Grid
-                    item
-                    key={item.id}
+                  <Typography
                     sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "space-around",
+                      fontFamily: "Lora",
+                      fontSize: "18px",
+                      lineHeight: "27px",
+                      fontWeight: 400,
+                      textAlign: "start",
+                      margin: "0px 25px 0px 25px",
                     }}
                   >
-                    <MotionInView variants={varFadeInUp}>
-                      <Link>
-                        <Box
-                          component="img"
-                          src={item.icon}
-                          sx={{
-                            width: "90px",
-                            height: "100px",
-                          }}
-                        />
-                      </Link>
-                    </MotionInView>
-                  </Grid>
-                ))}
+                    {item.paragraphe}
+                  </Typography>
+                </Box>
               </Grid>
             </MotionInView>
           </Grid>
-        </MHidden>
-        <Grid item xs={12} md={6} lg={5.6} mt="1rem" ml="1.5rem">
-          <MotionInView variants={varFadeInLeft}>
-            <Typography
-              sx={{
-                display: "flex",
-                my: 2,
-                color: "common.gray",
-                fontWeight: "fontWeightMedium",
-                margin: 0,
-                lineHeight: 1.2,
-                fontSize: 37,
-              }}
-            >
-              Nous nous engageons dans la réalisation des ODD de l’ONU !
-            </Typography>
-          </MotionInView>
-
-          <MotionInView variants={varFadeInLeft}>
-            <Typography
-              sx={{
-                opacity: 0.75,
-                mb: 4,
-                mt: 6,
-                fontSize: "20px",
-                lineHeight: "1.3em",
-                fontWeight: 400,
-                marginInlineStart: "0px",
-                marginInlineEnd: "0px",
-                fontStyle: "normal",
-                boxSizing: "border-box",
-              }}
-            >
-              Le meilleur moyen de passer à l’action, c’est de s’y <br />
-              mettre. <br /> <br /> Nous nous engageons à remplir notre mission
-              selon le référentiel commun des 17 ODD : 17 objectifs de
-              développement durable qui visent à réduire la pauvreté, réduire
-              les inégalités et lutter contre les dérèglements climatiques afin
-              de créer un monde plus durable et plus équitable. <br /> <br />
-              Nous nous attachons particulièrement aux 6 des ODD (2 <br /> –
-              Faim zéro, 10 – Inégalités réduites, 12- Consommation & production
-              responsables, 13- Mesures relatives à la lutte contre le
-              réchauffement climatique, 15- Vie terrestre et 17 <br /> –
-              Partenariats pour la réalisation des objectifs).
-            </Typography>
-          </MotionInView>
-        </Grid>
-        <CommunautesInput
-          sx={{ fontSize: "32px", textAlign: "center" }}
-          title={titre}
-          inputStyle={{ ml: "-2.5rem", mt: -6, mb: -20 }}
-          buttonStyle={{ mr: "28.5rem" }}
+        ))}
+      </Container>
+      <Grid sx={{ display: "flex", flexDirection: "row" }}>
+        <Box
+          sx={{
+            width: "100%",
+            height: "562px",
+            bgcolor: "#10403B",
+          }}
+        >
+          <Typography
+            sx={{
+              fontFamily: "Poppins",
+              height: "133px",
+              top: "347px",
+              fontSize: { md: "38px", xs: "22px" },
+              color: "#fff",
+              fontWeight: 900,
+              lineHeight: "63px",
+              fontStyle: "normal",
+              margin: "70px 0px 0px 100px",
+            }}
+          >
+            Mission
+            <span style={{ color: "#FAAA42" }}>.</span>
+          </Typography>
+          <Typography
+            sx={{
+              color: "#fff",
+              fontFamily: "Lora",
+              margin: "-10px 0px 39px 100px",
+              fontSize: "20px",
+            }}
+          >
+            Le compte OnlyOne souhaite faire de la banque, le catalyseur du{" "}
+            <br />
+            changement. La banque doit être au cœur de l’économie réelle et
+            servir <br /> de guide pour construire le monde de demain, plus
+            durable, plus <br /> responsable et plus inclusif.
+          </Typography>
+          <Typography
+            sx={{
+              color: "#C4E3D5",
+              margin: "0px 0px 69px 100px",
+              fontWeight: 900,
+              fontSize: "22px",
+            }}
+          >
+            Bienvenue dans le mouvement d’un nouveau <br /> monde bancaire, au
+            service du climat, de la <br /> biodiversité et de la société.
+          </Typography>
+        </Box>
+        <Box
+          component="img"
+          src={plage_image}
+          sx={{
+            width: "646.45px",
+            height: "562px",
+          }}
         />
       </Grid>
     </RootStyle>

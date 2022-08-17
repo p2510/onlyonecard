@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Grid, Typography, Box, Button, TextField } from "@mui/material";
+import { Grid, Typography, Box, Button } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import Slider from "react-slick";
 import { MotionInView, varFadeInLeft, varFadeInUp } from "../../atoms/animate";
@@ -8,6 +8,7 @@ import { styled } from "@mui/system";
 import CarouselDots from "../../atoms/CarouselDots";
 import nouveau_monde from "../../../assets/images/nouveau_monde.svg";
 import { Cursor, Typewriter } from "react-simple-typewriter";
+import { CustomTextField } from "src/components/atoms/GeneralTextfield.style";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -16,26 +17,6 @@ const RootStyle = styled("div")(({ theme }) => ({
   },
   marginTop: -100,
 }));
-
-const CustomTextField = styled(TextField)({
-  width: "656px",
-  background: "#fff",
-  marginTop: "44px",
-  marginBottom: "51px",
-  border: "0px",
-  borderRadius: "50px",
-  outline: "none",
-  noBorder: {
-    border: "none",
-  },
-  "& .css-1k2zuns-MuiInputBase-root-MuiOutlinedInput-root": {
-    borderRadius: "50px",
-  },
-  "& .MuiInputBase-input": {
-    color: "#333",
-    fontWeight: "900",
-  },
-});
 
 export default function AboutUs({ isActive }) {
   const theme = useTheme();
