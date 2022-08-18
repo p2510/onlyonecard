@@ -12,7 +12,6 @@ export default function CompteEcologiqueEthique() {
       <OuvrirUnCompte />
       <DifferentsService />
       <BanqueSection />
-      {/* <CartePaiementEtPrix /> */}
       <DifferentsEtapes />
     </Page>
   );

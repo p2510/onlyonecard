@@ -4,7 +4,7 @@ import { MotionInView, varFadeInUp } from "../atoms/animate";
 import { styled } from "@mui/styles";
 
 CommunautesInput.propTypes = {
-  title: PropTypes.any,
+  titre: PropTypes.string,
   sx: PropTypes.any,
   inputStyle: PropTypes.any,
   buttonStyle: PropTypes.any,
@@ -23,7 +23,7 @@ const CustomTextField = styled(TextField)({
 });
 
 export default function CommunautesInput({
-  title,
+  titre,
   sx,
   inputStyle,
   buttonStyle,
@@ -56,7 +56,7 @@ export default function CommunautesInput({
             textAlign: "34px",
           }}
         >
-          Rejoins la communauté
+          {titre}
         </Typography>
         <MotionInView variants={varFadeInUp}>
           <CustomTextField type="email" placeholder="* votre@email.com" />
