@@ -4,14 +4,12 @@ import { styled } from "@mui/system";
 import "react-phone-number-input/style.css";
 import { MotionInView, varFadeInDown, varFadeInUp } from "../../atoms/animate";
 import { OUVERTURECOMPTEDATA } from "./OnlyoneEcoCompte.constant";
-import ouverture_compte_img from "../../../assets/images/ouverture_compte_img.png";
-import cercle from "../../../assets/images/cercle.png";
 import riviere from "../../../assets/images/riviere.png";
 import { CustomTextField } from "src/components/atoms/GeneralTextfield.style";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
-  paddingBottom: theme.spacing(10),
+  paddingBottom: theme.spacing(1),
   [theme.breakpoints.up("md")]: {
     textAlign: "left",
   },
@@ -26,49 +24,37 @@ export default function OnlyoneEcoCompte() {
           dispaly: "flex",
           justifyContent: "center",
           alignItems: "center",
-          mt: 23,
+          mt: 20,
         }}
       >
         <Grid
+          container
           xs={12}
-          spacing={2}
-          sx={{ display: "flex", justifyContent: "space-between", mb: "6rem" }}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          <Grid xs={6} sx={{ padding: "25px" }}>
-            <Typography
-              sx={{
-                fontSize: "42px",
-                fontWeight: 900,
-                lineHeight: "63px",
-                textAlign: "start",
-                color: "#10403B",
-                mb: 10,
-                mt: {
-                  md: 5,
-                  xs: -12,
-                },
-              }}
-            >
-              C’est si
-              <span style={{ color: "#C4E3D5" }}> simple </span>
-              d’ouvrir un
-              <br /> éco-compte OnlyOne!
-            </Typography>
-          </Grid>
-          <Grid xs={6}>
-            <MotionInView variants={varFadeInUp}>
-              <Box
-                component="img"
-                src={ouverture_compte_img}
-                sx={{ opacity: 0.99 }}
-              />
-              <Box
-                component="img"
-                src={cercle}
-                sx={{ margin: "-380px 0px 0px -35px" }}
-              />
-            </MotionInView>
-          </Grid>
+          <Typography
+            sx={{
+              fontSize: "43px",
+              fontWeight: 600,
+              lineHeight: 0.9,
+              textAlign: "center",
+              mb: 10,
+              mt: {
+                md: 5,
+                xs: -12,
+              },
+            }}
+          >
+            <span>C’est si</span> {""}
+            <span style={{ color: "#00db89" }}>simple </span>
+            <span>d’ouvrir un éco-compte OnlyOne </span>
+            <span style={{ color: "#00db89" }}>!</span>
+          </Typography>
         </Grid>
         <Grid
           container
@@ -76,7 +62,7 @@ export default function OnlyoneEcoCompte() {
           xs={12}
           sx={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "space-around",
             alignItems: "center",
             width: "100%",
             mb: {
@@ -93,12 +79,20 @@ export default function OnlyoneEcoCompte() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: "space-around",
                 marginRight: "2rem",
               }}
             >
               <MotionInView variants={varFadeInUp}>
-                <Box component="img" src={item.icon} alt={item.title} />
+                <Box
+                  component="img"
+                  src={item.icon}
+                  alt={item.title}
+                  sx={{
+                    width: "150px",
+                    height: "120px",
+                  }}
+                />
               </MotionInView>
 
               <MotionInView variants={varFadeInDown}>
