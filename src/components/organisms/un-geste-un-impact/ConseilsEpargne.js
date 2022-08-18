@@ -172,6 +172,7 @@ export default function ConseilsEpargne() {
               valeurs en plus. Et si vous testiez ?
             </Typography>
           </MotionInView>
+
           <Box
             open={isOpen}
             onClose={() => setIsOpen(false)}
