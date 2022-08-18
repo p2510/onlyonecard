@@ -7,7 +7,7 @@ export const CustomTextField = styled(TextField)({
   marginTop: "44px",
   marginBottom: "51px",
   border: "0px",
-  borderRadius: "50px",
+  borderRadius: 9,
   outline: "none",
   noBorder: {
     border: "none",
