@@ -6,7 +6,6 @@ import {
   Button,
   Card,
   CardActionArea,
-  CardActions,
   CardContent,
   CardMedia,
   Container,
@@ -30,11 +29,12 @@ const RootStyle = styled("div")(({ theme }) => ({
 
 const useStyles = makeStyles(() => ({
   root: {
-    backgroundColor: "#00db89",
-    "&:hover": { backgroundColor: "#00db89" },
+    backgroundColor: "#2A7267",
+    "&:hover": { backgroundColor: "#2A7267" },
   },
   link: {
     backgroundColor: "#fff",
+    color: "#10403B",
   },
 }));
 
@@ -75,22 +75,26 @@ export default function FinanceEtImpact() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
+          mb: 20,
         }}
       >
         <Typography
           sx={{
-            fontSize: "48px",
-            fontWeight: 600,
-            lineHeight: 1.2,
+            fontSize: "42px",
+            fontWeight: 900,
+            lineHeight: "63px",
             textAlign: "center",
+            color: "#10403B",
             mt: {
               md: 24,
               xs: 15,
             },
-            mb: 18,
+            mb: 16,
           }}
         >
-          La chronique finance et impact
+          La chronique <span style={{ color: "#C4E3D5" }}>finance</span> et
+          <span style={{ color: "#C4E3D5" }}> impact</span>
+          <span style={{ color: "#FAAA42" }}>.</span>
         </Typography>
         <Grid item xs={6}>
           <Box sx={{ width: "100%", maxWidth: "100%" }}>
@@ -108,20 +112,21 @@ export default function FinanceEtImpact() {
             ))}
           </Box>
         </Grid>
-        <Grid item xs={6} mt="4rem">
+        <Grid item xs={6} mt="10rem">
           <Container>
-            <Grid container spacing={{ xs: 4, md: 4 }}>
+            <Grid container spacing={{ xs: 4, md: 8 }}>
               {data.map((item) => (
                 <Grid
                   item
                   xs={4}
                   md={4}
-                  sx={{ width: 150, minWidth: 394 }}
+                  sx={{ width: "333px", minWidth: "403px" }}
                   key={item.id}
                 >
                   <Card
                     sx={{
                       borderRadius: "0px",
+                      background: "#E4D6C0",
                     }}
                   >
                     <CardActionArea>
@@ -129,16 +134,17 @@ export default function FinanceEtImpact() {
                         component="img"
                         image={item.icon}
                         alt="green iguana"
-                        sx={{ height: 320 }}
+                        sx={{ height: "233px" }}
                       />
-                      <CardContent>
+                      <CardContent sx={{ height: "283px" }}>
                         <Typography
                           sx={{
                             display: "flex",
+                            justifyContent: "center",
                             mb: "20px",
-                            fontSize: "0.8em",
+                            fontSize: "17px",
                             lineHeight: 1.4,
-                            margin: "0px 0px 20px",
+                            color: "#10403B",
                           }}
                         >
                           <span style={{ marginRight: "10px" }}>
@@ -151,26 +157,28 @@ export default function FinanceEtImpact() {
                         </Typography>
                         <Typography
                           sx={{
-                            fontSize: "20px",
-                            fontWeight: "bold",
-                            lineHeight: 1.2,
+                            textAlign: "center",
+                            fontSize: "24px",
+                            fontWeight: 700,
+                            lineHeight: "36px",
+                            color: "#10403B",
+                            mb: 2,
                           }}
                         >
                           {item.description}
                         </Typography>
-                      </CardContent>
-                      <CardActions>
                         <Typography
                           sx={{
-                            color: "#00db9b",
-                            fontSize: "17px",
-                            fontWeight: 600,
-                            marginLeft: "15px",
+                            textAlign: "center",
+                            color: "#B7795E",
+                            fontSize: "16px",
+                            lineHeight: "24px",
+                            fontWeight: 700,
                           }}
                         >
                           {item.lien}
                         </Typography>
-                      </CardActions>
+                      </CardContent>
                     </CardActionArea>
                   </Card>
                 </Grid>
