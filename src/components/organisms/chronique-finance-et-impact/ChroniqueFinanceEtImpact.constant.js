@@ -18,15 +18,15 @@ export const buttonStyles = {
 };
 
 export const buttonTwoStyles = {
-  borderRadius: 50,
+  borderRadius: "23px",
   p: 1,
   m: 2,
-  minWidth: "150px",
+  minWidth: "170px",
   border: "1px solid",
-  borderColor: "#00db89",
-  backgroundColor: "#00db89",
+  borderColor: "#2A7267",
+  backgroundColor: "#2A7267",
   textTransform: "none",
-  color: "#333",
+  color: "#fff",
 };
 
 export const CHRONIQUEDATA = [
