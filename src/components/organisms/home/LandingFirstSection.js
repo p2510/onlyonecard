@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import presentation from "../../../assets/images/presentation.svg";
 import euro_image from "../../../assets/images/euro_image.svg";
 import planete_image from "../../../assets/images/planete_image.svg";
@@ -13,6 +13,7 @@ import {
   varFadeInUp,
 } from "src/components/atoms/animate";
 import { ACTIONSDATA } from "./Home.constant";
+import Dialogue from "src/components/molecules/Dialogue";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -28,6 +29,11 @@ LandingFirstSection.propTypes = {
 };
 
 export default function LandingFirstSection() {
+  const [open, setOpen] = useState(false);
+  const modalClose = () => {
+    setOpen(false);
+  };
+
   return (
     <RootStyle>
       <MHidden width="mdDown">
@@ -215,14 +221,14 @@ export default function LandingFirstSection() {
         <Button
           sx={{
             borderRadius: 50,
-            bgcolor: "#2A7267",
-            "&:hover": { bgcolor: "#10403B" },
+            bgcolor: "#2A7267 !important",
+            "&:hover": { bgcolor: "#10403B !important" },
             boxShadow: "none",
             fontSize: "15px",
             padding: "7px 28px 10px 28px",
           }}
           variant="contained"
-          href={PATH_PAGE.UnGesteUnImpact}
+          onClick={() => setOpen(true)}
         >
           J'ouvre un compte écologique et éthique
         </Button>
@@ -349,7 +355,7 @@ export default function LandingFirstSection() {
                 padding: "7px 38px 10px 38px",
               }}
               variant="contained"
-              href={PATH_PAGE.UnGesteUnImpact}
+              href={PATH_PAGE.PlaceImpact}
             >
               J'explore la Place Impact
             </Button>
@@ -362,6 +368,7 @@ export default function LandingFirstSection() {
           sx={{ width: "467px", height: "459px" }}
         />
       </Grid>
+      <Dialogue open={open} modalClose={modalClose} />
     </RootStyle>
   );
 }

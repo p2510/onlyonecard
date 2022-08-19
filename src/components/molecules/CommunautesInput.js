@@ -6,6 +6,7 @@ import { styled } from "@mui/styles";
 CommunautesInput.propTypes = {
   titre: PropTypes.string,
   sx: PropTypes.any,
+  titleStyle: PropTypes.any,
   inputStyle: PropTypes.any,
   buttonStyle: PropTypes.any,
 };
@@ -25,6 +26,7 @@ const CustomTextField = styled(TextField)({
 export default function CommunautesInput({
   titre,
   sx,
+  titleStyle,
   inputStyle,
   buttonStyle,
 }) {
@@ -53,7 +55,9 @@ export default function CommunautesInput({
             fontSize: "32px",
             color: "#10403B",
             fontWeight: 700,
-            textAlign: "34px",
+            textAlign: "center",
+            lineHeight: "34px",
+            ...titleStyle,
           }}
         >
           {titre}

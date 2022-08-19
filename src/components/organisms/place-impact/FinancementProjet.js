@@ -1,20 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { styled } from "@mui/system";
-import { Container, Divider, Grid, Typography } from "@mui/material";
+import { Box, Container, Divider, Grid, Typography } from "@mui/material";
+import citoyens_image from "../../../assets/images/citoyens_image.svg";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import { varFadeInUp, MotionInView } from "../../atoms/animate";
 import { FINANCEMENTPROJETDATA } from "./PlaceImpact.constant";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
-import AddIcon from "@mui/icons-material/Add";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import CommunautesInput from "../../molecules/CommunautesInput";
 import AccordionDetails from "@mui/material/AccordionDetails";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
-  marginBottom: "3.5rem",
   paddingBottom: theme.spacing(1),
   [theme.breakpoints.up("md")]: {
     textAlign: "left",
@@ -33,99 +32,113 @@ const Accordion = styled((props) => (
   },
 }));
 
-const titre = (
-  <Typography
-    sx={{
-      fontSize: "35px",
-      lineHeight: 1.2,
-      fontWeight: "bolder",
-      textAlign: "start",
-      margin: "0px",
-      mb: 6,
-      mt: 1,
-      ml: -18,
-    }}
-  >
-    Rejoins le mouvement des citoyens mettant leur argent au service du climat,
-    de la biodiversité et de la société
-  </Typography>
-);
-
 export default function FinancementProjet() {
-  const [expanded, setExpanded] = useState(true);
   const AccordionSummary = styled((props) => (
     <MuiAccordionSummary
       expandIcon={
-        expanded ? (
-          <AddIcon
-            onClick={() => setExpanded(true)}
-            sx={{ fontSize: "0.9rem" }}
-          />
-        ) : (
-          <ExpandMoreIcon
-            onClick={() => setExpanded(false)}
-            sx={{ fontSize: "0.9rem" }}
-          />
-        )
+        <ArrowForwardIosSharpIcon sx={{ fontSize: "1.3rem", mr: "1rem" }} />
       }
       {...props}
     />
   ))(({ theme }) => ({
-    backgroundColor: theme.palette.mode === "dark" ? "white" : "white",
     flexDirection: "row-reverse",
     "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-      transform: "rotate(50deg)",
+      transform: "rotate(90deg)",
     },
   }));
 
   return (
     <RootStyle>
-      <Typography
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          textAlign: "center",
-          fontSize: "39px",
-          lineHeight: 1.2,
-          fontWeight: 600,
-          mt: 3,
-          mb: 5,
-        }}
+      <Box
+        sx={{ bgcolor: "#E4D6C0", marginBottom: 8, mt: -15, height: "1372px" }}
       >
-        <span>
-          Participez vous aussi à financer des projets utiles depuis la <br />
-          Place Impact
-          <span style={{ color: "#00db89" }}>.</span>
-        </span>
-      </Typography>
-      <Container>
-        <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 6 }}>
-          {FINANCEMENTPROJETDATA.map((item) => (
-            <Grid item xs={6}>
-              <MotionInView variants={varFadeInUp}>
-                <Card sx={{ height: "140px" }}>
-                  <CardMedia
-                    component="img"
-                    image={item.image}
-                    alt="green iguana"
-                    className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
-                  />
-                </Card>
-              </MotionInView>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+        <Typography
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            textAlign: "center",
+            fontSize: "39px",
+            lineHeight: 1.2,
+            fontWeight: 800,
+            color: "#10403B",
+            paddingTop: "7rem",
+            mb: 18,
+          }}
+        >
+          Participez vous aussi à financer des projets
+          <br /> utiles depuis la Place Impact.
+        </Typography>
+        <Container>
+          <Grid
+            container
+            rowSpacing={12}
+            columnSpacing={{ xs: 1, sm: 2, md: 6 }}
+          >
+            {FINANCEMENTPROJETDATA.map((item) => (
+              <Grid
+                item
+                xs={6}
+                alignItems="center"
+                justifyContent="center"
+                key={item.id}
+              >
+                <MotionInView variants={varFadeInUp}>
+                  <Card
+                    sx={{
+                      maxWidth: "511px",
+                      borderRadius: "0px",
+                    }}
+                  >
+                    <CardMedia
+                      component="img"
+                      image={item.image}
+                      alt="green iguana"
+                      sx={{ zIndex: 0 }}
+                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
+                    />
+                  </Card>
+                  <Box
+                    component="container"
+                    alt="Eco-compte Onlyone"
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: { md: "270px", xs: "380px" },
+                      zIndex: 6,
+                      bgcolor: "#10403B",
+                      opacity: 0.75,
+                      height: "132px ",
+                      mt: { md: "-180px", xs: "100px" },
+                      marginLeft: { md: "120px", xs: "0px" },
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        textAlign: "center",
+                        color: "#fff",
+                        fontSize: "24px",
+                        fontWeight: 700,
+                      }}
+                    >
+                      {item.title}
+                    </Typography>
+                  </Box>
+                </MotionInView>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
       <Typography
         sx={{
-          display: "flex",
-          justifyContent: "center",
           textAlign: "center",
-          fontSize: "35px",
-          lineHeight: 1.2,
-          fontWeight: 600,
+          fontSize: "24px",
+          lineHeight: "36px",
+          color: "#10403B",
+          fontWeight: 700,
           mt: 10,
-          mb: 5,
+          mb: 12,
         }}
       >
         F.A.Q
@@ -135,8 +148,12 @@ export default function FinancementProjet() {
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
             <Typography
               sx={{
+                color: "#10403B",
+                fontWeight: 700,
+                lineHeight: "36px",
+                fontSize: "24px",
                 "&:hover": {
-                  color: "#65bc7b",
+                  color: "#10403B",
                 },
               }}
             >
@@ -144,7 +161,14 @@ export default function FinancementProjet() {
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
+            <Typography
+              sx={{
+                fontFamily: "Lora",
+                color: "#10403B",
+                fontSize: "19px",
+                lineHeight: "26px",
+              }}
+            >
               Nous sélectionnons nos partenaires en fonction de la qualité du
               service proposé et des valeurs défendues par celui-ci. <br />{" "}
               <br />
@@ -160,16 +184,24 @@ export default function FinancementProjet() {
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
             <Typography
               sx={{
-                "&:hover": {
-                  color: "#65bc7b",
-                },
+                color: "#10403B",
+                fontWeight: 700,
+                fontSize: "24px",
+                lineHeight: "36px",
               }}
             >
               Comment souscrire à un service proposé sur la Place de l'impact?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
+            <Typography
+              sx={{
+                fontFamily: "Lora",
+                color: "#10403B",
+                fontSize: "19px",
+                lineHeight: "26px",
+              }}
+            >
               Une fois que vous êtes sur l’onglet “Place de l’impact” sur votre
               application OnlyOne, vous pouvez vous rendre sur les différentes
               <br />
@@ -185,32 +217,40 @@ export default function FinancementProjet() {
         </Accordion>
         <Divider />
       </Container>
-      <Grid
-        container
-        spacing={1}
+
+      <Box
         sx={{
-          mb: 18,
-          mt: {
-            md: "7rem",
-            xs: 0,
-          },
-          width: "80vw",
-          mx: "auto",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexDirection: "row",
+          width: { md: "100%", xs: "100%" },
+          mt: "109px",
+          height: "485px",
         }}
       >
-        <CommunautesInput
+        <Box component="img" src={citoyens_image} />
+        <Typography
           sx={{
-            fontSize: "35px",
-            fontWeight: 600,
-            ml: 9.5,
-            textAlign: "center",
-            lineHeight: 1.4,
+            position: "absolute",
+            width: "924px",
+            height: "145px",
+            mt: "-300px",
+            left: "500px",
+            fontFamily: "Poppins",
+            fontStyle: "normal",
+            fontWeight: 700,
+            fontSize: "32px",
+            lineHeight: "48px",
+            color: "#10403B",
           }}
-          title={titre}
-          inputStyle={{ ml: "-7rem", mt: -6, mb: -20 }}
-          buttonStyle={{ mr: "28.5rem" }}
-        />
-      </Grid>
+        >
+          <CommunautesInput
+            titleStyle={{ lineHeight: "48px" }}
+            titre="Rejoins le mouvement des citoyens mettant leur argent au service du climat, de la biodiversité et de la société."
+          />
+        </Typography>
+      </Box>
     </RootStyle>
   );
 }

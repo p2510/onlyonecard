@@ -1,7 +1,10 @@
 import { styled } from "@mui/system";
-import { Box, Container, Grid, Typography } from "@mui/material";
-import { MotionInView, varFadeInLeft, varFadeInUp } from "../../atoms/animate";
-import { EPARGNERIMAGEDATA, INVESTIRIMAGEDATA } from "./PlaceImpact.constant";
+import { Box, Container, Divider, Grid, Typography } from "@mui/material";
+import { MotionInView, varFadeInUp } from "../../atoms/animate";
+import { EPARGNERIMAGEDATA } from "./PlaceImpact.constant";
+import arbres_image from "../../../assets/images/arbres_image.svg";
+import title_bg from "../../../assets/images/title_bg.svg";
+import { MHidden } from "src/components/atoms/@material-extend";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -14,202 +17,173 @@ const RootStyle = styled("div")(({ theme }) => ({
 export default function PlaceImpactServiceFirstPart() {
   return (
     <RootStyle>
+      <MHidden width="mdDown">
+        <Grid container mt="-2rem">
+          <Box
+            component="img"
+            src={arbres_image}
+            alt="Eco-compte Onlyone"
+            sx={{
+              width: "100%",
+              height: "1053px",
+              position: "absolute",
+              mb: "1rem",
+            }}
+          />
+        </Grid>
+      </MHidden>
       <Grid
-        item
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
+        container
+        mb="55rem"
+        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
-        <Typography
+        <Box
+          component="container"
+          alt="Eco-compte Onlyone"
           sx={{
-            fontSize: "52px",
-            fontWeight: 600,
-            lineHeight: 1.2,
-            textAlign: "center",
-            mt: {
-              md: 28,
-              xs: 15,
-            },
+            opacity: 0.75,
+            width: { md: "845px", xs: "380px" },
+            bgcolor: "#10403B",
+            height: "375px",
+            position: "absolute",
+            top: { md: "308px", xs: "100px" },
           }}
         >
-          La Place Impact vous donne accès à des <br /> services écologiques,
-          solidaires et
-          <br /> innovants.
-        </Typography>
+          <Typography
+            sx={{
+              textAlign: "center",
+              left: "102px",
+              fontSize: { md: "42px", xs: "22px" },
+              color: "#FFFFFF !important",
+              fontWeight: 900,
+              lineHeight: "63px",
+              fontStyle: "normal",
+              margin: "49px 73px 0px 34px",
+            }}
+          >
+            <span>La Place Impact vous donne accès à des </span>
+            <span style={{ color: "#C4E3D5" }}>
+              services
+              <br /> écologiques, solidaires et
+              <br /> innovants
+            </span>
+            <span style={{ color: "#FAAA42", borderRadius: 50 }}>.</span>
+          </Typography>
+        </Box>
       </Grid>
+      <Typography
+        sx={{
+          fontSize: "24px",
+          fontWeight: 700,
+          lineHeight: "36px",
+          textAlign: "center",
+          color: "#10403B",
+        }}
+      >
+        Ces services vous permettent d’aller encore plus loin avec votre argent
+        et de le mettre au service
+        <br /> de la planète, tout en gagnant du temps et de l’argent !
+      </Typography>
       <Container
         sx={{
           dispaly: "flex",
           justifyContent: "center",
           alignItems: "center",
-        }}
-      >
-        <Grid item xs={12} md={6} ml="2rem">
-          <MotionInView variants={varFadeInLeft}>
-            <Typography
-              sx={{
-                fontSize: "20px",
-                fontWeight: 400,
-                lineHeight: 1.4,
-                mb: 5,
-                margin: "0px 0px 20px",
-                mt: {
-                  md: 10,
-                  xs: 15,
-                },
-              }}
-            >
-              Ces services vous permettent d’aller encore plus loin avec votre
-              argent et de le mettre au service de la planète, tout en <br />{" "}
-              gagnant du temps et de l’argent !
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "36px",
-                fontWeight: 800,
-                lineHeight: 1,
-                mb: "1rem",
-                mt: {
-                  md: 8,
-                  xs: 15,
-                },
-              }}
-            >
-              <span>Epargner</span>
-              <span style={{ color: "#00bd85" }}>.</span>
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "20px",
-                fontWeight: 400,
-                lineHeight: 1.4,
-                margin: "0px 0px 20px",
-              }}
-            >
-              Devenez propriétaire d’arbres sur des massifs forestiers gérés
-              durablement ou épargnez dans des fonds qui financent <br /> des
-              entreprises et des projets durables.
-            </Typography>
-          </MotionInView>
-        </Grid>
-      </Container>
-      <Container
-        direction={{ xs: "column", sm: "row" }}
-        sx={{
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          width: "100%",
-          mt: "-1.5rem",
-          mb: {
-            md: 4,
-            xs: 8,
-          },
+          mt: 20,
         }}
       >
         {EPARGNERIMAGEDATA.map((item) => (
           <Grid
-            item
             key={item.id}
+            item
             sx={{
               display: "flex",
-              flexDirection: "column",
+              flexDirection: "row",
               alignItems: "center",
-              justifyContent: "space-around",
+              justifyContent: "space-between",
               marginRight: "2rem",
+              mb: 10,
             }}
           >
-            <MotionInView variants={varFadeInUp}>
-              <Box
-                component="img"
-                src={item.icon}
-                alt={item.title}
-                sx={{
-                  width: "170px",
-                  height: "160px",
-                }}
-              />
-            </MotionInView>
-          </Grid>
-        ))}
-      </Container>
-      <Container
-        sx={{
-          dispaly: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Grid item xs={12} md={6} ml="2rem">
-          <MotionInView variants={varFadeInLeft}>
-            <Typography
+            <Box
               sx={{
-                fontSize: "36px",
-                fontWeight: 800,
-                lineHeight: 1,
-                mb: "1rem",
-                mt: {
-                  md: 3,
-                  xs: 15,
-                },
+                display: "flex",
+                justifyContent: "space-between",
+                flexDirection: "column",
+                alignItems: "center",
+                ml: -5,
               }}
             >
-              <span>Investir</span>
-              <span style={{ color: "#00bd85" }}>.</span>
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "20px",
-                fontWeight: 400,
-                lineHeight: 1.4,
-                margin: "0px 0px 20px",
-              }}
-            >
-              Investissez dans des start-ups et des PME à impact positif,
-              devenez actionnaire d’une société à but non lucratif luttant
-              <br />
-              contre le dérèglement climatique ou investissez dans les projets
-              de vos territoires avec des prêts rémunérés !
-            </Typography>
-          </MotionInView>
-        </Grid>
-      </Container>
-      <Container
-        direction={{ xs: "column", sm: "row" }}
-        sx={{
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          width: "100%",
-          mt: "-1.5rem",
-        }}
-      >
-        {INVESTIRIMAGEDATA.map((item) => (
-          <Grid
-            item
-            key={item.id}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "space-around",
-              marginRight: "2rem",
-            }}
-          >
-            <MotionInView variants={varFadeInUp}>
               <Box
                 component="img"
-                src={item.icon}
-                alt={item.title}
-                sx={{
-                  width: "170px",
-                  height: "160px",
-                }}
+                src={title_bg}
+                alt="ses services vous permettent d'aller encore plus loin"
+                minWidth="318px"
               />
+              <Typography
+                sx={{
+                  fontSize: "36px",
+                  fontWeight: 800,
+                  lineHeight: 1,
+                  color: "#fff",
+                  mb: "4rem",
+                  mt: {
+                    md: -8,
+                    xs: 15,
+                  },
+                }}
+              >
+                <span>{item.title}</span>
+                <span style={{ color: "#FAAA42" }}>.</span>
+              </Typography>
+              <Typography
+                sx={{
+                  textAlign: "center",
+                  fontSize: "20px",
+                  fontWeight: 400,
+                  lineHeight: 1.4,
+                  margin: "0px 0px 20px",
+                  width: "560px",
+                }}
+              >
+                {item.paragraphe}
+              </Typography>
+            </Box>
+            <MotionInView variants={varFadeInUp}>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  flexDirection: "row",
+                  mr: -10,
+                }}
+              >
+                <Box component="img" src={item.icon} alt={item.title} />
+                <Box
+                  component="img"
+                  src={item.icon_deux}
+                  alt={item.title}
+                  marginLeft="3rem"
+                />
+                {item.icon_trois ? (
+                  <Box
+                    component="img"
+                    src={item.icon_trois}
+                    alt={item.title}
+                    marginLeft="3rem"
+                  />
+                ) : (
+                  ""
+                )}
+              </Box>
             </MotionInView>
+            <Box>
+              <Divider
+                orientation="horizontal"
+                sx={{ color: "red" }}
+                flexItem
+              />
+            </Box>
           </Grid>
         ))}
       </Container>
