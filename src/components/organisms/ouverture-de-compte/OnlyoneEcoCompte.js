@@ -52,8 +52,7 @@ export default function OnlyoneEcoCompte() {
               C’est si
               <span style={{ color: "#C4E3D5" }}> simple </span>
               d’ouvrir un
-              <br /> éco-compte OnlyOne
-              <span style={{ color: "#00db89" }}>!</span>
+              <br /> éco-compte OnlyOne!
             </Typography>
           </Grid>
           <Grid xs={6}>
