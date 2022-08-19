@@ -1,94 +1,77 @@
-import ecotree from "../../../assets/images/ecotree.png";
-import good_vest from "../../../assets/images/good_vest.png";
-import time_for_the_planet from "../../../assets/images/time_for_the_planet.png";
-import villyz from "../../../assets/images/villyz.png";
-import wedogood from "../../../assets/images/wedogood.png";
+import ecotree from "../../../assets/images/ecotree.svg";
+import good_vest from "../../../assets/images/good_vest.svg";
+import time_for_the_planet from "../../../assets/images/time_for_the_planet.svg";
+import villyz from "../../../assets/images/villyz.svg";
+import wedogood from "../../../assets/images/wedogood.svg";
 import transparent from "../../../assets/images/transparent_icon.svg";
 import ethique_icon from "../../../assets/images/ethique_icon.svg";
 import solidaire_icon from "../../../assets/images/solidaire_icon.svg";
-import temps_icon from "../../../assets/images/temps_icon.png";
-import responsable_icon from "../../../assets/images/responsable_icon.svg";
-import outil from "../../../assets/images/outil.svg";
+import garantie_icon from "../../../assets/images/garantie_icon.svg";
 import accompagner_icon from "../../../assets/images/accompagner_icon.png";
-import luko from "../../../assets/images/luko.png";
-import plum_energie from "../../../assets/images/plum_energie.png";
-import phenix from "../../../assets/images/phenix.png";
-import transition_ecologique from "../../../assets/images/transition_ecologique.png";
-import financement_territoire from "../../../assets/images/financement_territoire.png";
+import luko from "../../../assets/images/luko.svg";
+import plum_energie from "../../../assets/images/plum_energie.svg";
+import phenix from "../../../assets/images/phenix.svg";
+import projet_1 from "../../../assets/images/projet_1.svg";
+import projet_2 from "../../../assets/images/projet_2.svg";
 import financement_association from "../../../assets/images/financement_association.png";
-import rechauffement_climatique from "../../../assets/images/rechauffement_climatique.png";
-import ecotree_valeur from "../../../assets/images/ecotree_valeur.png";
-import protection_foret from "../../../assets/images/protection_foret.png";
-import ethikdo from "../../../assets/images/ethikdo.png";
-import unitlife_2 from "../../../assets/images/unitlife_2.png";
-import coverd from "../../../assets/images/coverd.png";
+import projet_3 from "../../../assets/images/projet_3.svg";
+import ecotree_valeur from "../../../assets/images/ecotree_valeur.svg";
+import projet_4 from "../../../assets/images/projet_4.svg";
+import ethikdo from "../../../assets/images/ethikdo.svg";
+import unitlife_2 from "../../../assets/images/unitlife_2.svg";
+import coverd from "../../../assets/images/coverd.svg";
 import fain_zero from "../../../assets/images/fain_zero.png";
 import inegalite_reduite from "../../../assets/images/inegalite_reduite.png";
 import consommation_production from "../../../assets/images/consommation_production.png";
-import transition_agricole from "../../../assets/images/transition_agricole.png";
+import projet_5 from "../../../assets/images/projet_5.svg";
+import projet_6 from "../../../assets/images/projet_6.svg";
 import vie_terrestre from "../../../assets/images/vie_terrestre.png";
 import partenariat from "../../../assets/images/partenariat.png";
 
 export const EPARGNERIMAGEDATA = [
   {
     id: 1,
+    title: "Epargner",
+    paragraphe:
+      "Devenez propriétaire d’arbres sur des massifs forestiers gérés durablement ou épargnez dans des fonds qui financent des entreprises et des projets durables.",
     icon: `${ecotree}`,
+    icon_deux: `${good_vest}`,
+    icon_trois: ``,
   },
   {
     id: 2,
-    icon: `${good_vest}`,
-  },
-];
-
-export const ASSURERIMAGEDATA = [
-  {
-    id: 1,
-    icon: `${luko}`,
-  },
-  {
-    id: 2,
-    icon: `${coverd}`,
-  },
-];
-
-export const DONSDATA = [
-  {
-    id: 1,
-    icon: `${unitlife_2}`,
-  },
-  {
-    id: 2,
-    icon: `${ecotree_valeur}`,
-  },
-];
-
-export const INVESTIRIMAGEDATA = [
-  {
-    id: 1,
+    title: "Investir",
+    paragraphe:
+      "Investissez dans des start-ups et des PME à impact positif, devenez actionnaire d’une société à but non lucratif luttant contre le dérèglement climatique ou investissez dans les projets de vos territoires avec des prêts rémunérés !",
     icon: `${wedogood}`,
-  },
-  {
-    id: 2,
-    icon: `${time_for_the_planet}`,
+    icon_deux: `${time_for_the_planet}`,
+    icon_trois: `${villyz}`,
   },
   {
     id: 3,
-    icon: `${villyz}`,
+    title: "Assurer",
+    paragraphe:
+      "Découvrez une assurance habitation simple, transparente et éthique et assurez votre téléphone en ligne ou faites le réparer facilement.",
+    icon: `${luko}`,
+    icon_deux: `${coverd}`,
+    icon_trois: ``,
   },
-];
-
-export const VIEQUOTIDIENNEDATA = [
   {
-    id: 1,
+    id: 4,
+    title: "Vie quotidienne",
+    paragraphe:
+      "Passez à un fournisseur d’électricité verte, locale et d’intérêt général, achetez à prix réduit les invendus de vos commerçants et offrez une carte cadeau écologique et solidaire !",
     icon: `${plum_energie}`,
+    icon_deux: `${phenix}`,
+    icon_trois: `${ethikdo}`,
   },
   {
-    id: 2,
-    icon: `${phenix}`,
-  },
-  {
-    id: 3,
-    icon: `${ethikdo}`,
+    id: 5,
+    title: "Dons",
+    paragraphe: "Luttez contre les inégalités et protégez la biodiversité.",
+    icon: `${unitlife_2}`,
+    icon_deux: `${ecotree_valeur}`,
+    icon_trois: ``,
   },
 ];
 
@@ -149,46 +132,52 @@ export const ODDDATA = [
 export const FINANCEMENTPROJETDATA = [
   {
     id: 1,
-    image: `${transition_ecologique}`,
+    title: `La transition écologique`,
+    image: `${projet_1}`,
   },
   {
     id: 2,
-    image: `${protection_foret}`,
+    title: `La transition agricole et énergétique`,
+    image: `${projet_2}`,
   },
   {
     id: 3,
-    image: `${financement_territoire}`,
+    title: `La protection de la forêt`,
+    image: `${projet_3}`,
   },
   {
     id: 4,
-    image: `${financement_association}`,
+    title: `Le financement d’associations`,
+    image: `${projet_4}`,
   },
   {
     id: 5,
-    image: `${rechauffement_climatique}`,
+    title: `Le financement des territoires`,
+    image: `${projet_5}`,
   },
   {
     id: 6,
-    image: `${transition_agricole}`,
+    title: `La lutte contre le réchauffement climatique`,
+    image: `${projet_6}`,
   },
 ];
 
 export const DATA = [
   {
     id: 1,
-    icon: `${temps_icon}`,
+    icon: `${garantie_icon}`,
     title: `Gain de temps`,
     paragraphe: `Plus besoin de perdre du temps à chercher des solutions d’impact et à les comparer, nous vous les proposons directement dans notre Place Impact`,
   },
   {
     id: 2,
-    icon: `${responsable_icon}`,
+    icon: `${garantie_icon}`,
     title: `Garantie d’impact`,
     paragraphe: `Nos partenaires sont sélectionnés pour leur engagement sociétal et environnemental`,
   },
   {
     id: 3,
-    icon: `${outil}`,
+    icon: `${garantie_icon}`,
     title: `Gain d’argent`,
     paragraphe: `Grâce à des conditions préférentielles chez nos partenaires, vous obtenez une réduction sur vos achats dans la majorité des cas`,
   },
