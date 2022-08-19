@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import presentation from "../../../assets/images/presentation.png";
 import euro_image from "../../../assets/images/euro_image.png";
+=======
+import presentation from "../../../assets/images/presentation.svg";
+import euro_image from "../../../assets/images/euro_image.svg";
+>>>>>>> finalisation de la page place impact
 import planete_image from "../../../assets/images/planete_image.svg";
 import { styled } from "@mui/system";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";

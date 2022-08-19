@@ -10,7 +10,10 @@ import nouveau_monde from "../../../assets/images/nouveau_monde.png";
 import { Cursor, Typewriter } from "react-simple-typewriter";
 import { CustomTextField } from "src/components/atoms/GeneralTextfield.style";
 import Dialogue from "src/components/molecules/Dialogue";
+<<<<<<< HEAD
 import { MHidden } from "src/components/atoms/@material-extend";
+=======
+>>>>>>> finalisation de la page place impact
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -31,6 +34,10 @@ export default function AboutUs({ isActive }) {
   const modalClose = () => {
     setOpen(false);
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> finalisation de la page place impact
   const settings = {
     speed: 800,
     dots: true,
