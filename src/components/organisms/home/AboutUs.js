@@ -9,6 +9,7 @@ import CarouselDots from "../../atoms/CarouselDots";
 import nouveau_monde from "../../../assets/images/nouveau_monde.svg";
 import { Cursor, Typewriter } from "react-simple-typewriter";
 import { CustomTextField } from "src/components/atoms/GeneralTextfield.style";
+import Dialogue from "src/components/molecules/Dialogue";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -24,6 +25,10 @@ export default function AboutUs({ isActive }) {
   const [currentIndex, setCurrentIndex] = useState(
     theme.direction === "rtl" ? ABOUTUSDATA.length - 1 : 0
   );
+  const [open, setOpen] = useState(false);
+  const modalClose = () => {
+    setOpen(false);
+  };
 
   const settings = {
     speed: 800,
@@ -160,6 +165,7 @@ export default function AboutUs({ isActive }) {
               écologique, transparent et sécurisé.
             </Typography>
             <Button
+              variant="contained"
               sx={{
                 borderRadius: 50,
                 bgcolor: "#FAAA42 !important",
@@ -169,7 +175,7 @@ export default function AboutUs({ isActive }) {
                 margin: "29px 0px 61px 0px",
                 padding: "6px 38px 6px 38px",
               }}
-              variant="contained"
+              onClick={() => setOpen(true)}
             >
               Je démarre
             </Button>
@@ -265,6 +271,7 @@ export default function AboutUs({ isActive }) {
           </Box>
         </Box>
       </Grid>
+      <Dialogue open={open} modalClose={modalClose} />
     </RootStyle>
   );
 }

@@ -114,7 +114,7 @@ export default function Functionalities() {
                 padding: "7px 38px 10px 38px",
               }}
               variant="contained"
-              href={PATH_PAGE.UnGesteUnImpact}
+              href={PATH_PAGE.CompteEcologiqueEthique}
             >
               Je découvre toutes les fonctionnalités
             </Button>

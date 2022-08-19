@@ -153,7 +153,7 @@ export default function ValeurAndEngagement() {
                   padding: "7px 38px 10px 38px",
                 }}
                 variant="contained"
-                href={PATH_PAGE.UnGesteUnImpact}
+                href={PATH_PAGE.NotreMission}
               >
                 La mission d'OnlyOne
               </Button>
