@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import abonnement_simple_img from "../../../assets/images/abonnement_simple_img.png";
 import { styled } from "@mui/system";
-import { Box, Container, Grid, Typography } from "@mui/material";
-import { MHidden } from "src/components/atoms/@material-extend";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import {
   MotionInView,
   varFadeInLeft,
@@ -15,7 +13,6 @@ import { useTheme } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import TButton from "../../../components/atoms/tailwindComponent/TButton";
 import Dialogue from "src/components/molecules/Dialogue";
 
 const RootStyle = styled("div")(({ theme }) => ({
@@ -56,12 +53,15 @@ function a11yProps(index) {
   return {
     id: `full-width-tab-${index}`,
     "aria-controls": `full-width-tabpanel-${index}`,
+    "&:.css-1w9ke15-MuiButtonBase-root-MuiTab-root:not(:last-of-type)": {
+      backgroundColor: "red",
+    },
   };
 }
 
 export default function AbonnementsSimples() {
   const theme = useTheme();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(0, { backgroundColor: "red" });
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -82,21 +82,21 @@ export default function AbonnementsSimples() {
 
   return (
     <RootStyle>
-      <MHidden width="mdDown">
-        <Grid container>
-          <Box
-            component="img"
-            src={abonnement_simple_img}
-            alt="Eco-compte Onlyone"
-            sx={{
-              width: "100%",
-              height: 450,
-              alignItems: "center",
-              mt: 13.3,
-            }}
-          />
-        </Grid>
-      </MHidden>
+      <Typography
+        sx={{
+          textAlign: "center",
+          fontSize: "42px",
+          fontWeight: 900,
+          lineHeight: "63px",
+          color: "#10403B",
+          mt: "285px",
+        }}
+      >
+        Des tarifs et abonnements{" "}
+        <span style={{ color: "#C4E3D5" }}> simples </span>et
+        <span style={{ color: "#C4E3D5" }}> transparents</span>
+        <span style={{ color: "#FAAA42" }}>.</span>
+      </Typography>
       <Grid
         container
         sx={{
@@ -108,8 +108,8 @@ export default function AbonnementsSimples() {
       >
         <Typography
           sx={{
-            fontSize: "20px",
-            fontWeight: 400,
+            fontSize: "38px",
+            fontWeight: 800,
             textAlign: "center",
             mr: {
               md: "3rem",
@@ -117,17 +117,22 @@ export default function AbonnementsSimples() {
             },
           }}
         >
-          <span style={{ fontSize: "60px", fontWeight: "bold" }}>3€</span>
-          <span style={{ fontSize: "25px", fontWeight: "bold" }}>
-            /mois
-          </span>{" "}
+          3€/mois
           <br />
-          Compte jeune (18-25 ans)
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "Lora",
+              fontWeight: 600,
+            }}
+          >
+            Compte jeune (18-25 ans)
+          </span>
         </Typography>
         <Typography
           sx={{
-            fontSize: "20px",
-            fontWeight: 400,
+            fontSize: "38px",
+            fontWeight: 800,
             textAlign: "center",
             ml: {
               md: "3rem",
@@ -135,224 +140,318 @@ export default function AbonnementsSimples() {
             },
           }}
         >
-          <span style={{ fontSize: "60px", fontWeight: "bold" }}>6€</span>
-          <span style={{ fontSize: "25px", fontWeight: "bold" }}>
-            /mois
-          </span>{" "}
+          6€/mois
           <br />
-          Compte impact
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "Lora",
+              fontWeight: 600,
+            }}
+          >
+            Compte impact
+          </span>
         </Typography>
       </Grid>
       <Typography
         sx={{
-          fontWeight: 400,
-          textAlign: "center",
-          fontSize: "20px",
-          mt: 8,
-          mb: 3,
+          fontWeight: 800,
+          textAlign: "start",
+          lineHeight: "57px",
+          fontSize: "24px",
+          margin: "57px 0px 80px 270px ",
+          color: "#10403B",
         }}
       >
         Commencez à gérer votre argent avec un impact positif dès aujourd’hui.
         <br />
         C’est simple et sans engagement !
       </Typography>
-      <Container
-        sx={{
-          dispaly: "flex",
+      <Box
+        style={{
+          display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          mt: "5rem",
+          background: "#E4D6C0",
+          height: "867px",
         }}
       >
-        <Grid item md={12}>
-          <MotionInView variants={varFadeInLeft}>
-            <Typography
-              sx={{
-                fontSize: "40px",
-                fontWeight: 800,
-                lineHeight: 1.3,
-                mt: {
-                  md: 18,
-                  xs: 15,
-                },
-              }}
-            >
-              Un tarif et un abonnement avec engagement, cela sera <br /> aussi
-              bientôt possible – Comparez :
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "20px",
-                fontWeight: 400,
-                mt: 2,
-                mb: 5,
-              }}
-            >
-              Vous pourrez bientôt économisez jusqu’à 20 % en choisissant
-              l’abonnement annuel
-            </Typography>
-          </MotionInView>
-        </Grid>
-        <Box sx={{ border: "1px solid #cdd3d1", height: "320px" }}>
-          <AppBar color="common" position="static">
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              variant="fullWidth"
-              sx={{
-                "& .css-1vnk2cq-MuiTabs-indicator": { height: "4px" },
-              }}
-            >
-              <Tab label="Mensuel sans engagement" {...a11yProps(0)} />
-              <Tab label="Annuel avec -20%" {...a11yProps(1)} />
-            </Tabs>
-          </AppBar>
-          <SwipeableViews
-            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-            index={value}
-            onChangeIndex={handleChangeIndex}
-          >
-            <TabPanel value={value} index={0}>
-              <Box
+        <Container
+          sx={{
+            dispaly: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            mt: -5,
+          }}
+        >
+          <Grid item md={12}>
+            <MotionInView variants={varFadeInLeft}>
+              <Typography
                 sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexDirection: "row",
+                  fontSize: "40px",
+                  fontWeight: 800,
+                  lineHeight: "57px",
                 }}
               >
-                <Box
-                  sx={{
-                    fontSize: "20px",
-                    fontWeight: "bold",
-                    mt: 4,
-                  }}
-                >
-                  <span style={{ fontSize: "20px", fontWeight: 5 }}>
-                    Compte <br /> Jeune
-                  </span>
-                  <br />
-                  <span
-                    style={{
-                      fontSize: {
-                        md: "70px",
-                        sx: "38px",
-                      },
-                      fontWeight: "bold",
-                    }}
-                  >
-                    3€
-                  </span>
-                  TTC/ mois
-                </Box>
-                <Box
-                  sx={{
-                    fontSize: "20px",
-                    fontWeight: "bold",
-                    mt: 4,
-                    mr: {
-                      md: "23rem",
-                      xs: 0,
-                    },
-                  }}
-                >
-                  <span style={{ fontSize: "20px", fontWeight: 5 }}>
-                    Compte <br /> Impact
-                  </span>
-                  <br />
-                  <span
-                    style={{
-                      fontSize: {
-                        md: "40px",
-                        sx: "38px",
-                      },
-                      fontWeight: "bold",
-                    }}
-                  >
-                    6€
-                  </span>
-                  TTC/ mois
-                </Box>
-              </Box>
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-              <Box
+                Un tarif et un abonnement avec engagement, cela sera <br />
+                aussi bientôt possible
+                <span style={{ color: "#FAAA42" }}>.</span>
+                <br />
+                Comparez :
+              </Typography>
+              <Typography
                 sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexDirection: "row",
+                  fontSize: "19px",
+                  fontWeight: 400,
+                  mt: "42px",
+                  mb: 5,
                 }}
               >
-                <Box
-                  sx={{
-                    fontSize: "20px",
-                    fontWeight: "bold",
-                    mt: 4,
-                  }}
-                >
-                  <span style={{ fontSize: "20px", fontWeight: 5 }}>
-                    Compte <br /> Jeune
-                  </span>
-                  <br />
-                  <span
-                    style={{
-                      fontSize: {
-                        md: "40px",
-                        sx: "38px",
-                      },
-                      fontWeight: "bold",
-                    }}
-                  >
-                    29€
-                  </span>
-                  TTC/ an
-                </Box>
-                <Box
-                  sx={{
-                    fontSize: "20px",
-                    fontWeight: "bold",
-                    mt: 4,
-                    mr: {
-                      md: "23rem",
-                      xs: 0,
-                    },
-                  }}
-                >
-                  <span style={{ fontSize: "20px", fontWeight: 5 }}>
-                    Compte <br /> Impact
-                  </span>
-                  <br />
-                  <span
-                    style={{
-                      fontSize: {
-                        md: "40px",
-                        sx: "37px",
-                      },
-                      fontWeight: "bold",
-                    }}
-                  >
-                    58€
-                  </span>
-                  TTC/ an
-                </Box>
-              </Box>
-            </TabPanel>
-          </SwipeableViews>
-        </Box>
-        <MotionInView variants={varFadeInUp}>
-          <Grid
-            open={isOpen}
-            onClose={() => setIsOpen(false)}
-            onClick={modalClickOpen}
+                Vous pourrez bientôt économisez jusqu’à 20 % en choisissant
+                l’abonnement annuel
+              </Typography>
+            </MotionInView>
+          </Grid>
+          <Box
             sx={{
-              display: "flex",
-              justifyContent: "center",
-              mt: 8,
+              border: "1px solid #f1ebdf",
+              height: "320px",
+              bgcolor: "#10403B",
             }}
           >
-            <TButton name="Ouvrir un éco-compte" />
-          </Grid>
-        </MotionInView>
-      </Container>
+            <AppBar
+              color="common"
+              position="static"
+              boxShadow="0px"
+              sx={{
+                backgroundCol: "#10403B",
+                color: "#fff",
+                "&:.css-1w9ke15-MuiButtonBase-root-MuiTab-root:not(:last-of-type)":
+                  {
+                    backgroundColor: "red",
+                  },
+              }}
+            >
+              <Tabs
+                sx={{
+                  backgroundColor: "#10403B",
+                  color: "#fff",
+                  "&:.Mui-focusVisible": { color: "red" },
+                }}
+                value={value}
+                onChange={handleChange}
+                TabIndicatorProps={{
+                  style: {
+                    backgroundColor: "#2A7267",
+                    height: "100px",
+                  },
+                }}
+                variant="fullWidth"
+              >
+                <Tab
+                  sx={{
+                    color: "#ffffff !important",
+                    fontSize: "24px",
+                    height: "70px",
+                    zIndex: 6,
+                  }}
+                  label="Mensuel sans engagement"
+                  tab
+                  {...a11yProps(0)}
+                />
+                <Tab
+                  sx={{
+                    color: "#ffffff !important",
+                    fontSize: "24px",
+                    height: "70px",
+                    zIndex: 6,
+                  }}
+                  label="Annuel avec -20%"
+                  {...a11yProps(1)}
+                />
+              </Tabs>
+            </AppBar>
+            <SwipeableViews
+              axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+              index={value}
+              onChangeIndex={handleChangeIndex}
+            >
+              <TabPanel value={value} index={0}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-around",
+                    flexDirection: "row",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      fontSize: "24px",
+                      fontWeight: "bold",
+                      color: "#fff",
+                      mt: 4,
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: "Lora",
+                        color: "#fff",
+                        fontSize: "20px",
+                        lineHeight: "25.6px",
+                        fontWeight: 600,
+                      }}
+                    >
+                      Compte Jeune
+                    </span>
+                    <br />
+                    <span
+                      style={{
+                        fontSize: "38px",
+                        fontWeight: "bold",
+                        color: "#fff",
+                      }}
+                    >
+                      3€
+                    </span>
+                    TTC / mois
+                  </Box>
+                  <Box
+                    sx={{
+                      fontSize: "24px",
+                      fontWeight: "bold",
+                      color: "#fff",
+                      mt: 4,
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: "Lora",
+                        color: "#fff",
+                        fontSize: "20px",
+                        lineHeight: "25.6px",
+                        fontWeight: 600,
+                      }}
+                    >
+                      Compte Impact
+                    </span>
+                    <br />
+                    <span
+                      style={{
+                        fontSize: "38px",
+                        fontWeight: "bold",
+                        color: "#fff",
+                      }}
+                    >
+                      6€
+                    </span>
+                    TTC / mois
+                  </Box>
+                </Box>
+              </TabPanel>
+              <TabPanel value={value} index={1}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-around",
+                    flexDirection: "row",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      fontSize: "24px",
+                      fontWeight: "bold",
+                      color: "#fff",
+                      mt: 4,
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: "Lora",
+                        color: "#fff",
+                        fontSize: "20px",
+                        lineHeight: "25.6px",
+                        fontWeight: 600,
+                      }}
+                    >
+                      Compte Jeune
+                    </span>
+                    <br />
+                    <span
+                      style={{
+                        fontSize: "38px",
+                        fontWeight: "bold",
+                        color: "#fff",
+                      }}
+                    >
+                      29€
+                    </span>
+                    TTC / an
+                  </Box>
+                  <Box
+                    sx={{
+                      fontSize: "24px",
+                      fontWeight: "bold",
+                      color: "#fff",
+                      mt: 4,
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: "Lora",
+                        color: "#fff",
+                        fontSize: "20px",
+                        lineHeight: "25.6px",
+                        fontWeight: 600,
+                      }}
+                    >
+                      Compte Impact
+                    </span>
+                    <br />
+                    <span
+                      style={{
+                        fontSize: "38px",
+                        fontWeight: "bold",
+                        color: "#fff",
+                        marginTop: "4rem",
+                      }}
+                    >
+                      58€
+                    </span>
+                    TTC / an
+                  </Box>
+                </Box>
+              </TabPanel>
+            </SwipeableViews>
+          </Box>
+          <MotionInView variants={varFadeInUp}>
+            <Grid
+              open={isOpen}
+              onClose={() => setIsOpen(false)}
+              onClick={modalClickOpen}
+              sx={{
+                display: "flex",
+                mt: 8,
+                justifyContent: "center",
+              }}
+            >
+              <Button
+                sx={{
+                  variant: "contained",
+                  borderRadius: 50,
+                  background: " #2A7267 !important",
+                  "&:hover": { background: "#10403B !important" },
+                  boxShadow: "none",
+                  color: "#fff",
+                  fontSize: "16px",
+                  padding: "7px 18px 10px 18px",
+                }}
+              >
+                Ouvrir un éco-compte
+              </Button>
+            </Grid>
+          </MotionInView>
+        </Container>
+      </Box>
       <Dialogue open={open} modalClose={modalClose} />
     </RootStyle>
   );
