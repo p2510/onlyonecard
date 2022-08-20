@@ -30,12 +30,8 @@ OuvrirUnCompte.propTypes = {
 
 export default function OuvrirUnCompte() {
   const [open, setOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
   const modalClose = () => {
     setOpen(false);
-  };
-  const modalClickOpen = () => {
-    setOpen(true);
   };
   return (
     <RootStyle>
@@ -132,6 +128,7 @@ export default function OuvrirUnCompte() {
           }}
         />
         <Button
+          variant="contained"
           sx={{
             borderRadius: 50,
             bgcolor: "#FAAA42 !important",
@@ -142,7 +139,7 @@ export default function OuvrirUnCompte() {
             padding: "8px 38px 8px 38px",
             marginTop: "-16rem",
           }}
-          variant="contained"
+          onClick={() => setOpen(true)}
         >
           C'est parti !
         </Button>
@@ -243,34 +240,22 @@ export default function OuvrirUnCompte() {
               ))}
             </Grid>
             <MotionInView variants={varFadeInUp}>
-              <Box
+              <Button
+                variant="contained"
                 sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
+                  borderRadius: 50,
+                  bgcolor: "#10403B !important",
+                  "&:hover": { bgcolor: "#2A7267 !important" },
+                  margin: "3px 0px 0px 0px",
+                  fontSize: "16px",
+                  padding: "8px 48px 8px 40px",
+                  mt: 6,
                 }}
+                onClick={() => setOpen(true)}
               >
-                <Button
-                  open={isOpen}
-                  onClose={() => setIsOpen(false)}
-                  onClick={modalClickOpen}
-                  sx={{
-                    borderRadius: 50,
-                    bgcolor: "#2A7267 !important",
-                    "&:hover": { bgcolor: "#10403B  !important" },
-                    boxShadow: "none",
-                    margin: "3px 0px 0px 0px",
-                    fontSize: "16px",
-                    padding: "8px 48px 8px 40px",
-                    mt: 6,
-                  }}
-                  variant="contained"
-                >
-                  Cette fois, je démarre vraiment !
-                </Button>
-              </Box>
+                Cette fois, je démarre vraiment !
+              </Button>
             </MotionInView>
-            <Dialogue open={open} modalClose={modalClose} />
           </Box>
         </Grid>
         <Box
@@ -289,6 +274,7 @@ export default function OuvrirUnCompte() {
           }}
         />
       </Grid>
+      <Dialogue open={open} modalClose={modalClose} />
     </RootStyle>
   );
 }

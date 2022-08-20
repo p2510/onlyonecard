@@ -1,4 +1,4 @@
-import compte_courant from "../../../assets/images/compte_courant.png";
+import compte_courant from "../../../assets/images/compte_courant.svg";
 import paiement_carte from "../../../assets/images/paiement_carte.png";
 import epargne_position from "../../../assets/images/epargne_position.png";
 import societe_generale from "../../../assets/images/societe_generale.svg";

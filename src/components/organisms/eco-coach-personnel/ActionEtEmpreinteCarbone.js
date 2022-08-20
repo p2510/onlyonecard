@@ -1,10 +1,8 @@
 import { styled } from "@mui/system";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { MotionInView, varFadeInDown, varFadeInUp } from "../../atoms/animate";
 import { ACTIONSDATA } from "./ActionEtEmpreinteCarbone.constant";
-import CheckIcon from "@mui/icons-material/Check";
-import { MHidden } from "../../atoms/@material-extend";
-import TButton from "src/components/atoms/tailwindComponent/TButton";
+import only_leave from "../../../assets/images/only_leave.svg";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -28,34 +26,47 @@ export default function ActionEtEmpreinteCarbone() {
       >
         <Typography
           sx={{
-            fontSize: "50px",
-            fontWeight: 600,
-            lineHeight: 1.2,
+            fontSize: "42px",
+            fontWeight: 900,
+            lineHeight: "63px",
             textAlign: "center",
+            color: "#10403B",
             mt: {
-              md: 24,
+              md: 32,
               xs: 15,
             },
           }}
         >
-          Un éco-coach pour transformer vos <br /> bonnes intentions en actions{" "}
+          Un
           <span
             style={{
-              height: "5px",
-              width: "5px",
-              borderRadius: "50px",
-              bgcolor: "#333",
+              color: "#C4E3D5",
+              marginLeft: "0.5rem",
+              marginRight: "0.5rem",
             }}
           >
-            {" "}
+            éco-coach
           </span>
+          pour transformer vos
+          <br /> bonnes intentions en
+          <span
+            style={{
+              color: "#C4E3D5",
+              marginLeft: "0.5rem",
+            }}
+          >
+            actions
+          </span>
+          <span style={{ color: "#FAAA42" }}>.</span>
         </Typography>
         <Typography
           sx={{
-            fontWeight: 400,
+            fontWeight: 700,
             textAlign: "center",
-            fontSize: "24px",
-            mt: 2,
+            fontSize: "32px",
+            lineHeight: "48px",
+            color: " #10403B",
+            mt: 8,
             mb: 3,
           }}
         >
@@ -70,7 +81,7 @@ export default function ActionEtEmpreinteCarbone() {
           alignItems: "center",
           width: "100%",
           mb: {
-            xs: 8,
+            xs: 14,
           },
           mt: 7,
         }}
@@ -103,14 +114,7 @@ export default function ActionEtEmpreinteCarbone() {
               }}
             >
               <MotionInView variants={varFadeInUp}>
-                <Box
-                  component="img"
-                  src={item.icon}
-                  sx={{
-                    width: "120px",
-                    height: "105px",
-                  }}
-                />
+                <Box component="img" src={item.icon} />
               </MotionInView>
               <MotionInView variants={varFadeInDown}>
                 <Typography
@@ -118,9 +122,12 @@ export default function ActionEtEmpreinteCarbone() {
                     display: "flex",
                     alignItems: "center",
                     textAlign: "center",
-                    fontSize: "24px",
-                    fontWeight: "bolder",
-                    mt: 1,
+                    fontFamily: "Lora",
+                    lineHeight: "25.6px",
+                    color: "#10403B",
+                    fontSize: "21px",
+                    fontWeight: 600,
+                    mt: 5,
                     mb: 3,
                   }}
                 >
@@ -135,14 +142,14 @@ export default function ActionEtEmpreinteCarbone() {
                     flexDirection: "row",
                   }}
                 >
-                  <Typography>
-                    {<CheckIcon color="primary" sx={{ mr: "0.7rem" }} />}
-                  </Typography>
                   <Typography
                     sx={{
-                      fontSize: "16px",
+                      fontSize: "19px",
+                      fontFamily: "Lora",
                       textAlign: "inherit",
-                      color: "#4a4e57",
+                      fontWeight: 400,
+                      lineHeight: "27px",
+                      color: "#10403B",
                     }}
                   >
                     {item.paragraphe}
@@ -153,17 +160,17 @@ export default function ActionEtEmpreinteCarbone() {
                     display: "flex",
                     justifyContent: "center",
                     flexDirection: "row",
-                    mt: "15px",
+                    mt: "20px",
                   }}
                 >
-                  <Typography>
-                    {<CheckIcon color="primary" sx={{ mr: "0.7rem" }} />}
-                  </Typography>
                   <Typography
                     sx={{
-                      fontSize: "16px",
+                      fontSize: "19px",
                       textAlign: "inherit",
-                      color: "#4a4e57",
+                      fontFamily: "Lora",
+                      fontWeight: 400,
+                      lineHeight: "27px",
+                      color: "#10403B",
                     }}
                   >
                     {item.paragraphe2}
@@ -174,82 +181,68 @@ export default function ActionEtEmpreinteCarbone() {
           ))}
         </Grid>
       </Container>
-      <MHidden width="mdDown">
-        <Grid
-          container
+      <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Box
+          component="img"
+          src={only_leave}
+          sx={{ height: "536px", width: "315px", zIndex: 6, mt: "-0.6rem" }}
+        />
+        <Box
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            mb: { md: -9, xs: 16 },
+            width: "100%",
+            height: "526px",
+            bgcolor: "#C4E3D5",
           }}
         >
-          <TButton name="Ouvrir un compte écologique" link="" />
-        </Grid>
-      </MHidden>
-      <Grid
-        item
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Typography
-          sx={{
-            fontSize: "35px",
-            fontWeight: 600,
-            lineHeight: 1.2,
-            textAlign: "center",
-            mt: {
-              md: 24,
-              xs: 15,
-            },
-          }}
-        >
-          Saviez-vous que chaque Français doit réduire son empreinte carbone de
-          <br />
-          80% ?
-        </Typography>
-        <Typography
-          sx={{
-            fontWeight: 400,
-            textAlign: "center",
-            fontSize: "18px",
-            mt: 5.5,
-            mb: 3,
-          }}
-        >
-          Chaque Français doit passer de 11 tonnes de CO2e par an à 2 tonnes
-          pour contenir la hausse de la température moyenne en dessous de +2°C.
-        </Typography>
-        <Typography
-          sx={{
-            fontWeight: 400,
-            textAlign: "center",
-            fontSize: "18px",
-            mb: 8.5,
-          }}
-        >
-          En s’appuyant sur la base carbone de l’ADEME, OnlyOne a conçu un
-          algorithme capable d’estimer en temps réel l’empreinte carbone de
-          chaque <br /> transaction effectuée par carte de paiement !
-        </Typography>
+          <Typography
+            sx={{
+              ml: "5000px",
+              height: "133px",
+              fontSize: { md: "24px", xs: "22px" },
+              color: "#10403B",
+              fontWeight: 700,
+              lineHeight: "36px",
+              margin: "69px 73px 0px 68px",
+            }}
+          >
+            Saviez-vous que chaque Français doit réduire son empreinte carbone
+            de 80% ?
+          </Typography>
+          <Typography
+            sx={{
+              color: "#10403B",
+              fontFamily: "Lora",
+              margin: "-55px 49px 69px 68px",
+              lineHeight: "27px",
+              fontSize: "21px",
+            }}
+          >
+            Chaque Français doit passer de 11 tonnes de CO2e par an à 2 tonnes
+            pour contenir la hausse de la
+            <br /> température moyenne en dessous de +2°C.
+            <br />
+            <br /> En s’appuyant sur la base carbone de l’ADEME, OnlyOne a conçu
+            un algorithme capable d’estimer
+            <br /> en temps réel l’empreinte carbone de chaque transaction
+            effectuée par carte de paiement !
+          </Typography>
+          <Button
+            sx={{
+              borderRadius: 50,
+              bgcolor: "#2A7267 !important",
+              "&:hover": { bgcolor: "#10403B  !important" },
+              boxShadow: "none",
+              margin: "30px 201px 0px 68px",
+              fontSize: "16px",
+              padding: "7px 38px 10px 38px",
+            }}
+            variant="contained"
+            // href={PATH_PAGE.UnGesteUnImpact}
+          >
+            Comment estimer mon empreinte carbone?
+          </Button>
+        </Box>
       </Grid>
-      <MHidden width="mdDown">
-        <Grid
-          container
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            mb: { md: -9, xs: 16 },
-          }}
-        >
-          <TButton name="Comment estimer mon empreinte carbone ?" link="" />
-        </Grid>
-      </MHidden>
     </RootStyle>
   );
 }
