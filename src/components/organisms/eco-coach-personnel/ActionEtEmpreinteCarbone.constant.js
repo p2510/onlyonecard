@@ -1,6 +1,6 @@
-import calculez from "../../../assets/images/calculez.png";
-import comprenez from "../../../assets/images/comprenez.png";
-import adoptez from "../../../assets/images/adoptez.png";
+import calculez from "../../../assets/images/calculez.svg";
+import comprenez from "../../../assets/images/comprenez.svg";
+import adoptez_2 from "../../../assets/images/adoptez_2.svg";
 import fain_zero from "../../../assets/images/fain_zero.png";
 import inegalite_reduite from "../../../assets/images/inegalite_reduite.png";
 import consommation_production from "../../../assets/images/consommation_production.png";
@@ -26,7 +26,7 @@ export const ACTIONSDATA = [
   },
   {
     id: 3,
-    icon: `${adoptez}`,
+    icon: `${adoptez_2}`,
     title: `Adoptez un mode de vie bas carbone`,
     paragraphe: `Recevez des conseils personnalisés éco-responsables`,
     paragraphe2: `Accédez à des produits d’épargne responsable et durable avec la sélection de l’éco-coach sur la Place Impact`,
