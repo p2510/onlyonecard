@@ -69,12 +69,12 @@ export default function CommunautesInput({
           sx={{
             variant: "contained",
             borderRadius: 50,
-            background: "#10403B !important",
-            "&:hover": { background: "#2A7267 !important" },
+            background: "#2A7267 !important",
+            "&:hover": { background: "#10403B !important" },
             boxShadow: "none",
             color: "#fff",
             fontSize: "16px",
-            padding: "7px 38px 10px 38px",
+            padding: "7px 38px 7px 38px",
           }}
         >
           M'abonner

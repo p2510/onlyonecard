@@ -135,6 +135,7 @@ export default function DifferentsEtapes() {
                       fontSize: "16px",
                     }}
                     variant="contained"
+                    href={item.link}
                   >
                     {item.title}
                   </Button>
@@ -187,13 +188,14 @@ export default function DifferentsEtapes() {
               boxShadow: "none",
               padding: "8px 50px 9px 50px",
             }}
+            onClick={() => setOpen(true)}
           >
             J'ouvre un compte
           </Button>
           {/* </Box> */}
         </Typography>
       </Box>
-      <CommunautesInput title="Rejoins la communauté" />
+      <CommunautesInput titre="Rejoins la communauté" />
       <Container>
         <Grid
           item
