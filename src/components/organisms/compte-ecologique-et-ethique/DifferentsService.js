@@ -3,6 +3,7 @@ import { styled } from "@mui/system";
 import { Box, Grid, Typography, Button } from "@mui/material";
 import Brightness1Icon from "@mui/icons-material/Brightness1";
 import foret_image from "../../../assets/images/foret_image.svg";
+import { PATH_PAGE } from "src/configues/routes/paths";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -194,7 +195,7 @@ export default function DifferentsService() {
                 padding: "10px 38px 10px 38px",
               }}
               variant="contained"
-              // href={PATH_PAGE.UnGesteUnImpact}
+              href={PATH_PAGE.TarifsEtAbonnements}
             >
               Je trouve l'abonnement qui me convient
             </Button>
