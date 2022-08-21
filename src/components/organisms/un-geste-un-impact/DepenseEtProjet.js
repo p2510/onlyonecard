@@ -7,6 +7,7 @@ import conseils_phone from "../../../assets/images/conseils_phone.svg";
 import homme_image from "../../../assets/images/homme_image.svg";
 import cercle_vert from "../../../assets/images/cercle_vert.svg";
 import { varFadeInUp, MotionInView, varFadeInLeft } from "../../atoms/animate";
+import { PATH_PAGE } from "src/configues/routes/paths";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -133,6 +134,7 @@ export default function DepenseEtProjet() {
                   padding: "7px 22px 10px 22px",
                   ml: -15,
                 }}
+                href={PATH_PAGE.CompteEcologiqueEthique}
               >
                 Je découvre le compte et sa carte de paiement OnlyOne
               </Button>
@@ -295,6 +297,7 @@ export default function DepenseEtProjet() {
               padding: "8px 30px 9px 30px",
               margin: "60px 0px 0px 240px",
             }}
+            href={PATH_PAGE.ActionEtEmpreinteCarbone}
           >
             Je fais connaissance avec l'éco-coach
           </Button>

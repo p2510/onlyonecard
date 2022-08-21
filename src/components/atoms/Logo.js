@@ -15,8 +15,8 @@ export default function Logo({ disabledLink = false, sx }) {
       src={onlyone_logo}
       alt="logo"
       sx={{
-        width: { md: 100, xs: 45 },
-        height: { md: 20, xs: 47 },
+        width: { md: 70, xs: 45 },
+        height: { md: 10, xs: 47 },
         objectFit: "cover",
         ...sx,
       }}
