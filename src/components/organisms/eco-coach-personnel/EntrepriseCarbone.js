@@ -1,5 +1,5 @@
 import { styled } from "@mui/system";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Link, Typography } from "@mui/material";
 import { Cursor, Typewriter } from "react-simple-typewriter";
 import ademe from "../../../assets/images/ademe.svg";
 import semeur_image from "../../../assets/images/semeur_image.svg";
@@ -54,8 +54,12 @@ export default function EntrepriseCarbone() {
               height: "191px",
             }}
           >
-            <Box component="img" src={ademe} />
-            <Box component="img" src={abc} />
+            <Link href="https://www.ademe.fr/" target="_blank">
+              <Box component="img" src={ademe} />
+            </Link>
+            <Link href="https://abc-transitionbascarbone.fr/" target="_blank">
+              <Box component="img" src={abc} />
+            </Link>
           </Box>
         </Box>
         <Box component="img" src={semeur_image} />
