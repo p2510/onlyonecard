@@ -74,6 +74,11 @@ export default function Router() {
       element: <MainLayout />,
       children: [{ element: <PartenariatOnuUnitlife />, index: true }],
     },
+    {
+      path: "/saviez-vous-que-votre-argent-a-la-banque-ne-pas",
+      element: <MainLayout />,
+      children: [{ element: <Article />, index: true }],
+    },
   ]);
 }
 
@@ -108,3 +113,4 @@ const ActionEtEmpreinteCarbone = Loadable(
 const PartenariatOnuUnitlife = Loadable(
   lazy(() => import("../../components/pages/PartenariatOnuUnitlife"))
 );
+const Article = Loadable(lazy(() => import("../../components/pages/Article")));

@@ -8,6 +8,7 @@ import bordure_roche from "../../../assets/images/bordure_roche.svg";
 import { varFadeInUp, MotionInView, varFadeInLeft } from "../../atoms/animate";
 import Dialogue from "src/components/molecules/Dialogue";
 import { CustomTextField } from "src/components/atoms/GeneralTextfield.style";
+import { PATH_PAGE } from "src/configues/routes/paths";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -80,6 +81,7 @@ export default function ConseilsEpargne() {
 
           <Box sx={{ display: "flex", justifyContent: "end" }}>
             <Button
+              variant="contained"
               sx={{
                 borderRadius: 50,
                 bgcolor: "#2A7267 !important",
@@ -89,7 +91,7 @@ export default function ConseilsEpargne() {
                 fontSize: "16px",
                 padding: "10px 38px 10px 38px",
               }}
-              variant="contained"
+              href={PATH_PAGE.PlaceImpact}
             >
               J'explore la place impact
             </Button>
