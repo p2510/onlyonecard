@@ -62,9 +62,8 @@ export default function MainHeader() {
         >
           <Logo
             sx={{
-              mt: "1rem",
-              width: { md: 87, xs: 45 },
-              height: { md: 90, xs: 47 },
+              width: { md: 65, xs: 45 },
+              height: { md: 68, xs: 47 },
               objectFit: "cover",
             }}
           />

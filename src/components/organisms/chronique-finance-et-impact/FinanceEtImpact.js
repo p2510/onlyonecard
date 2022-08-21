@@ -11,6 +11,7 @@ import {
   Container,
   Divider,
   Grid,
+  Link,
   Typography,
 } from "@mui/material";
 import {
@@ -18,6 +19,7 @@ import {
   CHRONIQUEDATA,
   BUTTONLABELLEDATA,
 } from "./ChroniqueFinanceEtImpact.constant";
+import { PATH_PAGE } from "src/configues/routes/paths";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -123,64 +125,66 @@ export default function FinanceEtImpact() {
                   sx={{ width: "333px", minWidth: "403px" }}
                   key={item.id}
                 >
-                  <Card
-                    sx={{
-                      borderRadius: "0px",
-                      background: "#E4D6C0",
-                    }}
-                  >
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        image={item.icon}
-                        alt="green iguana"
-                        sx={{ height: "233px" }}
-                      />
-                      <CardContent sx={{ height: "283px" }}>
-                        <Typography
-                          sx={{
-                            display: "flex",
-                            justifyContent: "center",
-                            mb: "20px",
-                            fontSize: "17px",
-                            lineHeight: 1.4,
-                            color: "#10403B",
-                          }}
-                        >
-                          <span style={{ marginRight: "10px" }}>
-                            {item.type}
-                          </span>
-                          <Divider orientation="vertical" flexItem />
-                          <span style={{ marginLeft: "10px" }}>
-                            {item.date}
-                          </span>
-                        </Typography>
-                        <Typography
-                          sx={{
-                            textAlign: "center",
-                            fontSize: "24px",
-                            fontWeight: 700,
-                            lineHeight: "36px",
-                            color: "#10403B",
-                            mb: 2,
-                          }}
-                        >
-                          {item.description}
-                        </Typography>
-                        <Typography
-                          sx={{
-                            textAlign: "center",
-                            color: "#B7795E",
-                            fontSize: "16px",
-                            lineHeight: "24px",
-                            fontWeight: 700,
-                          }}
-                        >
-                          {item.lien}
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
+                  <Link href={PATH_PAGE.ArticleBlog}>
+                    <Card
+                      sx={{
+                        borderRadius: "0px",
+                        background: "#E4D6C0",
+                      }}
+                    >
+                      <CardActionArea>
+                        <CardMedia
+                          component="img"
+                          image={item.icon}
+                          alt="green iguana"
+                          sx={{ height: "233px" }}
+                        />
+                        <CardContent sx={{ height: "283px" }}>
+                          <Typography
+                            sx={{
+                              display: "flex",
+                              justifyContent: "center",
+                              mb: "20px",
+                              fontSize: "17px",
+                              lineHeight: 1.4,
+                              color: "#10403B",
+                            }}
+                          >
+                            <span style={{ marginRight: "10px" }}>
+                              {item.type}
+                            </span>
+                            <Divider orientation="vertical" flexItem />
+                            <span style={{ marginLeft: "10px" }}>
+                              {item.date}
+                            </span>
+                          </Typography>
+                          <Typography
+                            sx={{
+                              textAlign: "center",
+                              fontSize: "24px",
+                              fontWeight: 700,
+                              lineHeight: "36px",
+                              color: "#10403B",
+                              mb: 2,
+                            }}
+                          >
+                            {item.description}
+                          </Typography>
+                          <Typography
+                            sx={{
+                              textAlign: "center",
+                              color: "#B7795E",
+                              fontSize: "16px",
+                              lineHeight: "24px",
+                              fontWeight: 700,
+                            }}
+                          >
+                            {item.lien}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Link>
                 </Grid>
               ))}
             </Grid>
