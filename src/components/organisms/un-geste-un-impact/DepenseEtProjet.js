@@ -1,11 +1,11 @@
 import { styled } from "@mui/system";
 import { Box, Grid, Typography, Button } from "@mui/material";
 import { MHidden } from "../../atoms/@material-extend";
-import geste_foret_image from "../../../assets/images/geste_foret_image.svg";
-import solidaire_image from "../../../assets/images/solidaire_image.svg";
-import conseils_phone from "../../../assets/images/conseils_phone.svg";
-import homme_image from "../../../assets/images/homme_image.svg";
-import cercle_vert from "../../../assets/images/cercle_vert.svg";
+import geste_foret_image from "../../../assets/images/geste_foret_image.png";
+import solidaire_image from "../../../assets/images/solidaire_image.png";
+import conseils_phone from "../../../assets/images/conseils_phone.png";
+import homme_image from "../../../assets/images/homme_image.png";
+import cercle_vert from "../../../assets/images/cercle_vert.png";
 import { varFadeInUp, MotionInView, varFadeInLeft } from "../../atoms/animate";
 import { PATH_PAGE } from "src/configues/routes/paths";
 
@@ -227,7 +227,9 @@ export default function DepenseEtProjet() {
             </MotionInView>
           </Box>
         </Box>
-        <Box component="img" src={solidaire_image} />
+        <MHidden width="mdDown">
+          <Box component="img" src={solidaire_image} />
+        </MHidden>
       </Grid>
       <Box
         sx={{
@@ -302,28 +304,30 @@ export default function DepenseEtProjet() {
             Je fais connaissance avec l'éco-coach
           </Button>
         </Box>
-        <Box
-          component="img"
-          src={conseils_phone}
-          sx={{
-            zIndex: 6,
-            margin: "-340px -300px 0px 0px",
-          }}
-        />
-        <Box
-          component="img"
-          src={cercle_vert}
-          sx={{ display: "flex", margin: "-140px 270px 0px 0px" }}
-        />
-        <Box
-          component="img"
-          src={homme_image}
-          sx={{
-            display: "flex",
-            zIndex: 6,
-            margin: "30px 50px 0px -600px",
-          }}
-        />
+        <MHidden width="mdDown">
+          <Box
+            component="img"
+            src={conseils_phone}
+            sx={{
+              zIndex: 6,
+              margin: "-340px -300px 0px 0px",
+            }}
+          />
+          <Box
+            component="img"
+            src={cercle_vert}
+            sx={{ display: "flex", margin: "-140px 270px 0px 0px" }}
+          />
+          <Box
+            component="img"
+            src={homme_image}
+            sx={{
+              display: "flex",
+              zIndex: 6,
+              margin: "30px 50px 0px -600px",
+            }}
+          />
+        </MHidden>
       </Box>
     </RootStyle>
   );

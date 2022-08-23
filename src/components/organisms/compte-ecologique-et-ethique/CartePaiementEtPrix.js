@@ -63,6 +63,7 @@ export default function CartePaiementEtPrix() {
             </MotionInView>
           </Grid>
         </MHidden>
+        8
         <Grid item xs={12} md={6} lg={5} mt="2rem">
           <MotionInView variants={varFadeInLeft}>
             <Typography

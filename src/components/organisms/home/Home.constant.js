@@ -15,10 +15,18 @@ import ethique_mobile from "../../../assets/images/ethique_mobile.svg";
 import carte_mobile from "../../../assets/images/carte_mobile.png";
 import biodiversite_mobile from "../../../assets/images/biodiversite_mobile.png";
 import economisez_mobile from "../../../assets/images/economisez_mobile.png";
-
+import biodiversite_image from "../../../assets/images/biodiversite_image.png";
+import ecosysteme_image from "../../../assets/images/ecosysteme_image.png";
+import transition_image from "../../../assets/images/transition_image.png";
 import paiement_utile from "../../../assets/images/paiement_utile.svg";
 import courant_ecologique from "../../../assets/images/courant_ecologique.svg";
-import epargne_positive from "../../../assets/images/epargne_positive.svg";
+import inegalite_image from "../../../assets/images/inegalite_image.png";
+import agricole_image from "../../../assets/images/agricole_image.png";
+import protection_foret_image from "../../../assets/images/protection_foret_image.png";
+import association_image from "../../../assets/images/association_image.png";
+import financement_territoires from "../../../assets/images/financement_territoires.png";
+import rechauffement_image from "../../../assets/images/rechauffement_image.png";
+import epargne_positive_image from "../../../assets/images/epargne_positive_image.svg";
 
 export const AVANTAGES = [
   {
@@ -177,9 +185,59 @@ export const ACTIONSDATA = [
   },
   {
     id: 3,
-    icon: `${epargne_positive}`,
+    icon: `${epargne_positive_image}`,
     title: `De l’épargne positive`,
     paragraphe: `Découvrez des produits financiers qui vous correspondent`,
     paragraphe2: `Diversifier votre épargne au profit de la transition écologique et solidaire`,
+  },
+];
+
+export const ECOCOMPTEDATA = [
+  {
+    id: 1,
+    cardImage: `${biodiversite_image}`,
+    cardTitle: "La protection de la biodiversité",
+  },
+  {
+    id: 2,
+    cardImage: `${ecosysteme_image}`,
+    cardTitle: "La protection des écosystèmes",
+  },
+  {
+    id: 3,
+    cardImage: `${inegalite_image}`,
+    cardTitle: "La lutte contre les inégalités mondiales",
+  },
+];
+export const EPARGNEDATA = [
+  {
+    id: 1,
+    cardImage: `${transition_image}`,
+    cardTitle: "La transition écologique",
+  },
+  {
+    id: 2,
+    cardImage: `${agricole_image}`,
+    cardTitle: "La transition agricole et énergétique",
+  },
+  {
+    id: 3,
+    cardImage: `${protection_foret_image}`,
+    cardTitle: "La protection de la forêt",
+  },
+  {
+    id: 4,
+    cardImage: `${association_image}`,
+    cardTitle: "Le financement d’associations",
+  },
+  {
+    id: 5,
+    cardImage: `${financement_territoires}`,
+    cardTitle: "Le financement des territoires",
+  },
+  {
+    id: 6,
+    cardImage: `${rechauffement_image}`,
+    cardTitle: "La lutte contre le réchauffement climatique",
   },
 ];

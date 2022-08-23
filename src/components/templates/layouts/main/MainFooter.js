@@ -56,10 +56,10 @@ export default function MainFooter() {
         >
           <Logo
             sx={{
-              width: { md: 142, xs: 140 },
-              height: { md: 150, xs: 40 },
+              width: { md: 142, xs: 80 },
+              height: { md: 150, xs: 85 },
               mb: 4,
-              mt: 4,
+              mt: { md: 4, xs: 8 },
               objectFit: "cover",
             }}
           />
@@ -72,28 +72,32 @@ export default function MainFooter() {
           >
             <MotionInView variants={varFadeInLeft}>
               <Button>
-                <Box
-                  component="img"
-                  src={app_store_icon}
-                  alt=""
-                  sx={{
-                    height: "70px",
-                    width: "130px",
-                  }}
-                />
+                <Link href="https://apps.apple.com/fr/app/onlyone-card/id1520016716">
+                  <Box
+                    component="img"
+                    src={app_store_icon}
+                    alt=""
+                    sx={{
+                      height: "70px",
+                      width: "130px",
+                    }}
+                  />
+                </Link>
               </Button>
             </MotionInView>
             <MotionInView variants={varFadeInLeft}>
               <Button>
-                <Box
-                  component="img"
-                  src={google_play_logo}
-                  alt=""
-                  sx={{
-                    height: "70px",
-                    width: "130px",
-                  }}
-                />
+                <Link href="https://play.google.com/store/apps/details?id=eu.onlyonecard.mobile">
+                  <Box
+                    component="img"
+                    src={google_play_logo}
+                    alt=""
+                    sx={{
+                      height: "70px",
+                      width: "130px",
+                    }}
+                  />
+                </Link>
               </Button>
             </MotionInView>
           </Box>
@@ -138,7 +142,7 @@ export default function MainFooter() {
             fontSize="18px"
             fontWeight="700"
             lineHeight="27px"
-            textAlign="end"
+            textAlign={{ md: "end", xs: "center" }}
             mb="3rem"
           >
             Rester informé et recevoir les chroniques de la finance et de
@@ -165,12 +169,14 @@ export default function MainFooter() {
           >
             {SOCIALS.map((social) => (
               <Button variant="outline">
-                <Box
-                  key={social.id}
-                  component="img"
-                  src={social.icon}
-                  sx={{ height: "30px" }}
-                />
+                <Link href={social.lien}>
+                  <Box
+                    key={social.id}
+                    component="img"
+                    src={social.icon}
+                    sx={{ height: "30px" }}
+                  />
+                </Link>
               </Button>
             ))}
           </Stack>
