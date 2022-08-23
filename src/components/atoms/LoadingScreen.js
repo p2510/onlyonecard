@@ -1,30 +1,66 @@
-import PropTypes from "prop-types";
-import { m } from "framer-motion";
-import { alpha, styled } from "@mui/material/styles";
-import { Box } from "@mui/material";
-import Logo from "./Logo";
-import ProgressBar from "./ProgressBar";
+import NProgress from "nprogress";
+import { motion } from "framer-motion";
+import { useEffect, useMemo } from "react";
+import { makeStyles, createStyles } from "@mui/styles";
+import { alpha, styled } from "@mui/system";
+import onlyone_logo from "../../assets/images/onlyone_logo.svg";
+import { Box, Typography } from "@mui/material";
+
+const nprogressStyle = makeStyles((theme) =>
+  createStyles({
+    "@global": {
+      "#nprogress": {
+        pointerEvents: "none",
+        "& .bar": {
+          top: 0,
+          left: 0,
+          height: 2,
+          width: "100%",
+          position: "fixed",
+          zIndex: theme.zIndex?.snackbar,
+          backgroundColor: theme.palette?.primary.main,
+          boxShadow: `0 0 2px ${theme.palette?.primary.main}`,
+        },
+        "& .peg": {
+          right: 0,
+          opacity: 1,
+          width: 100,
+          height: "100%",
+          display: "block",
+          position: "absolute",
+          transform: "rotate(3deg) translate(0px, -4px)",
+          boxShadow: `0 0 10px ${theme.palette?.primary.main}, 0 0 5px ${theme.palette?.primary.main}`,
+        },
+      },
+    },
+  })
+);
 
 const RootStyle = styled("div")(({ theme }) => ({
-  right: 0,
-  bottom: 0,
-  zIndex: 99999,
-  width: "100%",
   height: "100%",
-  position: "fixed",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: theme.palette.background.default,
+  backgroundColor: theme.palette.background?.default,
 }));
 
-LoadingScreen.propTypes = {
-  isDashboard: PropTypes.bool,
-};
+function ProgressBar() {
+  nprogressStyle();
 
-export default function LoadingScreen({ isDashboard, ...other }) {
+  useMemo(() => {
+    NProgress.start();
+  }, []);
+
+  useEffect(() => {
+    NProgress.done();
+  }, []);
+
+  return null;
+}
+
+export default function LoadingScreen({ ...other }) {
   return (
-    <>
+    < {...other}>
       <ProgressBar />
       {!isDashboard && (
         <RootStyle {...other}>

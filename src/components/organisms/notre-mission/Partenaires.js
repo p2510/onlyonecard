@@ -133,7 +133,6 @@ export default function Partenaires() {
             }}
           >
             <MotionInView variants={varFadeInUp}></MotionInView>
-
             <MotionInView variants={varFadeInDown}>
               <Typography
                 sx={{

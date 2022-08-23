@@ -5,7 +5,7 @@ import {
   varFadeInLeft,
   varFadeInUp,
 } from "../../atoms/animate";
-import unicef_icon from "../../../assets/images/unicef_icon.svg";
+import unicef_icon from "../../../assets/images/unicef_icon.png";
 import { VALEURANDENGAGEMENTDATA } from "./Home.constant";
 import { MHidden } from "../../atoms/@material-extend";
 import { PATH_PAGE } from "../../../configues/routes/paths";

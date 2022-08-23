@@ -2,13 +2,8 @@ import { styled } from "@mui/system";
 import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import { MotionInView, varFadeInUp } from "../../atoms/animate";
 import { EPARGNERIMAGEDATA } from "./PlaceImpact.constant";
-<<<<<<< HEAD
 import arbres_image from "../../../assets/images/arbres_image.png";
 import title_bg from "../../../assets/images/title_bg.png";
-=======
-import arbres_image from "../../../assets/images/arbres_image.svg";
-import title_bg from "../../../assets/images/title_bg.svg";
->>>>>>> finalisation de la page place impact
 import { MHidden } from "src/components/atoms/@material-extend";
 
 const RootStyle = styled("div")(({ theme }) => ({
@@ -23,22 +18,14 @@ export default function PlaceImpactServiceFirstPart() {
   return (
     <RootStyle>
       <MHidden width="mdDown">
-<<<<<<< HEAD
         <Grid container mt="8rem">
-=======
-        <Grid container mt="-2rem">
->>>>>>> finalisation de la page place impact
           <Box
             component="img"
             src={arbres_image}
             alt="Eco-compte Onlyone"
             sx={{
               width: "100%",
-<<<<<<< HEAD
               height: "655px",
-=======
-              height: "1053px",
->>>>>>> finalisation de la page place impact
               position: "absolute",
               mb: "1rem",
             }}
@@ -59,11 +46,7 @@ export default function PlaceImpactServiceFirstPart() {
             bgcolor: "#10403B",
             height: "375px",
             position: "absolute",
-<<<<<<< HEAD
             top: { md: "288px", xs: "100px" },
-=======
-            top: { md: "308px", xs: "100px" },
->>>>>>> finalisation de la page place impact
           }}
         >
           <Typography
@@ -175,7 +158,6 @@ export default function PlaceImpactServiceFirstPart() {
                   mr: -10,
                 }}
               >
-<<<<<<< HEAD
                 <Box
                   component="img"
                   src={item.icon}
@@ -183,30 +165,21 @@ export default function PlaceImpactServiceFirstPart() {
                   height="150px"
                   width="180px"
                 />
-=======
-                <Box component="img" src={item.icon} alt={item.title} />
->>>>>>> finalisation de la page place impact
                 <Box
                   component="img"
                   src={item.icon_deux}
                   alt={item.title}
                   marginLeft="3rem"
-<<<<<<< HEAD
                   height="150px"
                   width="180px"
-=======
->>>>>>> finalisation de la page place impact
                 />
                 {item.icon_trois ? (
                   <Box
                     component="img"
                     src={item.icon_trois}
                     alt={item.title}
-<<<<<<< HEAD
                     height="150px"
                     width="180px"
-=======
->>>>>>> finalisation de la page place impact
                     marginLeft="3rem"
                   />
                 ) : (
