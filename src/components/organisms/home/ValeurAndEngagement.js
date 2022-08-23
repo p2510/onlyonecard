@@ -5,7 +5,7 @@ import {
   varFadeInLeft,
   varFadeInUp,
 } from "../../atoms/animate";
-import unicef_icon from "../../../assets/images/unicef_icon.svg";
+import unicef_icon from "../../../assets/images/unicef_icon.png";
 import { VALEURANDENGAGEMENTDATA } from "./Home.constant";
 import { MHidden } from "../../atoms/@material-extend";
 import { PATH_PAGE } from "../../../configues/routes/paths";
@@ -18,6 +18,7 @@ export default function ValeurAndEngagement() {
         dispaly: "flex",
         justifyContent: "center",
         alignItems: "center",
+        marginTop: { md: 0, xs: -70 },
       }}
     >
       <Grid
@@ -31,16 +32,19 @@ export default function ValeurAndEngagement() {
       >
         <Typography
           sx={{
-            fontSize: "38px",
+            display: "flex",
+            fontSize: { md: "38px", xs: "24px" },
             fontWeight: "bold",
             alignItems: "center",
-            mb: 6,
+            flexDirection: { md: "row", xs: "column" },
+            mb: { md: "144px", xs: 4 },
             mt: {
               md: "121px",
+              xs: "620px",
             },
           }}
         >
-          Des <span style={{ color: "#C4E3D5" }}>valeurs</span> et des{" "}
+          Des <span style={{ color: "#C4E3D5" }}>valeurs</span> et des
           <spanstyle style={{ color: "#C4E3D5" }}>engagements</spanstyle>
           <spn style={{ color: "#FAAA42" }}>.</spn>
         </Typography>
@@ -55,11 +59,8 @@ export default function ValeurAndEngagement() {
           alignItems: "center",
           width: "100%",
           mb: {
-            md: 4,
+            md: "109px",
             xs: 8,
-          },
-          mt: {
-            md: "90px",
           },
         }}
       >
@@ -72,7 +73,7 @@ export default function ValeurAndEngagement() {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "space-around",
-              marginRight: "2rem",
+              marginRight: { md: "2rem", xs: 0 },
             }}
           >
             <MotionInView variants={varFadeInUp}>
@@ -140,7 +141,7 @@ export default function ValeurAndEngagement() {
                 display: "flex",
                 justifyContent: "center",
                 mb: 12,
-                ml: -10,
+                ml: { md: -10, xs: 0 },
               }}
             >
               <Button

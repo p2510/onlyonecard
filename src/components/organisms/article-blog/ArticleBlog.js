@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/system";
 import { PATH_PAGE } from "src/configues/routes/paths";
-import article_image from "../../../assets/images/article_image.svg";
+import article_image from "../../../assets/images/article_image.png";
 import { CHRONIQUEDATA } from "./ArticleBolg.constant";
 
 const RootStyle = styled("div")(({ theme }) => ({

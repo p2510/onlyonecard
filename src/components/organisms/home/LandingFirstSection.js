@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import presentation from "../../../assets/images/presentation.svg";
-import euro_image from "../../../assets/images/euro_image.svg";
+import presentation from "../../../assets/images/presentation.png";
+import euro_image from "../../../assets/images/euro_image.png";
 import planete_image from "../../../assets/images/planete_image.svg";
 import { styled } from "@mui/system";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
@@ -16,6 +16,7 @@ import { ACTIONSDATA } from "./Home.constant";
 import Dialogue from "src/components/molecules/Dialogue";
 
 const RootStyle = styled("div")(({ theme }) => ({
+  marginBottom: "13rem",
   textAlign: "center",
   [theme.breakpoints.up("md")]: {
     textAlign: "left",
@@ -36,27 +37,20 @@ export default function LandingFirstSection() {
 
   return (
     <RootStyle>
-      <MHidden width="mdDown">
-        <Grid container>
+      <Grid container>
+        <MHidden width="mdDown">
           <Box
             component="img"
             src={presentation}
-            alt="Eco-compte Onlyone"
-            sx={{
-              width: "100%",
-              height: "1053px",
-              position: "absolute",
-              mb: "1rem",
-            }}
+            alt="Le 1er compte à impact positif."
           />
-        </Grid>
-      </MHidden>
+        </MHidden>
+      </Grid>
       <Grid container>
         <Box
           component="container"
-          alt="Eco-compte Onlyone"
           sx={{
-            width: { md: "587px", xs: "380px" },
+            width: { md: "587px", xs: "100%" },
             bgcolor: "#10403B",
             height: "455px",
             position: "absolute",
@@ -67,23 +61,23 @@ export default function LandingFirstSection() {
           <Typography
             sx={{
               fontFamily: "Poppins",
-              width: "480px",
+              width: { md: "480px", xs: "100%" },
               height: "133px",
-              top: "347px",
-              left: "102px",
               fontSize: { md: "42px", xs: "22px" },
               color: "#fff",
               fontWeight: 900,
               lineHeight: "63px",
               fontStyle: "normal",
-              margin: "39px 73px 0px 34px",
+              margin: "39px 0px 0px 0px",
+              marginRight: { md: "73px", xs: 0 },
+              marginLeft: { md: "34px", xs: 0 },
             }}
           >
             <span>
               Le 1er compte à <br />
             </span>
             <span style={{ color: "#C4E3D5" }}>impact positif</span>
-            <span style={{ color: "#FAAA42", borderRadius: 50 }}>.</span>
+            <span style={{ color: "#FAAA42" }}>.</span>
           </Typography>
           <Typography
             sx={{
@@ -112,7 +106,9 @@ export default function LandingFirstSection() {
               bgcolor: "#FAAA42",
               "&:hover": { bgcolor: "#f7b96c" },
               boxShadow: "none",
-              margin: "7px 201px 0px 221px",
+              marginTop: { md: "7px", xs: -5 },
+              marginRight: { md: "201px", xs: "0px" },
+              marginLeft: { md: "201px", xs: "0px" },
               fontSize: "15px",
               padding: "7px 18px 10px 18px",
             }}
@@ -127,17 +123,18 @@ export default function LandingFirstSection() {
         sx={{
           display: "flex",
           justifyContent: "center",
-          marginTop: "935px",
+          marginTop: { md: "-100px", xs: "10rem" },
         }}
       >
         <Typography
           sx={{
             display: "flex",
             justifyContent: "center",
-            color: "#fff",
+            color: { md: "#fff", xs: "#10403B" },
             fontFamily: "Poppins",
-            fontSize: "32px",
+            fontSize: { md: "32px", xs: "22px" },
             fontWeight: 700,
+            mt: { md: "-30px", xs: "470px" },
             zIndex: 6,
           }}
         >
@@ -151,7 +148,7 @@ export default function LandingFirstSection() {
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
-          mt: 14,
+          mt: { md: "170px", xs: "80px" },
         }}
       >
         {ACTIONSDATA.map((item) => (
@@ -167,14 +164,15 @@ export default function LandingFirstSection() {
             }}
           >
             <MotionInView variants={varFadeInUp}>
-              <Box
-                component="img"
-                src={item.icon}
-                sx={{
-                  width: "130px",
-                  height: "100px",
-                }}
-              />
+              <Box>
+                <Box
+                  component="img"
+                  src={item.icon}
+                  alt="Un compte courant"
+                  width="63px"
+                  height="91px"
+                />
+              </Box>
             </MotionInView>
             <MotionInView variants={varFadeInDown}>
               <Typography
@@ -183,7 +181,7 @@ export default function LandingFirstSection() {
                   fontSize: "22px",
                   fontWeight: "bolder",
                   color: "#C4E3D5",
-                  mt: 8,
+                  mt: "20px",
                   mb: 3,
                 }}
               >
@@ -234,18 +232,17 @@ export default function LandingFirstSection() {
         </Button>
       </Box>
       <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
+        <MHidden width="mdDown">
+          <Box
+            component="img"
+            src={euro_image}
+            alt="J'ouvre un compte écologique et éthique"
+          />
+        </MHidden>
         <Box
-          component="img"
-          src={euro_image}
           sx={{
-            width: "390px",
-            height: "584px",
-          }}
-        />
-        <Box
-          sx={{
-            width: "80%",
-            height: "584px",
+            width: { md: "80%", xs: "100%" },
+            height: "588px",
             bgcolor: "#10403B",
           }}
         >
@@ -254,23 +251,25 @@ export default function LandingFirstSection() {
               fontFamily: "Poppins",
               ml: "5000px",
               height: "133px",
-              top: "347px",
-              fontSize: { md: "38px", xs: "22px" },
+              fontSize: { md: "38px", xs: "20px" },
               color: "#fff",
               fontWeight: 900,
-              lineHeight: "63px",
+              lineHeight: { md: "63px", xs: "40px" },
               fontStyle: "normal",
-              margin: "39px 73px 0px 68px",
+              margin: "0px 73px 0px 68px",
+              marginTop: { md: "39px", xs: 0 },
             }}
           >
             Chaque euro peut devenir une bonne{" "}
-            <span style={{ color: "#C4E3D5" }}>action !</span>
+            <span style={{ color: "#C4E3D5" }}>action</span>
+            <span style={{ color: "#FAAA42" }}>!</span>
           </Typography>
           <Typography
             sx={{
               color: "#fff",
               fontFamily: "Lora",
-              margin: "0px 49px 69px 68px",
+              margin: "0px 49px 0px 68px",
+              marginBottom: { md: " 69px", xs: 2 },
               fontSize: "18px",
             }}
           >
@@ -289,7 +288,8 @@ export default function LandingFirstSection() {
               bgcolor: "#FAAA42",
               "&:hover": { bgcolor: "#f7b96c" },
               boxShadow: "none",
-              margin: "7px 201px 0px 68px",
+              margin: "7px 0px 0px 68px",
+              marginRight: "50px",
               fontSize: "16px",
               padding: "7px 38px 10px 38px",
             }}
@@ -310,7 +310,7 @@ export default function LandingFirstSection() {
       >
         <Box
           sx={{
-            width: "80%",
+            width: { md: "80%", xs: "100%" },
             height: "584px",
           }}
         >
@@ -320,13 +320,14 @@ export default function LandingFirstSection() {
                 fontFamily: "Poppins",
                 ml: "5000px",
                 height: "133px",
-                top: "347px",
                 fontSize: { md: "32px", xs: "22px" },
                 color: "#10403B",
                 fontWeight: 900,
-                lineHeight: "63px",
+                lineHeight: { md: "63px", xs: "40px" },
                 fontStyle: "normal",
-                margin: "39px 73px 0px 68px",
+                marginTop: { md: "39px", xs: 0 },
+                marginLeft: { md: "68px", xs: "10px" },
+                marginRight: { md: "73px", xs: 0 },
               }}
             >
               Épargnez votre argent, épargnez la planète !
@@ -336,6 +337,7 @@ export default function LandingFirstSection() {
                 color: "10403B",
                 fontFamily: "Lora",
                 margin: "0px 49px 69px 68px",
+                marginBottom: { md: "49px", xs: 2 },
                 fontSize: "18px",
               }}
             >
@@ -350,7 +352,9 @@ export default function LandingFirstSection() {
                 bgcolor: "#2A7267",
                 "&:hover": { bgcolor: "#10403B" },
                 boxShadow: "none",
-                margin: "7px 201px 0px 358px",
+                margin: "7px 0px 0px 70px",
+                marginLeft: { md: "70px", xs: 0 },
+                marginRight: { md: "201px", xs: 0 },
                 fontSize: "16px",
                 padding: "7px 38px 10px 38px",
               }}
@@ -361,12 +365,15 @@ export default function LandingFirstSection() {
             </Button>
           </Container>
         </Box>
-        <Box
-          component="img"
-          src={planete_image}
-          alt="Epargnez votre argent, épargnez la planète"
-          sx={{ width: "467px", height: "459px" }}
-        />
+        <MHidden width="mdDown">
+          <Box
+            component="img"
+            src={planete_image}
+            width="467px"
+            height="559px"
+            alt="Epargnez votre argent, épargnez la planète"
+          />
+        </MHidden>
       </Grid>
       <Dialogue open={open} modalClose={modalClose} />
     </RootStyle>

@@ -5,7 +5,7 @@ import { MotionInView, varFadeInUp } from "../../atoms/animate";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import etape_image from "../../../assets/images/etape_image.svg";
-import citoyens_image from "../../../assets/images/citoyens_image.svg";
+import citoyens_image from "../../../assets/images/citoyens_image.png";
 import {
   DIFFERENTSETAPESDATA,
   PARTENAIRELOGODATA,
@@ -51,12 +51,14 @@ export default function DifferentsEtapes() {
             sx={{
               display: "flex",
               justifyContent: "center",
-              fontSize: "2.3rem",
+              flexDirection: { md: "row", xs: "column" },
+              fontSize: { md: "2.3rem", xs: "1.8rem" },
               fontWeight: "bold",
               alignItems: "center",
               mb: 6,
               mt: {
                 md: 15,
+                xs: 5,
               },
             }}
           >
@@ -83,63 +85,57 @@ export default function DifferentsEtapes() {
             },
           }}
         >
-          <Grid item xs={3} ml="-5rem" mt="-25rem">
-            <Box component="img" src={etape_image} />
-          </Grid>
+          <MHidden width="mdDown">
+            <Grid item xs={3} ml="-5rem" mt="-25rem">
+              <Box component="img" src={etape_image} />
+            </Grid>
+          </MHidden>
           {DIFFERENTSETAPESDATA.map((item) => (
             <Grid
               item
-              xs={9}
+              xs={12}
               key={item.id}
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "start",
-                justifyContent: "start",
+                alignItems: { md: "start", xs: "center" },
+                justifyContent: { md: "start", xs: "center" },
                 width: "230px",
-                ml: 12,
+                ml: { md: 12, xs: 0 },
               }}
             >
-              <Grid
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexDirection: "row",
-                  mb: 5,
-                }}
-              >
-                <MotionInView variants={varFadeInUp}>
-                  <Box component="img" src={item.icon} />
-                </MotionInView>
-              </Grid>
+              <MotionInView variants={varFadeInUp}>
+                <Box component="img" src={item.icon} />
+              </MotionInView>
               <MotionInView variants={varFadeInUp}>
                 <Typography
                   sx={{
                     fontSize: "18px",
                     fontWeight: 400,
                     lineHeight: "27px",
+                    mt: 5,
                   }}
                 >
                   {item.paragraphe}
                 </Typography>
-                <MHidden width="mdDown">
-                  <Button
-                    sx={{
-                      borderRadius: 50,
-                      fontFamily: "Lora",
-                      bgcolor: "#2A7267 !important",
-                      "&:hover": { bgcolor: "#10403B !important" },
-                      boxShadow: "none",
-                      margin: "100px -70px 0px -20px",
-                      fontSize: "16px",
-                    }}
-                    variant="contained"
-                    href={item.link}
-                  >
-                    {item.title}
-                  </Button>
-                </MHidden>
+                <Button
+                  sx={{
+                    borderRadius: 50,
+                    fontFamily: "Lora",
+                    bgcolor: "#2A7267 !important",
+                    "&:hover": { bgcolor: "#10403B !important" },
+                    boxShadow: "none",
+                    marginRight: { md: "-70px", xs: 0 },
+                    marginLeft: { md: "-20px", xs: 0 },
+                    marginTop: { md: "70px", xs: 3 },
+                    marginBottom: { md: 0, xs: 10 },
+                    fontSize: "16px",
+                  }}
+                  variant="contained"
+                  href={item.link}
+                >
+                  {item.title}
+                </Button>
               </MotionInView>
             </Grid>
           ))}
@@ -157,30 +153,30 @@ export default function DifferentsEtapes() {
           height: "485px",
         }}
       >
-        <Box component="img" src={citoyens_image} />
+        <MHidden width="mdDown">
+          <Box component="img" src={citoyens_image} />
+        </MHidden>
         <Typography
           sx={{
-            position: "absolute",
-            width: "679px",
             height: "145px",
-            mt: "-120px",
+            mt: { md: "-120px", xs: "-260px" },
             left: "660px",
             fontFamily: "Poppins",
             fontStyle: "normal",
             fontWeight: 700,
-            fontSize: "32px",
+            fontSize: { md: "32px", xs: "27px" },
             lineHeight: "48px",
             color: "#10403B",
           }}
         >
-          Ouvrez un compte pour rejoindre le mouvement des citoyens au service
-          du climat, de la biodiversité et de la société
-          {/* <Box> */}
+          Ouvrez un compte pour rejoindre le
+          <br /> mouvement des citoyens au service du
+          <br /> climat, de la biodiversité et de la société
           <Button
             variant="contained"
             sx={{
-              left: "28%",
-              top: "70%",
+              left: { md: "28%", xs: 0 },
+              top: { md: "70%", xs: 35 },
               background: "#FAAA42 !important",
               "&:hover": { bgcolor: "#f7b96c !important" },
               borderRadius: "30px",
@@ -192,10 +188,12 @@ export default function DifferentsEtapes() {
           >
             J'ouvre un compte
           </Button>
-          {/* </Box> */}
         </Typography>
       </Box>
-      <CommunautesInput titre="Rejoins la communauté" />
+      <CommunautesInput
+        titre="Rejoins la communauté"
+        sx={{ width: { md: "100%", xs: "50%" } }}
+      />
       <Container>
         <Grid
           item

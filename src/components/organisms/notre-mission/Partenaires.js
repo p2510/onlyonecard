@@ -3,10 +3,10 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import { MotionInView, varFadeInDown, varFadeInUp } from "../../atoms/animate";
 import { PARTENAIREDATA } from "./NotreMission.constant";
 import { MHidden } from "../../atoms/@material-extend";
-import arriere_plan_notre_mission from "../../../assets/images/arriere_plan_notre_mission.svg";
-import bras_image from "../../../assets/images/bras_image.svg";
-import cercle from "../../../assets/images/cercle.svg";
-import plage_image from "../../../assets/images/plage_image.svg";
+import arriere_plan_notre_mission from "../../../assets/images/arriere_plan_notre_mission.png";
+import bras_image from "../../../assets/images/bras_image.png";
+import cercle from "../../../assets/images/cercle.png";
+import plage_image from "../../../assets/images/plage_image.png";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -134,15 +134,7 @@ export default function Partenaires() {
             }}
           >
             <MotionInView variants={varFadeInUp}>
-              <Box
-                component="img"
-                src={item.icon}
-                alt={item.title}
-                sx={{
-                  width: "220px",
-                  height: "170px",
-                }}
-              />
+              <Box component="img" src={item.icon} alt={item.title} />
             </MotionInView>
 
             <MotionInView variants={varFadeInDown}>

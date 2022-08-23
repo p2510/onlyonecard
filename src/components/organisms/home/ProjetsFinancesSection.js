@@ -2,12 +2,13 @@ import { styled } from "@mui/system";
 import { Box, Grid, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
-import biodiversite_image from "../../../assets/images/biodiversite_image.svg";
 import projet_image_1 from "../../../assets/images/projet_image_1.svg";
 import projet_image_2 from "../../../assets/images/projet_image_2.svg";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 import { varFadeInUp, MotionInView, varFadeInLeft } from "../../atoms/animate";
 import { MHidden } from "src/components/atoms/@material-extend";
+import { ECOCOMPTEDATA, EPARGNEDATA } from "./Home.constant";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -25,45 +26,37 @@ export default function ProjetsFiancesSection() {
     <RootStyle>
       <MHidden width="mdDown">
         <Grid container>
-          <Box
-            component="img"
-            src={projet_image_1}
-            alt="Eco-compte Onlyone"
-            sx={{
-              width: "1440px",
-              height: "1020px",
-              position: "absolute",
-              mt: 23.5,
-            }}
-          />
-          <Box
-            component="img"
-            src={projet_image_2}
-            alt="Eco-compte Onlyone"
-            sx={{
-              width: "1440px",
-              height: "558px",
-              position: "absolute",
-              mt: 83.5,
-            }}
-          />
+          <Box sx={{ mt: -5, position: "absolute" }}>
+            <Box
+              component="img"
+              src={projet_image_1}
+              alt="Eco-compte Onlyone"
+            />
+          </Box>
+          <Box sx={{ mt: 55, position: "absolute" }}>
+            <Box
+              component="img"
+              src={projet_image_2}
+              alt="Eco-compte Onlyone"
+            />
+          </Box>
         </Grid>
       </MHidden>
       <Typography
         sx={{
           display: "flex",
           justifyContent: "center",
-          fontSize: "38px",
+          fontSize: { md: "38px", xs: "20px" },
           fontWeight: 800,
           alignItems: "center",
+          flexDirection: { md: "row", xs: "column" },
           width: "100%",
-          mb: "86px",
-          mt: "-10px",
+          mb: { md: "86px", xs: "-330px" },
+          mt: "-230px",
         }}
       >
         Les projets financés par la
         <span style={{ color: "#B7795E", marginLeft: "10px" }}>
-          {" "}
           communauté OnlyOne
         </span>
         <span style={{ color: "#FAAA42" }}>.</span>
@@ -73,6 +66,7 @@ export default function ProjetsFiancesSection() {
         spacing={6}
         alignItems="center"
         justifyContent="space-around"
+        flexDirection={{ md: "row", xs: "column" }}
         sx={{ mb: 10, width: "88vw", mx: "auto" }}
       >
         <Grid item xs={12} md={6} lg={5} mt={{ xs: -8, md: 0 }}>
@@ -83,10 +77,10 @@ export default function ProjetsFiancesSection() {
                   variant="h4"
                   sx={{
                     my: -2,
-                    color: "common.gray",
+                    color: "#10403B",
                     fontWeight: "fontWeightMedium",
                     lineHeight: "3em",
-                    fontSize: { md: "26px", xs: "14px" },
+                    fontSize: { md: "26px", xs: "16px" },
                     marginTop: { xs: "350px", md: -2 },
                     marginLeft: { md: -3, xs: -3 },
                     textAlign: "start",
@@ -104,156 +98,76 @@ export default function ProjetsFiancesSection() {
               mt="-1rem"
               marginLeft={{ xs: -4 }}
             >
-              <Grid item xs={12} alignItems="center" justifyContent="center">
-                <MotionInView variants={varFadeInUp}>
-                  <Card
-                    sx={{
-                      maxWidth: "444px",
-                      borderRadius: "8px",
-                    }}
-                  >
-                    <CardMedia
-                      component="img"
-                      image={biodiversite_image}
-                      alt="green iguana"
-                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
-                    />
-                  </Card>
-                  <Box
-                    component="container"
-                    alt="Eco-compte Onlyone"
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: { md: "270px", xs: "380px" },
-                      zIndex: 6,
-                      bgcolor: "#10403B",
-                      opacity: 0.75,
-                      height: "132px ",
-                      position: "absolute",
-                      mt: { md: "-165px", xs: "100px" },
-                      left: { md: "227px", xs: "0px" },
-                    }}
-                  >
-                    <Typography
+              {ECOCOMPTEDATA.map((item) => (
+                <Grid
+                  key={item.id}
+                  item
+                  xs={12}
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <MotionInView variants={varFadeInUp}>
+                    <Card
                       sx={{
-                        textAlign: "center",
-                        color: "#fff",
-                        fontSize: "24px",
-                        fontWeight: 700,
+                        maxWidth: "444px",
+                        borderRadius: "8px",
                       }}
                     >
-                      La protection de la biodiversité
-                    </Typography>
-                  </Box>
-                </MotionInView>
-              </Grid>
-              <Grid item xs={12} alignItems="center" justifyContent="center">
-                <MotionInView variants={varFadeInUp}>
-                  <Card
-                    sx={{
-                      maxWidth: "444px",
-                      borderRadius: "8px",
-                    }}
-                  >
-                    <CardMedia
-                      component="img"
-                      image={biodiversite_image}
-                      alt="green iguana"
-                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
-                    />
-                  </Card>
-                  <Box
-                    component="container"
-                    alt="Eco-compte Onlyone"
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: { md: "270px", xs: "380px" },
-                      zIndex: 6,
-                      bgcolor: "#10403B",
-                      opacity: 0.75,
-                      height: "132px ",
-                      position: "absolute",
-                      mt: { md: "-165px", xs: "100px" },
-                      left: { md: "227px", xs: "0px" },
-                    }}
-                  >
-                    <Typography
+                      <Box className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 ">
+                        <Box
+                          component="img"
+                          src={item.cardImage}
+                          alt="Grâce à votre éco-compte OnlyOne."
+                        />
+                      </Box>
+                    </Card>
+                    <Box
+                      component="container"
+                      alt="Eco-compte Onlyone"
                       sx={{
-                        textAlign: "center",
-                        color: "#fff",
-                        fontSize: "24px",
-                        fontWeight: 700,
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        width: { md: "270px", xs: "70%" },
+                        zIndex: 6,
+                        bgcolor: "#10403B",
+                        opacity: 0.75,
+                        height: { md: "132px ", xs: "110px" },
+                        position: "absolute",
+                        mt: { md: "-165px", xs: "-130px" },
+                        left: { md: "227px", xs: "60px" },
                       }}
                     >
-                      La protection de la biodiversité
-                    </Typography>
-                  </Box>
-                </MotionInView>
-              </Grid>
-              <Grid item xs={12} alignItems="center" justifyContent="center">
-                <MotionInView variants={varFadeInUp}>
-                  <Card
-                    sx={{
-                      maxWidth: "444px",
-                      borderRadius: "8px",
-                    }}
-                  >
-                    <CardMedia
-                      component="img"
-                      image={biodiversite_image}
-                      alt="green iguana"
-                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
-                    />
-                  </Card>
-                  <Box
-                    component="container"
-                    alt="Eco-compte Onlyone"
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: { md: "270px", xs: "380px" },
-                      zIndex: 6,
-                      bgcolor: "#10403B",
-                      opacity: 0.75,
-                      height: "132px ",
-                      position: "absolute",
-                      mt: { md: "-165px", xs: "100px" },
-                      left: { md: "227px", xs: "0px" },
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        textAlign: "center",
-                        color: "#fff",
-                        fontSize: "24px",
-                        fontWeight: 700,
-                      }}
-                    >
-                      La protection de la biodiversité
-                    </Typography>
-                  </Box>
-                </MotionInView>
-              </Grid>
+                      <Typography
+                        sx={{
+                          textAlign: "center",
+                          color: "#fff",
+                          fontSize: "24px",
+                          fontWeight: 700,
+                        }}
+                      >
+                        {item.cardTitle}
+                      </Typography>
+                    </Box>
+                  </MotionInView>
+                </Grid>
+              ))}
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12} md={6} lg={5.5} mt={{ xs: -8, md: 0 }}>
+        <Grid item xs={12} md={6} lg={5.5} mt={{ xs: -7, md: -4 }}>
           <Grid container spacing={14} alignItems="center">
             <Grid item xs={12} md={12}>
               <MotionInView variants={varFadeInLeft}>
                 <Typography
                   sx={{
-                    my: -3,
-                    color: "common.gray",
+                    my: { md: -3, xs: 0 },
+                    color: "#10403B",
                     fontWeight: "fontWeightMedium",
                     lineHeight: "2em",
-                    fontSize: { md: "26px", xs: "17px" },
+                    fontSize: { md: "26px", xs: "18px" },
                     marginLeft: { md: 0, xs: -3 },
+                    mt: { md: 0, xs: 10 },
                     textAlign: "start",
                   }}
                 >
@@ -267,326 +181,68 @@ export default function ProjetsFiancesSection() {
               spacing={2}
               mt="-2rem"
               rowSpacing={16}
-              marginLeft={{ md: "2rem", xs: -3 }}
+              marginLeft={{ md: "2rem", xs: 6 }}
             >
-              <Grid
-                item
-                xs={12}
-                md={6}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <MotionInView variants={varFadeInUp}>
-                  <Card
-                    sx={{
-                      maxWidth: "283px",
-                      borderRadius: "8px",
-                    }}
-                  >
-                    <CardMedia
-                      component="img"
-                      sx={{ width: "285px", height: "210px" }}
-                      image={biodiversite_image}
-                      alt="green iguana"
-                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
-                    />
-                  </Card>
-                  <Box
-                    component="container"
-                    alt="Eco-compte Onlyone"
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: { md: "176px", xs: "380px" },
-                      zIndex: 6,
-                      bgcolor: "#10403B",
-                      opacity: 0.75,
-                      height: "132px ",
-                      position: "relative",
-                      mt: { md: "-165px", xs: "100px" },
-                      left: { md: "227px", xs: "0px" },
-                      margin: "3212px 134px 0px -176px",
-                    }}
-                  >
-                    <Typography
+              {EPARGNEDATA.map((item) => (
+                <Grid
+                  key={item.id}
+                  item
+                  xs={12}
+                  md={6}
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <MotionInView variants={varFadeInUp}>
+                    <Card
                       sx={{
-                        textAlign: "center",
-                        color: "#fff",
-                        fontSize: "18px",
-                        fontWeight: 700,
+                        maxWidth: "283px",
+                        minWidth: "100%",
+                        borderRadius: "8px",
                       }}
                     >
-                      La transition écologique
-                    </Typography>
-                  </Box>
-                </MotionInView>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={6}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <MotionInView variants={varFadeInUp}>
-                  <Card
-                    sx={{
-                      maxWidth: "283px",
-                      borderRadius: "8px",
-                    }}
-                  >
-                    <CardMedia
-                      component="img"
-                      sx={{ width: "285px", height: "210px" }}
-                      image={biodiversite_image}
-                      alt="green iguana"
-                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
-                    />
-                  </Card>
-                  <Box
-                    component="container"
-                    alt="Eco-compte Onlyone"
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: { md: "176px", xs: "380px" },
-                      zIndex: 6,
-                      bgcolor: "#10403B",
-                      opacity: 0.75,
-                      height: "132px ",
-                      position: "relative",
-                      mt: { md: "-165px", xs: "100px" },
-                      left: { md: "227px", xs: "0px" },
-                      margin: "3212px 134px 0px -176px",
-                    }}
-                  >
-                    <Typography
+                      <CardMedia
+                        component="img"
+                        sx={{
+                          width: { md: "285px", xs: "100%" },
+                          height: "210px",
+                        }}
+                        image={item.cardImage}
+                        alt="green iguana"
+                        className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
+                      />
+                    </Card>
+                    <Box
+                      component="container"
+                      alt="Eco-compte Onlyone"
                       sx={{
-                        textAlign: "center",
-                        color: "#fff",
-                        fontSize: "18px",
-                        fontWeight: 700,
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        width: { md: "176px", xs: "300px" },
+                        zIndex: 6,
+                        bgcolor: "#10403B",
+                        opacity: 0.75,
+                        height: "132px ",
+                        position: "relative",
+                        mt: { md: "-165px", xs: "-165px" },
+                        left: { md: "227px", xs: "190px" },
+                        margin: "3212px 134px 0px -176px",
                       }}
                     >
-                      La transition écologique
-                    </Typography>
-                  </Box>
-                </MotionInView>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={6}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <MotionInView variants={varFadeInUp}>
-                  <Card
-                    sx={{
-                      maxWidth: "283px",
-                      borderRadius: "8px",
-                    }}
-                  >
-                    <CardMedia
-                      component="img"
-                      sx={{ width: "285px", height: "210px" }}
-                      image={biodiversite_image}
-                      alt="green iguana"
-                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
-                    />
-                  </Card>
-                  <Box
-                    component="container"
-                    alt="Eco-compte Onlyone"
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: { md: "176px", xs: "380px" },
-                      zIndex: 6,
-                      bgcolor: "#10403B",
-                      opacity: 0.75,
-                      height: "132px ",
-                      position: "relative",
-                      mt: { md: "-165px", xs: "100px" },
-                      left: { md: "227px", xs: "0px" },
-                      margin: "3212px 134px 0px -176px",
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        textAlign: "center",
-                        color: "#fff",
-                        fontSize: "18px",
-                        fontWeight: 700,
-                      }}
-                    >
-                      La protection de la forêt
-                    </Typography>
-                  </Box>
-                </MotionInView>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={6}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <MotionInView variants={varFadeInUp}>
-                  <Card
-                    sx={{
-                      maxWidth: "283px",
-                      borderRadius: "9-8px",
-                    }}
-                  >
-                    <CardMedia
-                      component="img"
-                      sx={{ width: "285px", height: "210px" }}
-                      image={biodiversite_image}
-                      alt="green iguana"
-                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
-                    />
-                  </Card>
-                  <Box
-                    component="container"
-                    alt="Eco-compte Onlyone"
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: { md: "176px", xs: "380px" },
-                      zIndex: 6,
-                      bgcolor: "#10403B",
-                      opacity: 0.75,
-                      height: "132px ",
-                      position: "relative",
-                      mt: { md: "-165px", xs: "100px" },
-                      left: { md: "227px", xs: "0px" },
-                      margin: "3212px 134px 0px -176px",
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        textAlign: "center",
-                        color: "#fff",
-                        fontSize: "18px",
-                        fontWeight: 700,
-                      }}
-                    >
-                      Le financement d’associations
-                    </Typography>
-                  </Box>
-                </MotionInView>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={6}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <MotionInView variants={varFadeInUp}>
-                  <Card
-                    sx={{
-                      maxWidth: "283px",
-                      borderRadius: "8px",
-                    }}
-                  >
-                    <CardMedia
-                      component="img"
-                      sx={{ width: "285px", height: "210px" }}
-                      image={biodiversite_image}
-                      alt="green iguana"
-                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
-                    />
-                  </Card>
-                  <Box
-                    component="container"
-                    alt="Eco-compte Onlyone"
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: { md: "176px", xs: "380px" },
-                      zIndex: 6,
-                      bgcolor: "#10403B",
-                      opacity: 0.75,
-                      height: "132px ",
-                      position: "relative",
-                      mt: { md: "-165px", xs: "100px" },
-                      left: { md: "227px", xs: "0px" },
-                      margin: "3212px 134px 0px -176px",
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        textAlign: "center",
-                        color: "#fff",
-                        fontSize: "18px",
-                        fontWeight: 700,
-                      }}
-                    >
-                      Le financement des territoires
-                    </Typography>
-                  </Box>
-                </MotionInView>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={6}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <MotionInView variants={varFadeInUp}>
-                  <Card
-                    sx={{
-                      maxWidth: "283px",
-                      borderRadius: "8px",
-                    }}
-                  >
-                    <CardMedia
-                      component="img"
-                      sx={{ width: "285px", height: "210px" }}
-                      image={biodiversite_image}
-                      alt="green iguana"
-                      className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
-                    />
-                  </Card>
-                  <Box
-                    component="container"
-                    alt="Eco-compte Onlyone"
-                    sx={{
-                      position: "relative",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: { md: "176px", xs: "380px" },
-                      zIndex: 6,
-                      bgcolor: "#10403B",
-                      opacity: 0.75,
-                      height: "132px ",
-                      mt: { md: "-165px", xs: "100px" },
-                      left: { md: "227px", xs: "0px" },
-                      margin: "3212px 134px 0px -176px",
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        textAlign: "center",
-                        color: "#fff",
-                        fontSize: "18px",
-                        fontWeight: 700,
-                      }}
-                    >
-                      La lutte contre le réchauffement climatique
-                    </Typography>
-                  </Box>
-                </MotionInView>
-              </Grid>
+                      <Typography
+                        sx={{
+                          textAlign: "center",
+                          color: "#fff",
+                          fontSize: "18px",
+                          fontWeight: 700,
+                        }}
+                      >
+                        {item.cardTitle}
+                      </Typography>
+                    </Box>
+                  </MotionInView>
+                </Grid>
+              ))}
             </Grid>
           </Grid>
         </Grid>
