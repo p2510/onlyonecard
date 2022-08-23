@@ -1,11 +1,16 @@
 import { Box, Grid, Typography, Container } from "@mui/material";
-import Icon_cadenas from "../../../assets/images/Icon_cadenas.svg";
+import Icon_cadenas from "../../../assets/images/Icon_cadenas.png";
 import { BANQUEDATA } from "./Home.constant";
 import Banques from "../../molecules/Banques";
 
 export default function BanqueSection() {
   return (
-    <Box sx={{ bgcolor: "#f1ebdf", height: "980px" }}>
+    <Box
+      sx={{
+        bgcolor: "#f1ebdf",
+        height: { md: "980px", xs: "1800px" },
+      }}
+    >
       <Container
         spacing={10}
         sx={{
@@ -37,10 +42,11 @@ export default function BanqueSection() {
             sx={{
               display: "flex",
               justifyContent: "center",
-              fontSize: "38px",
+              fontSize: { md: "38px", xs: "28px" },
+              flexDirection: { md: "row", xs: "column" },
               fontWeight: "bold",
               alignItems: "center",
-              mb: 3,
+              mb: { md: 3, xs: -4 },
             }}
           >
             <span>Votre argent est en </span>

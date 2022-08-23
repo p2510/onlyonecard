@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import { useRoutes } from "react-router-dom";
 import LoadingScreen from "../../components/atoms/LoadingScreen";
+// import AuthGuard from "../guards/AuthGuard";
 import MainLayout from "../../components/templates/layouts/main";
 
 const Loadable = (Component) => (props) =>
@@ -24,6 +25,14 @@ const Loadable = (Component) => (props) =>
 
 export default function Router() {
   return useRoutes([
+    // {
+    //   path: "",
+    //   element: (
+    //     <AuthGuard>
+    //       <MainLayout />
+    //     </AuthGuard>
+    //   ),
+    // },
     {
       path: "/",
       element: <MainLayout />,
