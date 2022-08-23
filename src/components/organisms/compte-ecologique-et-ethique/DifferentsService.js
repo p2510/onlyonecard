@@ -2,8 +2,9 @@ import React from "react";
 import { styled } from "@mui/system";
 import { Box, Grid, Typography, Button } from "@mui/material";
 import Brightness1Icon from "@mui/icons-material/Brightness1";
-import foret_image from "../../../assets/images/foret_image.svg";
+import foret_image from "../../../assets/images/foret_image.png";
 import { PATH_PAGE } from "src/configues/routes/paths";
+import { MHidden } from "src/components/atoms/@material-extend";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -22,18 +23,22 @@ export default function DifferentsService() {
           mt: -1,
         }}
       >
-        <Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { md: "column", xs: "column" },
+            mt: { md: 0, xs: -15 },
+          }}
+        >
           <Typography
             sx={{
               fontFamily: "Poppins",
-              height: "133px",
-              top: "347px",
               fontSize: { md: "38px", xs: "22px" },
               color: "#10403B",
               fontWeight: 800,
-              lineHeight: "57px",
-              fontStyle: "normal",
+              lineHeight: { md: "57px", xs: "35px" },
               margin: "162.47px 100px 0px 119px",
+              mb: { md: "162.47px", xs: 0 },
             }}
           >
             Recevez la 1ère carte de paiement
@@ -97,7 +102,7 @@ export default function DifferentsService() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              flexDirection: "column",
+              flexDirection: { md: "column", xs: "row" },
               mt: "67px",
               mb: "75px",
             }}
@@ -108,8 +113,8 @@ export default function DifferentsService() {
                 justifyContent: "start",
                 flexDirection: "column",
                 bgcolor: "#C4E3D5",
-                width: "702px",
-                height: "339px",
+                width: { md: "702px", xs: "100%" },
+                height: { md: "33çpx", xs: "100%" },
               }}
             >
               <Typography
@@ -183,15 +188,22 @@ export default function DifferentsService() {
               </Typography>
             </Box>
           </Grid>
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              mt: { md: 0, xs: -5 },
+              mb: { md: 10, xs: 5 },
+            }}
+          >
             <Button
               sx={{
                 borderRadius: 50,
                 bgcolor: "#2A7267 !important",
                 "&:hover": { bgcolor: "#10403B !important" },
                 boxShadow: "none",
-                margin: "7px 0px 0px 68px",
-                fontSize: "16px",
+                marginLeft: { md: "68px", xs: 0 },
+                fontSize: { md: "16px", xs: "13px" },
                 padding: "10px 38px 10px 38px",
               }}
               variant="contained"
@@ -201,45 +213,46 @@ export default function DifferentsService() {
             </Button>
           </Box>
         </Box>
-        <Box
-          component="img"
-          src={foret_image}
-          sx={{
-            width: "509px",
-            height: "1473px",
-          }}
-        />
-
-        <Box
-          src={foret_image}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            bgcolor: "#10403B",
-            width: "508px",
-            height: "316px",
-            mt: 144.6,
-            ml: "916px",
-            position: "absolute",
-          }}
-        >
-          <Typography
+        <MHidden width="mdDown">
+          <Box
+            component="img"
+            src={foret_image}
             sx={{
-              textAlign: "center",
-              fontSize: "20px",
-              fontFamily: "Lora",
-              fontWeight: 600,
-              color: "#fff",
-              lineHeight: "25.6px",
+              width: "508px",
+              height: "1473px",
+            }}
+          />
+          <Box
+            src={foret_image}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              bgcolor: "#10403B",
+              width: "508px",
+              height: "316px",
+              mt: { md: 166.8, xs: 0 },
+              ml: "925px",
+              position: "absolute",
             }}
           >
-            215 Euros, le coût moyen des frais <br /> bancaires <br /> Vous
-            n’auriez sûrement pas pensé <br /> que c’était aussi élevé. D’autant
-            plus <br />
-            que les coûts manquent souvent de <br /> transparence !
-          </Typography>
-        </Box>
+            <Typography
+              sx={{
+                textAlign: "center",
+                fontSize: "20px",
+                fontFamily: "Lora",
+                fontWeight: 600,
+                color: "#fff",
+                lineHeight: "25.6px",
+              }}
+            >
+              215 Euros, le coût moyen des frais <br /> bancaires <br /> Vous
+              n’auriez sûrement pas pensé <br /> que c’était aussi élevé.
+              D’autant plus <br />
+              que les coûts manquent souvent de <br /> transparence !
+            </Typography>
+          </Box>
+        </MHidden>
       </Grid>
     </RootStyle>
   );

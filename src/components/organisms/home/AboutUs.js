@@ -6,13 +6,15 @@ import { MotionInView, varFadeInLeft, varFadeInUp } from "../../atoms/animate";
 import { ABOUTUSDATA } from "./Home.constant";
 import { styled } from "@mui/system";
 import CarouselDots from "../../atoms/CarouselDots";
-import nouveau_monde from "../../../assets/images/nouveau_monde.svg";
+import nouveau_monde from "../../../assets/images/nouveau_monde.png";
 import { Cursor, Typewriter } from "react-simple-typewriter";
 import { CustomTextField } from "src/components/atoms/GeneralTextfield.style";
 import Dialogue from "src/components/molecules/Dialogue";
+import { MHidden } from "src/components/atoms/@material-extend";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
+  marginBottom: -6,
   [theme.breakpoints.up("md")]: {
     textAlign: "left",
   },
@@ -63,16 +65,22 @@ export default function AboutUs({ isActive }) {
         <Typography
           sx={{
             textAlign: "center",
-            fontSize: "2.7rem",
+            fontSize: { md: "2.7rem", xs: "2rem" },
             fontWeight: "bold",
-            mt: "-59px",
+            mt: { md: "-59px", xs: 0 },
             mb: "63px",
             color: "#fff",
           }}
         >
           Ils parlent de nous.
         </Typography>
-        <Box sx={{ bgcolor: "#fff", width: "853px", height: "296px" }}>
+        <Box
+          sx={{
+            bgcolor: "#fff",
+            width: { md: "853px", xs: "90%" },
+            height: { md: "296px", xs: "390px" },
+          }}
+        >
           <MotionInView variants={varFadeInLeft}>
             <Slider ref={carouselRef} {...settings}>
               {ABOUTUSDATA.map((app, index) => (
@@ -80,7 +88,7 @@ export default function AboutUs({ isActive }) {
                   <Typography
                     sx={{
                       textAlign: "justify",
-                      fontSize: "20px",
+                      fontSize: { md: "20px", xs: "15px" },
                       fontStyle: "italic",
                       padding: "40px 70px 0px 70px",
                       color: "#10403B",
@@ -88,29 +96,34 @@ export default function AboutUs({ isActive }) {
                   >
                     {app.paragraphe}
                   </Typography>
-                  <Grid display="flex" flexDirection={{ md: "row", xs: "row" }}>
-                    <Box
-                      component="img"
-                      src={app.icon}
-                      sx={{
-                        width: "65px",
-                        height: "65px",
-                        mt: 2,
-                        padding: "0px 0px 0px 10px",
-                      }}
-                    />
-                    <Typography
-                      sx={{
-                        mt: 4,
-                        ml: 2,
-                        fontWeight: 700,
-                        fontSize: "24px",
-                        color: "#10403B",
-                      }}
+                  <MHidden width="mdDown">
+                    <Grid
+                      display="flex"
+                      flexDirection={{ md: "row", xs: "row" }}
                     >
-                      {app.libele}
-                    </Typography>
-                  </Grid>
+                      <Box
+                        component="img"
+                        src={app.icon}
+                        sx={{
+                          width: "65px",
+                          height: "65px",
+                          mt: 2,
+                          padding: "0px 0px 0px 10px",
+                        }}
+                      />
+                      <Typography
+                        sx={{
+                          mt: 4,
+                          ml: 2,
+                          fontWeight: 700,
+                          fontSize: "24px",
+                          color: "#10403B",
+                        }}
+                      >
+                        {app.libele}
+                      </Typography>
+                    </Grid>
+                  </MHidden>
                 </Grid>
               ))}
             </Slider>
@@ -125,15 +138,15 @@ export default function AboutUs({ isActive }) {
           mb: 0,
         }}
       >
-        <Box
-          component="img"
-          src={nouveau_monde}
-          sx={{
-            width: "428px",
-            height: "992px",
-            marginLeft: "0px",
-          }}
-        />
+        <MHidden width="mdDown">
+          <Box
+            component="img"
+            src={nouveau_monde}
+            alt="Grâce à votre éco-compte OnlyOne."
+            width="428px"
+            height="992px"
+          />
+        </MHidden>
         <Box
           sx={{
             width: "100%",
@@ -152,11 +165,11 @@ export default function AboutUs({ isActive }) {
           >
             <Typography
               sx={{
-                fontSize: "32px",
+                fontSize: { md: "32px", xs: "25px" },
                 fontWeight: 700,
                 lineHeight: "48px",
                 color: "#10403B",
-                mt: "-20px",
+                mt: { md: "-20px", xs: 10 },
                 mb: "20px",
                 textAlign: "center",
               }}
@@ -182,10 +195,10 @@ export default function AboutUs({ isActive }) {
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "row",
+                flexDirection: { md: "row", xs: "column" },
                 alignItems: "center",
                 justifyContent: "center",
-                mb: 7,
+                mb: { md: 7, xs: 3 },
               }}
             >
               <Typography
@@ -220,7 +233,7 @@ export default function AboutUs({ isActive }) {
             </Box>
             <Typography
               sx={{
-                fontSize: "24px",
+                fontSize: { md: "24px", xs: "18" },
                 fontWeight: 700,
                 lineHeight: "36px",
                 color: "#10403B",

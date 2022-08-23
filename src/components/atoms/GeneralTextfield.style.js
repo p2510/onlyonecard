@@ -2,7 +2,7 @@ import { TextField } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const CustomTextField = styled(TextField)({
-  width: "656px",
+  width: { md: "656px", xs: "556px" },
   background: "#fff",
   marginTop: "44px",
   marginBottom: "51px",

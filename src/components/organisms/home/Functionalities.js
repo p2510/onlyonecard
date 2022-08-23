@@ -9,6 +9,7 @@ import { FONCTIONNALITES } from "./Home.constant";
 import ImageItem from "../../atoms/ImageItem";
 // import TButton from "../../atoms/tailwindComponent/TButton.js";
 import { PATH_PAGE } from "../../../configues//routes/paths";
+import { MHidden } from "src/components/atoms/@material-extend";
 
 export default function Functionalities() {
   const theme = useTheme();
@@ -32,28 +33,34 @@ export default function Functionalities() {
     <Grid
       container
       spacing={3}
-      sx={{ marginTop: { md: "10rem" }, width: "80vw", mx: "auto" }}
+      sx={{
+        marginTop: { md: "10rem" },
+        width: { md: "80vw", xs: "100%" },
+        mx: "auto",
+      }}
     >
       <Grid item xs={12} md={5} lg={5.5}>
-        <MotionInView variants={varFadeInUp}>
-          <Card
-            sx={{
-              width: { md: "358px", xs: 260 },
-              height: "478px",
-              borderRadius: "0px",
-            }}
-          >
-            <Slider ref={carouselRef} {...settings}>
-              {FONCTIONNALITES.map((app, index) => (
-                <ImageItem
-                  key={app.id}
-                  item={app}
-                  isActive={index === currentIndex}
-                />
-              ))}
-            </Slider>
-          </Card>
-        </MotionInView>
+        <MHidden width="mdDown">
+          <MotionInView variants={varFadeInUp}>
+            <Card
+              sx={{
+                width: { md: "358px", xs: 260 },
+                height: "478px",
+                borderRadius: "0px",
+              }}
+            >
+              <Slider ref={carouselRef} {...settings}>
+                {FONCTIONNALITES.map((app, index) => (
+                  <ImageItem
+                    key={app.id}
+                    item={app}
+                    isActive={index === currentIndex}
+                  />
+                ))}
+              </Slider>
+            </Card>
+          </MotionInView>
+        </MHidden>
       </Grid>
 
       <Grid item xs={12} md={7} lg={6.5} mt="-2.3rem">
@@ -65,6 +72,7 @@ export default function Functionalities() {
               fontStyle: "normal",
               fontWeight: 800,
               lineHeight: "57px",
+              textAlign: { md: "start", xs: "center" },
             }}
           >
             Un compte innovant, simple et responsable.

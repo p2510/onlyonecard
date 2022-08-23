@@ -2,8 +2,8 @@ import { styled } from "@mui/system";
 import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import { MotionInView, varFadeInUp } from "../../atoms/animate";
 import { EPARGNERIMAGEDATA } from "./PlaceImpact.constant";
-import arbres_image from "../../../assets/images/arbres_image.svg";
-import title_bg from "../../../assets/images/title_bg.svg";
+import arbres_image from "../../../assets/images/arbres_image.png";
+import title_bg from "../../../assets/images/title_bg.png";
 import { MHidden } from "src/components/atoms/@material-extend";
 
 const RootStyle = styled("div")(({ theme }) => ({
@@ -18,14 +18,14 @@ export default function PlaceImpactServiceFirstPart() {
   return (
     <RootStyle>
       <MHidden width="mdDown">
-        <Grid container mt="-2rem">
+        <Grid container mt="8rem">
           <Box
             component="img"
             src={arbres_image}
             alt="Eco-compte Onlyone"
             sx={{
               width: "100%",
-              height: "1053px",
+              height: "655px",
               position: "absolute",
               mb: "1rem",
             }}
@@ -46,7 +46,7 @@ export default function PlaceImpactServiceFirstPart() {
             bgcolor: "#10403B",
             height: "375px",
             position: "absolute",
-            top: { md: "308px", xs: "100px" },
+            top: { md: "288px", xs: "100px" },
           }}
         >
           <Typography
@@ -158,18 +158,28 @@ export default function PlaceImpactServiceFirstPart() {
                   mr: -10,
                 }}
               >
-                <Box component="img" src={item.icon} alt={item.title} />
+                <Box
+                  component="img"
+                  src={item.icon}
+                  alt={item.title}
+                  height="150px"
+                  width="180px"
+                />
                 <Box
                   component="img"
                   src={item.icon_deux}
                   alt={item.title}
                   marginLeft="3rem"
+                  height="150px"
+                  width="180px"
                 />
                 {item.icon_trois ? (
                   <Box
                     component="img"
                     src={item.icon_trois}
                     alt={item.title}
+                    height="150px"
+                    width="180px"
                     marginLeft="3rem"
                   />
                 ) : (
