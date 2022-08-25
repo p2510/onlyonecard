@@ -1,5 +1,5 @@
 import { Box, Grid, Typography, Container } from "@mui/material";
-import Icon_cadenas from "../../../assets/images/Icon_cadenas.png";
+import Icon_cadenas from "../../../assets/images/Icon_cadenas.svg";
 import { BANQUEDATA } from "./Home.constant";
 import Banques from "../../molecules/Banques";
 
