@@ -1,9 +1,3 @@
-// i18n
-import "./locales/i18n";
-
-// highlight
-
-// scroll bar
 import "simplebar/src/simplebar.css";
 
 // lightbox
@@ -30,6 +24,7 @@ import { HelmetProvider } from "react-helmet-async";
 
 //
 import App from "./App";
+import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 // ----------------------------------------------------------------------
