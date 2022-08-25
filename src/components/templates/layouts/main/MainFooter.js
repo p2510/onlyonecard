@@ -19,10 +19,7 @@ import {
 import MotionInView from "../../../atoms/animate/MotionInView";
 import google_play_logo from "../../../../assets/images/google_play_logo.svg";
 import app_store_icon from "../../../../assets/images/app_store_icon.svg";
-import {
-  varFadeInLeft,
-  varFadeInUp,
-} from "../../components/animate/variants/fade/";
+import { varFadeInLeft, varFadeInUp } from "src/components/atoms/animate";
 
 export default function MainFooter() {
   const currentDate = new Date();

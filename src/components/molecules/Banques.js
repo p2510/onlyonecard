@@ -48,7 +48,7 @@ export default function Banques({ data, sx }) {
                   display: "flex",
                   alignItems: "center",
                   textAlign: "center",
-                  fontSize: "18px",
+                  fontSize: "18.1px",
                   fontWeight: "bold",
                   color: "#10403B",
                   mb: 2,
