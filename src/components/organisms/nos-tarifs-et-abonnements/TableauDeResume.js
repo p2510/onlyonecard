@@ -2,11 +2,11 @@ import * as React from "react";
 import Grid from "@mui/material/Grid";
 import { Container, Box, Typography, Button, Divider } from "@mui/material";
 import { TABLEAUDERESUMEDATA } from "./nosTarifsEtAbonnements.constant";
-import citoyens_image_2 from "../../../assets/images/citoyens_image_2.svg";
+import citoyens_image_2 from "../../../assets/images/citoyens_image_2.png";
 import only_name from "../../../assets/images/only_name.svg";
 import google_play_icon from "../../../assets/images/google_play_icon.svg";
 import app_store_icon from "../../../assets/images/app_store_icon.svg";
-import ocean_image from "../../../assets/images/ocean_image.svg";
+import ocean_image from "../../../assets/images/ocean_image.png";
 import {
   MotionInView,
   varFadeInLeft,
