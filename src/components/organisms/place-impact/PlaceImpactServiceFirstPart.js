@@ -34,19 +34,23 @@ export default function PlaceImpactServiceFirstPart() {
       </MHidden>
       <Grid
         container
-        mb="55rem"
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+        mb={{ md: "55rem", xs: 70 }}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
       >
         <Box
           component="container"
           alt="Eco-compte Onlyone"
           sx={{
-            opacity: 0.75,
-            width: { md: "845px", xs: "380px" },
+            opacity: { md: 0.75, xs: 1 },
+            width: { md: "845px", xs: "100%" },
+            height: { md: "375px", xs: "350px" },
             bgcolor: "#10403B",
-            height: "375px",
             position: "absolute",
-            top: { md: "288px", xs: "100px" },
+            top: { md: "288px", xs: "140px" },
           }}
         >
           <Typography
@@ -54,11 +58,13 @@ export default function PlaceImpactServiceFirstPart() {
               textAlign: "center",
               left: "102px",
               fontSize: { md: "42px", xs: "22px" },
-              color: "#FFFFFF !important",
+              color: "#fff !important",
               fontWeight: 900,
               lineHeight: "63px",
               fontStyle: "normal",
-              margin: "49px 73px 0px 34px",
+              margin: "49px 0px 0px 0px",
+              marginRight: { md: "73px", xs: 0 },
+              marginLeft: { md: "34px", xs: 0 },
             }}
           >
             <span>La Place Impact vous donne accès à des </span>
@@ -78,6 +84,8 @@ export default function PlaceImpactServiceFirstPart() {
           lineHeight: "36px",
           textAlign: "center",
           color: "#10403B",
+          pl: { md: 0, xs: 3 },
+          pr: { md: 0, xs: 3 },
         }}
       >
         Ces services vous permettent d’aller encore plus loin avec votre argent
@@ -98,7 +106,7 @@ export default function PlaceImpactServiceFirstPart() {
             item
             sx={{
               display: "flex",
-              flexDirection: "row",
+              flexDirection: { md: "row", xs: "column" },
               alignItems: "center",
               justifyContent: "space-between",
               marginRight: "2rem",
@@ -111,7 +119,7 @@ export default function PlaceImpactServiceFirstPart() {
                 justifyContent: "space-between",
                 flexDirection: "column",
                 alignItems: "center",
-                ml: -5,
+                ml: { md: -5, xs: 0 },
               }}
             >
               <Box
@@ -129,7 +137,7 @@ export default function PlaceImpactServiceFirstPart() {
                   mb: "4rem",
                   mt: {
                     md: -8,
-                    xs: 15,
+                    xs: -8,
                   },
                 }}
               >
@@ -143,7 +151,7 @@ export default function PlaceImpactServiceFirstPart() {
                   fontWeight: 400,
                   lineHeight: 1.4,
                   margin: "0px 0px 20px",
-                  width: "560px",
+                  width: { md: "560px", xs: "100%" },
                 }}
               >
                 {item.paragraphe}
@@ -155,32 +163,32 @@ export default function PlaceImpactServiceFirstPart() {
                   display: "flex",
                   justifyContent: "space-between",
                   flexDirection: "row",
-                  mr: -10,
+                  mr: { md: -10, xs: -2 },
                 }}
               >
                 <Box
                   component="img"
                   src={item.icon}
                   alt={item.title}
-                  height="150px"
-                  width="180px"
+                  height={{ md: "150px", xs: "120px" }}
+                  width={{ md: "180px", xs: "120px" }}
                 />
                 <Box
                   component="img"
                   src={item.icon_deux}
                   alt={item.title}
-                  marginLeft="3rem"
-                  height="150px"
-                  width="180px"
+                  marginLeft={{ md: "-3rem", xs: "-2rem" }}
+                  height={{ md: "150px", xs: "120px" }}
+                  width={{ md: "180px", xs: "120px" }}
                 />
                 {item.icon_trois ? (
                   <Box
                     component="img"
                     src={item.icon_trois}
                     alt={item.title}
-                    height="150px"
-                    width="180px"
-                    marginLeft="3rem"
+                    height={{ md: "150px", xs: "120px" }}
+                    width={{ md: "180px", xs: "120px" }}
+                    marginLeft={{ md: "-3rem", xs: "-2rem" }}
                   />
                 ) : (
                   ""

@@ -9,6 +9,7 @@ import cercle from "../../../assets/images/cercle.png";
 import plage_image from "../../../assets/images/plage_image.png";
 
 const RootStyle = styled("div")(({ theme }) => ({
+  marginTop: { md: 0, xs: "20rem" },
   textAlign: "center",
   paddingBottom: theme.spacing(0),
   [theme.breakpoints.up("md")]: {
@@ -55,57 +56,63 @@ export default function Partenaires() {
             }}
           />
         </Grid>
-        <Box
+      </MHidden>
+      <Box
+        sx={{
+          width: "80%",
+          height: "584px",
+          mt: { md: 25, xs: 15 },
+          mb: { md: 0, xs: 2 },
+          ml: "2rem",
+        }}
+      >
+        <Typography
           sx={{
-            width: "80%",
-            height: "584px",
-            mt: 25,
-            ml: "2rem",
+            font: "Poppins",
+            ml: "5000px",
+            height: "133px",
+            top: "347px",
+            fontSize: { md: "42px", xs: "22px" },
+            color: { md: "#fff", xs: "#10403B" },
+            fontWeight: 900,
+            lineHeight: { md: "63px", xs: "40px" },
+            fontStyle: "normal",
+            opacity: 0.98,
+            margin: "39px 73px 0px 68px",
+            marginRight: { md: "73px", xs: "0px" },
+            marginLeft: { md: "68px", xs: "0px" },
+            marginBottom: { md: "60px", xs: "50px" },
           }}
         >
-          <Typography
-            sx={{
-              font: "Poppins",
-              ml: "5000px",
-              height: "133px",
-              top: "347px",
-              fontSize: { md: "42px", xs: "22px" },
-              color: "#fff",
-              fontWeight: 900,
-              lineHeight: "63px",
-              fontStyle: "normal",
-              opacity: 0.98,
-              margin: "39px 73px 60px 68px",
-            }}
+          Notre mission est de concilier
+          <br />
+          <span
+            style={{ fontWeight: "bold", color: "#C4E3D6", marginLeft: 0.5 }}
           >
-            Notre mission est de concilier
-            <br />
-            <span
-              style={{ fontWeight: "bold", color: "#C4E3D5", marginLeft: 0.5 }}
-            >
-              votre argent
-            </span>
-            <span> et </span>
-            <span style={{ fontWeight: "bold", color: "#C4E3D5" }}>
-              vos valeurs
-            </span>
-            <span style={{ fontWeight: "bold", color: "#FAAA42" }}>.</span>
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: "32px",
-              color: "#fff",
-              margin: "0px 49px 79px 68px",
-              lineHeight: "48px",
-              fontWeight: 700,
-              opacity: 0.98,
-            }}
-          >
-            Nous aidons à transformer vos bonnes <br /> intentions en actions,
-            tout simplement.
-          </Typography>
-        </Box>
-      </MHidden>
+            votre argent
+          </span>
+          <span> et </span>
+          <span style={{ fontWeight: "bold", color: "#C4E3D6" }}>
+            vos valeurs
+          </span>
+          <span style={{ fontWeight: "bold", color: "#FAAA42" }}>.</span>
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: "32px",
+            color: { md: "#fff", xs: "#10403B" },
+            marginBottom: "79px",
+            marginRight: { md: "49px", xs: "0px" },
+            marginLeft: { md: "68px", xs: "0px" },
+            lineHeight: { md: "48px", xs: "40px" },
+            fontWeight: 700,
+            opacity: 0.98,
+          }}
+        >
+          Nous aidons à transformer vos bonnes <br /> intentions en actions,
+          tout simplement.
+        </Typography>
+      </Box>
 
       <Container
         direction={{ xs: "column", sm: "row" }}
@@ -113,6 +120,7 @@ export default function Partenaires() {
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
+          flexDirection: { md: "row", xs: "column" },
           width: "100%",
           mb: {
             md: 18,
@@ -131,6 +139,7 @@ export default function Partenaires() {
               alignItems: "center",
               justifyContent: "space-around",
               marginRight: "2rem",
+              mb: { md: 0, xs: "6rem" },
             }}
           >
             <MotionInView variants={varFadeInUp}>
@@ -146,8 +155,8 @@ export default function Partenaires() {
                   fontWeight: 700,
                   fontSize: "32px",
                   lineHeight: "48px",
-                  mt: 8,
-                  mb: 6,
+                  mt: { md: 8, xs: 2 },
+                  mb: { md: 6, xs: 3 },
                 }}
               >
                 {item.title}
@@ -187,7 +196,7 @@ export default function Partenaires() {
         <Box
           sx={{
             width: "100%",
-            height: "562px",
+            height: { md: "562px", xs: "100%" },
             bgcolor: "#10403B",
           }}
         >
@@ -202,6 +211,7 @@ export default function Partenaires() {
               lineHeight: "63px",
               fontStyle: "normal",
               margin: "70px 0px 0px 100px",
+              marginLeft: { md: "100px", xs: "0px" },
             }}
           >
             Mission
@@ -211,7 +221,8 @@ export default function Partenaires() {
             sx={{
               color: "#fff",
               fontFamily: "Lora",
-              margin: "-10px 0px 39px 100px",
+              margin: "-10px 0px 39px 0px",
+              marginLeft: { md: "100px", xs: "0px" },
               fontSize: "20px",
             }}
           >
@@ -224,7 +235,8 @@ export default function Partenaires() {
           <Typography
             sx={{
               color: "#C4E3D5",
-              margin: "0px 0px 69px 100px",
+              margin: "0px 0px 69px 0px",
+              marginLeft: { md: "100px", xs: "0px" },
               fontWeight: 900,
               fontSize: "22px",
             }}
@@ -233,14 +245,16 @@ export default function Partenaires() {
             service du climat, de la <br /> biodiversité et de la société.
           </Typography>
         </Box>
-        <Box
-          component="img"
-          src={plage_image}
-          sx={{
-            width: "646.45px",
-            height: "562px",
-          }}
-        />
+        <MHidden width="mdDown">
+          <Box
+            component="img"
+            src={plage_image}
+            sx={{
+              width: "646.45px",
+              height: "562px",
+            }}
+          />
+        </MHidden>
       </Grid>
     </RootStyle>
   );

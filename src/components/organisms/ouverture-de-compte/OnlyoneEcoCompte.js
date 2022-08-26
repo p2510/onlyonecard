@@ -8,6 +8,7 @@ import ouverture_compte_img from "../../../assets/images/ouverture_compte_img.pn
 import cercle from "../../../assets/images/cercle.png";
 import riviere from "../../../assets/images/riviere.png";
 import { CustomTextField } from "src/components/atoms/GeneralTextfield.style";
+import { MHidden } from "src/components/atoms/@material-extend";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -40,9 +41,9 @@ export default function OnlyoneEcoCompte() {
                 fontSize: "42px",
                 fontWeight: 900,
                 lineHeight: "63px",
-                textAlign: "start",
+                textAlign: { md: "start", xs: "center" },
                 color: "#10403B",
-                mb: 10,
+                mb: { md: 10, xs: 0 },
                 mt: {
                   md: 5,
                   xs: -12,
@@ -55,20 +56,22 @@ export default function OnlyoneEcoCompte() {
               <br /> éco-compte OnlyOne!
             </Typography>
           </Grid>
-          <Grid xs={6}>
-            <MotionInView variants={varFadeInUp}>
-              <Box
-                component="img"
-                src={ouverture_compte_img}
-                sx={{ opacity: 0.99 }}
-              />
-              <Box
-                component="img"
-                src={cercle}
-                sx={{ margin: "-380px 0px 0px -35px" }}
-              />
-            </MotionInView>
-          </Grid>
+          <MHidden width="mdDown">
+            <Grid xs={6}>
+              <MotionInView variants={varFadeInUp}>
+                <Box
+                  component="img"
+                  src={ouverture_compte_img}
+                  sx={{ opacity: 0.99 }}
+                />
+                <Box
+                  component="img"
+                  src={cercle}
+                  sx={{ margin: "-380px 0px 0px -35px" }}
+                />
+              </MotionInView>
+            </Grid>
+          </MHidden>
         </Grid>
         <Grid
           container
@@ -77,6 +80,7 @@ export default function OnlyoneEcoCompte() {
           sx={{
             display: "flex",
             justifyContent: "space-between",
+            flexDirection: { md: "row", xs: "column" },
             alignItems: "center",
             width: "100%",
             mb: {
@@ -94,7 +98,8 @@ export default function OnlyoneEcoCompte() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "space-between",
-                marginRight: "2rem",
+                marginRight: { md: "2rem", xs: 0 },
+                marginBottom: { md: 0, xs: 10 },
               }}
             >
               <MotionInView variants={varFadeInUp}>
@@ -110,7 +115,9 @@ export default function OnlyoneEcoCompte() {
                     fontWeight: 600,
                     lineHeight: "26px",
                     color: "#B7795E",
-                    margin: "59px 0px 50px 0px",
+                    marginTop: { md: "59px", xs: 2 },
+                    marginBottom: { md: "50px", xs: 2 },
+                    width: { md: "290px", xs: "280px" },
                   }}
                 >
                   {item.title}
@@ -125,7 +132,7 @@ export default function OnlyoneEcoCompte() {
                     fontFamily: "Lora",
                     lineHeight: "27px",
                     color: "#10403B",
-                    width: "290px",
+                    width: { md: "290px", xs: "280px" },
                   }}
                 >
                   {item.paragraphe}
@@ -140,7 +147,7 @@ export default function OnlyoneEcoCompte() {
           display: "flex",
           justifyContent: "space-between",
           mb: -10,
-          mt: 25,
+          mt: { md: 25, xs: 10 },
         }}
       >
         <Box
@@ -148,7 +155,7 @@ export default function OnlyoneEcoCompte() {
             display: "flex",
             justifyContent: "center",
             flexDirection: "column",
-            alignItems: "start",
+            alignItems: { md: "start", xs: "center" },
             width: "100%",
             height: "396px",
             background: "#E4D6C0",
@@ -161,13 +168,13 @@ export default function OnlyoneEcoCompte() {
               color: "#10403B",
               fontWeight: 400,
               textAlign: "27px",
-              ml: 20,
+              ml: { md: 20, xs: 0 },
             }}
           >
             Téléphone (Nécessaire)
           </Typography>
           <MotionInView variants={varFadeInUp}>
-            <Box sx={{ ml: 20 }}>
+            <Box sx={{ ml: { md: 20, xs: 0 } }}>
               <CustomTextField type="email" placeholder="* votre@email.com" />
             </Box>
           </MotionInView>
@@ -180,14 +187,16 @@ export default function OnlyoneEcoCompte() {
               boxShadow: "none",
               color: "#fff",
               fontSize: "16px",
-              ml: 20,
+              ml: { md: 20, xs: 0 },
               padding: "7px 38px 10px 38px",
             }}
           >
             M'abonner
           </Button>
         </Box>
-        <Box component="img" src={riviere} />
+        <MHidden width="mdDown">
+          <Box component="img" src={riviere} />
+        </MHidden>
       </Grid>
     </RootStyle>
   );

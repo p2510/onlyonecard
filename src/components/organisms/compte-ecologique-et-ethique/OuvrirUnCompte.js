@@ -56,12 +56,14 @@ export default function OuvrirUnCompte() {
               sx={{
                 font: "Poppins",
                 ml: "5000px",
-                fontSize: { md: "42px", xs: "24px" },
+                fontSize: { md: "42px", xs: "28px" },
                 color: "#10403B",
                 fontWeight: 900,
                 lineHeight: { md: "63px", xs: "35px" },
                 fontStyle: "normal",
-                margin: "0px 73px 10px 68px",
+                marginBottom: { md: "10px", xs: "40px" },
+                marginRight: { md: "73px", xs: 0 },
+                marginLeft: { md: "68px", xs: 0 },
                 marginTop: { md: "39px", xs: "10px" },
               }}
             >
@@ -71,8 +73,12 @@ export default function OuvrirUnCompte() {
               sx={{
                 color: "#10403B",
                 fontFamily: "Lora",
-                margin: "0px 49px 69px 68px",
+                marginBottom: { md: "69px", xs: "10px" },
+                marginRight: { md: "49px", xs: 0 },
+                marginLeft: { md: "68px", xs: 0 },
                 fontSize: "18px",
+                pl: { md: 0, xs: 3 },
+                pr: { md: 0, xs: 3 },
               }}
             >
               À partir de votre compte, vous gérez votre argent, comme vos
@@ -140,7 +146,7 @@ export default function OuvrirUnCompte() {
             bgcolor: "#FAAA42 !important",
             "&:hover": { bgcolor: "#f7b96c !important" },
             boxShadow: "none",
-            mt: "3px",
+            mt: { md: "3px", xs: "-360px" },
             mr: { md: "140px", xs: 0 },
             marginLeft: { md: "35rem", xs: 0 },
             fontSize: "16px",
@@ -166,7 +172,7 @@ export default function OuvrirUnCompte() {
               fontSize: "38px",
               fontWeight: 800,
               lineHeight: "57px",
-              color: { md: "#fff !important", xs: "red" },
+              color: { md: "#fff !important", xs: " #10403B" },
               ml: { md: 36, xs: 0 },
               zIndex: 6,
             }}

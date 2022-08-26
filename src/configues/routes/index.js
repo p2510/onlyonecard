@@ -79,11 +79,6 @@ export default function Router() {
       children: [{ element: <ActionEtEmpreinteCarbone />, index: true }],
     },
     {
-      path: "/partenariat-onu-unitlife",
-      element: <MainLayout />,
-      children: [{ element: <PartenariatOnuUnitlife />, index: true }],
-    },
-    {
       path: "/saviez-vous-que-votre-argent-a-la-banque-ne-pas",
       element: <MainLayout />,
       children: [{ element: <Article />, index: true }],
@@ -118,8 +113,5 @@ const TarifsEtAbonnements = Loadable(
 );
 const ActionEtEmpreinteCarbone = Loadable(
   lazy(() => import("../../components/pages/EcoCoachPersonnel"))
-);
-const PartenariatOnuUnitlife = Loadable(
-  lazy(() => import("../../components/pages/PartenariatOnuUnitlife"))
 );
 const Article = Loadable(lazy(() => import("../../components/pages/Article")));

@@ -6,6 +6,7 @@ import semeur_image from "../../../assets/images/semeur_image.png";
 import abc from "../../../assets/images/abc.svg";
 import only_name from "../../../assets/images/only_name.svg";
 import CommunautesInput from "src/components/molecules/CommunautesInput";
+import { MHidden } from "src/components/atoms/@material-extend";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -36,8 +37,10 @@ export default function EntrepriseCarbone() {
               fontSize: { md: "32px", xs: "22px" },
               color: "#fff",
               fontWeight: 800,
-              lineHeight: "57px",
-              margin: "40px 50px -70px 50px",
+              lineHeight: { md: "57px", xs: "50px" },
+              margin: "0px 50px 0px 50px",
+              marginTop: { md: "40px", xs: "380px" },
+              marginBottom: { md: "-70px", xs: 4 },
               textAlign: "center",
             }}
           >
@@ -47,11 +50,12 @@ export default function EntrepriseCarbone() {
           <Box
             sx={{
               display: "flex",
-              justifyContent: "space-around",
+              justifyContent: { md: "space-around", xs: "center" },
               alignItems: "center",
               bgcolor: "#fff",
-              width: "614px",
+              width: { md: "614px", xs: "90%" },
               height: "191px",
+              mb: { md: 0, xs: 50 },
             }}
           >
             <Link href="https://www.ademe.fr/" target="_blank">
@@ -62,7 +66,9 @@ export default function EntrepriseCarbone() {
             </Link>
           </Box>
         </Box>
-        <Box component="img" src={semeur_image} />
+        <MHidden width="mdDown">
+          <Box component="img" src={semeur_image} />
+        </MHidden>
       </Grid>
       <Grid
         item
@@ -77,7 +83,7 @@ export default function EntrepriseCarbone() {
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: { md: "row", xs: "column" },
             alignItems: "center",
             justifyContent: "center",
             mb: 10,
@@ -154,7 +160,14 @@ export default function EntrepriseCarbone() {
         Soyez riche de vos <span style={{ color: "#C4E3D5" }}>valeurs</span>
         <span style={{ color: "#FAAA42" }}>.</span>
       </Typography>
-      <CommunautesInput titre="Rejoins la communauté" />
+      <Box
+        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      >
+        <CommunautesInput
+          textFieldStyle={{ marginLeft: { xs: 1.5, md: 30 } }}
+          titre="Rejoins la communauté"
+        />
+      </Box>
     </RootStyle>
   );
 }
