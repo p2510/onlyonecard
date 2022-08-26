@@ -89,7 +89,7 @@ export default function AbonnementsSimples() {
           fontWeight: 900,
           lineHeight: "63px",
           color: "#10403B",
-          mt: "285px",
+          mt: { md: "285px", xs: "150px" },
         }}
       >
         Des tarifs et abonnements{" "}
@@ -102,13 +102,13 @@ export default function AbonnementsSimples() {
         sx={{
           display: "flex",
           justifyContent: "center",
-          flexDirection: "row",
+          flexDirection: { md: "row", xs: "row" },
           mt: "5rem",
         }}
       >
         <Typography
           sx={{
-            fontSize: "38px",
+            fontSize: { md: "38px", xs: "28px" },
             fontWeight: 800,
             textAlign: "center",
             mr: {
@@ -131,7 +131,7 @@ export default function AbonnementsSimples() {
         </Typography>
         <Typography
           sx={{
-            fontSize: "38px",
+            fontSize: { md: "38px", xs: "28px" },
             fontWeight: 800,
             textAlign: "center",
             ml: {
@@ -156,10 +156,13 @@ export default function AbonnementsSimples() {
       <Typography
         sx={{
           fontWeight: 800,
-          textAlign: "start",
-          lineHeight: "57px",
+          textAlign: { md: "start", xs: "center" },
+          lineHeight: { md: "57px ", xs: "40px" },
+          pl: { md: 0, xs: 1 },
+          pr: { md: 0, xs: 1 },
           fontSize: "24px",
-          margin: "57px 0px 80px 270px ",
+          margin: "57px 0px 80px 0px ",
+          marginLeft: { md: "270px ", xs: 0 },
           color: "#10403B",
         }}
       >
@@ -173,7 +176,8 @@ export default function AbonnementsSimples() {
           justifyContent: "center",
           alignItems: "center",
           background: "#E4D6C0",
-          height: "867px",
+          height: { md: "867px", xs: "100%" },
+          mt: { md: 0, xs: 3 },
         }}
       >
         <Container
@@ -181,7 +185,7 @@ export default function AbonnementsSimples() {
             dispaly: "flex",
             justifyContent: "center",
             alignItems: "center",
-            mt: -5,
+            mt: { md: 6, xs: 5 },
           }}
         >
           <Grid item md={12}>
@@ -251,7 +255,7 @@ export default function AbonnementsSimples() {
                 <Tab
                   sx={{
                     color: "#ffffff !important",
-                    fontSize: "24px",
+                    fontSize: { md: "24px", xs: "18px" },
                     height: "70px",
                     zIndex: 6,
                   }}
@@ -262,7 +266,7 @@ export default function AbonnementsSimples() {
                 <Tab
                   sx={{
                     color: "#ffffff !important",
-                    fontSize: "24px",
+                    fontSize: { md: "24px", xs: "18px" },
                     height: "70px",
                     zIndex: 6,
                   }}
@@ -286,7 +290,7 @@ export default function AbonnementsSimples() {
                 >
                   <Box
                     sx={{
-                      fontSize: "24px",
+                      fontSize: { md: "24px", xs: "18px" },
                       fontWeight: "bold",
                       color: "#fff",
                       mt: 4,
@@ -317,7 +321,7 @@ export default function AbonnementsSimples() {
                   </Box>
                   <Box
                     sx={{
-                      fontSize: "24px",
+                      fontSize: { md: "24px", xs: "18px" },
                       fontWeight: "bold",
                       color: "#fff",
                       mt: 4,
@@ -358,7 +362,7 @@ export default function AbonnementsSimples() {
                 >
                   <Box
                     sx={{
-                      fontSize: "24px",
+                      fontSize: { md: "24px", xs: "18px" },
                       fontWeight: "bold",
                       color: "#fff",
                       mt: 4,
@@ -389,7 +393,7 @@ export default function AbonnementsSimples() {
                   </Box>
                   <Box
                     sx={{
-                      fontSize: "24px",
+                      fontSize: { md: "24px", xs: "18px" },
                       fontWeight: "bold",
                       color: "#fff",
                       mt: 4,
@@ -430,8 +434,9 @@ export default function AbonnementsSimples() {
               onClick={modalClickOpen}
               sx={{
                 display: "flex",
-                mt: 8,
                 justifyContent: "center",
+                mt: 8,
+                mb: { md: 8, xs: 8 },
               }}
             >
               <Button

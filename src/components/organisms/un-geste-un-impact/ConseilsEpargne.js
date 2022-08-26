@@ -43,12 +43,16 @@ export default function ConseilsEpargne() {
         <Box>
           <Typography
             sx={{
-              textAlign: "end",
-              fontSize: { md: "38px", xs: "22px" },
+              textAlign: { md: "end", xs: "center" },
+              fontSize: { md: "38px", xs: "34px" },
               color: "#10403B",
               fontWeight: 800,
-              lineHeight: "57px",
-              margin: "160.47px 100px 0px 119px",
+              lineHeight: { md: "57px", xs: "40px" },
+              marginTop: "160.47px",
+              marginLeft: { md: "119px", xs: 0 },
+              marginRight: { md: "100px", xs: 0 },
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
             }}
           >
             Sélectionnez l’
@@ -60,11 +64,15 @@ export default function ConseilsEpargne() {
             sx={{
               color: "#10403B",
               fontFamily: "Lora",
-              margin: "90px 100px 0px 119px",
+              marginTop: { md: "90px", xs: "70px" },
+              marginLeft: { md: "119px", xs: 0 },
+              marginRight: { md: "100px", xs: 0 },
               fontSize: "19px",
               fontWeight: 400,
               lineHeight: "27px",
-              textAlign: "end",
+              textAlign: { md: "end", xs: "center" },
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
             }}
           >
             Dans l’app, vous accédez à la Place Impact : un espace de
@@ -79,7 +87,12 @@ export default function ConseilsEpargne() {
             <br /> temps, de l’argent et de l’impact positif !
           </Typography>
 
-          <Box sx={{ display: "flex", justifyContent: "end" }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: { md: "end", xs: "center" },
+            }}
+          >
             <Button
               variant="contained"
               sx={{
@@ -87,7 +100,9 @@ export default function ConseilsEpargne() {
                 bgcolor: "#2A7267 !important",
                 "&:hover": { bgcolor: "#10403B !important" },
                 boxShadow: "none",
-                margin: "80px 100px 0px 68px",
+                margin: "80px 0px 0px 0px",
+                marginLeft: { md: "68px", xs: 0 },
+                marginRight: { md: "100px", xs: 0 },
                 fontSize: "16px",
                 padding: "10px 38px 10px 38px",
               }}
@@ -117,6 +132,7 @@ export default function ConseilsEpargne() {
           color: "#10403B",
           mt: {
             md: "216px",
+            xs: 10,
           },
         }}
       >
@@ -133,7 +149,7 @@ export default function ConseilsEpargne() {
             md: "8rem",
             xs: 0,
           },
-          width: "80vw",
+          width: { md: "80vw", xs: "100%" },
           mx: "auto",
         }}
       >
@@ -148,7 +164,7 @@ export default function ConseilsEpargne() {
             </MotionInView>
           </Grid>
         </MHidden>
-        <Grid item xs={12} md={6} ml="-5rem" mb="11rem">
+        <Grid item xs={12} md={6} ml={{ md: "-5rem", xs: "0" }} mb="11rem">
           <MotionInView variants={varFadeInLeft}>
             <Typography
               sx={{
@@ -157,6 +173,8 @@ export default function ConseilsEpargne() {
                 fontFamily: "Lora",
                 color: "#333",
                 fontWeight: 400,
+                pl: { md: 0, xs: 3 },
+                pr: { md: 0, xs: 3 },
               }}
             >
               Pour toucher son salaire ou payer ses factures, 99% des français
@@ -186,7 +204,8 @@ export default function ConseilsEpargne() {
                 bgcolor: "#FAAA42 !important",
                 "&:hover": { bgcolor: "#f7ba6c !important" },
                 boxShadow: "none",
-                margin: "120px 100px 0px 0px",
+                marginTop: { md: "120px", xs: 5 },
+                marginRight: { md: "100px", xs: 0 },
                 fontSize: "16px",
                 padding: "7px 38px 7px 38px",
               }}
@@ -202,7 +221,7 @@ export default function ConseilsEpargne() {
         component="img"
         alt="fff"
         src={cascade_image}
-        sx={{ width: "100%", zIndex: 0, mt: "-110px" }}
+        sx={{ width: "100%", zIndex: 0, mt: { md: "-110px", xs: "-150px" } }}
       />
       <Box
         sx={{
@@ -210,18 +229,18 @@ export default function ConseilsEpargne() {
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
-          mt: -95,
-          mb: 36.5,
+          mt: { md: -95, xs: -40 },
+          mb: { md: 36.5, xs: -7.5 },
         }}
       >
         <Typography
           sx={{
             opacity: 0.99,
-            fontSize: "42px",
+            fontSize: { md: "42px", xs: "23px" },
             color: "#10403B",
             fontWeight: 900,
             textAlign: "center",
-            lineHeight: "63px",
+            lineHeight: { md: "63px", xs: "26px" },
           }}
         >
           Rejoignez le mouvement d’un

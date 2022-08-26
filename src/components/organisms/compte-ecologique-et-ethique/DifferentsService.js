@@ -21,6 +21,7 @@ export default function DifferentsService() {
           display: "flex",
           justifyContent: "space-between",
           mt: -1,
+          mb: 5,
         }}
       >
         <Box
@@ -37,8 +38,12 @@ export default function DifferentsService() {
               color: "#10403B",
               fontWeight: 800,
               lineHeight: { md: "57px", xs: "35px" },
-              margin: "162.47px 100px 0px 119px",
+              margin: "162.47px 0px 0px 0px",
+              marginRight: { md: "100px", xs: 0 },
+              marginLeft: { md: "119px", xs: 0 },
               mb: { md: "162.47px", xs: 0 },
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
             }}
           >
             Recevez la 1ère carte de paiement
@@ -48,9 +53,13 @@ export default function DifferentsService() {
             sx={{
               color: "#000000",
               fontFamily: "Lora",
-              margin: "39px 100px 0px 119px",
+              margin: "39px 0px 0px 0px",
+              marginRight: { md: "100px", xs: 0 },
+              marginLeft: { md: "119px", xs: 0 },
               fontSize: "19px",
               fontWeight: 500,
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
               lineHeight: "27px",
             }}
           >
@@ -77,7 +86,11 @@ export default function DifferentsService() {
               fontWeight: 800,
               lineHeight: "57px",
               fontStyle: "normal",
-              margin: "67px 100px 0px 119px",
+              margin: "67px 0px 0px 0px",
+              marginRight: { md: "100px", xs: 0 },
+              marginLeft: { md: "119px", xs: 0 },
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
             }}
           >
             Le prix de la
@@ -88,9 +101,13 @@ export default function DifferentsService() {
             sx={{
               color: "#10403B",
               fontFamily: "Lora",
-              margin: "-37px 100px 0px 119px",
+              margin: "-37px 0px 0px 0px",
+              marginRight: { md: "100px", xs: 0 },
+              marginLeft: { md: "119px", xs: 0 },
               fontSize: "19px",
               fontWeight: 500,
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
               lineHeight: "27px",
             }}
           >
@@ -192,7 +209,7 @@ export default function DifferentsService() {
             sx={{
               display: "flex",
               justifyContent: "center",
-              mt: { md: 0, xs: -5 },
+              mt: { md: 0, xs: 38 },
               mb: { md: 10, xs: 5 },
             }}
           >
@@ -222,37 +239,37 @@ export default function DifferentsService() {
               height: "1473px",
             }}
           />
-          <Box
-            src={foret_image}
+        </MHidden>
+        <Box
+          src={foret_image}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            bgcolor: "#10403B",
+            width: { md: "508px", xs: "100%" },
+            height: "316px",
+            mt: { md: 166.8, xs: 194.3 },
+            ml: { md: "925px", xs: 0 },
+            position: "absolute",
+          }}
+        >
+          <Typography
             sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              bgcolor: "#10403B",
-              width: "508px",
-              height: "316px",
-              mt: { md: 166.8, xs: 0 },
-              ml: "925px",
-              position: "absolute",
+              textAlign: "center",
+              fontSize: "20px",
+              fontFamily: "Lora",
+              fontWeight: 600,
+              color: "#fff",
+              lineHeight: "25.6px",
             }}
           >
-            <Typography
-              sx={{
-                textAlign: "center",
-                fontSize: "20px",
-                fontFamily: "Lora",
-                fontWeight: 600,
-                color: "#fff",
-                lineHeight: "25.6px",
-              }}
-            >
-              215 Euros, le coût moyen des frais <br /> bancaires <br /> Vous
-              n’auriez sûrement pas pensé <br /> que c’était aussi élevé.
-              D’autant plus <br />
-              que les coûts manquent souvent de <br /> transparence !
-            </Typography>
-          </Box>
-        </MHidden>
+            215 Euros, le coût moyen des frais <br /> bancaires <br /> Vous
+            n’auriez sûrement pas pensé <br /> que c’était aussi élevé. D’autant
+            plus <br />
+            que les coûts manquent souvent de <br /> transparence !
+          </Typography>
+        </Box>
       </Grid>
     </RootStyle>
   );

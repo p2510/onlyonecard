@@ -19,7 +19,8 @@ export default function PlaceImpactServiceSecondPart() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "673px",
+          height: { md: "673px", xs: "100%" },
+          marginTop: { md: 0, xs: -5 },
           background: "#10403B",
         }}
       >
@@ -44,6 +45,7 @@ export default function PlaceImpactServiceSecondPart() {
               sx={{
                 display: "flex",
                 justifyContent: "center",
+                flexDirection: { md: "row", xs: "column" },
                 fontSize: "2.2rem",
                 fontWeight: "bold",
                 color: "#fff",
@@ -51,6 +53,7 @@ export default function PlaceImpactServiceSecondPart() {
                 mb: 3,
                 mt: {
                   md: 1,
+                  xs: 6,
                 },
               }}
             >
@@ -80,9 +83,9 @@ export default function PlaceImpactServiceSecondPart() {
               width: "100%",
               mb: {
                 md: 4,
-                xs: 8,
+                xs: 3,
               },
-              mt: 3,
+              mt: { md: 3, xs: 6 },
             }}
           >
             {DATA.map((item) => (
@@ -95,6 +98,7 @@ export default function PlaceImpactServiceSecondPart() {
                   alignItems: "center",
                   justifyContent: "space-around",
                   marginRight: "2rem",
+                  mb: { md: 0, xs: 15 },
                 }}
               >
                 <Box component="img" src={item.icon} alt={item.title} />

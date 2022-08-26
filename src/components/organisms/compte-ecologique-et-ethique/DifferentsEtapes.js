@@ -167,6 +167,8 @@ export default function DifferentsEtapes() {
             fontSize: { md: "32px", xs: "27px" },
             lineHeight: "48px",
             color: "#10403B",
+            pl: { md: 0, xs: 3 },
+            pr: { md: 0, xs: 3 },
           }}
         >
           Ouvrez un compte pour rejoindre le
