@@ -11,6 +11,7 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import CommunautesInput from "../../molecules/CommunautesInput";
 import AccordionDetails from "@mui/material/AccordionDetails";
+import { MHidden } from "src/components/atoms/@material-extend";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -50,7 +51,12 @@ export default function FinancementProjet() {
   return (
     <RootStyle>
       <Box
-        sx={{ bgcolor: "#E4D6C0", marginBottom: 8, mt: -15, height: "1372px" }}
+        sx={{
+          bgcolor: "#E4D6C0",
+          marginBottom: { md: 8, xs: 1 },
+          mt: -15,
+          height: { md: "1372px", xs: "1050px" },
+        }}
       >
         <Typography
           sx={{
@@ -62,7 +68,7 @@ export default function FinancementProjet() {
             fontWeight: 800,
             color: "#10403B",
             paddingTop: "7rem",
-            mb: 18,
+            mb: { md: 18, xs: 10 },
           }}
         >
           Participez vous aussi à financer des projets
@@ -86,6 +92,7 @@ export default function FinancementProjet() {
                   <Card
                     sx={{
                       maxWidth: "511px",
+                      height: { md: "auto", xs: "135px" },
                       borderRadius: "0px",
                     }}
                   >
@@ -93,7 +100,7 @@ export default function FinancementProjet() {
                       component="img"
                       image={item.image}
                       alt="green iguana"
-                      sx={{ zIndex: 0 }}
+                      sx={{ zIndex: 0, height: { md: "auto", xs: "100%" } }}
                       className="opacity-90 hover:opacity-100 hover:cursor-text hover transition ease-in-out duration-500 "
                     />
                   </Card>
@@ -104,20 +111,20 @@ export default function FinancementProjet() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      width: { md: "270px", xs: "380px" },
+                      width: { md: "270px", xs: "93%" },
                       zIndex: 6,
                       bgcolor: "#10403B",
                       opacity: 0.75,
-                      height: "132px ",
-                      mt: { md: "-180px", xs: "100px" },
-                      marginLeft: { md: "120px", xs: "0px" },
+                      height: { md: "132px ", xs: "90px" },
+                      mt: { md: "-180px", xs: "-115px" },
+                      marginLeft: { md: "120px", xs: "5px" },
                     }}
                   >
                     <Typography
                       sx={{
                         textAlign: "center",
                         color: "#fff",
-                        fontSize: "24px",
+                        fontSize: { md: "24px", xs: "18px" },
                         fontWeight: 700,
                       }}
                     >
@@ -150,8 +157,8 @@ export default function FinancementProjet() {
               sx={{
                 color: "#10403B",
                 fontWeight: 700,
-                lineHeight: "36px",
-                fontSize: "24px",
+                lineHeight: { md: "36px", xs: "20px" },
+                fontSize: { md: "24px", xs: "13px" },
                 "&:hover": {
                   color: "#10403B",
                 },
@@ -186,8 +193,8 @@ export default function FinancementProjet() {
               sx={{
                 color: "#10403B",
                 fontWeight: 700,
-                fontSize: "24px",
-                lineHeight: "36px",
+                fontSize: { md: "24px", xs: "13px" },
+                lineHeight: { md: "36px", xs: "20px" },
               }}
             >
               Comment souscrire à un service proposé sur la Place de l'impact?
@@ -229,24 +236,27 @@ export default function FinancementProjet() {
           height: "485px",
         }}
       >
-        <Box component="img" src={citoyens_image} />
+        <MHidden width="mdDown">
+          <Box component="img" src={citoyens_image} />
+        </MHidden>
         <Typography
           sx={{
             position: "absolute",
-            width: "924px",
-            height: "145px",
-            mt: "-300px",
-            left: "500px",
+            width: { md: "924px", xs: "100%" },
+            height: { md: "145px", xs: "50px" },
+            mt: { md: "-300px", xs: "-600px" },
+            left: { md: "500px", xs: 0 },
             fontFamily: "Poppins",
             fontStyle: "normal",
             fontWeight: 700,
             fontSize: "32px",
-            lineHeight: "48px",
+            lineHeight: { md: "48px", xs: "25px" },
             color: "#10403B",
           }}
         >
           <CommunautesInput
             titleStyle={{ lineHeight: "48px" }}
+            textFieldStyle={{ marginLeft: { md: 0, xs: "8px" } }}
             titre="Rejoins le mouvement des citoyens mettant leur argent au service du climat, de la biodiversité et de la société."
           />
         </Typography>

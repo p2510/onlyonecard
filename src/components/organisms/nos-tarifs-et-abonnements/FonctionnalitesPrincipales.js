@@ -24,7 +24,7 @@ export default function FonctionnalitesPrincipales() {
               container
               spacing={{
                 md: 5,
-                xs: 10,
+                xs: 3,
               }}
             >
               <Grid item xs={6}>
@@ -55,7 +55,7 @@ export default function FonctionnalitesPrincipales() {
                   Compte One Jeune <br /> (18-25 ans)
                 </Typography>
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={6} mr={{ md: 0, xs: -4 }}>
                 <Typography
                   sx={{
                     display: "flex",

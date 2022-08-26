@@ -24,16 +24,18 @@ export default function ValeurEtMission() {
   return (
     <RootStyle>
       <Grid container sx={{ display: "flex", flexDirection: "row" }}>
-        <Grid>
-          <Box
-            component="img"
-            src={valle_image}
-            sx={{
-              width: "457px",
-              height: "931px",
-            }}
-          />
-        </Grid>
+        <MHidden width="mdDown">
+          <Grid>
+            <Box
+              component="img"
+              src={valle_image}
+              sx={{
+                width: "457px",
+                height: "931px",
+              }}
+            />
+          </Grid>
+        </MHidden>
         <Grid item xs={12} md={8}>
           <MotionInView variants={varFadeInLeft}>
             <Typography
@@ -42,15 +44,18 @@ export default function ValeurEtMission() {
                 fontSize: "38px",
                 fontWeight: 800,
                 color: "#10403B",
-                lineHeight: "57px",
+                lineHeight: { md: "57px", xs: "50px" },
                 mt: {
                   md: 10,
-                  xs: 15,
+                  xs: 10,
                 },
               }}
             >
-              Nos <span style={{ color: "#C4E3D5" }}> valeurs</span> &
-              <span style={{ color: "#C4E3D5" }}> engagements</span>
+              Nos{" "}
+              <span style={{ color: { md: "#C4E3D6", xs: "#10403B" } }}>
+                valeurs
+              </span>{" "}
+              &<span style={{ color: "#C4E3D6" }}> engagements</span>
             </Typography>
             <Typography
               sx={{
@@ -60,8 +65,8 @@ export default function ValeurEtMission() {
                 fontSize: "22px",
                 fontWeight: 400,
                 lineHeight: "27px",
-                mt: 8,
-                mb: 6,
+                mt: { md: 8, xs: 4 },
+                mb: { md: 6, xs: 10 },
               }}
             >
               4 valeurs profondément ancrées dans notre ADN, nous animent au
@@ -77,12 +82,22 @@ export default function ValeurEtMission() {
                 flexDirection: "row",
                 alignItems: "start",
                 justifyContent: "space-around",
+                mb: { md: 0, xs: 6 },
               }}
             >
-              <Grid item sx={{ ml: -96, marginBlock: -12, mt: 6 }}>
-                <Box component="img" src={item.icon} alt={item.title} />
-              </Grid>
-              <Grid item sx={{ ml: 21 }}>
+              <MHidden width="mdDown">
+                <Grid
+                  item
+                  sx={{
+                    ml: { md: -96, xs: -35 },
+                    mt: { md: 6, xs: 20 },
+                    marginBlock: -12,
+                  }}
+                >
+                  <Box component="img" src={item.icon} alt={item.title} />
+                </Grid>
+              </MHidden>
+              <Grid item sx={{ ml: { md: 21, xs: 2 } }}>
                 <MotionInView variants={varFadeInDown}>
                   <Typography
                     sx={{
@@ -90,7 +105,7 @@ export default function ValeurEtMission() {
                       fontSize: "24px",
                       color: "#C4E3D5",
                       lineHeight: 0.9,
-                      mb: 2,
+                      mb: { md: 2, xs: 4 },
                     }}
                   >
                     {item.title}
@@ -129,60 +144,66 @@ export default function ValeurEtMission() {
           mx: "auto",
         }}
       >
-        <MHidden width="mdDown">
-          <Grid item xs={12} md={6} lg={4.7}>
-            <MotionInView variants={varFadeInUp}>
-              <Box
-                component="img"
-                alt="Image d'une pièce d'hero "
-                src={unicef_icon}
-                sx={{
-                  borderRadius: 2,
-                  ml: 15,
-                  mt: 8,
-                }}
-              />
-              <Grid
-                container
-                direction={{ xs: "column", sm: "row" }}
-                sx={{
-                  display: "flex",
-                  width: "55vw",
-                  mt: 5,
-                  mb: {
-                    md: 7,
-                    xs: 8,
-                  },
-                }}
-              >
-                {ODDDATA.map((item) => (
-                  <Grid
-                    item
-                    key={item.id}
-                    sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "space-around",
-                    }}
-                  >
-                    <MotionInView variants={varFadeInUp}>
-                      <Box
-                        component="img"
-                        src={item.icon}
-                        sx={{
-                          width: "83px",
-                          height: "80px",
-                        }}
-                      />
-                    </MotionInView>
-                  </Grid>
-                ))}
-              </Grid>
-            </MotionInView>
-          </Grid>
-        </MHidden>
-        <Grid item xs={12} md={6} lg={6.7} mt="1rem" ml="1.5rem">
+        <Grid item xs={12} md={6} lg={4.7}>
+          <MotionInView variants={varFadeInUp}>
+            <Box
+              component="img"
+              alt="Image d'une pièce d'hero "
+              src={unicef_icon}
+              sx={{
+                borderRadius: 2,
+                ml: { md: 15, xs: 5 },
+                mt: 8,
+              }}
+            />
+            <Grid
+              container
+              direction={{ xs: "row", sm: "row" }}
+              sx={{
+                display: "flex",
+                width: { md: "55vw", xs: "90%" },
+                ml: { md: 0, xs: 5 },
+                mt: 5,
+                mb: {
+                  md: 7,
+                  xs: 8,
+                },
+              }}
+            >
+              {ODDDATA.map((item) => (
+                <Grid
+                  item
+                  key={item.id}
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  <MotionInView variants={varFadeInUp}>
+                    <Box
+                      component="img"
+                      src={item.icon}
+                      sx={{
+                        width: "83px",
+                        height: "80px",
+                      }}
+                    />
+                  </MotionInView>
+                </Grid>
+              ))}
+            </Grid>
+          </MotionInView>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          lg={6.7}
+          mt="1rem"
+          ml={{ md: "1.5rem", xs: 0 }}
+        >
           <MotionInView variants={varFadeInLeft}>
             <Typography
               sx={{

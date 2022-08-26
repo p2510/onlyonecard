@@ -10,7 +10,7 @@ const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
   paddingBottom: theme.spacing(10),
   [theme.breakpoints.up("md")]: {
-    textAlign: "left",
+    textAlign: { md: "left", xs: "center" },
   },
 }));
 
@@ -26,7 +26,6 @@ export default function DetailEmpreinteCarbone() {
           flexDirection: "row",
           width: "100%",
           mb: 15,
-          mx: "auto",
         }}
       >
         <Grid item xs={12} md={8}>
@@ -54,6 +53,8 @@ export default function DetailEmpreinteCarbone() {
                 textAlign: "center",
                 fontWeight: 400,
                 lineHeight: "27px",
+                pl: { md: 0, xs: 1 },
+                pr: { md: 0, xs: 1 },
                 mt: 7,
               }}
             >
@@ -71,7 +72,6 @@ export default function DetailEmpreinteCarbone() {
             </Typography>
           </MotionInView>
         </Grid>
-
         <MHidden width="mdDown">
           <Grid item xs={12} md={4}>
             <MotionInView variants={varFadeInUp}>
@@ -108,7 +108,7 @@ export default function DetailEmpreinteCarbone() {
           </Grid>
         </MHidden>
 
-        <Grid item xs={12} md={6} ml="-18rem">
+        <Grid item xs={12} md={6} ml={{ md: "-18rem", xs: 0 }}>
           <MotionInView variants={varFadeInLeft}>
             <Typography
               sx={{
@@ -117,6 +117,8 @@ export default function DetailEmpreinteCarbone() {
                 lineHeight: "36px",
                 fontSize: "24px",
                 textAlign: "center",
+                pl: { md: 0, xs: 2 },
+                pr: { md: 0, xs: 2 },
               }}
             >
               En route vers un mode de vie
@@ -134,6 +136,8 @@ export default function DetailEmpreinteCarbone() {
                 fontWeight: 400,
                 lineHeight: "27px",
                 mt: 7,
+                pl: { md: 0, xs: 1 },
+                pr: { md: 0, xs: 1 },
               }}
             >
               Afin d’accompagner chaque utilisateur vers un mode de vie
@@ -160,14 +164,14 @@ export default function DetailEmpreinteCarbone() {
           display: "flex",
           justifyContent: "space-betwenn",
           flexDirection: "row",
-          mt: 20,
+          mt: { md: 20, xs: 10 },
           width: "100%",
-          marginLeft: "-10rem",
+          marginLeft: { md: "-10rem", xs: -1.5 },
           mb: 15,
           mx: "auto",
         }}
       >
-        <Grid item xs={12} md={8} marginLeft="-5rem">
+        <Grid item xs={12} md={8} marginLeft={{ md: "-5rem", xs: 0 }}>
           <MotionInView variants={varFadeInLeft}>
             <Typography
               sx={{
@@ -194,6 +198,8 @@ export default function DetailEmpreinteCarbone() {
                 fontWeight: 400,
                 lineHeight: "27px",
                 mt: 7,
+                pl: { md: 0, xs: 1 },
+                pr: { md: 0, xs: 1 },
               }}
             >
               Associant une empreinte marginale en kilogramme de CO2e par
@@ -218,7 +224,13 @@ export default function DetailEmpreinteCarbone() {
         </Grid>
 
         <MHidden width="mdDown">
-          <Grid item xs={12} md={4} marginLeft="-5rem" marginTop="-2rem">
+          <Grid
+            item
+            xs={12}
+            md={4}
+            marginLeft={{ md: "-5rem", xs: 0 }}
+            marginTop="-2rem"
+          >
             <MotionInView variants={varFadeInUp}>
               <Box
                 component="img"

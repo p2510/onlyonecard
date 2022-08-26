@@ -12,6 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 import { styled } from "@mui/system";
+import { MHidden } from "src/components/atoms/@material-extend";
 import { PATH_PAGE } from "src/configues/routes/paths";
 import article_image from "../../../assets/images/article_image.png";
 import { CHRONIQUEDATA } from "./ArticleBolg.constant";
@@ -27,7 +28,7 @@ const RootStyle = styled("div")(({ theme }) => ({
 export default function ArticleBlog({ isActive }) {
   return (
     <RootStyle>
-      <Container sx={{ marginLeft: "200px" }}>
+      <Container sx={{ marginLeft: { md: "200px", xs: 0 } }}>
         <Box
           sx={{
             mt: "291px",
@@ -85,8 +86,10 @@ export default function ArticleBlog({ isActive }) {
           </span>
         </Typography>
       </Container>
-      <Box component="img" src={article_image} alt="Les rouages d’OnlyOne" />
-      <Container sx={{ marginLeft: "200px", marginTop: "79px" }}>
+      <MHidden width="mdDown">
+        <Box component="img" src={article_image} alt="Les rouages d’OnlyOne" />
+      </MHidden>
+      <Container sx={{ marginLeft: { md: "200px", xs: 0 }, marginTop: "79px" }}>
         <Typography
           style={{
             fontFamily: "Lora",
@@ -192,7 +195,7 @@ export default function ArticleBlog({ isActive }) {
               item
               xs={4}
               md={4}
-              sx={{ width: "333px", minWidth: "403px" }}
+              sx={{ width: "333px", minWidth: { md: "403px", xs: "100%" } }}
               key={item.id}
             >
               <Link href="#">
