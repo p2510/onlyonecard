@@ -1,4 +1,4 @@
-import etoile from "../../../assets/images/etoile.svg";
+import etoile from "../../../assets/images/etoile.png";
 
 export const COUTDATA = [
   {

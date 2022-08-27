@@ -2,13 +2,14 @@ import { styled } from "@mui/system";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { MotionInView, varFadeInDown, varFadeInUp } from "../../atoms/animate";
 import { ACTIONSDATA } from "./ActionEtEmpreinteCarbone.constant";
-import only_leave from "../../../assets/images/only_leave.svg";
+import only_leave from "../../../assets/images/only_leave.png";
+import { MHidden } from "src/components/atoms/@material-extend";
 
 const RootStyle = styled("div")(({ theme }) => ({
   textAlign: "center",
   paddingBottom: theme.spacing(10),
   [theme.breakpoints.up("md")]: {
-    textAlign: "left",
+    textAlign: { md: "left", xs: "center" },
   },
 }));
 
@@ -37,22 +38,22 @@ export default function ActionEtEmpreinteCarbone() {
             },
           }}
         >
-          Un
+          Un{" "}
           <span
             style={{
               color: "#C4E3D5",
-              marginLeft: "0.5rem",
-              marginRight: "0.5rem",
+              marginLeft: { md: "0.5rem", xs: 0 },
+              marginRight: { md: "0.5rem", xs: 0 },
             }}
           >
-            éco-coach
+            éco-coach{" "}
           </span>
           pour transformer vos
-          <br /> bonnes intentions en
+          <br /> bonnes intentions en{" "}
           <span
             style={{
               color: "#C4E3D5",
-              marginLeft: "0.5rem",
+              marginLeft: { md: "0.5rem", xs: 0 },
             }}
           >
             actions
@@ -109,7 +110,7 @@ export default function ActionEtEmpreinteCarbone() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "space-between",
-                marginRight: "2rem",
+                marginRight: { md: "2rem", xs: 0 },
                 width: "330px",
               }}
             >
@@ -182,15 +183,17 @@ export default function ActionEtEmpreinteCarbone() {
         </Grid>
       </Container>
       <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box
-          component="img"
-          src={only_leave}
-          sx={{ height: "536px", width: "315px", zIndex: 6, mt: "-0.6rem" }}
-        />
+        <MHidden width="mdDown">
+          <Box
+            component="img"
+            src={only_leave}
+            sx={{ height: "536px", width: "315px", zIndex: 6, mt: "-0.6rem" }}
+          />
+        </MHidden>
         <Box
           sx={{
             width: "100%",
-            height: "526px",
+            height: { md: "526px", xs: "100%" },
             bgcolor: "#C4E3D5",
           }}
         >
@@ -202,7 +205,10 @@ export default function ActionEtEmpreinteCarbone() {
               color: "#10403B",
               fontWeight: 700,
               lineHeight: "36px",
-              margin: "69px 73px 0px 68px",
+              margin: "69px 0px 0px 0px",
+              marginRight: { md: "73px", xs: 0 },
+              marginLeft: { md: "68px", xs: 0 },
+              marginBottom: { md: "0px", xs: 10 },
             }}
           >
             Saviez-vous que chaque Français doit réduire son empreinte carbone
@@ -212,7 +218,11 @@ export default function ActionEtEmpreinteCarbone() {
             sx={{
               color: "#10403B",
               fontFamily: "Lora",
-              margin: "-55px 49px 69px 68px",
+              margin: "-55px 0px 69px 0px",
+              marginRight: { md: "49px", xs: 0 },
+              marginLeft: { md: "68px", xs: 0 },
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
               lineHeight: "27px",
               fontSize: "21px",
             }}
@@ -232,8 +242,12 @@ export default function ActionEtEmpreinteCarbone() {
               bgcolor: "#2A7267 !important",
               "&:hover": { bgcolor: "#10403B  !important" },
               boxShadow: "none",
-              margin: "30px 201px 0px 68px",
-              fontSize: "16px",
+              margin: "30px 0px 40px 0px",
+              marginRight: { md: "201px", xs: 0 },
+              marginLeft: { md: "68px", xs: 0 },
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
+              fontSize: { md: "16px", xs: "14px" },
               padding: "7px 38px 10px 38px",
             }}
             variant="contained"

@@ -2,16 +2,17 @@ import * as React from "react";
 import Grid from "@mui/material/Grid";
 import { Container, Box, Typography, Button, Divider } from "@mui/material";
 import { TABLEAUDERESUMEDATA } from "./nosTarifsEtAbonnements.constant";
-import citoyens_image_2 from "../../../assets/images/citoyens_image_2.svg";
+import citoyens_image_2 from "../../../assets/images/citoyens_image_2.png";
 import only_name from "../../../assets/images/only_name.svg";
 import google_play_icon from "../../../assets/images/google_play_icon.svg";
 import app_store_icon from "../../../assets/images/app_store_icon.svg";
-import ocean_image from "../../../assets/images/ocean_image.svg";
+import ocean_image from "../../../assets/images/ocean_image.png";
 import {
   MotionInView,
   varFadeInLeft,
   varFadeInRight,
 } from "src/components/atoms/animate";
+import { MHidden } from "src/components/atoms/@material-extend";
 
 export default function TableauDeResume() {
   return (
@@ -194,7 +195,7 @@ export default function TableauDeResume() {
                 component="img"
                 src={app_store_icon}
                 alt="télécharger dans l'app store"
-                sx={{ padding: "0px 50px 0px 0px" }}
+                sx={{ paddingRight: { md: "50px", xs: "10px" } }}
               />
             </Button>
           </MotionInView>
@@ -204,17 +205,19 @@ export default function TableauDeResume() {
                 component="img"
                 src={google_play_icon}
                 alt="disponible sur google play"
-                sx={{ padding: "0px 0px 0px 50px" }}
+                sx={{ paddingLeft: { md: "50px", xs: "10px" } }}
               />
             </Button>
           </MotionInView>
         </Grid>
       </Container>
       <Grid sx={{ display: "flex", justifyContent: "space-between", mt: 12 }}>
-        <Box component="img" src={ocean_image} />
+        <MHidden width="mdDown">
+          <Box component="img" src={ocean_image} />
+        </MHidden>
         <Box
           sx={{
-            width: "80%",
+            width: { md: "80%", xs: "100%" },
             height: "668px",
             bgcolor: "#10403B",
           }}
@@ -224,8 +227,12 @@ export default function TableauDeResume() {
               fontSize: { md: "38px", xs: "22px" },
               color: "#fff",
               fontWeight: 800,
-              lineHeight: "57px",
-              margin: "66px 73px 70px 97px",
+              lineHeight: { md: "57px", xs: "40px" },
+              margin: "66px 0px 70px 0px",
+              marginRight: { md: "73px", xs: 0 },
+              marginLeft: { md: "97px", xs: 0 },
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
             }}
           >
             Profitez d’un abonnement au prix de la
@@ -236,8 +243,10 @@ export default function TableauDeResume() {
             sx={{
               color: "#fff",
               fontFamily: "Lora",
-              margin: "0px 0px 0px 97px",
+              marginLeft: { md: "97px", xs: 0 },
               fontSize: "20px",
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
             }}
           >
             Nos services payants nous permettent d’agir concrètement en vous
@@ -282,7 +291,7 @@ export default function TableauDeResume() {
           component="img"
           src={citoyens_image_2}
           alt="Rejoignez le mouvement des citoyens"
-          sx={{ margin: "0px 0px -150px 0px" }}
+          sx={{ marginBottom: { md: "-150px", xs: -4 } }}
         />
         <Box
           component="img"

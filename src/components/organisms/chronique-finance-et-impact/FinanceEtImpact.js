@@ -98,7 +98,7 @@ export default function FinanceEtImpact() {
           <span style={{ color: "#C4E3D5" }}> impact</span>
           <span style={{ color: "#FAAA42" }}>.</span>
         </Typography>
-        <Grid item xs={6}>
+        <Grid item xs={6} mb={{ md: 0, xs: -10 }}>
           <Box sx={{ width: "100%", maxWidth: "100%" }}>
             {BUTTONLABELLEDATA.map((item, key) => (
               <Button
@@ -122,7 +122,10 @@ export default function FinanceEtImpact() {
                   item
                   xs={4}
                   md={4}
-                  sx={{ width: "333px", minWidth: "403px" }}
+                  sx={{
+                    width: { md: "333px", xs: "100%" },
+                    minWidth: { md: "403px", xs: "100%" },
+                  }}
                   key={item.id}
                 >
                   <Link href={PATH_PAGE.ArticleBlog}>

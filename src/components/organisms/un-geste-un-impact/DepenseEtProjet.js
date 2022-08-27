@@ -29,6 +29,7 @@ export default function DepenseEtProjet() {
           color: "#10403B",
           mt: {
             md: 21,
+            xs: 15,
           },
         }}
       >
@@ -58,7 +59,7 @@ export default function DepenseEtProjet() {
           justifyContent: "space-between",
           mt: {
             md: "8rem",
-            xs: 0,
+            xs: 10,
           },
         }}
       >
@@ -81,6 +82,8 @@ export default function DepenseEtProjet() {
                 lineHeight: "57px",
                 fontSize: "38px",
                 color: "#10403B",
+                pl: { md: 0, xs: 3 },
+                pr: { md: 0, xs: 3 },
               }}
             >
               Protégez la biodiversité <br /> à chaque dépense !
@@ -96,6 +99,8 @@ export default function DepenseEtProjet() {
                 fontFamily: "Lora",
                 mb: 6,
                 mt: 3,
+                pl: { md: 0, xs: 3 },
+                pr: { md: 0, xs: 3 },
               }}
             >
               Vous protégez la biodiversité à chacun de vos paiements chez vos
@@ -120,6 +125,10 @@ export default function DepenseEtProjet() {
             sx={{
               textAlign: "center",
               lineHeight: 1.9,
+              mt: { md: 0, xs: 8 },
+              mb: { md: 0, xs: 18 },
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
             }}
           >
             <MotionInView variants={varFadeInUp}>
@@ -130,9 +139,9 @@ export default function DepenseEtProjet() {
                   background: "#2A7267 !important",
                   "&:hover": { background: "#10403B !important" },
                   color: "#fff",
-                  fontSize: "16px",
+                  fontSize: { md: "16px", xs: "13px" },
                   padding: "7px 22px 10px 22px",
-                  ml: -15,
+                  ml: { md: -15, xs: 0 },
                 }}
                 href={PATH_PAGE.CompteEcologiqueEthique}
               >
@@ -146,7 +155,7 @@ export default function DepenseEtProjet() {
         <Box
           sx={{
             width: "100%",
-            height: "866px",
+            height: { md: "866px", xs: "100%" },
             bgcolor: "#10403B",
           }}
         >
@@ -159,7 +168,8 @@ export default function DepenseEtProjet() {
               color: "#fff",
               fontWeight: 800,
               lineHeight: "57px",
-              margin: "100px 0px 0px 100px",
+              margin: "100px 0px 0px 0px",
+              marginLeft: { md: "100px", xs: 0 },
             }}
           >
             Participez à des
@@ -175,9 +185,12 @@ export default function DepenseEtProjet() {
             sx={{
               color: "#fff",
               fontFamily: "Lora",
-              margin: "80px 0px 100px 100px",
+              margin: "80px 0px 100px 0px",
+              marginLeft: { md: "100px", xs: 0 },
               fontSize: "21px",
               lineHeight: "27px",
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
             }}
           >
             Vous souscrivez à un compte courant écologique et éthique, nous
@@ -205,7 +218,9 @@ export default function DepenseEtProjet() {
           <Box
             sx={{
               textAlign: "center",
-              // lineHeight: 1.9,
+              mb: { md: 0, xs: 10 },
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
             }}
           >
             <MotionInView variants={varFadeInUp}>
@@ -219,7 +234,7 @@ export default function DepenseEtProjet() {
                   fontSize: "16px",
                   padding: "7px 22px 7px 22px",
                   margin: "10px, 50px 10px 50px",
-                  ml: 6,
+                  ml: { md: 6, xs: 0 },
                 }}
               >
                 Je comprends l’importance de ce projet solidaire
@@ -238,19 +253,21 @@ export default function DepenseEtProjet() {
           alignItems: "center",
           flexDirection: "row",
           bgcolor: "#C4E3D5",
-          width: { md: "100%", xs: "100%" },
-          height: "729px",
+          height: { md: "729px", xs: "100%" },
         }}
       >
-        <Box mt="-3rem">
+        <Box
+          mt={{ md: "-3rem", xs: "8rem" }}
+          minWidth={{ md: "50%", xs: "100%" }}
+        >
           <Typography
             sx={{
               fontWeight: 800,
               fontSize: "38px",
               lineHeight: "57px",
               color: "#10403B",
-              width: "764px",
-              ml: "100px",
+              width: { md: "764px", xs: "100%" },
+              ml: { md: "100px", xs: 0 },
               mb: 5,
             }}
           >
@@ -265,8 +282,10 @@ export default function DepenseEtProjet() {
               fontSize: "20px",
               lineHeight: "27px",
               color: "#10403B",
-              width: "707px",
-              ml: "100px",
+              width: { md: "707px", xs: "100%" },
+              ml: { md: "100px", xs: 0 },
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
             }}
           >
             Afin de piloter vos bonnes intentions, votre éco-coach (présent au
@@ -288,21 +307,30 @@ export default function DepenseEtProjet() {
             toujours l’impact de chacune
             <br /> de nos actions ni ne savons par où commencer.
           </Typography>
-          <Button
-            variant="contained"
+          <Box
             sx={{
-              background: "#2A7267 !important",
-              "&:hover": { bgcolor: "#10403B !important" },
-              borderRadius: "30px",
-              fontSize: "16px",
-              boxShadow: "none",
-              padding: "8px 30px 9px 30px",
-              margin: "60px 0px 0px 240px",
+              pl: { md: 0, xs: 3 },
+              pr: { md: 0, xs: 3 },
+              mb: { md: 0, xs: 4 },
             }}
-            href={PATH_PAGE.ActionEtEmpreinteCarbone}
           >
-            Je fais connaissance avec l'éco-coach
-          </Button>
+            <Button
+              variant="contained"
+              sx={{
+                background: "#2A7267 !important",
+                "&:hover": { bgcolor: "#10403B !important" },
+                borderRadius: "30px",
+                fontSize: { md: "16px", xs: "13px" },
+                boxShadow: "none",
+                padding: "8px 30px 9px 30px",
+                marginTop: "60px",
+                marginLeft: { md: "240px", xs: 0 },
+              }}
+              href={PATH_PAGE.ActionEtEmpreinteCarbone}
+            >
+              Je fais connaissance avec l'éco-coach
+            </Button>
+          </Box>
         </Box>
         <MHidden width="mdDown">
           <Box

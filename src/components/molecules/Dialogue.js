@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import sms_image from "../../assets/images/sms_image.svg";
+import { MHidden } from "../atoms/@material-extend";
 
 Dialogue.propTypes = {
   open: PropTypes.bool.isRequired,
@@ -46,10 +47,11 @@ export default function Dialogue({ open, modalClose }) {
             <Typography
               sx={{
                 fontWeight: 700,
-                lineHeight: "36px",
-                fontSize: "24px",
+                lineHeight: { md: "36px", xs: "20px" },
+                fontSize: { md: "24px", xs: "20px" },
                 mb: "35px",
-                mt: "-40px",
+                textAlign: { md: "start", xs: "center" },
+                mt: { md: "-40px", xs: 0 },
               }}
             >
               Nous vous enverrons un SMS contenant un lien pour
@@ -81,7 +83,7 @@ export default function Dialogue({ open, modalClose }) {
                 <TextField
                   placeholder="+33 612345678"
                   id="fullWidth"
-                  sx={{ maxWidth: "386px" }}
+                  sx={{ maxWidth: "100%" }}
                 />
                 <Button
                   sx={{
@@ -90,6 +92,7 @@ export default function Dialogue({ open, modalClose }) {
                     "&:hover": { bgcolor: "#10403B !important" },
                     boxShadow: "none",
                     margin: "70px 0px 0px 0px",
+                    ml: { md: 0, xs: 6 },
                     fontSize: "16px",
                     padding: "7px 45px 10px 45px",
                   }}
@@ -99,12 +102,14 @@ export default function Dialogue({ open, modalClose }) {
                   Envoyer
                 </Button>
               </Box>
-              <Box
-                component="img"
-                src={sms_image}
-                alt="Nous vous enverrons un sms"
-                sx={{ ml: 10, mb: -3 }}
-              />
+              <MHidden width="mdDown">
+                <Box
+                  component="img"
+                  src={sms_image}
+                  alt="Nous vous enverrons un sms"
+                  sx={{ ml: 10, mb: -3 }}
+                />
+              </MHidden>
             </Grid>
           </Box>
         </Box>
