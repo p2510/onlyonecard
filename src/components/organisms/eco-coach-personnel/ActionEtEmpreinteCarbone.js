@@ -124,7 +124,7 @@ export default function ActionEtEmpreinteCarbone() {
                     alignItems: "center",
                     textAlign: "center",
                     fontFamily: "Lora",
-                    lineHeight: "25.6px",
+                    lineHeight: "25.7px",
                     color: "#10403B",
                     fontSize: "21px",
                     fontWeight: 600,
