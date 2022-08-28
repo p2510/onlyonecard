@@ -1,7 +1,6 @@
 import { Suspense, lazy } from "react";
 import { useRoutes } from "react-router-dom";
 import LoadingScreen from "../../components/atoms/LoadingScreen";
-// import AuthGuard from "../guards/AuthGuard";
 import MainLayout from "../../components/templates/layouts/main";
 
 const Loadable = (Component) => (props) =>
@@ -83,6 +82,11 @@ export default function Router() {
       element: <MainLayout />,
       children: [{ element: <Article />, index: true }],
     },
+    {
+      path: "/programme-d'affiliation",
+      element: <MainLayout />,
+      children: [{ element: <Affiliation />, index: true }],
+    },
   ]);
 }
 
@@ -115,3 +119,6 @@ const ActionEtEmpreinteCarbone = Loadable(
   lazy(() => import("../../components/pages/EcoCoachPersonnel"))
 );
 const Article = Loadable(lazy(() => import("../../components/pages/Article")));
+const Affiliation = Loadable(
+  lazy(() => import("../../components/pages/Affiliation"))
+);

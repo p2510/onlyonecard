@@ -1,12 +1,19 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
-import { Container, Box, Typography, Button, Divider } from "@mui/material";
+import {
+  Container,
+  Box,
+  Typography,
+  Button,
+  Divider,
+  Link,
+} from "@mui/material";
 import { TABLEAUDERESUMEDATA } from "./nosTarifsEtAbonnements.constant";
-import citoyens_image_2 from "../../../assets/images/citoyens_image_2.png";
+import citoyens_image_2 from "../../../assets/images/citoyens_image_2.svg";
 import only_name from "../../../assets/images/only_name.svg";
 import google_play_icon from "../../../assets/images/google_play_icon.svg";
 import app_store_icon from "../../../assets/images/app_store_icon.svg";
-import ocean_image from "../../../assets/images/ocean_image.png";
+import ocean_image from "../../../assets/images/ocean_image.svg";
 import {
   MotionInView,
   varFadeInLeft,
@@ -191,22 +198,26 @@ export default function TableauDeResume() {
         >
           <MotionInView variants={varFadeInLeft}>
             <Button>
-              <Box
-                component="img"
-                src={app_store_icon}
-                alt="télécharger dans l'app store"
-                sx={{ paddingRight: { md: "50px", xs: "10px" } }}
-              />
+              <Link href="https://apps.apple.com/fr/app/onlyone-card/id1520016716">
+                <Box
+                  component="img"
+                  src={app_store_icon}
+                  alt="télécharger dans l'app store"
+                  sx={{ paddingRight: { md: "50px", xs: "10px" } }}
+                />
+              </Link>
             </Button>
           </MotionInView>
           <MotionInView variants={varFadeInRight}>
             <Button>
-              <Box
-                component="img"
-                src={google_play_icon}
-                alt="disponible sur google play"
-                sx={{ paddingLeft: { md: "50px", xs: "10px" } }}
-              />
+              <Link href="https://play.google.com/store/apps/details?id=eu.onlyonecard.mobile">
+                <Box
+                  component="img"
+                  src={google_play_icon}
+                  alt="disponible sur google play"
+                  sx={{ paddingLeft: { md: "50px", xs: "10px" } }}
+                />
+              </Link>
             </Button>
           </MotionInView>
         </Grid>

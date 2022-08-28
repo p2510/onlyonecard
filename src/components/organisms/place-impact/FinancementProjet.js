@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "@mui/system";
 import { Box, Container, Divider, Grid, Typography } from "@mui/material";
-import citoyens_image from "../../../assets/images/citoyens_image.png";
+import citoyens_image from "../../../assets/images/citoyens_image.svg";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import { varFadeInUp, MotionInView } from "../../atoms/animate";

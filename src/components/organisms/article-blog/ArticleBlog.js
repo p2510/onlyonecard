@@ -14,7 +14,7 @@ import {
 import { styled } from "@mui/system";
 import { MHidden } from "src/components/atoms/@material-extend";
 import { PATH_PAGE } from "src/configues/routes/paths";
-import article_image from "../../../assets/images/article_image.png";
+import article_image from "../../../assets/images/article_image.svg";
 import { CHRONIQUEDATA } from "./ArticleBolg.constant";
 
 const RootStyle = styled("div")(({ theme }) => ({

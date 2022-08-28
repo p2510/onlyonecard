@@ -2,7 +2,7 @@ import { styled } from "@mui/system";
 import { Box, Grid, Link, Typography } from "@mui/material";
 import { Cursor, Typewriter } from "react-simple-typewriter";
 import ademe from "../../../assets/images/ademe.svg";
-import semeur_image from "../../../assets/images/semeur_image.png";
+import semeur_image from "../../../assets/images/semeur_image.svg";
 import abc from "../../../assets/images/abc.svg";
 import only_name from "../../../assets/images/only_name.svg";
 import CommunautesInput from "src/components/molecules/CommunautesInput";

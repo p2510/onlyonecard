@@ -1,4 +1,3 @@
-import { Link as RouterLink } from "react-router-dom";
 import {
   Grid,
   Link,
@@ -121,15 +120,10 @@ export default function MainFooter() {
                     {headline}
                   </Typography>
                   {children.map((link) => (
-                    <Link
-                      to={link.href}
-                      key={link.name}
-                      color="inherit"
-                      fontSize="16px"
-                      component={RouterLink}
-                      sx={{ display: "block", lineHeight: "14px" }}
-                    >
-                      {link.name}
+                    <Link key={link.name} href={link.href}>
+                      <Typography sx={{ display: "block", lineHeight: "14px" }}>
+                        {link.name}
+                      </Typography>
                     </Link>
                   ))}
                 </Stack>
@@ -207,7 +201,6 @@ export default function MainFooter() {
                       to={link.href}
                       key={link.name}
                       color="inherit"
-                      component={RouterLink}
                       sx={{ display: "block", mr: "1.5rem" }}
                     >
                       {link.name}
