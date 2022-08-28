@@ -146,7 +146,7 @@ export default function OuvrirUnCompte() {
             bgcolor: "#FAAA42 !important",
             "&:hover": { bgcolor: "#f7b96c !important" },
             boxShadow: "none",
-            mt: { md: "-260px", xs: "-360px" },
+            mt: { md: "3px", xs: "-360px" },
             mr: { md: "140px", xs: 0 },
             marginLeft: { md: "35rem", xs: 0 },
             fontSize: "16px",

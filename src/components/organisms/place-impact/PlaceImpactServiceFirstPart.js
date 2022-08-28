@@ -163,22 +163,22 @@ export default function PlaceImpactServiceFirstPart() {
                   display: "flex",
                   justifyContent: "space-between",
                   flexDirection: "row",
-                  mr: { md: -30, xs: -2 },
+                  mr: { md: -10, xs: -2 },
                 }}
               >
                 <Box
                   component="img"
                   src={item.icon}
                   alt={item.title}
-                  height={{ md: "100px", xs: "120px" }}
+                  height={{ md: "150px", xs: "120px" }}
                   width={{ md: "180px", xs: "120px" }}
                 />
                 <Box
                   component="img"
                   src={item.icon_deux}
                   alt={item.title}
-                  marginLeft={{ md: "3rem", xs: "-2rem" }}
-                  height={{ md: "100px", xs: "120px" }}
+                  marginLeft={{ md: "-3rem", xs: "-2rem" }}
+                  height={{ md: "150px", xs: "120px" }}
                   width={{ md: "180px", xs: "120px" }}
                 />
                 {item.icon_trois ? (
@@ -186,9 +186,9 @@ export default function PlaceImpactServiceFirstPart() {
                     component="img"
                     src={item.icon_trois}
                     alt={item.title}
-                    height={{ md: "100px", xs: "120px" }}
+                    height={{ md: "150px", xs: "120px" }}
                     width={{ md: "180px", xs: "120px" }}
-                    marginLeft={{ md: "3rem", xs: "-2rem" }}
+                    marginLeft={{ md: "-3rem", xs: "-2rem" }}
                   />
                 ) : (
                   ""

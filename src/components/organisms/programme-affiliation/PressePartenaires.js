@@ -4,7 +4,7 @@ import { styled } from "@mui/system";
 import "react-phone-number-input/style.css";
 import { MotionInView, varFadeInUp } from "../../atoms/animate";
 import { PRESSEPARTENAIRESDATA } from "./PressePartenaires.constant";
-import cercle from "../../../assets/images/cercle.svg";
+import cercle from "../../../assets/images/cercle.png";
 import terre_image from "../../../assets/images/terre_image.svg";
 import { MHidden } from "src/components/atoms/@material-extend";
 

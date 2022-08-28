@@ -2,7 +2,7 @@ import { styled } from "@mui/system";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { MotionInView, varFadeInDown, varFadeInUp } from "../../atoms/animate";
 import { ACTIONSDATA } from "./ActionEtEmpreinteCarbone.constant";
-import only_leave from "../../../assets/images/only_leave.svg";
+import only_leave from "../../../assets/images/only_leave.png";
 import { MHidden } from "src/components/atoms/@material-extend";
 
 const RootStyle = styled("div")(({ theme }) => ({
@@ -124,7 +124,7 @@ export default function ActionEtEmpreinteCarbone() {
                     alignItems: "center",
                     textAlign: "center",
                     fontFamily: "Lora",
-                    lineHeight: "25.6px",
+                    lineHeight: "25.7px",
                     color: "#10403B",
                     fontSize: "21px",
                     fontWeight: 600,
