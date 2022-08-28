@@ -27,6 +27,11 @@ const menuConfig = [
     icon: <Iconify icon={"eva:home-fill"} {...ICON_SIZE} />,
     path: PATH_PAGE.ChroniqueFinanceEtImpact,
   },
+  {
+    title: "Ouvrir un compte",
+    icon: <Iconify icon={"eva:home-fill"} {...ICON_SIZE} />,
+    path: PATH_PAGE.OuvertureDeCompte,
+  },
 ];
 
 export default menuConfig;
