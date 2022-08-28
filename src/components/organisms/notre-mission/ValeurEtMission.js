@@ -1,7 +1,7 @@
 import { styled } from "@mui/system";
 import { Box, Grid, Typography, Button } from "@mui/material";
-import valle_image from "../../../assets/images/valle_image.svg";
-import unicef_icon from "../../../assets/images/unicef_icon.svg";
+import valle_image from "../../../assets/images/valle_image.png";
+import unicef_icon from "../../../assets/images/unicef_icon.png";
 import {
   MotionInView,
   varFadeInDown,

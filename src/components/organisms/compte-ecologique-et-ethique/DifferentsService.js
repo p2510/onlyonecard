@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "@mui/system";
 import { Box, Grid, Typography, Button } from "@mui/material";
 import Brightness1Icon from "@mui/icons-material/Brightness1";
-import foret_image from "../../../assets/images/foret_image.svg";
+import foret_image from "../../../assets/images/foret_image.png";
 import { PATH_PAGE } from "src/configues/routes/paths";
 import { MHidden } from "src/components/atoms/@material-extend";
 
@@ -241,6 +241,7 @@ export default function DifferentsService() {
           />
         </MHidden>
         <Box
+          src={foret_image}
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -248,7 +249,7 @@ export default function DifferentsService() {
             bgcolor: "#10403B",
             width: { md: "508px", xs: "100%" },
             height: "316px",
-            mt: { md: 171.8, xs: 194.3 },
+            mt: { md: 166.8, xs: 194.3 },
             ml: { md: "925px", xs: 0 },
             position: "absolute",
           }}

@@ -1,4 +1,4 @@
-import saviez_vous from "../../../assets/images/saviez_vous.svg";
+import saviez_vous from "../../../assets/images/saviez-vous.png";
 
 export const CHRONIQUEDATA = [
   {

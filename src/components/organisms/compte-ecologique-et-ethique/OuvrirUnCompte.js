@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { styled } from "@mui/system";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import onlyone_carte from "../../../assets/images/onlyone_carte.svg";
-import plan from "../../../assets/images/plan.svg";
-import telephone_image from "../../../assets/images/telephone_image.svg";
-import montagne from "../../../assets/images/montagne.svg";
-import cercle from "../../../assets/images/cercle.svg";
+import onlyone_carte from "../../../assets/images/onlyone_carte.png";
+import plan from "../../../assets/images/plan.png";
+import telephone from "../../../assets/images/telephone_image.png";
+import montagne from "../../../assets/images/montagne.png";
+import cercle from "../../../assets/images/cercle.png";
 import PropTypes from "prop-types";
 import {
   MotionInView,
@@ -108,7 +108,7 @@ export default function OuvrirUnCompte() {
             component="img"
             src={onlyone_carte}
             alt="Epargnez votre argent, épargnez la planète"
-            sx={{ width: "467px", height: "459px", zIndex: 6, mt: 5 }}
+            sx={{ width: "467px", height: "459px", zIndex: 6, mt: 4.5 }}
           />
         </MHidden>
       </Grid>
@@ -127,7 +127,7 @@ export default function OuvrirUnCompte() {
           />
           <Box
             component="img"
-            src={telephone_image}
+            src={telephone}
             alt="Eco-compte Onlyone"
             sx={{
               width: "284px",
@@ -146,7 +146,7 @@ export default function OuvrirUnCompte() {
             bgcolor: "#FAAA42 !important",
             "&:hover": { bgcolor: "#f7b96c !important" },
             boxShadow: "none",
-            mt: { md: "-260px", xs: "-360px" },
+            mt: { md: "3px", xs: "-360px" },
             mr: { md: "140px", xs: 0 },
             marginLeft: { md: "35rem", xs: 0 },
             fontSize: "16px",
