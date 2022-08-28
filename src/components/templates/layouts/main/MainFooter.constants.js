@@ -54,17 +54,26 @@ export const LINKS = [
         name: "Nos tarifs et abonnements",
         href: `${PATH_PAGE.TarifsEtAbonnements}`,
       },
-      { name: "FAQ", href: `/https://www.support.onlyonecard.eu/hc/fr` },
+      { name: "FAQ", href: `https://www.support.onlyonecard.eu/hc/fr` },
     ],
   },
   {
     id: 2,
     headline: "La marque OnlyOne",
     children: [
-      { name: "La chronique finance et impact", href: "#" },
-      { name: "Kite média", href: "#" },
-      { name: "Nous rejoindre", href: "#" },
-      { name: "Programme d'affiliation", href: "#" },
+      {
+        name: "La chronique finance et impact",
+        href: `${PATH_PAGE.ChroniqueFinanceEtImpact}`,
+      },
+      {
+        name: "Kite média",
+        href: `https://www.notion.so/OnlyOne-Kit-Media-Presse-d29b5112ae5545e19412b9c054214011`,
+      },
+      {
+        name: "Nous rejoindre",
+        href: `https://www.welcometothejungle.com/fr/companies/onlyone`,
+      },
+      { name: "Programme d'affiliation", href: `${PATH_PAGE.Affiliation}` },
     ],
   },
 ];

@@ -4,9 +4,9 @@ import { styled } from "@mui/system";
 import "react-phone-number-input/style.css";
 import { MotionInView, varFadeInDown, varFadeInUp } from "../../atoms/animate";
 import { OUVERTURECOMPTEDATA } from "./OnlyoneEcoCompte.constant";
-import ouverture_compte_img from "../../../assets/images/ouverture_compte_img.png";
-import cercle from "../../../assets/images/cercle.png";
-import riviere from "../../../assets/images/riviere.png";
+import ouverture_compte_img from "../../../assets/images/ouverture_compte_img.svg";
+import cercle from "../../../assets/images/cercle.svg";
+import riviere from "../../../assets/images/riviere.svg";
 import { CustomTextField } from "src/components/atoms/GeneralTextfield.style";
 import { MHidden } from "src/components/atoms/@material-extend";
 

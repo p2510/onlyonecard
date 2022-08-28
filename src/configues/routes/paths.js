@@ -19,4 +19,5 @@ export const PATH_PAGE = {
   TarifsEtAbonnements: "/nos-tarifs-et-abonnements",
   ActionEtEmpreinteCarbone: "/votre-eco-coach-personnel",
   ArticleBlog: "/saviez-vous-que-votre-argent-a-la-banque-ne-pas",
+  Affiliation: "/programme-d'affiliation",
 };

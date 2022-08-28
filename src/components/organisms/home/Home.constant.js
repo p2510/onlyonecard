@@ -15,17 +15,17 @@ import ethique_mobile from "../../../assets/images/ethique_mobile.svg";
 import carte_mobile from "../../../assets/images/carte_mobile.png";
 import biodiversite_mobile from "../../../assets/images/biodiversite_mobile.png";
 import economisez_mobile from "../../../assets/images/economisez_mobile.png";
-import biodiversite_image from "../../../assets/images/biodiversite_image.png";
-import ecosysteme_image from "../../../assets/images/ecosysteme_image.png";
-import transition_image from "../../../assets/images/transition_image.png";
+import biodiversite_image from "../../../assets/images/biodiversite_image.svg";
+import ecosysteme_image from "../../../assets/images/ecosysteme_image.svg";
+import transition_image from "../../../assets/images/transition_image.svg";
 import paiement_utile from "../../../assets/images/paiement_utile.svg";
 import courant_ecologique from "../../../assets/images/courant_ecologique.svg";
-import inegalite_image from "../../../assets/images/inegalite_image.png";
-import agricole_image from "../../../assets/images/agricole_image.png";
-import protection_foret_image from "../../../assets/images/protection_foret_image.png";
-import association_image from "../../../assets/images/association_image.png";
-import financement_territoires from "../../../assets/images/financement_territoires.png";
-import rechauffement_image from "../../../assets/images/rechauffement_image.png";
+import inegalite_image from "../../../assets/images/inegalite_image.svg";
+import agricole_image from "../../../assets/images/agricole_image.svg";
+import protection_foret_image from "../../../assets/images/protection_foret_image.svg";
+import association_image from "../../../assets/images/association_image.svg";
+import financement_territoires from "../../../assets/images/financement_territoires.svg";
+import rechauffement_image from "../../../assets/images/rechauffement_image.svg";
 import epargne_positive_image from "../../../assets/images/epargne_positive_image.svg";
 
 export const AVANTAGES = [

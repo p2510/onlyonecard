@@ -97,7 +97,6 @@ export default function Dialogue({ open, modalClose }) {
                     padding: "7px 45px 10px 45px",
                   }}
                   variant="contained"
-                  // href={PATH_PAGE.UnGesteUnImpact}
                 >
                   Envoyer
                 </Button>
