@@ -4,6 +4,8 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import projet_image_1 from "../../../assets/images/projet_image_1.svg";
 import projet_image_2 from "../../../assets/images/projet_image_2.svg";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 import { varFadeInUp, MotionInView, varFadeInLeft } from "../../atoms/animate";
 import { MHidden } from "src/components/atoms/@material-extend";
 import { ECOCOMPTEDATA, EPARGNEDATA } from "./Home.constant";
@@ -193,7 +195,7 @@ export default function ProjetsFiancesSection() {
                   <MotionInView variants={varFadeInUp}>
                     <Card
                       sx={{
-                        maxWidth: "100%",
+                        maxWidth: "283px",
                         minWidth: "100%",
                         borderRadius: "8px",
                       }}
@@ -201,7 +203,7 @@ export default function ProjetsFiancesSection() {
                       <CardMedia
                         component="img"
                         sx={{
-                          width: { md: "290px", xs: "100%" },
+                          width: { md: "285px", xs: "100%" },
                           height: "210px",
                         }}
                         image={item.cardImage}

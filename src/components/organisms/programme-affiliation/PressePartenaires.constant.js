@@ -1,9 +1,9 @@
-import partenaire_1 from "../../../assets/images/partenaire_1.svg";
-import partenaire_2 from "../../../assets/images/partenaire_2.svg";
-import partenaire_3 from "../../../assets/images/partenaire_3.svg";
-import partenaire_4 from "../../../assets/images/partenaire_4.svg";
-import partenaire_5 from "../../../assets/images/partenaire_5.svg";
-import partenaire_6 from "../../../assets/images/partenaire_6.svg";
+import partenaire_1 from "../../../assets/images/partenaire_1.png";
+import partenaire_2 from "../../../assets/images/partenaire_2.png";
+import partenaire_3 from "../../../assets/images/partenaire_3.png";
+import partenaire_4 from "../../../assets/images/partenaire_4.png";
+import partenaire_5 from "../../../assets/images/partenaire_5.png";
+import partenaire_6 from "../../../assets/images/partenaire_6.png";
 
 export const PRESSEPARTENAIRESDATA = [
   { id: 1, logo: `${partenaire_1}` },

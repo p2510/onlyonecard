@@ -5,7 +5,7 @@ import { MotionInView, varFadeInUp } from "../../atoms/animate";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import etape_image from "../../../assets/images/etape_image.svg";
-import citoyens_image from "../../../assets/images/citoyens_image.svg";
+import citoyens_image from "../../../assets/images/citoyens_image.png";
 import {
   DIFFERENTSETAPESDATA,
   PARTENAIRELOGODATA,
@@ -269,8 +269,8 @@ export default function DifferentsEtapes() {
                     component="img"
                     src={item.icon}
                     sx={{
-                      width: "80px",
-                      height: "75px",
+                      width: "165px",
+                      height: "125px",
                     }}
                   />
                 ))}

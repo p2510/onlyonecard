@@ -1,7 +1,7 @@
 import { styled } from "@mui/system";
 import { Box, Grid, Typography } from "@mui/material";
 import { MHidden } from "../../atoms/@material-extend";
-import compte_courant from "../../../assets/images/compte_courant.svg";
+import compte_courant from "../../../assets/images/compte_courant.png";
 import adoptez from "../../../assets/images/adoptez.svg";
 import telephone_2 from "../../../assets/images/telephone_2.svg";
 import { varFadeInUp, MotionInView, varFadeInLeft } from "../../atoms/animate";
