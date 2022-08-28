@@ -6,7 +6,6 @@ import {
   varFadeInLeft,
   varFadeInUp,
 } from "src/components/atoms/animate";
-
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
 import { useTheme } from "@mui/material/styles";

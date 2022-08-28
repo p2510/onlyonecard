@@ -2,8 +2,8 @@ import { styled } from "@mui/system";
 import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import { MotionInView, varFadeInUp } from "../../atoms/animate";
 import { EPARGNERIMAGEDATA } from "./PlaceImpact.constant";
-import arbres_image from "../../../assets/images/arbres_image.png";
-import title_bg from "../../../assets/images/title_bg.png";
+import arbres_image from "../../../assets/images/arbres_image.svg";
+import title_bg from "../../../assets/images/title_bg.svg";
 import { MHidden } from "src/components/atoms/@material-extend";
 
 const RootStyle = styled("div")(({ theme }) => ({
@@ -163,22 +163,22 @@ export default function PlaceImpactServiceFirstPart() {
                   display: "flex",
                   justifyContent: "space-between",
                   flexDirection: "row",
-                  mr: { md: -10, xs: -2 },
+                  mr: { md: -30, xs: -2 },
                 }}
               >
                 <Box
                   component="img"
                   src={item.icon}
                   alt={item.title}
-                  height={{ md: "150px", xs: "120px" }}
+                  height={{ md: "100px", xs: "120px" }}
                   width={{ md: "180px", xs: "120px" }}
                 />
                 <Box
                   component="img"
                   src={item.icon_deux}
                   alt={item.title}
-                  marginLeft={{ md: "-3rem", xs: "-2rem" }}
-                  height={{ md: "150px", xs: "120px" }}
+                  marginLeft={{ md: "3rem", xs: "-2rem" }}
+                  height={{ md: "100px", xs: "120px" }}
                   width={{ md: "180px", xs: "120px" }}
                 />
                 {item.icon_trois ? (
@@ -186,9 +186,9 @@ export default function PlaceImpactServiceFirstPart() {
                     component="img"
                     src={item.icon_trois}
                     alt={item.title}
-                    height={{ md: "150px", xs: "120px" }}
+                    height={{ md: "100px", xs: "120px" }}
                     width={{ md: "180px", xs: "120px" }}
-                    marginLeft={{ md: "-3rem", xs: "-2rem" }}
+                    marginLeft={{ md: "3rem", xs: "-2rem" }}
                   />
                 ) : (
                   ""

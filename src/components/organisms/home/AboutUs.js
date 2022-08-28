@@ -6,7 +6,7 @@ import { MotionInView, varFadeInLeft, varFadeInUp } from "../../atoms/animate";
 import { ABOUTUSDATA } from "./Home.constant";
 import { styled } from "@mui/system";
 import CarouselDots from "../../atoms/CarouselDots";
-import nouveau_monde from "../../../assets/images/nouveau_monde.png";
+import nouveau_monde from "../../../assets/images/nouveau_monde.svg";
 import { Cursor, Typewriter } from "react-simple-typewriter";
 import { CustomTextField } from "src/components/atoms/GeneralTextfield.style";
 import Dialogue from "src/components/molecules/Dialogue";

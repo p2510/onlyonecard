@@ -3,10 +3,10 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import { MotionInView, varFadeInDown, varFadeInUp } from "../../atoms/animate";
 import { PARTENAIREDATA } from "./NotreMission.constant";
 import { MHidden } from "../../atoms/@material-extend";
-import arriere_plan_notre_mission from "../../../assets/images/arriere_plan_notre_mission.png";
-import bras_image from "../../../assets/images/bras_image.png";
-import cercle from "../../../assets/images/cercle.png";
-import plage_image from "../../../assets/images/plage_image.png";
+import arriere_plan_notre_mission from "../../../assets/images/arriere_plan_notre_mission.svg";
+import bras_image from "../../../assets/images/bras_image.svg";
+import cercle from "../../../assets/images/cercle.svg";
+import plage_image from "../../../assets/images/plage_image.svg";
 
 const RootStyle = styled("div")(({ theme }) => ({
   marginTop: { md: 0, xs: "20rem" },
@@ -38,7 +38,7 @@ export default function Partenaires() {
             sx={{
               width: "100%",
               position: "absolute",
-              height: "686.49px",
+              height: "694.49px",
               right: "2px",
               top: "337.51px",
             }}
@@ -52,7 +52,7 @@ export default function Partenaires() {
               width: "583px",
               height: "568px",
               left: "836px",
-              top: "453px",
+              top: "458px",
             }}
           />
         </Grid>
