@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "@mui/system";
 import { Box, Grid, Typography, Button } from "@mui/material";
 import Brightness1Icon from "@mui/icons-material/Brightness1";
-import foret_image from "../../../assets/images/foret_image.png";
+import foret_image from "../../../assets/images/foret_image.svg";
 import { PATH_PAGE } from "src/configues/routes/paths";
 import { MHidden } from "src/components/atoms/@material-extend";
 

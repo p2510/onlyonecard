@@ -1,11 +1,11 @@
 import { styled } from "@mui/system";
 import { Box, Grid, Typography, Button } from "@mui/material";
 import { MHidden } from "../../atoms/@material-extend";
-import geste_foret_image from "../../../assets/images/geste_foret_image.png";
-import solidaire_image from "../../../assets/images/solidaire_image.png";
-import conseils_phone from "../../../assets/images/conseils_phone.png";
-import homme_image from "../../../assets/images/homme_image.png";
-import cercle_vert from "../../../assets/images/cercle_vert.png";
+import geste_foret_image from "../../../assets/images/geste_foret_image.svg";
+import solidaire_image from "../../../assets/images/solidaire_image.svg";
+import conseils_phone from "../../../assets/images/conseils_phone.svg";
+import homme_image from "../../../assets/images/homme_image.svg";
+import cercle_vert from "../../../assets/images/cercle_vert.svg";
 import { varFadeInUp, MotionInView, varFadeInLeft } from "../../atoms/animate";
 import { PATH_PAGE } from "src/configues/routes/paths";
 
@@ -172,7 +172,7 @@ export default function DepenseEtProjet() {
               marginLeft: { md: "100px", xs: 0 },
             }}
           >
-            Participez à des
+            Participez à des{" "}
             <span style={{ color: "#C4E3D5" }}>
               projets
               <br /> solidaires

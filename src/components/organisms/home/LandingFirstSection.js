@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import presentation from "../../../assets/images/presentation.png";
-import euro_image from "../../../assets/images/euro_image.png";
+import presentation from "../../../assets/images/presentation.svg";
+import euro_image from "../../../assets/images/euro_image.svg";
 import planete_image from "../../../assets/images/planete_image.svg";
 import { styled } from "@mui/system";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
@@ -369,7 +369,7 @@ export default function LandingFirstSection() {
           <Box
             component="img"
             src={planete_image}
-            width="467px"
+            width="469px"
             height="559px"
             alt="Epargnez votre argent, épargnez la planète"
           />

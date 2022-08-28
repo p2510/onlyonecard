@@ -2,8 +2,8 @@ import { styled } from "@mui/system";
 import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import { MotionInView, varFadeInUp } from "../../atoms/animate";
 import { EPARGNERIMAGEDATA } from "./PlaceImpact.constant";
-import arbres_image from "../../../assets/images/arbres_image.png";
-import title_bg from "../../../assets/images/title_bg.png";
+import arbres_image from "../../../assets/images/arbres_image.svg";
+import title_bg from "../../../assets/images/title_bg.svg";
 import { MHidden } from "src/components/atoms/@material-extend";
 
 const RootStyle = styled("div")(({ theme }) => ({

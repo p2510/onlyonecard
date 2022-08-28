@@ -2,7 +2,7 @@ import aide_financiere from "../../../assets/images/aide_financiere.png";
 import rouages_onlyone from "../../../assets/images/rouages_onlyone.png";
 import financement_protection from "../../../assets/images/financement_protection.png";
 import comment_estimer from "../../../assets/images/comment_estimer.png";
-import saviez_vous from "../../../assets/images/saviez-vous.png";
+import saviez_vous from "../../../assets/images/saviez_vous.svg";
 import carte_recyclee from "../../../assets/images/carte_recyclee.png";
 import unitlife from "../../../assets/images/unitlife.png";
 
